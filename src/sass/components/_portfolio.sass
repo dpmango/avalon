@@ -1,0 +1,99 @@
+// Portfolio
+
+.portfolio
+	background: #252525
+	color: #fff
+	padding: 75px 0 0
+	margin: 0 -10px 116px
+	+rmin($desktop)
+		padding: 75px 0 0
+		margin: 0 0 180px
+
+.portfolio__heading
+	@extend .heading
+	display: inline-block
+	vertical-align: baseline
+	margin: 0 0 40px
+	+rmin($desktop)
+		left: -8px
+
+.portfolio__link
+	transition: 0.25s
+	display: inline-block
+	vertical-align: baseline
+	font-size: 15px
+	line-height: 1
+	font-weight: 900
+	border-bottom: 3px solid #fff
+	padding: 7px 0
+	position: relative
+	margin: 0 0 40px
+	&:hover
+		color: #c43939
+	+rmin($tablet)
+		font-size: 20px
+		top: -8px
+	+rmin($desktop)
+		font-size: 25px
+		top: -12px
+
+
+.portfolio__grid
+
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			position: relative
+			padding: 0 10px
+			&:nth-child(1)
+				.slides-portfolio
+					margin-left: -20px
+			&:nth-child(2)
+			&:nth-child(3)
+				.slides-portfolio
+					margin-left: -20px
+				.slides-portfolio__image:before
+					padding: 100% 0 0
+			&:nth-child(4)
+				.slides-portfolio
+					margin-right: -20px
+				.slides-portfolio__image:before
+					padding: 100% 0 0
+			&:nth-child(5)
+				.slides-portfolio
+					top: 0
+					margin: 0 0 -50px
+					.slick-arrow
+						color: #252525
+						&:hover
+							color: #c43939
+				.slides-portfolio__caption
+					color: #252525
+			
+	+rmin($tablet)
+		padding: 10px 0 0
+		.row
+			& > [class^="col"]
+				&:nth-child(5)
+					.slides-portfolio
+						margin: -150px 0 -30px
+	+rmin($desktop)
+		padding: 69px 0 0
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+				&:nth-child(1)
+					.slides-portfolio
+						margin-left: -20px
+				&:nth-child(3)
+					.slides-portfolio
+						margin-left: 0
+				&:nth-child(5)
+					.slides-portfolio
+						margin: -244px 0 -82px
+						// margin: -210px 0 -60px
+						// top: -244px
+						// margin: 0 0 -350px
+
+

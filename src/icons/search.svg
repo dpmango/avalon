@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="avalon_hp_dt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1347.000000, -19.000000)">
+        <g id="header" transform="translate(20.000000, -2.000000)">
+            <g id="icons/search" transform="translate(1327.000000, 23.000000)">
+                <g id="search">
+                    <circle id="Oval" stroke="currentColor" stroke-width="3" cx="15" cy="10" r="10"></circle>
+                    <rect id="Rectangle-3" fill="currentColor" transform="translate(4.500000, 20.500000) rotate(-315.000000) translate(-4.500000, -20.500000) " x="3" y="16" width="3" height="9"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+*
+  box-sizing: border-box
+  outline: none
+
+a
+  color: inherit
+  text-decoration: none
+  &:hover
+    text-decoration: none
+  // &:hover, &:focus
+  //   text-decoration: none
+
+ul
+  list-style: none
+  li
+    display: inline-block
+
+body, html
+    width: 100%
+    background: white
+    color: $fontColor
+    font: 400 18px/25px $fontBase
+    font-size: 16px
+    min-width: 320px
+    max-width: 100%
+    margin: 0
+    overflow-x: hidden
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.page
+    position: relative
+    overflow: hidden
+    width: 100%
+    // display: flex
+    // flex-direction: column
+    &__content
+
+        // flex: 1 1 auto
+
+
+.container
+    max-width: 1440px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 30px
+    padding-right: 30px
+    +rmin($desktop)
+      padding-left: 20px
+      padding-right: 20px
+
+
+#grid
+    display: block
+    position: absolute
+    top: 0
+    left: 50%
+    width: 1440px
+    height: 7230px
+    margin: 0 0 0 -720px
+    z-index: 10000
+    background: url(../img/grid.png) 0 0 no-repeat
+    opacity: 0.5
+    visibility: hidden
+    &.is-active
+        visibility: visible

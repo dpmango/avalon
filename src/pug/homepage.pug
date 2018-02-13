@@ -1,0 +1,246 @@
+---
+title: Avalon
+bodyClass: page-homepage
+---
+extends shared/_layout
+block content
+	
+	#grid
+	.js-toggle Grid
+	//- .js-width 1920
+
+	// Promo :: Start
+	.promo
+		.container
+			.row
+				.col-8.col-xl-6
+
+					.slides-fade.js-slides-fade
+						.slides-fade__item
+							img(src="img/pic-promo-1.png", alt="")
+						.slides-fade__item
+							img(src="img/pic-promo-2.png", alt="")
+						.slides-fade__item
+							img(src="img/pic-promo-3.png", alt="")
+
+				.col-4.col-xl-6
+
+					.slides-h.js-slides-h
+						.slides-h__item
+							img(src="img/pic-promo-1-small.png", alt="")
+						.slides-h__item
+							img(src="img/pic-promo-2-small.png", alt="")
+						.slides-h__item
+							img(src="img/pic-promo-3-small.png", alt="")
+
+				.col-12.col-sm-11.offset-sm-1.col-md-10.col-xl-6.push-xl-6.offset-xl-0
+
+					.slides-v.js-slides-v
+						a(href="#").slides-v__item
+							.slides-v__item-in
+								h2.slides-v__title Коллекция <b>VEGETAL</b>
+								p.slides-v__text Кресла, будто сплетенные из ветвей, с удобными формами и прочным устойчивым каркасом. Возможно размещение внутри и снаружи.
+								span.slides-v__link перейти в каталог
+						a(href="#").slides-v__item
+							.slides-v__item-in
+								h2.slides-v__title <b>Металлическое подстолье</b> 0655A
+								p.slides-v__text Коллекция мягкой мебели LOFT — это смелое гармоничное  современного дизайна с чертами индустриального прошлого.
+								span.slides-v__link перейти в каталог
+						a(href="#").slides-v__item
+							.slides-v__item-in
+								h2.slides-v__title Стильные диваны <b>LOFT DESIGN</b>
+								p.slides-v__text Кресла, будто сплетенные из ветвей, с удобными формами и прочным устойчивым каркасом. Возможно размещение внутри и снаружи.
+								span.slides-v__link перейти в каталог
+
+							
+
+	// Promo :: End
+	
+
+	// Catalog :: Start
+	.catalog
+		.container
+
+			.row
+				.col-sm-11.offset-sm-1
+
+					h2.catalog__heading Каталог
+
+			.catalog__grid
+				.row
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-1')
+							span.catalog__item-text Столешницы
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-2')
+							span.catalog__item-text Подстолья
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-3')
+							span.catalog__item-text Барные стулья
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-4')
+							span.catalog__item-text Стулья
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-5')
+							span.catalog__item-text Мебель для конференц-залов
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-6')
+							span.catalog__item-text Столы
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-7')
+							span.catalog__item-text Кресла
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-8')
+							span.catalog__item-text Диваны
+
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-9')
+							span.catalog__item-text Складная мебель
+					.col-6.col-md-4.col-xl-3
+						a(href="#").catalog__item
+							span.catalog__item-icon
+								+icon('ico-catalog-10')
+							span.catalog__item-text Дизайнерская мебель
+
+
+	// Catalog :: End
+
+	// Portfolio :: Start
+	.portfolio
+		.container
+			
+			.row.align-items-end
+				.col-sm-11.offset-sm-1.col-md-7.col-lg-6
+					h2.portfolio__heading Портфолио
+				.col-sm-11.offset-sm-1.col-md-4.offset-md-0
+					a(href="#").portfolio__link смотреть все проекты
+
+			.portfolio__grid
+				.row
+					.col-12.col-md-7
+						.slides-portfolio.js-slides-portfolio
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-1.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-2.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+					.col-8.offset-4.col-md-5.offset-md-0
+
+						.slides-portfolio.js-slides-portfolio
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-2.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+					.col-10.col-md-3.offset-md-2
+
+						.slides-portfolio.js-slides-portfolio
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-3.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+					.col-6.offset-6.col-md-7.offset-md-0
+						.slides-portfolio.js-slides-portfolio
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-4.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+					.col-8.col-md-5
+						.slides-portfolio.js-slides-portfolio
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-5.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-4.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+							a(href="#").slides-portfolio__item
+								span.slides-portfolio__image
+									img(src="img/pic-portfolio-3.png", alt="")
+								span.slides-portfolio__caption Джаз-клуб «Эссе»
+
+	// Portfolio :: End
+
+
+	// News :: Start
+
+	.news
+		.container
+			.row
+				.col-sm-11.offset-sm-1
+		
+					h2.news__heading Новости
+
+			.news__grid
+				.row
+					.col-lg-6.offset-lg-1.push-lg-5
+
+
+						.news__sticky.js-sticky
+
+							a(href="#").news__item.news__item--dark
+								figure.news__item-image
+									img(src="img/pic-news-4.png", alt="")
+								
+								.news__item-desc
+									.row
+										.col-sm-10.offset-sm-1
+										
+											h3.news__item-title Оснащение гостевых зон и ресторанного комплекса <b>нового бизнес-отеля Sheraton</b>
+											p.news__item-text Многие на личном опыте знают, что такое «комната-пенал» или как говорят дизайнеры «эффект трамвая». Места много — поставить ничего нельзя. AVALON взялись решить эту задачу на отдельно взятой даче. Что же получилось? А получились раздвижные стены, гостиная и кухня с барной стойкой. Все в современном ритме: фрески, пробковые полы, натяжные потолки, камень и деревья, травы, цветы!
+							
+							.row
+								.col-11.offset-1
+									a(href="#").news__load загрузить еще
+
+					.col-sm-8.offset-sm-1.col-lg-4.offset-lg-1.pull-lg-7
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="img/pic-news-1.png", alt="")
+							h3.news__item-title Оснащение зоны питания LOREAL в Калужской области
+							p.news__item-text Коллекция мягкой мебели LOFT — это смелое гармоничное сочетание современного дизайна с чертами индустриального прошлого. Минимум изысков и продуманная эргономика сделали эту мебель востребованной и популярной.
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="img/pic-news-2.png", alt="")
+							h3.news__item-title Компания AVALON поставила мебель в отель Rodina
+							p.news__item-text В процессе реновации номеров отеля, руководством компании осуществлялся поиск подрядчика, способного поставить качественную продукцию для отеля.
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="img/pic-news-3.png", alt="")
+							h3.news__item-title Новый проект мебели для дома Avalonhome
+							p.news__item-text Стулья «Чикаго Люкс» в тонировке «тёмный орех» и «Сиэтл» с отделкой декоративными гвоздиками и прошитые контрастными нитями, в тандеме с диванами «Аояма» обеспечивают удобную посадку и комфортную атмосферу зоны лобби.
+
+						
+			
+
+	// News :: End

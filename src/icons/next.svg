@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="13px" viewBox="0 0 21 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="avalon_hp_dt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-799.000000, -3212.000000)">
+        <g id="portfolio" transform="translate(0.000000, 2320.000000)" fill="currentColor">
+            <g id="slider" transform="translate(19.000000, 873.000000)">
+                <g id="arrow-right" transform="translate(790.500000, 25.500000) scale(-1, 1) translate(-790.500000, -25.500000) translate(780.000000, 19.000000)">
+                    <rect id="Rectangle-5" x="1" y="5" width="20" height="2"></rect>
+                    <rect id="Rectangle-5" transform="translate(3.535534, 3.535534) rotate(-45.000000) translate(-3.535534, -3.535534) " x="-0.464466094" y="2.53553391" width="8" height="2"></rect>
+                    <rect id="Rectangle-5" transform="translate(3.535534, 8.535534) rotate(-315.000000) translate(-3.535534, -8.535534) " x="-0.464466094" y="7.53553391" width="8" height="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

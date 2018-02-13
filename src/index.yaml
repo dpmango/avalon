@@ -1,0 +1,7 @@
+ProjectTitle: Avalon
+
+PageList:
+- file: homepage.html
+  ready: 100
+- file: page.html
+  ready: 0

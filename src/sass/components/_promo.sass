@@ -1,0 +1,29 @@
+// Promo
+
+.promo
+	position: relative
+	margin: 0 0 45px
+	.container
+		padding: 0 20px
+	.row
+		margin: 0
+		z-index: 10
+		position: relative
+		& > [class^="col"]
+			padding: 0
+			&:nth-child(2)
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					width: 100vw
+					background: #f6f6f6
+					z-index: -1
+
+	+rmin($desktop)
+		margin: 0
+
+	

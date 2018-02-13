@@ -1,0 +1,451 @@
+// HEADER
+
+.page
+	padding: 60px 0 0
+	+rmin($tablet)
+		padding: 140px 0 0
+
+
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+	height: 60px
+	background: #fff
+	transition: 0.25s
+	backface-visibility: hidden
+	width: 100%
+	.container
+		position: relative
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 60px
+		background: #fff
+		z-index: -1
+		transition: inherit
+		// margin: 0 0 0 -1px
+
+	+rmin($tablet)
+		&:after
+			left: 320px
+	+rmin($xl)
+		&:after
+			left: 50%
+		
+
+	
+	
+
+
+// ------
+
+
+.logo
+	position: absolute
+	top: 10px
+	left: 10px
+	font-size: 40px
+	a
+		display: inline-block
+		vertical-align: top
+		position: relative
+		z-index: 20
+		color: #fff
+	+rmin($tablet)
+		font-size: 60px
+		top: 20px
+		left: 20px
+
+
+// ------
+
+
+
+.btn--nav
+    display: block
+    width: 40px
+    height: 40px
+    background: #252525
+    padding: 0
+    border: none
+    border-left: 1px solid #fff
+    position: absolute
+    top: 0
+    left: 100%
+    cursor: pointer
+    z-index: 10
+
+
+    span
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 20px
+        height: 2px
+        background: #fff
+        margin: -1px 0 0 -10px
+        transition: 0.25s
+        &:nth-child(1)
+            transform: translate(0,-7px)
+        &:nth-child(3)
+            transform: translate(0,7px)
+    &:hover span
+        background: #c43939
+
+    +rmin($tablet)
+    	width: 60px
+    	height: 60px
+    	span
+    		width: 30px
+    		height: 3px
+    		margin: -1.5px 0 0 -15px
+    		&:nth-child(1)
+    			transform: translate(0,-11px)
+    		&:nth-child(3)
+    			transform: translate(0,11px)
+    +rmin($xl)
+    	transform: translate(-60px,0)
+     	opacity: 0
+     	visibility: hidden
+
+
+// ------
+
+.nav
+	transition: 0.25s
+	font-size: 15px
+	line-height: 30px
+	font-weight: 900
+	text-transform: uppercase
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	// width: 100%
+	padding: 0 30px 42px 59px
+	z-index: 200
+	opacity: 0
+	visibility: hidden
+	max-height: calc(100vh - 40px)
+	overflow-x: hidden
+	overflow-y: auto
+	&::-webkit-scrollbar
+    	display: none
+
+	+rmin($tablet)
+		top: 0
+		left: 320px
+		right: 60px
+		// margin: 0 0 0 -59px
+		max-width: 400px
+		background: none
+		box-shadow: none
+	+rmin($xl)
+		opacity: 1
+		visibility: visible
+		left: 25%
+		margin-left: -39px
+
+	// box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+
+.nav__menu
+	margin: 0
+	padding: 0
+	letter-spacing: normal
+	display: flex
+	flex-wrap: wrap
+	max-width: 300px
+	& > li
+		margin: 0
+		width: 50%
+		padding: 10px 0
+
+.nav__link
+	display: block
+	color: #252525
+	transition: 0.25s
+	&:hover
+		color: #c43939
+
+
+// -----
+
+.nav__collapse
+	width: 200%
+	font-size: 15px
+	line-height: 15px
+	font-weight: 400
+	text-transform: none
+	padding: 26px 0 22px
+	display: none
+	.row
+		margin: 0 -10px
+		& > [class^="col-"]
+			padding: 0 10px;
+
+
+.nav__collapse-menu
+	margin: 0
+	padding: 0
+	letter-spacing: normal
+	& > li
+		padding: 0 0 14px
+		display: block
+
+.nav__collapse-link
+	display: block
+	color: #252525
+	transition: 0.25s
+	&:hover
+		color: #c43939
+
+
+// ------
+
+.phone
+	margin: 0
+	padding: 10px 20px
+	font-size: 25px
+	line-height: 40px
+	font-weight: 900
+	transition: 0.25s
+	overflow: hidden
+	display: none
+	+rmin($tablet)
+		display: block
+		position: absolute
+		top: 0
+		left: 320px
+	+rmin($xl)
+		left: 58.33333%
+
+
+
+
+.phone__number
+	position: relative
+	display: block
+	color: #252525
+	transition: 0.25s
+	&:nth-child(1)
+		z-index: 2
+	&:nth-child(2)
+		z-index: 1
+
+// ------
+
+.search
+	position: absolute
+	top: 0
+	height: 50px
+	padding: 0
+	// right: 67px
+	right: 10px
+	width: 25px
+	z-index: 20
+	background: #fff
+	transition: 0.25s
+	z-index: 100
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: -5px
+		left: -10px
+		right: -10px
+		bottom: -10px
+		background: #fff
+		z-index: -1
+		display: none
+	
+	// &:before 
+	// 	content: ''
+	// 	display: block
+	// 	position: absolute
+	// 	top: 100%
+	// 	width: 100%
+	// 	background: #fff
+	// 	height: 5px
+	// &:after
+	// 	content: ''
+	// 	display: block
+	// 	position: absolute
+	// 	bottom: 0
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 3px
+	// 	background: #252525
+	// 	z-index: 10
+	+rmin($tablet)
+		height: 80px
+		padding: 0
+		right: 20px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			height: 5px
+			background: #fff
+	+rmin($xl)
+		// padding: 0 60px
+		right: 66px
+
+
+.search__input
+	transition: 0.25s
+	display: block
+	height: 50px
+	padding: 10px 0
+	width: 100%
+	font: 900 20px/20px $fontBase
+	color: #252525
+	border: none
+	z-index: 5
+	margin: 0
+	border-bottom: 3px solid #252525
+	// opacity: 0
+	// visibility: hidden
+	text-indent: -9999px
+	&::placeholder
+		color: rgba(37, 37, 37, 0.25)
+	+rmin($tablet)
+		height: 80px
+		padding: 20px 0
+		font-size: 25px
+		line-height: 40px
+
+	
+
+
+.search__btn
+	display: block
+	padding: 0
+	background: none
+	font-size: 25px
+	line-height: 1
+	height: 100%
+	width: 25px
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 10
+	background: none
+	cursor: pointer
+	transition: 0.25s
+	color: #252525
+
+	.ico
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translate(0,-50%)
+	&:hover
+		color: #c43939
+	+rmin($tablet)
+		right: 0
+	+rmin($xl)
+		top: -8px
+
+
+
+
+// ------
+
+
+.is-searchOpen
+	.search
+		width: 100%
+		+rmin($tablet)
+			width: calc(100% - 360px)
+		+rmin($xl)
+			width: calc(41.66667% - 86px)
+
+	.search__input
+		opacity: 1
+		visibility: visible
+		text-indent: 0
+
+
+
+
+
+
+.is-headerFixed
+	
+	.header
+		background: none
+		height: 60px
+	.btn--nav
+		transform: translate(0,0)
+		opacity: 1
+		visibility: visible
+	.logo
+		border-color: #fff
+	.search
+		height: 50px
+		&:after, &:before
+	.search__btn
+		top: -3px
+	.search__input
+		height: 50px
+	.nav
+		opacity: 0
+		visibility: hidden
+		transform: translate(0,-20px)
+
+	.phone__number
+		height: 40px
+		&:nth-child(2)
+			opacity: 0
+			visibility: hidden
+			transform: translate(0,-40px)
+
+
+
+
+.is-navOpen
+	overflow: hidden
+	+rmin($tablet)
+		overflow: visible
+	.btn--nav
+		span
+			&:nth-child(1)
+				transform: translate(0,0) rotate(45deg)
+			&:nth-child(2)
+				opacity: 0
+			&:nth-child(3)
+				transform: translate(0,0) rotate(-45deg)
+
+	
+
+
+.is-navOpen
+	.nav
+		opacity: 1
+		visibility: visible
+		transform: translate(0,0)
+		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+		background: #fff
+
+
+// 	.nav
+// 		background: #fff
+// 		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+// 		opacity: 1
+// 		visibility: visible
+
+
+
+

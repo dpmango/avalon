@@ -1,0 +1,232 @@
+// News
+
+.news
+	+rmin($desktop)
+		padding: 96px 0 0
+
+.news__heading
+	@extend .heading
+	+rmin($xl)
+		margin: 0 0 110px -8px
+
+.news__grid
+	position: relative
+	z-index: 10
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		width: 120vw
+		margin: 0 -30px 0 0
+		// margin: 0 0 0 -70vw
+		background: #f2f1ed
+		z-index: -1
+	.row > [class^="col"]
+		position: static
+
+	+rmin($mobile)
+		&:after
+			right: 16.666%
+			margin: 0
+		// &:after
+		// 	left: auto
+		// 	margin: 0 -30px 0 0
+		// 	right: 17.666%
+	+rmin($tablet)
+		margin: 0 0 60px
+	+rmin($desktop)
+		background: none
+		padding: 0 0 55px
+		margin: 0
+		&:after
+			right: 50%
+		// &:after
+		// 	width: 50vw
+		// 	left: -50%
+		// 	margin: 0
+
+		
+
+		.row > [class^="col"]
+			position: relative
+
+
+
+
+
+
+.news__item
+	display: block
+	position: relative
+	padding: 30px 0
+	&:last-of-type
+		&:after
+			display: none
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 2px
+		right: 0
+		width: 560px
+		height: 3px
+		background: #252525
+	&:hover
+		.news__item-image
+		    box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.5)
+		.news__item-title
+			color: #c43939
+	+rmin($tablet)
+		padding: 60px 0
+	+rmin($desktop)
+		max-width: 440px
+		margin: 0 auto
+		// padding: 60px 0
+
+.news__item-image
+	margin: 0 0 16px
+	overflow: hidden
+	position: relative
+	transition: 0.25s
+
+	&:before
+		content: ''
+		display: block
+		float: left
+		padding: 60.3% 0 0
+	img
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+	+rmin($desktop)
+		margin: 0 0 20px
+
+
+.news__item-title
+	font-size: 23px
+	line-height: 25px
+	font-weight: 900
+	margin: 0 0 17px
+	transition: 0.25s
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 30px
+		margin: 0 0 19px
+	+rmin($desktop)
+		margin: 0 0 15px
+
+
+.news__item-text
+	margin: 0
+	font-size: 15px
+	line-height: 20px
+	+rmin($tablet)
+		font-size: 18px
+		line-height: 25px
+
+
+// -----
+
+.news__item--dark
+	max-width: none
+	background: #252525
+	color: #fff
+	padding: 0
+	transition: 0.25s
+	&:after
+		display: none
+
+	.news__item-image
+		margin: 0
+		&:before
+			padding: 53.6% 0 0
+	
+	+rmin($tablet)
+		.news__item-title
+			font-size: 40px
+			line-height: 50px
+			font-weight: 400
+			margin: 0 0 45px
+			b
+				font-weight: 900
+
+		.news__item-text
+			font-size: 20px
+			line-height: 25px
+	
+	+rmin($xl)
+		.news__item-title
+			font-size: 50px
+			line-height: 60px
+			font-weight: 400
+			margin: 0 20px 37px 0
+			
+		.news__item-text
+			font-size: 25px
+			line-height: 35px
+			max-width: 560px
+
+
+.news__item-desc
+	padding: 25px 30px 30px
+	+rmin($tablet)
+		padding: 30px 30px 55px
+	+rmin($desktop)
+		padding-left: 0
+		padding-right: 0
+	+rmin($xl)
+		padding: 54px 0 72px 18px
+		// padding: 56px 82px 72px 78px
+
+
+.news__load
+	display: inline-block
+	vertical-align: top
+	font-size: 15px
+	line-height: 1
+	font-weight: 900
+	color: #252525
+	padding: 6px 0 8px
+	border-bottom: 3px solid #252525
+	margin: 20px 0
+	transition: 0.25s
+	position: absolute
+	top: 100%
+	left: 0
+	&:hover
+		color: #c43939
+
+	+rmin($mobile)
+		left: 8.333%
+
+	+rmin($tablet)
+		font-size: 20px
+		margin: 45px 0
+
+	+rmin($desktop)
+		position: relative
+		top: 0
+		left: 0
+		font-size: 25px
+		margin: 108px 0 55px
+	+rmin($xl)
+		margin-left: 77px
+		// margin: 108px 0 110px 140px
+
+// -----
+
+.news__sticky
+	margin: 0 -30px
+	+rmin($desktop)
+		margin: 0 -20px
+
+
+// -----
+

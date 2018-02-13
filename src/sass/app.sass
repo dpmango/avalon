@@ -1,0 +1,58 @@
+@import utilities/variables
+@import utilities/mixins
+
+@import vendor/normalize
+@import vendor/slick
+@import bower_components/magnific-popup/dist/magnific-popup
+
+@import layout/font
+@import layout/typography
+@import layout/grid
+@import layout/general
+
+@import generated/sprite-png
+@import generated/sprite-svg
+
+@import elements/buttons
+@import elements/icons
+@import elements/modal
+@import elements/ui
+@import elements/wow
+
+@import components/slides
+
+@import components/header
+@import components/footer
+
+@import components/promo
+@import components/catalog
+@import components/portfolio
+@import components/news
+
+
+
+
+
+
+.js-toggle, .js-width
+	display: block
+	position: fixed
+	left: 0
+	bottom: 10px
+	padding: 0 20px
+	font-weight: 900
+	line-height: 40px
+	height: 40px
+	background: #000
+	z-index: 100000
+	color: #fff
+	width: 100px
+
+.js-width
+	bottom: 60px
+	display: none
+
+
+.promo, .portfolio, .news
+	.container
+		// max-width: 1920px
