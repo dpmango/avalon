@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/filter icon white phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="avalon_ct_ph" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-335.000000, -173.000000)">
+        <g id="filter" transform="translate(325.000000, 165.000000)">
+            <g id="icons/filter-icon-white-phone" transform="translate(10.000000, 9.000000)">
+                <rect id="Rectangle" fill="#000" x="0" y="1" width="20" height="2"></rect>
+                <rect id="Rectangle" fill="#000" x="0" y="10" width="20" height="2"></rect>
+                <rect id="Rectangle" fill="#000" x="0" y="19" width="20" height="2"></rect>
+                <circle id="Oval-2" stroke="#000" stroke-width="2" fill="#999999" cx="3" cy="2" r="2"></circle>
+                <circle id="Oval-2" stroke="#000" stroke-width="2" fill="#999999" cx="17" cy="11" r="2"></circle>
+                <circle id="Oval-2" stroke="#000" stroke-width="2" fill="#999999" cx="10" cy="20" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

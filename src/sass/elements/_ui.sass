@@ -1,70 +1,102 @@
 // UI
 
+.ui__fieldset
+    display: block
+    margin: 0
+    padding: 0
+    border: none
 
-// THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
-.ui-input
-  display: block
-  width: 100%
-  -webkit-appearance: none
-  background: white
-  color: $grayColor
-  border: 1px solid $borderColor
-  border-radius: 4px
-  padding: 12px 15px
+.ui__legend
+    display: block
+    font-weight: 900
+
+.ui__label
 
 
-// Checkbox
-.ui-checkbox
-  input
-    display: none
-    width: 0.1px
-    height: 0.1px
-    opacity: 0
+.ui__check
+    display: block
+    position: relative
+    cursor: pointer
+
+.ui__check-input
     position: absolute
     top: 0
     left: 0
-    &:checked
-      + label
-        &::before
-          border-color: $colorGreen
-        &::after
-          transform: translateY(-50%) scale(1)
-  label
+    opacity: 0
+    visibility: hidden
+    &:checked ~ .ui__checkbox
+
+.ui__checkbox
     display: block
-    width: 100%
-    position: relative
-    cursor: pointer
-    &::before
-      position: absolute
-      left: 0
-      top: 50%
-      transform: translateY(-50%)
-      display: inline-block
-      content: ' '
-      size: 20px
-      background-color: white
-      border: 1px solid #AFB7C0
-      border-radius: 4px
-      cursor: pointer
-      vertical-align: middle
-      cursor: pointer
-      transition: all $transitionSpeed ease-in-out
-    &::after
-      position: absolute
-      left: 1px
-      top: 50%
-      transform: translateY(-50%) scale(0)
-      display: inline-block
-      content: ' '
-      size: 20px
-      // background-image: svg-load('../../images/svg/checkbox.svg')
-      background-repeat: no-repeat
-      background-position: center
-      transition: transform .2s ease
-    span
-      display: inline-block
-      padding-left: 35px
-      vertical-align: top
-      line-height: 1.3
-      font-size: 14px
-      cursor: pointer
+    width: 20px
+    height: 20px
+    border: 2px solid #252525
+    
+
+// THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
+// .ui-input
+//   display: block
+//   width: 100%
+//   -webkit-appearance: none
+//   background: white
+//   color: $grayColor
+//   border: 1px solid $borderColor
+//   border-radius: 4px
+//   padding: 12px 15px
+
+
+// // Checkbox
+// .ui-checkbox
+//   input
+//     display: none
+//     width: 0.1px
+//     height: 0.1px
+//     opacity: 0
+//     position: absolute
+//     top: 0
+//     left: 0
+//     &:checked
+//       + label
+//         &::before
+//           border-color: $colorGreen
+//         &::after
+//           transform: translateY(-50%) scale(1)
+//   label
+//     display: block
+//     width: 100%
+//     position: relative
+//     cursor: pointer
+//     &::before
+//       position: absolute
+//       left: 0
+//       top: 50%
+//       transform: translateY(-50%)
+//       display: inline-block
+//       content: ' '
+//       size: 20px
+//       background-color: white
+//       border: 1px solid #AFB7C0
+//       border-radius: 4px
+//       cursor: pointer
+//       vertical-align: middle
+//       cursor: pointer
+//       transition: all $transitionSpeed ease-in-out
+//     &::after
+//       position: absolute
+//       left: 1px
+//       top: 50%
+//       transform: translateY(-50%) scale(0)
+//       display: inline-block
+//       content: ' '
+//       size: 20px
+//       // background-image: svg-load('../../images/svg/checkbox.svg')
+//       background-repeat: no-repeat
+//       background-position: center
+//       transition: transform .2s ease
+//     span
+//       display: inline-block
+//       padding-left: 35px
+//       vertical-align: top
+//       line-height: 1.3
+//       font-size: 14px
+//       cursor: pointer

@@ -1,0 +1,35 @@
+// Breadcrumbs
+
+.breadcrumbs
+	margin: 0 0 27px
+	padding: 0
+	letter-spacing: normal
+	font-size: 12px
+	line-height: 15px
+	& > li
+		display: inline-block
+		vertical-align: top
+		position: relative
+		padding: 0 20px 0 0
+		&:after
+			content: ' → '
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			width: 20px
+			text-align: center
+		&:last-child:after
+			display: none
+		&:first-child .breadcrumbs__link
+			border-color: #202020
+
+
+.breadcrumbs__link
+	display: block
+	color: #202020
+	border-bottom: 1px solid transparent
+	transition: 0.25s
+	&:hover
+		color: #C43939
+		border-color: #202020

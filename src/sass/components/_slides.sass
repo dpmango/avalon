@@ -227,6 +227,13 @@
 	margin: 0 60px 0 -20px
 	transition: 0.25s
 	background: #252525
+
+	.slick-slide .slides-v__item-in
+		transform: translate(0,100%)
+		opacity: 0
+	.slick-active .slides-v__item-in
+		transform: translate(0,0)
+		opacity: 1
 	.slick-arrow
 		display: block
 		display: flex
@@ -298,11 +305,15 @@
 	+rmin($tablet)
 		padding: 33px 53px 43px 57px
 	+rmin($desktop)
+		padding: 54px 83px 81px 78px
+	+rmin($xl)
 		min-height: 410px
-		padding: 54px 83px 41px 78px
+		padding-bottom: 41px
 	
 .slides-v__item-in
 	width: 100%
+	position: relative
+	transition: 0.4s cubic-bezier(1, 0, 0, 1)
 
 .slides-v__title
 	display: block
@@ -348,16 +359,19 @@
 	transition: 0.25s
 	opacity: 0
 	transform: translate(0,180px)
+	position: absolute
+	left: 0
+	bottom: 0
 	+rmin($tablet)
 		font-size: 20px
-		position: absolute
-		bottom: 43px
-		left: 57px
+		// position: absolute
+		// bottom: 43px
+		// left: 57px
 		
 	+rmin($desktop)
 		font-size: 25px
-		left: 81px
-		bottom: 80px
+		// left: 81px
+		// bottom: 80px
 		
 	
 
@@ -373,6 +387,7 @@
 	min-width: 100%
 	transition: 0.25s
 	margin: 0 0 58px
+	background: #252525
 	&:after
 		content: ''
 		display: block
@@ -437,6 +452,7 @@
 .slides-portfolio__item
 	display: block
 	position: relative
+
 
 
 .slides-portfolio__image

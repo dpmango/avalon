@@ -1,7 +1,8 @@
 // HEADER
 
 .page
-	padding: 60px 0 0
+	// padding: 60px 0 0
+	padding: 100px 0 0
 	+rmin($tablet)
 		padding: 140px 0 0
 
@@ -20,6 +21,7 @@
 	width: 100%
 	.container
 		position: relative
+		min-height: 100%
 	&:after
 		content: ''
 		display: block
@@ -36,7 +38,7 @@
 	+rmin($tablet)
 		&:after
 			left: 320px
-	+rmin($xl)
+	+rmin($desktop)
 		&:after
 			left: 50%
 		
@@ -53,6 +55,8 @@
 	top: 10px
 	left: 10px
 	font-size: 40px
+	.ico
+		border-right: 1px solid #fff
 	a
 		display: inline-block
 		vertical-align: top
@@ -76,7 +80,7 @@
     background: #252525
     padding: 0
     border: none
-    border-left: 1px solid #fff
+
     position: absolute
     top: 0
     left: 100%
@@ -197,6 +201,7 @@
 	margin: 0
 	padding: 0
 	letter-spacing: normal
+
 	& > li
 		padding: 0 0 14px
 		display: block
@@ -218,14 +223,15 @@
 	line-height: 40px
 	font-weight: 900
 	transition: 0.25s
-	overflow: hidden
+	// overflow: hidden
 	display: none
 	+rmin($tablet)
 		display: block
 		position: absolute
 		top: 0
 		left: 320px
-	+rmin($xl)
+		height: 40px
+	+rmin($desktop)
 		left: 58.33333%
 
 
@@ -298,7 +304,7 @@
 			right: 0
 			height: 5px
 			background: #fff
-	+rmin($xl)
+	+rmin($desktop)
 		// padding: 0 60px
 		right: 66px
 
@@ -310,16 +316,19 @@
 	padding: 10px 0
 	width: 100%
 	font: 900 20px/20px $fontBase
-	color: #252525
+	color: transparent
 	border: none
 	z-index: 5
 	margin: 0
 	border-bottom: 3px solid #252525
+	position: relative
+	// transition-delay: 0.25s
 	// opacity: 0
 	// visibility: hidden
-	text-indent: -9999px
+	// text-indent: -9999px
 	&::placeholder
-		color: rgba(37, 37, 37, 0.25)
+		transition: inherit
+		color: rgba(37, 37, 37, 0)
 	+rmin($tablet)
 		height: 80px
 		padding: 20px 0
@@ -337,6 +346,7 @@
 	line-height: 1
 	height: 100%
 	width: 25px
+	// background: #fff
 	position: absolute
 	top: 0
 	right: 0
@@ -366,16 +376,23 @@
 
 .is-searchOpen
 	.search
-		width: 100%
+		width: calc(100% - 20px)
 		+rmin($tablet)
 			width: calc(100% - 360px)
-		+rmin($xl)
+		+rmin($desktop)
 			width: calc(41.66667% - 86px)
 
 	.search__input
 		opacity: 1
 		visibility: visible
 		text-indent: 0
+		color: #252525
+		
+		&::placeholder
+			color: rgba(37, 37, 37, 0.25)
+
+
+			
 
 
 
@@ -396,8 +413,7 @@
 	.search
 		height: 50px
 		&:after, &:before
-	.search__btn
-		top: -3px
+	
 	.search__input
 		height: 50px
 	.nav
@@ -411,6 +427,9 @@
 			opacity: 0
 			visibility: hidden
 			transform: translate(0,-40px)
+	+rmin($tablet)
+		.search__btn
+			top: -3px
 
 
 

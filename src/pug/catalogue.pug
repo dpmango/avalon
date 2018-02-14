@@ -1,0 +1,413 @@
+---
+title: Каталог - Avalon
+bodyClass: page-catalog
+---
+extends shared/_layout
+block content
+	
+	#grid
+	.js-toggle Grid
+
+	// Catalog :: Start
+	.catalog
+		.container
+
+			.row
+				.col-sm-11.offset-sm-1
+
+
+					.catalog__head
+
+						h1 Мебель для конференц-залов
+
+						ul.breadcrumbs
+							li
+								a(href="#").breadcrumbs__link Главная 
+							li
+								a(href="#").breadcrumbs__link Каталог 
+							li
+								a(href="#").breadcrumbs__link Мебель для конференц-залов
+
+
+					.catalog__main
+
+						button.btn.btn--categories
+							+icon('ico-categories')
+						button.btn.btn--filter
+							+icon('ico-filter')
+
+						.catalog__content
+
+							
+							.catalog__ctrl
+								.row
+									.col-6
+
+										.catalog__sorting
+											button.catalog__sorting-trigger сортировка<span>: по убыванию цены</span>
+											.catalog__sorting-dropdown
+												label.ui__check
+													input(type="radio" name="sorting" checked).ui__check-input
+													span.ui__check-btn по убыванию цены
+												label.ui__check
+													input(type="radio" name="sorting" checked).ui__check-input
+													span.ui__check-btn по возрастанию цены
+												label.ui__check
+													input(type="radio" name="sorting" checked).ui__check-input
+													span.ui__check-btn по популярности
+												label.ui__check
+													input(type="radio" name="sorting" checked).ui__check-input
+													span.ui__check-btn по популярности
+
+									.col-6
+										
+										.catalog__display
+
+											label.ui__check
+												input(type="radio" name="display").ui__check-input
+												span.ui__check-link 8
+
+											label.ui__check
+												input(type="radio" name="display").ui__check-input
+												span.ui__check-link 12
+
+											label.ui__check
+												input(type="radio" name="display" checked).ui__check-input
+												span.ui__check-link 18
+
+											label.ui__check
+												input(type="radio" name="display").ui__check-input
+												span.ui__check-link все
+											
+
+
+							.catalog__grid
+
+								.row
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-1.png", alt="")
+											h2.catalog__item-title Кресло 3402B
+											p.catalog__item-price 3560 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-2.png", alt="")
+											h2.catalog__item-title Кресло Денди
+											p.catalog__item-price 4200 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-3.png", alt="")
+											h2.catalog__item-title Кресло 0623B
+											p.catalog__item-price 5360 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-4.png", alt="")
+											h2.catalog__item-title Кресло орион
+											p.catalog__item-price 4800 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-5.png", alt="")
+											h2.catalog__item-title Кресло красное
+											p.catalog__item-price 8750 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-6.png", alt="")
+											h2.catalog__item-title Кресло 6811bm
+											p.catalog__item-price 2340 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-7.png", alt="")
+											h2.catalog__item-title Кресло эмилия
+											p.catalog__item-price 6670 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-8.png", alt="")
+											h2.catalog__item-title Кресло 6811bm
+											p.catalog__item-price 5250 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-9.png", alt="")
+											h2.catalog__item-title Складной стол 1206NM
+											p.catalog__item-price 8300 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-10.png", alt="")
+											h2.catalog__item-title Стул 3302GM
+											p.catalog__item-price 1250 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-11.png", alt="")
+											h2.catalog__item-title Складной стол 1202NM
+											p.catalog__item-price 10000 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-12.png", alt="")
+											h2.catalog__item-title Стул 1404GM
+											p.catalog__item-price 3400 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-13.png", alt="")
+											h2.catalog__item-title Стул 1405GM
+											p.catalog__item-price 3500 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-14.png", alt="")
+											h2.catalog__item-title Стул 1406GM
+											p.catalog__item-price 2900 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-15.png", alt="")
+											h2.catalog__item-title Складной стул 6420NM
+											p.catalog__item-price 4200 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+									.col-xl-3
+							
+										a(href="#").catalog__item
+											figure.catalog__item-image
+												img(src="img/pic-16.png", alt="")
+											h2.catalog__item-title 6416NM
+											p.catalog__item-price 5800 ₽
+											ul.catalog__item-desc
+												li Размеры (см): <b>160х87х99</b>
+												li Вес: <b>5.5 кг</b>
+												li Наличие: <b>есть</b>
+
+							.catalog__load
+								a(href="#").btn.btn--load загрузить еще
+
+						.catalog__filter
+
+							form(action="#")
+
+								fieldset.ui__fieldset
+
+									legend.ui__legend Фильтр
+
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Столы
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Кресла
+						
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Стулья
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Пуфы
+
+
+
+								
+									label.ui__label Материал
+
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Дерево
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Металл
+						
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Пластик
+
+
+
+									label.ui__label Цвет
+
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Черный
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Белый
+						
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										| Красный
+
+
+								.catalog__filter-all
+									button.btn.btn--link все параметры
+
+
+								fieldset.ui__fieldset
+
+									legend.ui__legend Подразделы
+										
+									label.ui__check
+										input(type="radio" name="subsections").ui__check-input
+										span.ui__check-btn Вся мебель
+
+									label.ui__check
+										input(type="radio" name="subsections").ui__check-input
+										span.ui__check-btn Складная мебель
+
+									label.ui__check
+										input(type="radio" name="subsections").ui__check-input
+										span.ui__check-btn Стулья для сцен
+
+									label.ui__check
+										input(type="radio" name="subsections").ui__check-input
+										span.ui__check-btn Мягкая мебель для сцен
+
+									label.ui__check
+										input(type="radio" name="subsections").ui__check-input
+										span.ui__check-btn Деревянная мебель
+
+
+	// Catalog :: End
+
+
+	// Seo :: Start
+	
+	.seo
+		.container
+			.row
+				.col-sm-11.offset-sm-1
+
+					h2.seo__heading Покупка мебели для конференц-залов
+
+					.row
+						.col-lg-5
+
+							.seo__desc
+								p Многие на личном опыте знают, что такое «комната-пенал» или как говорят дизайнеры «эффект трамвая». Места много — поставить ничего нельзя. AVALON взялись решить эту задачу на отдельно взятой даче. Что же получилось? А получились раздвижные стены, гостиная и кухня с барной стойкой. Все в современном ритме: фрески, пробковые полы, натяжные потолки, камень и деревья, травы, цветы! 
+
+								p Мебель и столы для переговорных комнат компания «Авалон» предлагает широкий выбор мебели для переговорных комнат и конференц-залов по выгодной цене с доставкой по Москве!<br>Мы ждем вас в магазинах фабрики «Авалон». 
+
+								p Как успешно провести переговоры любого уровня и добиться поставленной цели? Обеспечьте своим собеседникам максимальный комфорт. Это можно сделать при помощи правильного оформления интерьера, выбора удобной мебели и создания общей приятной атмосферы в переговорной комнате. Для начала при обустройстве переговорной комнаты обратите 
+							
+
+						.col-lg-7
+							
+							figure.seo__image
+								img(src="img/pic-seo-1.png", alt="")
+
+	// Seo :: End
+
+	

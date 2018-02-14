@@ -15,8 +15,7 @@ $(document).ready(function(){
 
     // Header
 
-
-    $(window).on('scroll', function(event) {
+    function headerStyle() {
         var offset = 0,
             offsetScroll = $(window).scrollTop();
 
@@ -26,6 +25,12 @@ $(document).ready(function(){
         else {
             $('html').removeClass('is-headerFixed');
         }
+    }
+
+    headerStyle();
+
+    $(window).on('scroll', function(event) {
+        headerStyle();
     });
 
 
@@ -67,11 +72,30 @@ $(document).ready(function(){
     $(document).on('click', function(e) {
         if($(e.target).closest('.js-search').length == 0) {
            $('html').removeClass('is-searchOpen');
+           // ('.js-search-input').trigger('focusout');
     
         }
     });
 
 
+
+
+    // Sticky
+
+    $('.js-sticky').stick_in_parent({
+        offset_top: 0
+    });
+
+
+    $(window).on('resize', function(event) {
+       $('.js-sticky').trigger("sticky_kit:recalc");
+    });
+
+
+
+    // ScrollMagic
+
+    // var controller = new ScrollMagic.Controller();
 
 
 
@@ -175,18 +199,6 @@ $(document).ready(function(){
 
 
 
-
-    // Sticky
-
-    // $('.js-sticky').stick_in_parent({
-    //     offset_top: 0,
-    //     inner_scrolling: true
-    // });
-
-
-    // $(window).on('resize', function(event) {
-    //    $('.js-sticky').trigger("sticky_kit:recalc");
-    // });
 
 
 

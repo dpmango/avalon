@@ -69,7 +69,7 @@ gulp.task('sass', function() {
         includePaths : [config.src.sass]
     }))
     .on('error', config.errorHandler)
-    // .pipe(postcss(processors))
+    .pipe(postcss(processors))
     .pipe(config.production ? util.noop() : sourcemaps.write('.'))
     .pipe(config.production ? postcss([cssnano(cssNanoParams)]) : util.noop())
     .pipe(gulp.dest(config.dest.css))

@@ -1,117 +1,111 @@
 // Catalog
 
 .catalog
-	padding: 0 0 40px
-	+rmin($desktop)
-		padding: 0 0 180px
 
-.catalog__heading
-	@extend .heading
-
-
-.catalog__grid
-	margin: 0 -20px
-	.row
-		margin: 0 -10px
-		& > [class^="col"]
-			padding: 0 10px
-	+rmin($tablet)
-		margin: 0
-	+rmin($desktop)
-		.row
-			margin: 0 -20px
-			& > [class^="col"]
-				padding: 0 20px
-
-.catalog__item
+.catalog__head
 	position: relative
-	display: block
-	font-size: 15px
-	line-height: 20px
-	font-weight: 900
-	text-transform: uppercase
-	color: #252525
-	margin: 0 0 56px 20px
-	transition: none
-	&:hover
-		color: #c43939
-		.catalog__item-icon
-			color: inherit
-			&:after
-				left: -20px
+	padding: 0 50px 0 0
 
-		.ico
-			transform: translate(-10px,0)
+.catalog__main
+	display: flex
+	align-items: flex-start
 
-	+rmin($desktop)
-		font-size: 25px
-		line-height: 30px
-		margin: 0 0 56px 120px
-		&:hover
-			.catalog__item-icon:after
-				left: -60px
-			.ico
-				transform: translate(-30px,0)
-
-
-.catalog__item-icon
-	display: block
+.catalog__content
 	position: relative
 	z-index: 10
-	height: 150px
-	display: flex
-	align-items: center
-	justify-content: center
-	margin: 0 0 24px
-	color: #fff
+	flex: 1
+	padding: 40px 60px 40px 0
 	&:after
 		content: ''
 		display: block
 		position: absolute
 		top: 0
-		left: 40px
 		right: 0
 		bottom: 0
+		width: 100vw
 		background: #f2f1ed
 		z-index: -1
+
+.catalog__filter
+	flex: 0 0 220px
+	width: 220px
+	width: 220px
+	margin: 0 0 0 20px
+
+
+// -----
+
+.catalog__item
+	display: block
+	position: relative
+	z-index: 10
+	backface-visibility: hidden
+	margin: 0 0 40px
+	& *
+		backface-visibility: hidden
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: -40px
+		left: -40px
+		right: -40px
+		bottom: -40px
+		background: #fff
+		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+		z-index: -1
 		transition: 0.25s
-	
-	.ico
-		transition: transform 0.25s, color 0.25s
-		transform: translate(-40px,0)
-		position: relative
-		
-	.ico-catalog-1
-		font-size: 67px
-	.ico-catalog-2
-		font-size: 100px
-	.ico-catalog-3
-		font-size: 100px
-	.ico-catalog-4
-		font-size: 100px
-	.ico-catalog-5
-		font-size: 100px
-	.ico-catalog-6
-		font-size: 72px
-	.ico-catalog-7
-		font-size: 100px
-	.ico-catalog-8
-		font-size: 72px
-	.ico-catalog-9
-		font-size: 94px
-	.ico-catalog-10
-		font-size: 100px
-
-
-	+rmin($desktop)
+		opacity: 0
+		visibility: hidden
+	&:hover
+		z-index: 20
 		&:after
-			left: 0
-		.ico
-			transform: translate(-90px,0)
+			opacity: 1
+			visibility: visible
+			top: -40px
+			left: -40px
+			right: -40px
+			bottom: -40px
+		.catalog__item-image
+			border-color: #202020
+			img
+				transform: translate(-50%,-40%) scale(2)
+
+.catalog__item-image
+	position: relative
+	margin: 0 0 20px
+	background: #fff
+	overflow: hidden
+	border: 2px solid transparent
+	transition: 0.25s
+	&:before
+		content: ''
+		float: left
+		padding: 100% 0 0
+	img
+		transition: inherit
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		max-width: 80%
+		max-height: 80%
 
 
-
-
-.catalog__item-text
+.catalog__item-title
+	display: block
 	margin: 0
-	transition: color 0.25s
+
+.catalog__item-price
+	display: block
+	margin: 0
+
+.catalog__item-desc
+	margin: 0
+	padding: 0
+	letter-spacing: normal
+	overflow: hidden
+	max-height: 0
+	& > li
+		display: block

@@ -19,18 +19,24 @@
 @import elements/ui
 @import elements/wow
 
-@import components/slides
+
 
 @import components/header
 @import components/footer
 
+
+// Slides
+@import components/slides
+
+// Homepage
 @import components/promo
-@import components/catalog
+@import components/categories
 @import components/portfolio
 @import components/news
 
-
-
+// Catalog
+@import components/catalog
+@import components/breadcrumbs
 
 
 
@@ -47,6 +53,11 @@
 	z-index: 100000
 	color: #fff
 	width: 100px
+	cursor: pointer
+	transition: 0.25s
+	
+	&:hover
+		background: #C43939
 
 .js-width
 	bottom: 60px
@@ -56,3 +67,21 @@
 .promo, .portfolio, .news
 	.container
 		// max-width: 1920px
+
+
+#grid
+    display: block
+    position: absolute
+    top: 0
+    left: 50%
+    width: 1440px
+    height: 7230px
+    // height: 3065px
+    margin: 0 0 0 -720px
+    z-index: 10000
+    background: url(../img/grid.png) 0 0 no-repeat
+    opacity: 0.5
+    visibility: hidden
+    &.is-active
+        visibility: visible
+

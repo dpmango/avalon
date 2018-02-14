@@ -19,6 +19,10 @@ gulp.task('javascript:vendor', function() {
       path.resolve('bower_components', 'jquery-mask-plugin/dist/jquery.mask.min.js'),
       path.resolve('bower_components', 'sticky-kit/jquery.sticky-kit.min.js'),
       path.resolve('bower_components', 'matchHeight/dist/jquery.matchHeight.js'),
+      // path.resolve('bower_components', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
+      // path.resolve('bower_components', 'scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js'),
+      // path.resolve('bower_components', 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js'),
+
       config.src.js + '/vendor/**/*.js'
      ])
     .pipe(plumber({ errorHandler: config.errorHandler }))
