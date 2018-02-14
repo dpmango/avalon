@@ -3,11 +3,12 @@
 .categories
 	padding: 0 0 40px
 	+rmin($desktop)
-		padding: 0 0 180px
+		padding: 15px 0 180px
 
 .categories__heading
 	@extend .heading
-
+	+rmin($xl)
+		margin-bottom: 92px
 
 .categories__grid
 	margin: 0 -20px
@@ -47,7 +48,7 @@
 	+rmin($desktop)
 		font-size: 25px
 		line-height: 30px
-		margin: 0 0 56px 120px
+		margin: 0 0 52px 120px
 		&:hover
 			.categories__item-icon:after
 				left: -60px
@@ -63,7 +64,7 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	margin: 0 0 24px
+	margin: 0 0 28px
 	color: #fff
 	&:before
 		content: ''
