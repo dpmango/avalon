@@ -8,10 +8,6 @@ $(document).ready(function(){
 
 
 
-    $('.js-width').on('click', function(event) {
-        $('html').toggleClass('is-width');
-    });
-
 
     // Header
 
@@ -62,9 +58,8 @@ $(document).ready(function(){
             $('html').removeClass('is-searchOpen');
         }
         else {
-            $('html').addClass('is-searchOpen').on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
-                $('.js-search-input').focus();
-            });
+            $('html').addClass('is-searchOpen');
+            $('.js-search-input').focus();
         }
     });
 
@@ -82,14 +77,14 @@ $(document).ready(function(){
 
     // Sticky
 
-    $('.js-sticky').stick_in_parent({
-        offset_top: 0
-    });
+    // $('.js-sticky').stick_in_parent({
+    //     offset_top: 0
+    // });
 
 
-    $(window).on('resize', function(event) {
-       $('.js-sticky').trigger("sticky_kit:recalc");
-    });
+    // $(window).on('resize', function(event) {
+    //    $('.js-sticky').trigger("sticky_kit:recalc");
+    // });
 
 
 
@@ -97,7 +92,13 @@ $(document).ready(function(){
 
     // var controller = new ScrollMagic.Controller();
 
-
+    // var rellax = new Rellax('.js-rellax', {
+    //     speed: -0.2,
+    //     center: false,
+    //     round: true,
+    //     vertical: true,
+    //     horizontal: false
+    // });
 
 
     // Slides
@@ -111,7 +112,7 @@ $(document).ready(function(){
         dots: false,
         arrows: false,
         asNavFor: '.js-slides-h, .js-slides-v',
-        cssEase: 'cubic-bezier(1, 0, 0, 1)',
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
         mobileFirst: true,
         responsive: [
             {
@@ -138,8 +139,7 @@ $(document).ready(function(){
         swipe: false,
         asNavFor: '.js-slides-fade, .js-slides-h',
         mobileFirst: true,
-        cssEase: 'cubic-bezier(1, 0, 0, 1)',
-        // waitForAnimate: false,
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
         nextArrow: slidesPrev,
         prevArrow: slidesNext,
         // adaptiveHeight: true,
@@ -166,7 +166,7 @@ $(document).ready(function(){
         dots: true,
         asNavFor: '.js-slides-fade, .js-slides-v',
         mobileFirst: true,
-        cssEase: 'cubic-bezier(1, 0, 0, 1)',
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
         nextArrow: slidesPrev,
         prevArrow: slidesNext,
         responsive: [

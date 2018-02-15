@@ -5,9 +5,19 @@
 		padding: 114px 0 0
 
 .news__heading
-	@extend .heading
-	+rmin($xl)
+	font-size: 50px
+	font-weight: 900
+	line-height: 1
+	display: block
+	position: relative
+	margin: 0 0 34px
+	+rmin($tablet)
+		font-size: 80px
+		margin: 0 0 50px
+	+rmin($wide)
+		font-size: 120px
 		margin: 0 0 90px -8px
+
 
 .news__grid
 	position: relative
@@ -163,7 +173,7 @@
 			font-size: 20px
 			line-height: 25px
 	
-	+rmin($xl)
+	+rmin($wide)
 		.news__item-title
 			font-size: 50px
 			line-height: 60px
@@ -216,10 +226,10 @@
 		position: relative
 		top: 0
 		left: 0
-		font-size: 25px
-		margin: 108px 0 55px
-	+rmin($xl)
+		margin: 108px 0 55px 77px
+	+rmin($wide)
 		margin-left: 77px
+		font-size: 25px
 		// margin: 108px 0 110px 140px
 
 // -----

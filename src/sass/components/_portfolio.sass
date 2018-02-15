@@ -9,13 +9,24 @@
 		padding: 94px 0 0
 		margin: 0 0 180px
 
+
 .portfolio__heading
-	@extend .heading
-	display: inline-block
-	vertical-align: top
+	font-size: 50px
+	font-weight: 900
+	line-height: 1
+	display: block
+	position: relative
+	// margin: 0 0 34px
 	margin: 0 0 40px
+	+rmin($tablet)
+		font-size: 80px
+		// margin: 0 0 50px
 	+rmin($desktop)
 		left: -8px
+	+rmin($wide)
+		font-size: 120px
+		// margin: 0 0 108px -8px
+
 
 .portfolio__link
 	transition: 0.25s
@@ -33,9 +44,9 @@
 	+rmin($tablet)
 		font-size: 20px
 		top: -8px
-	+rmin($desktop)
+	+rmin($wide)
 		font-size: 25px
-		top: -28px
+		// top: -28px
 
 
 .portfolio__grid

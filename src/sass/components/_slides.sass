@@ -1,6 +1,10 @@
 // Slides Fade
 
 
+// .slides-fade__item, .slides-h__item
+
+
+
 .slides-fade
 	position: relative
 	margin: 0 0 0 -20px
@@ -56,6 +60,9 @@
 		width: 100%
 		height: 100%
 		object-fit: cover
+	+rmin($xl)
+		&:before
+			padding: calc(80.555% - 60px) 0 0
 
 
 
@@ -75,13 +82,13 @@
 
 .slides-h
 	position: relative
-	// background: #f6f6f6
 	min-width: 100%
-	// background-image: radial-gradient(circle at 51% 32%, #ffffff, #f6f6f6)
-	// background-position: center center
 	margin: 0 -20px 0 0
-	// min-height: 100%
 	height: 100%
+	background-image: radial-gradient(circle at 51% 32%, #ffffff, #f6f6f6)
+	
+	
+
 	+rmin($xl)
 		// padding: 0 0 205px
 		// margin: 0 0 205px
@@ -103,6 +110,7 @@
 		height: 100%
 	.slick-slide
 		height: 100%
+
 	
 	.slick-dots
 		margin: 0
@@ -150,27 +158,20 @@
 		border-radius: 50%
 		position: absolute
 		bottom: 75px
-		font-size: 13px
+		font-size: 40px
 		cursor: pointer
 		z-index: 10
-
 		color: #252525
-		transition: 0.25s
-		&:after
-			content: ''
-			display: block
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			border: 2px solid #252525
-			border-radius: 50%;
-			transition: inherit
+		.ico
+			transition: 0.4s
+			stroke-dasharray: 160 160
 		&:hover
 			color: #c43939
-			&:after
-				opacity: 0
+			.ico-prev
+				stroke-dashoffset: 160
+			.ico-next
+				stroke-dashoffset: 160
+
 
 
 	.slick-prev
@@ -234,6 +235,13 @@
 	.slick-active .slides-v__item-in
 		transform: translate(0,0)
 		opacity: 1
+
+	.slick-track
+		display: flex
+		height: auto
+	.slick-slide
+		display: flex
+		height: auto
 	.slick-arrow
 		display: block
 		display: flex
@@ -247,28 +255,21 @@
 		border-radius: 50%
 		position: absolute
 		top: 50%
-		font-size: 13px
+		left: 100%
+		margin: 0 0 0 20px
+		font-size: 40px
 		cursor: pointer
 		z-index: 10
-		margin: 0 0 0 20px
 		color: #252525
-		transition: 0.25s
-		left: 100%
-		&:after
-			content: ''
-			display: block
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			border: 2px solid #252525
-			border-radius: 50%;
-			transition: inherit
+		.ico
+			transition: 0.4s
+			stroke-dasharray: 160 160
 		&:hover
 			color: #c43939
-			&:after
-				opacity: 0
+			.ico-prev
+				stroke-dashoffset: 160
+			.ico-next
+				stroke-dashoffset: 160
 
 	.slick-prev
 		top: 60px
@@ -304,10 +305,10 @@
 			transform: translate(0,0)
 	+rmin($tablet)
 		padding: 33px 53px 43px 57px
-	+rmin($desktop)
+	+rmin($wide)
 		// padding: 54px 83px 81px 78px
 		padding: 62px 83px 81px 78px
-	+rmin($xl)
+	+rmin($wide)
 		min-height: 410px
 		padding-bottom: 41px
 	
@@ -328,7 +329,7 @@
 		font-size: 40px
 		line-height: 50px
 		margin: 0 0 47px
-	+rmin($xl)
+	+rmin($wide)
 		font-size: 50px
 		line-height: 60px
 		margin: 0 -30px 30px 0
@@ -344,7 +345,7 @@
 	+rmin($tablet)
 		font-size: 20px
 		line-height: 25px
-	+rmin($xl)
+	+rmin($wide)
 		font-size: 25px
 		line-height: 35px
 
@@ -375,6 +376,8 @@
 		// bottom: 80px
 		
 	
+
+
 
 
 
@@ -413,7 +416,7 @@
 		border-radius: 50%
 		position: absolute
 		top: 100%
-		font-size: 12px
+		font-size: 40px
 		cursor: pointer
 		color: #fff
 		transition: 0.25s
@@ -421,11 +424,16 @@
 		z-index: 100
 		transform: translate(0,-40px)
 		opacity: 0
-	
+		.ico
+			stroke-dasharray: 160 160
+			stroke-dashoffset: 160
+		&:hover
+			color: #c43939
+
 		&:hover
 			color: #c43939
 		+rmin($desktop)
-			margin: 28px 0 0
+			margin: 24px 0 0
 
 	.slick-prev
 		right: 30px

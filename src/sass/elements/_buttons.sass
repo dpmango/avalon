@@ -25,21 +25,26 @@ button
 .btn--chat
     border: none
     position: fixed
-    top: 50%
-    right: 0
+    bottom: 0
+    right: 10px
     z-index: 100
     font: 900 15px/20px $fontBase
     text-transform: lowercase
     padding: 3px 20px 7px
-    min-width: 160px
+    width: 160px
     background: #999999
     color: #fff
-    transform: rotate(90deg)
-    transform-origin: 100% 0
-    margin: 80px 0 0
     &:hover
         background: #c43939
-        box-shadow: 0 2px 4px rgba(0,0,0,0.25)
+
+    +rmin($tablet)
+        right: 20px
+    +rmin($desktop)
+        bottom: 125px
+        right: -65px
+        transform: rotate(90deg)
+        transform-origin: 50% 50%
+
 
 
 .btn--categories

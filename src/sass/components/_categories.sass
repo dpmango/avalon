@@ -6,9 +6,19 @@
 		padding: 15px 0 180px
 
 .categories__heading
-	@extend .heading
-	+rmin($xl)
-		margin-bottom: 92px
+	font-size: 50px
+	font-weight: 900
+	line-height: 1
+	display: block
+	position: relative
+	margin: 0 0 34px
+	+rmin($tablet)
+		font-size: 80px
+		margin: 0 0 50px
+	+rmin($wide)
+		font-size: 120px
+		margin: 0 0 92px -8px
+
 
 .categories__grid
 	margin: 0 -20px
