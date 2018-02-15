@@ -52,15 +52,25 @@ $(document).ready(function(){
     });
 
 
-    $('.js-search').on('click', '.js-search-btn', function(event) {
+    // $('.js-search').on('click', '.js-search-btn', function(event) {
+    //     event.preventDefault();
+    //     if ($('html').is('.is-searchOpen')) {
+    //         $('html').removeClass('is-searchOpen');
+    //     }
+    //     else {
+    //         $('html').addClass('is-searchOpen');
+    //         $('.js-search-input').focus();
+    //     }
+    // });
+
+    $(document).on('click', '.js-search-open', function(event) {
         event.preventDefault();
-        if ($('html').is('.is-searchOpen')) {
-            $('html').removeClass('is-searchOpen');
-        }
-        else {
-            $('html').addClass('is-searchOpen');
-            $('.js-search-input').focus();
-        }
+        $('html').addClass('is-searchOpen');
+        $('.js-search-input').focus();
+    });
+
+    $(document).on('click', '.js-search-clear', function(event) {
+        $('html').removeClass('is-searchOpen');
     });
 
 
@@ -259,7 +269,7 @@ $(document).ready(function(){
 
  	// Prevent # behavior
 	$('[href="#"]').click(function(e) {
-		e.preventDefault();
+		// e.preventDefault();
 	});
 
 	// Smoth scroll

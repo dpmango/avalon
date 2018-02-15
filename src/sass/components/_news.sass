@@ -130,13 +130,13 @@
 		line-height: 30px
 		margin: 0 0 19px
 	+rmin($desktop)
-		margin: 0 0 15px
+		margin: 0 0 15px -1px
 	+rmin($xl)
 
 
 
 .news__item-text
-	margin: 0
+	margin: 0 0 0 -1px
 	font-size: 15px
 	line-height: 20px
 	+rmin($tablet)
@@ -178,7 +178,7 @@
 			font-size: 50px
 			line-height: 60px
 			font-weight: 400
-			margin: 0 20px 37px 0
+			margin: 0 20px 34px 0
 			
 		.news__item-text
 			font-size: 25px
@@ -194,42 +194,43 @@
 		padding-left: 0
 		padding-right: 0
 	+rmin($xl)
-		padding: 54px 0 72px 18px
+		padding: 62px 0 69px 17px
 		// padding: 56px 82px 72px 78px
 
 
 .news__load
-	display: inline-block
-	vertical-align: top
-	font-size: 15px
-	line-height: 1
-	font-weight: 900
-	color: #252525
-	padding: 6px 0 8px
-	border-bottom: 3px solid #252525
-	margin: 20px 0
-	transition: 0.25s
+	// display: inline-block
+	// vertical-align: top
+	// font-size: 15px
+	// line-height: 1
+	// font-weight: 900
+	// color: #252525
+	// padding: 6px 0 8px
+	// border-bottom: 3px solid #252525
+	// margin: 20px 0
+	// transition: 0.25s
 	position: absolute
 	top: 100%
 	left: 0
-	&:hover
-		color: #c43939
+	padding: 20px 0
+	// &:hover
+		// color: #c43939
 
 	+rmin($mobile)
 		left: 8.333%
 
 	+rmin($tablet)
-		font-size: 20px
-		margin: 45px 0
+		// font-size: 20px
+		padding: 45px 0
 
 	+rmin($desktop)
 		position: relative
 		top: 0
 		left: 0
-		margin: 108px 0 55px 77px
+		padding: 108px 0 55px 77px
 	+rmin($wide)
-		margin-left: 77px
-		font-size: 25px
+		// margin-left: 77px
+		// font-size: 25px
 		// margin: 108px 0 110px 140px
 
 // -----
