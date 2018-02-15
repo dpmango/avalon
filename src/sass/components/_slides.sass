@@ -7,7 +7,7 @@
 
 .slides-fade
 	position: relative
-	margin: 0 0 0 -20px
+	margin: 0 0 0 -30px
 	min-width: 100%
 	height: 100%
 	.slick-list, .slick-track
@@ -41,6 +41,10 @@
 		.slick-active button
 			background: #252525
 			border-color: #252525
+	+rmin($tablet)
+		margin: 0 12px 0 -20px
+	+rmin($desktop)
+		margin: 0 0 0 -20px
 
 
 .slides-fade__item
@@ -60,8 +64,12 @@
 		width: 100%
 		height: 100%
 		object-fit: cover
-	+rmin($xl)
+	+rmin($tablet)
 		&:before
+			padding: 102.555% 0 0
+	+rmin($desktop)
+		&:before
+			padding: 80.555% 0 0
 			// padding: calc(80.555% - 60px) 0 0
 
 
@@ -83,12 +91,15 @@
 .slides-h
 	position: relative
 	min-width: 100%
-	margin: 0 -20px 0 0
+	margin: 0 -30px 0 0
 	height: 100%
 	background-image: radial-gradient(circle at 51% 32%, #ffffff, #f6f6f6)
 	
 	
-
+	+rmin($tablet)
+		margin: 0 -20px 0 -12px
+	+rmin($desktop)
+		margin: 0 -20px 0 0
 	+rmin($xl)
 		// padding: 0 0 205px
 		// margin: 0 0 205px
@@ -143,22 +154,23 @@
 			border-color: #252525
 
 		+rmin($tablet)
-			bottom: 60px
+			bottom: 63px
+			left: 6px
 
 	.slick-arrow
 		display: block
 		display: flex
 		align-items: center
 		justify-content: center
-		width: 40px
-		height: 40px
+		// width: 40px
+		// height: 40px
 		line-height: 1
 		padding: 0
 		background: none
 		border-radius: 50%
 		position: absolute
-		bottom: 75px
-		font-size: 40px
+		bottom: 77px
+		font-size: 42px
 		cursor: pointer
 		z-index: 10
 		color: #252525
@@ -179,6 +191,10 @@
 
 	.slick-next
 		right: 20px
+
+	+rmin($tablet)
+		// .slick-arrow
+
 	+rmin($xl)
 		.slick-arrow
 			top: 50%
@@ -191,13 +207,14 @@
 
 .slides-h__item
 	position: relative
-	padding: 20px 20px 90px 20px
+	padding: 28px 30px 90px 30px
 	display: flex
 	align-items: center
 	justify-content: center
 	img
 		max-height: 100%
 	+rmin($tablet)
+		padding: 30px 30px 135px
 		// padding: 30px 30px 135px
 
 	+rmin($desktop)
@@ -225,7 +242,7 @@
 .slides-v
 	position: relative
 	top: -30px
-	margin: 0 60px 0 -20px
+	margin: 0 32px 0 -30px
 	transition: 0.25s
 	background: #252525
 
@@ -247,8 +264,8 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		width: 40px
-		height: 40px
+		// width: 40px
+		// height: 40px
 		line-height: 1
 		padding: 0
 		background: none
@@ -256,8 +273,8 @@
 		position: absolute
 		top: 50%
 		left: 100%
-		margin: 0 0 0 20px
-		font-size: 40px
+		margin: 0 0 0 8px
+		font-size: 44px
 		cursor: pointer
 		z-index: 10
 		color: #252525
@@ -272,17 +289,18 @@
 				stroke-dashoffset: 160
 
 	.slick-prev
-		top: 60px
+		top: 130px
 
 	.slick-next
-		top: 130px
+		top: 60px
 		
 
 	&:hover
 		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75);
 	+rmin($tablet)
 		margin: 0
-		top: -55px
+		margin: 0 -12px 0 40px
+		top: -57px
 	+rmin($xl)
 		top: -205px
 		margin: 0 40px -117px 60px
@@ -293,7 +311,7 @@
 	background: #252525
 	color: #fff
 	position: relative
-	padding: 20px 30px 30px 30px
+	padding: 26px 24px 24px 30px
 	min-height: 200px
 	// display: flex
 	// align-items: center
@@ -304,7 +322,7 @@
 			opacity: 1
 			transform: translate(0,0)
 	+rmin($tablet)
-		padding: 33px 53px 43px 57px
+		padding: 44px 53px 55px 57px
 	+rmin($wide)
 		// padding: 54px 83px 81px 78px
 		padding: 62px 83px 81px 78px
@@ -322,13 +340,13 @@
 	font-size: 23px
 	line-height: 25px
 	font-weight: 400
-	margin: 0 0 22px
+	margin: 0 0 21px
 	b
 		font-weight: 900
 	+rmin($tablet)
 		font-size: 40px
 		line-height: 50px
-		margin: 0 0 47px
+		margin: 0 0 40px
 	+rmin($wide)
 		font-size: 50px
 		line-height: 60px
@@ -449,7 +467,7 @@
 			opacity: 1
 	
 	+rmin($tablet)
-		margin: 0 0 90px
+		margin: 0 0 88px
 	+rmin($desktop)
 		margin: 0 0 120px
 		&:after
@@ -469,15 +487,17 @@
 	position: relative
 	width: 100%
 	transition: 0.25s
-	&:after
-		content: ''
-		display: table
-		clear: both
-		width: 100%
+	overflow: hidden
+	// &:after
+	// 	content: ''
+	// 	display: table
+	// 	clear: both
+	// 	width: 100%
 	&:before
 		content: ''
 		display: block
-		padding: 66.67% 0 0
+		padding: 69% 0 0
+		// padding: 69% 0 0
 		float: left
 	img
 		display: block
@@ -486,7 +506,10 @@
 		left: 0
 		width: 100%
 		height: 100%
-		object-fit: cover;
+		object-fit: cover
+	+rmin($desktop)
+		&:before
+			padding: 66.67% 0 0
 
 .slides-portfolio__caption
 	display: block

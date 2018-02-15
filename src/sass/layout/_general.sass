@@ -45,9 +45,14 @@ body, html
     margin-right: auto
     padding-left: 30px
     padding-right: 30px
-    +rmin($desktop)
+    +rmin($tablet)
       padding-left: 20px
       padding-right: 20px
 
 
+.indent
+    +rmin($mobile)
+        padding: 0 0 0 35px
+    +rmin($desktop)
+        padding: 0
 

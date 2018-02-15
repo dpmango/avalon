@@ -1,8 +1,10 @@
 // FOOTER
 .footer
-	padding: 132px 0 75px
+	padding: 128px 0 75px
 	font-size: 18px
 	line-height: 25px
+	+rmin($tablet)
+		padding: 124px 0 75px
 	+rmin($desktop)
 		padding: 109px 0
 
@@ -14,13 +16,17 @@
 
 
 .footer__nav
-	margin: 0 0 22px
+	margin: 0 0 25px
 	font-size: 15px
 	line-height: 25px
 	text-transform: uppercase
 	font-weight: 900
+	+rmin($tablet)
+		padding-left: 5px
+		
 	+rmin($desktop)
 		margin: 0 0 90px
+		padding: 0
 
 .footer__nav-menu
 	margin: 0
@@ -42,7 +48,7 @@
 // -----
 
 .footer__phone
-	margin: 0 0 22px
+	margin: 0 0 18px
 	font-size: 25px
 	line-height: 40px
 	font-weight: 900

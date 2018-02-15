@@ -39,37 +39,58 @@
 @import components/breadcrumbs
 
 
-
-.js-toggle, .js-width
-	display: block
+.grid-buttons
 	position: fixed
 	left: 0
-	bottom: 10px
-	padding: 0 20px
-	font-weight: 900
-	line-height: 40px
-	height: 40px
-	background: #000
-	z-index: 100000
-	color: #fff
-	width: 100px
-	cursor: pointer
-	transition: 0.25s
-	
-	&:hover
-		background: #C43939
+	bottom: 0
+	z-index: 10000
 
-.js-width
-	bottom: 60px
-	display: none
+.js-desktop, .js-tablet, .js-mobile
+    display: block
+    padding: 0 10px
+    font-weight: 900
+    line-height: 40px
+    height: 40px
+    background: #000
+    z-index: 100000
+    font-size: 12px
+    color: #fff
+    width: 100px
+    cursor: pointer
+    transition: 0.25s
+    margin: 0 0 10px
+    display: none
+    &:hover
+        background: #C43939
 
+.js-mobile
+    display: block
+    +rmin($tablet)
+        display: none
+
+.js-tablet
+    +rmin($tablet)
+        display: block
+    +rmin($wide)
+        display: none
+
+.js-desktop
+    +rmin($wide)
+        display: block
+
+.categories__grid
+    +r($mobile)
+        .row
+            & > [class^="col"]
+                &:nth-child(3), &:nth-child(6), &:nth-child(9)
+                    display: none
 
 .promo, .portfolio, .news
 	.container
 		// max-width: 1920px
 
 
-#grid
+#grid-desktop
     display: block
     position: absolute
     top: 0
@@ -84,4 +105,44 @@
     visibility: hidden
     &.is-active
         visibility: visible
+
+#grid-tablet
+    display: block
+    position: absolute
+    top: 0
+    left: 50%
+    width: 768px
+    height: 6930px
+    // height: 3065px
+    margin: 0 0 0 -384px
+    z-index: 10000
+    background: url(../img/grid-tablet.png) 0 0 no-repeat
+    opacity: 0.5
+    visibility: hidden
+    &.is-active
+        visibility: visible
+
+#grid-mobile
+    display: block
+    position: absolute
+    top: 0
+    left: 50%
+    width: 376px
+    height: 5865px
+    // height: 3065px
+    margin: 0 0 0 -188px
+    z-index: 10000
+    background: url(../img/grid-mobile.png) 0 0 no-repeat
+    opacity: 0.5
+    visibility: hidden
+    &.is-active
+        visibility: visible
+
+
+.row-0
+    margin: 0
+    & > [class^="col"]
+        padding: 0
+
+
 

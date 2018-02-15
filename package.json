@@ -26,6 +26,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
+    "git-pre-push": "^0.0.5",
     "git-scripts": "^0.2.1",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.6",

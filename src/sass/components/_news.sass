@@ -1,6 +1,9 @@
 // News
 
 .news
+	
+	+rmin($tablet)
+		padding: 18px 0 0
 	+rmin($desktop)
 		padding: 114px 0 0
 
@@ -10,10 +13,10 @@
 	line-height: 1
 	display: block
 	position: relative
-	margin: 0 0 34px
+	margin: 0 0 34px -4px
 	+rmin($tablet)
 		font-size: 80px
-		margin: 0 0 50px
+		margin: 0 0 40px
 	+rmin($wide)
 		font-size: 120px
 		margin: 0 0 90px -8px
@@ -27,7 +30,7 @@
 		display: block
 		position: absolute
 		top: 0
-		bottom: 0
+		bottom: 5px
 		right: 0
 		width: 120vw
 		margin: 0 -30px 0 0
@@ -38,21 +41,27 @@
 		position: static
 
 	+rmin($mobile)
-		&:after
-			right: 16.666%
-			margin: 0
+		// &:after
+		// 	right: 16.666%
+		// 	margin: 0
 		// &:after
 		// 	left: auto
 		// 	margin: 0 -30px 0 0
 		// 	right: 17.666%
 	+rmin($tablet)
 		margin: 0 0 60px
+		// .indent
+			// margin-left: 5px
+		&:after
+			right: 27%
+			margin: 0
 	+rmin($desktop)
 		background: none
 		padding: 0 0 55px
 		margin: 0
 		&:after
 			right: 50%
+			bottom: 0
 		// &:after
 		// 	width: 50vw
 		// 	left: -50%
@@ -71,7 +80,7 @@
 .news__item
 	display: block
 	position: relative
-	padding: 30px 0
+	padding: 30px 0 28px
 	&:last-of-type
 		&:after
 			display: none
@@ -94,10 +103,11 @@
 	+rmin($desktop)
 		max-width: 440px
 		margin: 0 auto
+		padding: 60px 0 56px
 		// padding: 60px 0
 
 .news__item-image
-	margin: 0 0 16px
+	margin: 0 0 20px
 	overflow: hidden
 	position: relative
 	transition: 0.25s
@@ -115,6 +125,8 @@
 		width: 100%
 		height: 100%
 		object-fit: cover
+	+rmin($tablet)
+		margin: 0 0 22px
 	+rmin($desktop)
 		margin: 0 0 24px
 
@@ -128,7 +140,7 @@
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 30px
-		margin: 0 0 19px
+		margin: 0 0 15px
 	+rmin($desktop)
 		margin: 0 0 15px -1px
 	+rmin($xl)
@@ -158,20 +170,31 @@
 	.news__item-image
 		margin: 0
 		&:before
-			padding: 53.6% 0 0
+			// padding: 53.6% 0 0
+			padding: 50.5% 0 0
+
+	.news__item-title
+		margin: 0 25px 20px 0
 	
 	+rmin($tablet)
+		.news__item-image:before
+			padding: 49% 0 0
 		.news__item-title
 			font-size: 40px
 			line-height: 50px
 			font-weight: 400
-			margin: 0 0 45px
+			margin: 0 0 38px
 			b
 				font-weight: 900
 
 		.news__item-text
 			font-size: 20px
 			line-height: 25px
+			max-width: 580px
+
+	+rmin($desktop)
+		.news__item-image:before
+			padding: 53.6% 0 0
 	
 	+rmin($wide)
 		.news__item-title
@@ -187,15 +210,15 @@
 
 
 .news__item-desc
-	padding: 25px 30px 30px
+	padding: 24px 30px 22px 30px
 	+rmin($tablet)
-		padding: 30px 30px 55px
+		padding: 44px 30px 52px 70px
 	+rmin($desktop)
-		padding-left: 0
-		padding-right: 0
-	+rmin($xl)
-		padding: 62px 0 69px 17px
-		// padding: 56px 82px 72px 78px
+		// padding-left: 78px
+		// padding-right: 82px
+	+rmin($desktop)
+		// padding: 62px 0 69px 17px
+		padding: 62px 62px 72px 78px
 
 
 .news__load
@@ -212,22 +235,23 @@
 	position: absolute
 	top: 100%
 	left: 0
-	padding: 20px 0
+	padding: 15px 0
 	// &:hover
 		// color: #c43939
 
 	+rmin($mobile)
-		left: 8.333%
+		// left: 8.333%
 
 	+rmin($tablet)
 		// font-size: 20px
-		padding: 45px 0
+		padding: 35px 0
 
 	+rmin($desktop)
 		position: relative
 		top: 0
 		left: 0
-		padding: 108px 0 55px 77px
+		padding: 106px 0 55px 140px
+		
 	+rmin($wide)
 		// margin-left: 77px
 		// font-size: 25px

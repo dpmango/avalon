@@ -344,7 +344,7 @@
 	display: block
 	padding: 0
 	background: none
-	font-size: 25px
+	font-size: 26px
 	line-height: 1
 	height: 100%
 	width: 25px
@@ -363,12 +363,16 @@
 		top: 50%
 		left: 0
 		transform: translate(0,-50%)
+		margin: -2.5px 0 0 -1px
 	&:hover
 		color: #c43939
+
 	+rmin($tablet)
 		right: 0
-	+rmin($xl)
 		top: -8px
+		font-size: 25px
+		.ico
+			margin: 0
 
 
 .search__clear

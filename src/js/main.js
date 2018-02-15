@@ -2,8 +2,16 @@ $(document).ready(function(){
 
     // Grid
 
-    $('.js-toggle').on('click', function(event) {
-        $('#grid').toggleClass('is-active');
+    $('.js-desktop').on('click', function(event) {
+        $('#grid-desktop').toggleClass('is-active');
+    });
+
+    $('.js-tablet').on('click', function(event) {
+        $('#grid-tablet').toggleClass('is-active');
+    });
+
+    $('.js-mobile').on('click', function(event) {
+        $('#grid-mobile').toggleClass('is-active');
     });
 
 

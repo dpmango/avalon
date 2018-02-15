@@ -3,8 +3,10 @@
 .portfolio
 	background: #252525
 	color: #fff
-	padding: 75px 0 0
-	margin: 0 -10px 116px
+	padding: 34px 0 0
+	margin: 0 0 116px
+	+rmin($tablet)
+		padding: 44px 0 0
 	+rmin($desktop)
 		padding: 94px 0 0
 		margin: 0 0 180px
@@ -16,10 +18,14 @@
 	line-height: 1
 	display: block
 	position: relative
+	left: -4px
 	// margin: 0 0 34px
-	margin: 0 0 40px
+	// margin: 0 0 10px -5px
+	margin: 0 0 10px
 	+rmin($tablet)
 		font-size: 80px
+		margin: 0 0 36px
+		left: 0
 		// margin: 0 0 50px
 	+rmin($desktop)
 		left: -8px
@@ -43,68 +49,103 @@
 		color: #c43939
 	+rmin($tablet)
 		font-size: 20px
-		top: -8px
+		top: -16px
+		float: right
+
+	+rmin($desktop)
+		top: -26px
+		float: none
 	+rmin($wide)
 		font-size: 25px
-		top: -28px
-
+		top: -25px
+	
 
 .portfolio__grid
-
+	padding: 5px 10px 0
+	margin: 0 -30px
 	.row
 		margin: 0 -10px
-		& > [class^="col"]
-			position: relative
+	.col
+		padding: 0 10px
+		&:nth-child(1)
+			padding-left: 0
+		&:nth-child(2)
+			top: 0
+		&:nth-child(3)
+			top: 10px
+			padding-left: 0
+		&:nth-child(4)
+			top: 10px
+		&:last-child
+			margin: 0 0 -38px
+			top: 10px
+
+
+		// Correct Slides
+		&:nth-child(3), &:nth-child(4)
+			.slides-portfolio__image:before
+				padding: 96% 0 0
+
+		&:last-child
+			.slides-portfolio
+				margin: 0
+				.slick-arrow
+					color: #252525
+					&:hover
+						color: #c43939
+			.slides-portfolio__caption
+				color: #252525
+
+	+rmin($tablet)
+		margin: 0 -20px
+		padding: 6px 20px 0
+		.row
+			margin: 0 -10px
+		.col
 			padding: 0 10px
+			&:nth-child(1)
+				padding: 0 10px
+			&:nth-child(2)
+				top: 0
+			&:nth-child(3)
+				top: 0
+				padding: 0 10px
+			&:nth-child(4)
+				top: 0
+
+			// Correct Slides
 			&:nth-child(1)
 				.slides-portfolio
 					margin-left: -20px
-			&:nth-child(2)
-			&:nth-child(3)
-				.slides-portfolio
-					margin-left: -20px
-				.slides-portfolio__image:before
-					padding: 100% 0 0
 			&:nth-child(4)
 				.slides-portfolio
 					margin-right: -20px
-				.slides-portfolio__image:before
-					padding: 100% 0 0
-			&:nth-child(5)
-				.slides-portfolio
-					top: 0
-					margin: 0 0 -50px
-					.slick-arrow
-						color: #252525
-						&:hover
-							color: #c43939
-				.slides-portfolio__caption
-					color: #252525
-			
-	+rmin($tablet)
-		padding: 52px 0 0
-		.row
-			& > [class^="col"]
-				&:nth-child(5)
-					.slides-portfolio
-						margin: -150px 0 -30px
+			&:last-child
+				margin: -192px 0 0
+				top: 32px
 	+rmin($desktop)
-		
+		padding: 55px 0 0
+		margin: 0
 		.row
 			margin: 0 -20px
-			& > [class^="col"]
+		.col
+			padding: 0 20px
+			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
 				padding: 0 20px
-				&:nth-child(1)
-					.slides-portfolio
-						margin-left: -20px
-				&:nth-child(3)
-					.slides-portfolio
-						margin-left: 0
-				&:nth-child(5)
-					.slides-portfolio
-						margin: -244px 0 -82px
-						// margin: -210px 0 -60px
-						// top: -244px
-						// margin: 0 0 -350px
 
+			// Correct Slides
+			&:nth-child(1)
+				.slides-portfolio
+					// margin-left: 0
+			&:nth-child(4)
+				.slides-portfolio
+					// margin-right: 0
+			&:last-child
+				margin: -244px 0 -82px
+				top: 0
+
+			// Correct Slides
+			&:nth-child(3), &:nth-child(4)
+				.slides-portfolio__image:before
+					padding: 100% 0 0
 

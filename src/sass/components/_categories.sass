@@ -1,9 +1,12 @@
 // Categories
 
 .categories
-	padding: 0 0 40px
+	padding: 0 0 58px
+	+rmin($tablet)
+		padding: 0 0 80px
 	+rmin($desktop)
 		padding: 15px 0 180px
+		margin: 0
 
 .categories__heading
 	font-size: 50px
@@ -11,13 +14,15 @@
 	line-height: 1
 	display: block
 	position: relative
+	// margin: 0 0 34px -3px
 	margin: 0 0 34px
 	+rmin($tablet)
 		font-size: 80px
-		margin: 0 0 50px
+		margin: 0 0 40px
 	+rmin($wide)
 		font-size: 120px
-		margin: 0 0 92px -8px
+		// margin: 0 0 92px -8px
+		margin: 0 0 92px
 
 
 .categories__grid
@@ -28,11 +33,12 @@
 			padding: 0 10px
 	+rmin($tablet)
 		margin: 0
-	+rmin($desktop)
 		.row
 			margin: 0 -20px
 			& > [class^="col"]
 				padding: 0 20px
+
+
 
 .categories__item
 	position: relative
@@ -42,7 +48,7 @@
 	font-weight: 900
 	text-transform: uppercase
 	color: #252525
-	margin: 0 0 56px 20px
+	margin: 0 0 22px 18px
 	transition: none
 	&:hover
 		color: #c43939
@@ -55,6 +61,15 @@
 			transform: translate(-10px,0)
 			left: 0
 
+	+rmin($tablet)
+		font-size: 20px
+		line-height: 25px
+		margin: 0 0 32px 40px
+		&:hover
+			.categories__item-icon:after
+				// left: -60px
+			.ico
+				// transform: translate(-30px,0)
 	+rmin($desktop)
 		font-size: 25px
 		line-height: 30px
@@ -70,11 +85,11 @@
 	display: block
 	position: relative
 	z-index: 10
-	height: 150px
+	height: 105px
 	display: flex
 	align-items: center
 	justify-content: center
-	margin: 0 0 28px
+	margin: 0 0 12px
 	color: #fff
 	&:before
 		content: ''
@@ -89,7 +104,7 @@
 		display: block
 		position: absolute
 		top: 0
-		left: 40px
+		left: 44px
 		right: 0
 		bottom: 0
 		background: #f2f1ed
@@ -102,43 +117,83 @@
 		position: relative
 		
 	.ico-categories-1
-		font-size: 67px
-		left: 5px
+		font-size: 52px
+		left: 6px
 	.ico-categories-2
-		font-size: 100px
-		left: -12px
+		font-size: 75px
+		left: -10px
 	.ico-categories-3
-		font-size: 100px
+		font-size: 75px
 		left: -15px
 	.ico-categories-4
-		font-size: 100px
-		left: -34px
+		font-size: 75px
+		left: -26px
 	.ico-categories-5
-		font-size: 100px
-		left: -10px
+		font-size: 75px
+		left: -8px
 	.ico-categories-6
 		font-size: 72px
 		left: 5px
 	.ico-categories-7
-		font-size: 100px
-		top: -3px
-		left: -24px
+		font-size: 75px
+		top: 0px
+		left: -18px
 	.ico-categories-8
-		font-size: 72px
-		left: 11px
+		font-size: 54px
+		left: 8px
 	.ico-categories-9
-		font-size: 94px
+		font-size: 68px
 		left: 6px
 	.ico-categories-10
-		font-size: 100px
+		font-size: 75px
 		left: -11px
 
 
-	+rmin($desktop)
+	+rmin($tablet)
+		height: 150px
+		margin: 0 0 18px
 		&:after
 			left: 0
 		.ico
+			transform: translate(-58px,0)
+
+		.ico-categories-1
+			font-size: 67px
+			left: 5px
+		.ico-categories-2
+			font-size: 100px
+			left: -12px
+		.ico-categories-3
+			font-size: 100px
+			left: -15px
+		.ico-categories-4
+			font-size: 100px
+			left: -34px
+		.ico-categories-5
+			font-size: 100px
+			left: -10px
+		.ico-categories-6
+			font-size: 72px
+			left: 5px
+		.ico-categories-7
+			font-size: 100px
+			top: -3px
+			left: -24px
+		.ico-categories-8
+			font-size: 72px
+			left: 11px
+		.ico-categories-9
+			font-size: 94px
+			left: 6px
+		.ico-categories-10
+			font-size: 100px
+			left: -11px
+	+rmin($desktop)
+		margin: 0 0 28px
+		.ico
 			transform: translate(-90px,0)
+
+
 
 
 
