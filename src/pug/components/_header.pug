@@ -12,51 +12,56 @@ header.header
                 +icon('ico-logo')
 
         nav.nav
-            ul.nav__menu
-                li
-                    a(href="#").nav__link.js-nav-trigger Каталог
-                    .nav__collapse.js-nav-collapse
-                        .row
-                            .col-6
-                                ul.nav__collapse-menu
-                                    li
-                                        a(href="#").nav__collapse-link Столешницы
-                                    li
-                                        a(href="#").nav__collapse-link Подстолья
-                                    li
-                                        a(href="#").nav__collapse-link Дизайнерская мебель
-                                    li
-                                        a(href="#").nav__collapse-link Барные стулья
-                                    li
-                                        a(href="#").nav__collapse-link Стулья
-                                    li
-                                        a(href="#").nav__collapse-link Диваны
-                                    li
-                                        a(href="#").nav__collapse-link Столы
-                                    li
-                                        a(href="#").nav__collapse-link Кресла
-                                    li
-                                        a(href="#").nav__collapse-link Складная мебель
-                                    li
-                                        a(href="#").nav__collapse-link Мебель для 
-                                    li
-                                        a(href="#").nav__collapse-link конференц-залов
-                            .col-6
-                                ul.nav__collapse-menu
-                                    li
-                                        a(href="#").nav__collapse-link Услуги
-                                    li
-                                        a(href="#").nav__collapse-link Доставка и оплата
-                                    li
-                                        a(href="#").nav__collapse-link Дилерам
-                                    li
-                                        a(href="#").nav__collapse-link Реквизиты
-                li
-                    a(href="#").nav__link Компания
-                li
-                    a(href="#").nav__link Портфолио
-                li
-                    a(href="#").nav__link Контакты
+            .nav__menu
+                .row
+                    .col-6
+                        a(href="#").nav__link.js-nav-trigger Каталог
+                    .col-6
+                        a(href="#").nav__link.js-nav-trigger Компания
+                    .col-12
+
+                        .nav__collapse.js-nav-collapse
+                            .row
+                                .col-6
+                                    ul.nav__collapse-menu
+                                        li
+                                            a(href="#").nav__collapse-link Столешницы
+                                        li
+                                            a(href="#").nav__collapse-link Подстолья
+                                        li
+                                            a(href="#").nav__collapse-link Дизайнерская мебель
+                                        li
+                                            a(href="#").nav__collapse-link Барные стулья
+                                        li
+                                            a(href="#").nav__collapse-link Стулья
+                                        li
+                                            a(href="#").nav__collapse-link Диваны
+                                        li
+                                            a(href="#").nav__collapse-link Столы
+                                        li
+                                            a(href="#").nav__collapse-link Кресла
+                                        li
+                                            a(href="#").nav__collapse-link Складная мебель
+                                        li
+                                            a(href="#").nav__collapse-link Мебель для 
+                                        li
+                                            a(href="#").nav__collapse-link конференц-залов
+                                .col-6
+                                    ul.nav__collapse-menu
+                                        li
+                                            a(href="#").nav__collapse-link Услуги
+                                        li
+                                            a(href="#").nav__collapse-link Доставка и оплата
+                                        li
+                                            a(href="#").nav__collapse-link Дилерам
+                                        li
+                                            a(href="#").nav__collapse-link Реквизиты
+
+                    .col-6
+                        a(href="#").nav__link Портфолио
+                    .col-6
+                        a(href="#").nav__link Контакты
+           
 
 
         p.phone
@@ -70,6 +75,45 @@ header.header
                     +icon('ico-search-clear')
                 button.search__btn.js-search-open
                     +icon('ico-search')
+                
+                .search__progress.js-search-progress
+                .search__dropdown
+                    .search__results
+                        p.search__count товары (48)
+                        ul.search__list
+                            li.col-6
+                                a(href="#").search__item
+                                    figure.search__item-image
+                                        img(src="img/pic-1.png", alt="")
+                                    span.search__item-name Кресло 3402BM
+                            li.col-6
+                                a(href="#").search__item
+                                    figure.search__item-image
+                                        img(src="img/pic-2.png", alt="")
+                                    span.search__item-name Кресло Денди
+                            li.col-6
+                                a(href="#").search__item
+                                    figure.search__item-image
+                                        img(src="img/pic-3.png", alt="")
+                                    span.search__item-name Кресло красное
+                            li.col-6
+                                a(href="#").search__item
+                                    figure.search__item-image
+                                        img(src="img/pic-4.png", alt="")
+                                    span.search__item-name Кресло 6811bm
+                        p.search__count категории товаров (5)
+                        ul.search__list
+                            li.col-12
+                                a(href="#").search__item
+                                    span.search__item-name Кресла
+                            li.col-12
+                                a(href="#").search__item
+                                    span.search__item-name Кресла для клубов
+
+                        .search__action
+                            a(href="#").btn.btn--red показать все (53)
+
+                    p.search__notfind К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.
         
        
 

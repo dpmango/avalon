@@ -1,15 +1,35 @@
 // Portfolio
 
 .portfolio
+	position: relative
+	z-index: 10
 	background: #252525
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 38px
+		background: #252525
+		z-index: -1
 	color: #fff
 	padding: 34px 0 0
 	margin: 0 0 116px
+	// margin: 0 0 78px
+	.container
+		// max-width: 1920px
 	+rmin($tablet)
 		padding: 44px 0 0
+		margin: 0 0 116px
+		&:after
+			bottom: 20px
 	+rmin($desktop)
 		padding: 94px 0 0
 		margin: 0 0 180px
+		&:after
+			bottom: 70px
 
 
 .portfolio__heading
@@ -28,7 +48,7 @@
 		left: 0
 		// margin: 0 0 50px
 	+rmin($desktop)
-		left: -8px
+		// left: -8px
 	+rmin($wide)
 		font-size: 120px
 		// margin: 0 0 108px -8px
@@ -121,7 +141,7 @@
 				.slides-portfolio
 					margin-right: -20px
 			&:last-child
-				margin: -192px 0 0
+				margin: -195px 0 0
 				top: 32px
 	+rmin($desktop)
 		padding: 55px 0 0
@@ -141,6 +161,7 @@
 				.slides-portfolio
 					// margin-right: 0
 			&:last-child
+				margin: -254px 0 0
 				margin: -244px 0 -82px
 				top: 0
 

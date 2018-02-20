@@ -60,31 +60,117 @@ $(document).ready(function(){
     });
 
 
-    // $('.js-search').on('click', '.js-search-btn', function(event) {
-    //     event.preventDefault();
-    //     if ($('html').is('.is-searchOpen')) {
-    //         $('html').removeClass('is-searchOpen');
-    //     }
-    //     else {
-    //         $('html').addClass('is-searchOpen');
-    //         $('.js-search-input').focus();
-    //     }
-    // });
+
 
     $(document).on('click', '.js-search-open', function(event) {
         event.preventDefault();
-        $('html').addClass('is-searchOpen');
-        $('.js-search-input').focus();
+
+        if ($('html').is('.is-search-open')) {
+            $('html').removeClass('is-search-open');
+        }
+        else {
+            $('html').addClass('is-search-open');
+            $('.js-search-input').focus();
+        }
     });
 
+    $('.js-search-input').on('keyup', function(event) {
+        var valThis = this.value.toLowerCase(),
+            lenght  = this.value.length;
+            // htmlR = '<b>' + text.substr(0, lenght) + '</b>' + text.substr(lenght);
+
+            if(lenght >= 1) {
+                $('html').addClass('is-search-keyup');
+            }
+            else {
+                $('html').removeClass('is-search-keyup');
+            }
+
+
+
+            $('.js-search-progress').width(0);
+
+            clearTimeout(searchProgress);
+
+
+
+            var searchProgress = setTimeout(function() {
+
+                $('.js-search-progress').stop().animate({
+                    width: '100%'},
+                    1000, function() {
+                    /* stuff to do after animation is complete */
+                });
+
+            }, 1000);
+
+
+            $('.search__item-name').each(function () {
+                var text  = $(this).text(),
+                    textL = text.toLowerCase();
+
+                    if (textL.indexOf(valThis) == 0) {
+                        $(this).closest('li').show();
+
+                        $('html').removeClass('is-search-notfind').addClass('is-search-find');
+                        
+                    }
+                    else {
+                        $(this).closest('li').hide();
+
+                        $('html').removeClass('is-search-find').addClass('is-search-notfind');
+                        
+                    }
+
+                    // elLength = $('.search__item-name').length,
+                    // elLengthVisible = $('.search__item-name:visible').length;
+
+                    // if (elLengthVisible == 0) $('html').removeClass('is-search-find').addClass('is-search-notfind');
+                    // else $('html').removeClass('is-search-notfind').addClass('is-search-find');
+
+                    // console.log(elLengthVisible)
+
+                    // if ( $('.st-multiple-text') )
+                
+
+            });
+
+            // $('.st-multiple-text').each(function () {
+            //     var text  = $(this).text(),
+            //         textL = text.toLowerCase(),
+            //         htmlR = '<b>' + text.substr(0, lenght) + '</b>' + text.substr(lenght);
+
+            //         if (textL.indexOf(valThis) == 0) {
+            //             $(this).html(htmlR).closest('li').show();
+            //         }
+            //         else {
+            //             $(this).closest('li').hide();
+            //         }
+
+            //         elLength = $('.st-multiple-text').length,
+            //         elLengthVisible = $('.st-multiple-text:visible').length;
+
+            //         if (elLengthVisible == 0) $(this).closest('.st-multiple').addClass('is-empty');
+            //         else $(this).closest('.st-multiple').removeClass('is-empty');
+            //         console.log(elLengthVisible)
+
+            //         // if ( $('.st-multiple-text') )
+
+            //    // (textL.indexOf(valThis) == 0) ? $(this).html(htmlR).closest('li').show() : $(this).closest('li').hide();
+                
+
+            // });
+    });
     $(document).on('click', '.js-search-clear', function(event) {
-        $('html').removeClass('is-searchOpen');
+        event.preventDefault();
+        $('.js-search').find('form').trigger('reset');
+        $('html').removeClass('is-search-keyup');
     });
 
 
     $(document).on('click', function(e) {
         if($(e.target).closest('.js-search').length == 0) {
-           $('html').removeClass('is-searchOpen');
+           $('html').removeClass('is-search-open');
            // ('.js-search-input').trigger('focusout');
     
         }

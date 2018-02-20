@@ -1,7 +1,8 @@
 // News
 
 .news
-	
+	.container
+		// max-width: 1920px
 	+rmin($tablet)
 		padding: 18px 0 0
 	+rmin($desktop)
@@ -19,7 +20,7 @@
 		margin: 0 0 40px
 	+rmin($wide)
 		font-size: 120px
-		margin: 0 0 90px -8px
+		margin: 0 0 92px
 
 
 .news__grid
@@ -99,12 +100,18 @@
 		.news__item-title
 			color: #c43939
 	+rmin($tablet)
-		padding: 60px 0 56px
+		padding: 60px 0 56px 4px
+		&:nth-child(2):not(.news__item--dark)
+			padding-top: 65px
+			padding-bottom: 40px
 	+rmin($desktop)
-		max-width: 440px
-		margin: 0 auto
-		padding: 60px 0 56px
+		// max-width: 440px
+		// margin: 0 auto
+		padding: 60px 0 56px 8px
 		// padding: 60px 0
+		&:nth-child(2):not(.news__item--dark)
+			padding-top: 60px
+			padding-bottom: 56px
 
 .news__item-image
 	margin: 0 0 20px
@@ -126,7 +133,7 @@
 		height: 100%
 		object-fit: cover
 	+rmin($tablet)
-		margin: 0 0 22px
+		margin: 0 0 23px
 	+rmin($desktop)
 		margin: 0 0 24px
 
@@ -212,13 +219,14 @@
 .news__item-desc
 	padding: 24px 30px 22px 30px
 	+rmin($tablet)
-		padding: 44px 30px 52px 70px
+		padding: 44px 30px 52px 35px
 	+rmin($desktop)
 		// padding-left: 78px
 		// padding-right: 82px
 	+rmin($desktop)
 		// padding: 62px 0 69px 17px
-		padding: 62px 62px 72px 78px
+		// padding: 62px 62px 72px 78px
+		padding: 62px 20px 72px 34px
 
 
 .news__load
@@ -235,6 +243,7 @@
 	position: absolute
 	top: 100%
 	left: 0
+	right: 0
 	padding: 15px 0
 	// &:hover
 		// color: #c43939
@@ -244,13 +253,19 @@
 
 	+rmin($tablet)
 		// font-size: 20px
-		padding: 35px 0
+		padding: 42px 0
+		// left: 4px
+		padding-left: 7.2%
+		left: -10px
+		right: -10px
 
 	+rmin($desktop)
 		position: relative
 		top: 0
 		left: 0
-		padding: 106px 0 55px 140px
+		// padding: 106px 20px 55px 20px
+		padding: 106px 0 55px 19.333%
+		// padding: 106px 0 55px 140px
 		
 	+rmin($wide)
 		// margin-left: 77px
