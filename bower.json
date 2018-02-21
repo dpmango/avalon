@@ -24,6 +24,9 @@
     "viewport-units-buggyfill": "^0.6.2",
     "scrollMonitor": "^1.2.4",
     "sticky-kit": "^1.1.2",
-    "rellax": "*"
+    "rellax": "*",
+    "sticky.js": "^1.2.0",
+    "readmore-js": "^2.2.0",
+    "matchHeight": "matchheight#^0.7.2"
   }
 }

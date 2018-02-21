@@ -264,7 +264,8 @@
 		top: 0
 		left: 0
 		// padding: 106px 20px 55px 20px
-		padding: 106px 0 55px 19.333%
+		// padding: 106px 0 55px 19.333%
+		padding: 106px 0 106px 19.333%
 		// padding: 106px 0 55px 140px
 		
 	+rmin($wide)
@@ -276,6 +277,8 @@
 
 .news__sticky
 	margin: 0 -30px
+	backface-visibility: hidden
+	transform: translate3d(0,0,0)
 	+rmin($desktop)
 		margin: 0 -20px
 

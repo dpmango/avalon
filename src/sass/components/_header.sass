@@ -13,7 +13,7 @@
 	top: 0
 	left: 0
 	right: 0
-	z-index: 100
+	z-index: 1000
 	height: 60px
 	background: #fff
 	transition: 0.25s
@@ -196,7 +196,7 @@
 	line-height: 15px
 	font-weight: 400
 	text-transform: none
-	padding: 26px 0 22px
+	// padding: 26px 0 22px
 	display: none
 
 
@@ -317,7 +317,7 @@
 	transition: 0.25s
 	display: block
 	height: 50px
-	padding: 10px 0
+	padding: 10px 25px 10px 0
 	width: 100%
 	font: 900 20px/20px $fontBase
 	color: transparent
@@ -337,7 +337,7 @@
 		color: rgba(37, 37, 37, 0)
 	+rmin($tablet)
 		height: 80px
-		padding: 20px 0
+		padding: 20px 25px 20px 0
 		font-size: 25px
 		line-height: 40px
 
@@ -411,13 +411,15 @@
 	text-align: center
 	background-color: #ffffff
 	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
-	padding: 10px 20px
+	padding: 0
 	font-size: 15px
 	line-height: 20px
 	font-weight: 400
 	transition: 0.25s
 	opacity: 0
 	visibility: hidden
+	overflow-y: auto
+	max-height: calc(100vh - 140px)
 
 .search__progress
 	height: 3px
@@ -428,10 +430,19 @@
 	width: 0
 	z-index: 20
 
+
+.search__group
+	padding: 0 0 20px
+
 .search__count
 	display: block
-	margin: 0 0 20px
+	margin: 0 0 10px
 
+.search__count-link
+	colot: #000
+	transition: 0.25s
+	&:hover
+		color: #c43939
 
 .search__list
 	margin: 0 -10px
@@ -443,75 +454,118 @@
 	
 	& > li
 		padding: 0 10px
-		margin: 0 0 20px
-		
+		margin: 0 0 10px
+		display: none
+		animation: zoomIn 0.5s both
+		position: relative
+		&:hover
+			z-index: 10
+		&.is-visible
+			display: block
+
+
+@keyframes zoomIn
+	0%
+		opacity: 0
+		transform: scale3d(0.3, 0.3, 0.3)
+	50%
+		opacity: 1
+
+
+	
 		
 .search__item
+	position: relative
 	display: block
 	font-weight: 900
 	text-transform: uppercase
 	max-width: 170px
 	margin: 0 auto
+	colot: #000
+	transition: 0.25s
+	z-index: 10
+	&:hover
+		color: #c43939
+	&:hover
+		z-index: 20
+		.search__item-image
+			border-color: #202020
+			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+			img
+				transform: translate(-50%,-40%) scale(2)
+
 
 .search__item-image
-	margin: 0
+	margin: 10px auto 20px
 	overflow: hidden
 	position: relative
 	background: #fff
-	&:before
-		content: ''
-		float: left
-		padding: 75% 0 0
+	width: 70px
+	height: 70px
+	border: 1px solid transparent
 	img
 		display: block
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate(-50%,-50%)
-		max-width: 50%
-		max-height: 50%
+		max-width: 90%
+		max-height: 90%
+		transition: 0.25s
 
 .search__item-name
 	display: block
+	mark
+		background: none
+		color: #999
 
 
 
 .search__action
-	padding: 20px 0 0
+	padding: 0
 
 
 .search__results
 	display: none
-	max-width: 360px
+	max-width: 400px
 	margin: 0 auto
+	padding: 10px 20px 40px
 
 .search__notfind
-	font-size: 25px
-	line-height: 25px
+	font-size: 15px
+	line-height: 20px
 	margin: 0
-	padding: 30px 20px
+	padding: 58px 40px 77px 37px
 	display: block
 	text-align: left
 	display: none
+	+rmin($tablet)
+		font-size: 20px
+		line-height: 25px
+	+rmin($desktop)
+		font-size: 25px
+		line-height: 35px
 
 
 // ------
 
 
-.is-search-find
+.is-search-found
 	.search__results
 		display: block
-
-.is-search-notfind
-	.search__notfind
-		display: block
-
-.is-search-keyup
-	
 	.search__dropdown
 		opacity: 1
 		visibility: visible
 
+.is-search-notfound
+	.search__notfind
+		display: block
+	.search__dropdown
+		opacity: 1
+		visibility: visible
+
+.is-search-keyup
+	
 	.search__clear
 		opacity: 1
 		visibility: visible

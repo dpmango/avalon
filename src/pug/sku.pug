@@ -1,0 +1,237 @@
+---
+title: Карточка товара - Avalon
+bodyClass: page-sku
+---
+extends shared/_layout
+block content
+	
+	
+	// SKU :: Start
+	.sku
+		.container
+			
+			.row
+				.col-lg-10.offset-lg-1
+
+					h1.sku__heading Кресло 3402BM
+
+					ul.breadcrumbs
+						li
+							a(href="#").breadcrumbs__link Главная 
+						li
+							a(href="#").breadcrumbs__link Каталог 
+						li
+							a(href="#").breadcrumbs__link Мебель для конференц-залов
+
+					.row
+						.col-lg-6
+
+							.gallery.js-gallery
+								.gallery-slides.js-gallery-slides
+									.gallery-slides__item
+										img(src="img/pic-sku-1.png", alt="")
+									.gallery-slides__item
+										img(src="img/pic-1.png", alt="")
+									.gallery-slides__item
+										img(src="img/pic-2.png", alt="")
+									.gallery-slides__item
+										img(src="img/pic-3.png", alt="")
+									.gallery-slides__item
+										img(src="img/pic-4.png", alt="")
+									.gallery-slides__item
+										img(src="img/pic-5.png", alt="")
+								
+								.gallery-thumbs.js-gallery-thumbs
+									.gallery-thumbs__item
+										img(src="img/pic-sku-1.png", alt="")
+									.gallery-thumbs__item
+										img(src="img/pic-1.png", alt="")
+									.gallery-thumbs__item
+										img(src="img/pic-2.png", alt="")
+									.gallery-thumbs__item
+										img(src="img/pic-3.png", alt="")
+									.gallery-thumbs__item
+										img(src="img/pic-4.png", alt="")
+									.gallery-thumbs__item
+										img(src="img/pic-5.png", alt="")
+									
+
+						.col-lg-6
+
+							.row
+								.col-6
+
+									p.sku__price 8150 ₽
+
+								.col-6
+
+									.sku__action
+										button.sku__action-btn.js-form-trigger
+											| заказать
+											+icon('ico-close')
+										.sku__action-form
+											form(action="#")
+
+										
+												legend.ui__legend Офомление заказа
+
+												p.ui__caption Для оформления заказа, пожалуйста, заполните и отправьте форму.
+
+												.row
+													.col-6
+														label.ui__group
+															span.ui__placeholder Имя
+															input(type="text").ui__input
+
+													.col-6
+
+														label.ui__group
+															span.ui__placeholder Телефон
+															input(type="tel").ui__input
+
+													.col-12
+
+														label.ui__group
+															span.ui__placeholder Электронная почта
+															input(type="email").ui__input
+
+													.col-12
+
+														label.ui__group
+															span.ui__placeholder.ui__placeholder--textarea Дополнительная информация
+															textarea.ui__textarea
+
+												.row
+													.col-md-6
+
+														.ui__capcha
+
+													.col-md-6
+
+														button.btn.btn--red Отправить
+
+							.sku__caption
+								p Кресло металлическое. Корпус — ABS-палстик. Вращающееся. Окраска высококачественный лак, цвет металлик. Гарантийный срок эксплуатации 1 год. Обивка искусственная кожа.
+
+							.sku__info
+
+								h2 характеристики
+								
+								.row
+									.col-md-6
+										ul.sku__info-list
+											li Артикул <b>3402BM</b>
+											li Производство <b>Россия</b>
+											li Наличие <b>есть</b>
+									.col-md-6
+										ul.sku__info-list
+											li Ширина, см <b>180</b>
+											li Глубина, см <b>90</b>
+											li Высота, см <b>80</b>
+
+
+					.row
+						.col-lg-6
+
+							.sku__info
+								h2 Доставка и оплата
+								p Оплатить заказ в компании «Авалон» вы можете банковским переводом в любом подходящем для вас банке.
+
+								p Мы готовы пойти навстречу, если в вашем распоряжении сейчас нет крупной суммы. В этом случае мы готовы предоставить возможность получения кредита или рассрочки.
+
+								p Сотрудничаем с заказчиками на территории России, а также имеем возможность поставлять мебель в Беларусь и Казахстан.
+
+						.col-lg-6
+
+							.sku__info
+
+								h2 Гарантия
+
+								p Мы работаем со всеми регионами России без исключения. Готовы доставить нашу мебель в ваш город.
+
+								p На ваш выбор предлагается несколько вариантов транспортировки, из которых вы можете выбрать наиболее удобный для вас.
+
+
+	// SKU :: END
+
+	// Related :: Start
+
+	.related
+		.container
+			.row
+				.col-lg-10.offset-lg-1
+
+					h2.related__heading Похожие товары
+					
+
+			.related__container
+				.row
+					.col-lg-10.offset-lg-1
+
+						.related__grid
+							.row
+								.col-6.col-sm-4.col-lg-3.col-xl-20
+					
+									a(href="#").product
+										figure.product__image
+											img(src="img/pic-9.png", alt="")
+										h2.product__title Складной стол 1206NM
+										p.product__price 8300 ₽
+										ul.product__desc
+											li Размеры (см): <b>160х87х99</b>
+											li Вес: <b>5.5 кг</b>
+											li Наличие: <b>есть</b>
+
+								.col-6.col-sm-4.col-lg-3.col-xl-20
+						
+									a(href="#").product
+										figure.product__image
+											img(src="img/pic-10.png", alt="")
+										h2.product__title Стул 3302GM
+										p.product__price 1250 ₽
+										ul.product__desc
+											li Размеры (см): <b>160х87х99</b>
+											li Вес: <b>5.5 кг</b>
+											li Наличие: <b>есть</b>
+
+								.col-6.col-sm-4.col-lg-3.col-xl-20
+						
+									a(href="#").product
+										figure.product__image
+											img(src="img/pic-11.png", alt="")
+										h2.product__title Складной стол 1202NM
+										p.product__price 10000 ₽
+										ul.product__desc
+											li Размеры (см): <b>160х87х99</b>
+											li Вес: <b>5.5 кг</b>
+											li Наличие: <b>есть</b>
+
+								.col-6.col-sm-4.col-lg-3.col-xl-20
+						
+									a(href="#").product
+										figure.product__image
+											img(src="img/pic-12.png", alt="")
+										h2.product__title Стул 1404GM
+										p.product__price 3400 ₽
+										ul.product__desc
+											li Размеры (см): <b>160х87х99</b>
+											li Вес: <b>5.5 кг</b>
+
+								.col-6.col-sm-4.col-lg-3.col-xl-20
+						
+									a(href="#").product
+										figure.product__image
+											img(src="img/pic-12.png", alt="")
+										h2.product__title Стул 1404GM
+										p.product__price 3400 ₽
+										ul.product__desc
+											li Размеры (см): <b>160х87х99</b>
+											li Вес: <b>5.5 кг</b>
+						
+						.related__load
+							a(href="#").btn.btn--load загрузить еще
+
+	
+	// Related :: End
+
+	

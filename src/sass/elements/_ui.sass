@@ -3,20 +3,38 @@
 .ui__fieldset
     display: block
     margin: 0
-    padding: 0
+    padding: 0 0 20px
     border: none
 
 .ui__legend
     display: block
+    font-size: 20px
+    line-height: 20px
     font-weight: 900
+    margin: 0 0 20px
+    text-transform: uppercase
+    +rmin($tablet)
+        font-size: 25px
+        line-height: 30px
+        margin: 0 0 35px
 
 .ui__label
-
+    display: block
+    font-size: 15px
+    line-height: 1
+    font-weight: 900
+    margin: 0 0 15px
+    text-transform: uppercase
 
 .ui__check
     display: block
     position: relative
     cursor: pointer
+    font-size: 15px
+    line-height: 1
+    margin: 0 0 20px
+    min-height: 20px
+
 
 .ui__check-input
     position: absolute
@@ -24,14 +42,123 @@
     left: 0
     opacity: 0
     visibility: hidden
-    &:checked ~ .ui__checkbox
+    &:checked ~ .ui__checkbox:after
+        opacity: 1
+    &:checked ~ .ui__check-link
+        color: #c43939
+    &:checked ~ .ui__check-btn
+        background: #c43939
+        color: #fff
 
 .ui__checkbox
     display: block
     width: 20px
     height: 20px
     border: 2px solid #252525
-    
+    position: absolute
+    top: 0
+    left: 0
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 12px
+        height: 12px
+        margin: -6px 0 0 -6px
+        background: #c43939
+        transition: 0.25s
+        opacity: 0
+
+.ui__check-text
+    display: block
+    padding: 3px 0 0 35px
+    transition: 0.25s
+    &:hover
+        color: #c43939
+
+.ui__check-btn
+    font: 400 15px/1 $fontBase
+    display: block
+    padding: 8px 10px 7px
+    cursor: pointer
+    transition: 0.25s
+    &:hover
+        color: #c43939
+    +rmin($tablet)
+        padding-left: 20px
+        padding-right: 20px
+
+
+.ui__check-link
+    font: 900 12px/1 $fontBase
+    text-transform: lowercase
+    padding: 8px 0
+    border-bottom: 3px solid #000
+    color: #000
+    display: block
+    min-width: 18px
+    text-align: center
+    margin: 0
+
+    &:hover
+        border-color: #c43939
+    +rmin($tablet)
+        font-size: 15px
+
+.ui__group
+    position: relative
+    display: block
+    &.is-focused
+        .ui__placeholder
+            top: -20px
+            font-size: 18px
+            line-height: 25px
+            padding: 0
+
+        .ui__placeholder--textarea
+            top: -37px
+
+.ui__placeholder
+    display: block
+    font: 400 25px/40px $fontBase
+    color: #c8c8c8
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: 0.25s
+
+.ui__placeholder--textarea
+    padding: 15px 30px
+
+.ui__input
+    width: 100%
+    font: 400 25px/40px $fontBase
+    padding: 0 0 6px
+    border: none
+    display: block
+    border-bottom: 3px solid #252525
+    margin: 0 0 45px
+
+.ui__textarea
+    @extend .ui__input
+    border: 3px solid #252525
+    padding: 15px 30px
+    height: 150px
+    margin-top: 20px
+
+
+.ui__caption
+    max-width: 480px
+    color: #c8c8c8
+    display: block
+    font-size: 18px
+    line-height: 25px
+    margin: 0 0 20px
+
 
 // THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
 // .ui-input

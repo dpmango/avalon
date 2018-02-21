@@ -195,6 +195,7 @@ block content
 									img(src="img/pic-portfolio-3.png", alt="")
 								a(href="#").slides-portfolio__caption Джаз-клуб «Эссе»
 
+
 	// Portfolio :: End
 
 
@@ -207,11 +208,11 @@ block content
 				.col-12.col-indent
 					h2.news__heading Новости
 
-			.news__grid
+			.news__grid(data-sticky-container)
 				.row
 					.col-lg-6.offset-lg-1.push-lg-5
 
-						.news__sticky.js-sticky
+						.news__sticky.js-sticky(data-margin-top="20" data-sticky-for="1023" data-sticky-class="is-sticky")
 
 							a(href="#").news__item.news__item--dark
 								figure.news__item-image

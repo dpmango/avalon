@@ -4,9 +4,9 @@ PageList:
 - file: homepage.html
   ready: 100
 - file: catalogue.html
-  ready: 0
+  ready: 80
 - file: sku.html
-  ready: 0
+  ready: 80
 - file: portfolio.html
   ready: 0
 - file: services.html

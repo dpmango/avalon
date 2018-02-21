@@ -11,10 +11,10 @@ button
     vertical-align: top
     position: relative
     text-align: center
-    font: 900 15px/20px $fontBase
+    font: 900 25px/30px $fontBase
+    padding: 15px 30px
     transition: 0.25s
     border: none
-    padding: 0
     cursor: pointer
     &:focus, &:active
         outline: none
@@ -23,10 +23,49 @@ button
         width: 100%
 
 
+
+.btn--link
+    background: none
+    font-size: 15px
+    line-height: 1
+    padding: 0 0 8px
+    border-bottom: 3px solid #000
+    &:hover
+        color: #c43939
+
+
+.btn--collapse
+    font-size: 15px
+    line-height: 1
+    padding: 0 0 10px
+    border-bottom: 3px solid #000
+    +rmin($tablet)
+        font-size: 20px
+    +rmin($desktop)
+        font-size: 25px
+
+.btn--small
+    padding: 8px 10px 7px
+    font-size: 15px
+    line-height: 1
+
+.btn--large
+    // font-size: 25px
+    // line-height: 30px
+
+
+.btn--grey
+    background: #999999
+    color: #fff
+    &:hover
+        background: #c43939
+        color: #fff
+
 .btn--red
     background: #c43939
-    padding: 15px 20px
     color: #fff
+    &:hover
+        box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 
 .btn--load
     font-size: 15px
@@ -62,8 +101,10 @@ button
     position: fixed
     bottom: 0
     right: 10px
-    z-index: 100
+    z-index: 200
     text-transform: lowercase
+    font-size: 15px
+    line-height: 20px
     padding: 5px 20px
     width: 160px
     background: #999999
@@ -82,11 +123,58 @@ button
 
 
 
+.btn--filter, .btn--categories
+    display: block
+    width: 40px
+    height: 40px
+    background: #999999
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    backface-visibility: hidden
+    .ico
+        transition: 0.25s
+    .ico-close
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%) scale(0)
+        z-index: 10
+        font-size: 16px
+        opacity: 0
+    &:hover
+        background: #c43939
+    +rmin($tablet)
+        width: 60px
+        height: 60px
+
 .btn--categories
-    display: none
+    position: absolute
+    bottom: 75px
+    right: -20px
+    +rmin($tablet)
+        // right: 0
+        bottom: 105px
+    +rmin($desktop)
+        position: fixed
+        top: 50%
+        left: 0
+        right: auto
+        margin: -60px 0 0
+        z-index: 200
 
 .btn--filter
-    display: none
+    position: absolute
+    bottom: 30px
+    right: -20px
+    +rmin($tablet)
+        // right: 0
+        bottom: 40px
+    +rmin($desktop)
+        display: none
+    
 
 
 

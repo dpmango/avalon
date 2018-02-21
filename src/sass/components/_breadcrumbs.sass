@@ -5,12 +5,12 @@
 	padding: 0
 	letter-spacing: normal
 	font-size: 12px
-	line-height: 15px
+	line-height: 1
 	& > li
 		display: inline-block
 		vertical-align: top
 		position: relative
-		padding: 0 20px 0 0
+		padding: 0 20px 3px 0
 		&:after
 			content: ' → '
 			display: block
@@ -23,6 +23,10 @@
 			display: none
 		&:first-child .breadcrumbs__link
 			border-color: #202020
+	+rmin($tablet)
+		font-size: 15px
+		line-height: 18px
+		margin: 0 0 36px
 
 
 .breadcrumbs__link

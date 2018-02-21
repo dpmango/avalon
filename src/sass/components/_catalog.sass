@@ -1,111 +1,233 @@
 // Catalog
 
 .catalog
-
+	+rmin($tablet)
+		padding: 46px 0 0
 .catalog__head
 	position: relative
-	padding: 0 50px 0 0
+	padding: 0 60px 0 0
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	+rmin($tablet)
+		margin: 0 -20px
+		padding: 0 120px 0 7.2%
+	+rmin($desktop)
+		padding-left: 9.2%
+
 
 .catalog__main
 	display: flex
 	align-items: flex-start
+	position: relative
 
 .catalog__content
 	position: relative
 	z-index: 10
 	flex: 1
-	padding: 40px 60px 40px 0
+	padding: 30px 0 60px
+	transition: 0.4s
+	// padding: 30px 60px 30px 0
 	&:after
 		content: ''
 		display: block
 		position: absolute
 		top: 0
-		right: 0
+		right: -30px
 		bottom: 0
-		width: 100vw
+		min-width: 120vw
 		background: #f2f1ed
 		z-index: -1
+	+rmin($tablet)
+		padding-bottom: 80px
+	+rmin($desktop)
+		padding: 30px 60px 80px 9.2%
+		margin: 0 0 0 -20px
+		&:after
+			right: 0
+
+.catalog__filter-checkboxes
+	padding: 0 0 30px
+	.ui__check
+		margin: 0 0 15px
+		&:last-child
+			margin: 0
+	+rmin($tablet)
+		padding: 0 0 40px
+		.ui__check
+			margin: 0 0 20px
+
+.catalog__filter-subsections
+	margin: 0 0 0 -10px
+	.ui__check
+		margin: 0
+	+rmin($tablet)
+		margin: 0 0 0 -20px
+
+.catalog__filter-all
+	padding: 0 0 30px
+	+rmin($tablet)
+		padding: 0 0 40px
+
+.catalog__filter-action
+	padding: 0 0 52px
+	+rmin($tablet)
+		padding: 0 0 66px
+		margin: 0 0 0 -20px
 
 .catalog__filter
-	flex: 0 0 220px
-	width: 220px
-	width: 220px
-	margin: 0 0 0 20px
+	position: absolute
+	top: 0
+	right: -30px
+	width: 200px
+	transition: 0.4s
+	z-index: 110
+	opacity: 0
+	visibility: hidden
+	transform: translate3d(200px,0,0)
+	background: #fff
+	padding: 0 0 20px 20px
+	+rmin($tablet)
+		width: 275px
+		padding: 0 0 40px 40px
+	+rmin($desktop)
+		right: 0
+		position: relative
+		flex: 0 0 240px
+		width: 240px
+		margin: 0
+		opacity: 1
+		visibility: visible
+		transform: translate3d(0,0,0)
 
+.is-filter-open
+	.btn--filter
+		.ico-filter
+			opacity: 0
+			transform: scale(0)
+		.ico-close
+			opacity: 1
+			transform: translate(-50%,-50%) scale(1)
+	.catalog__filter
+		opacity: 1
+		visibility: visible
+		transform: translate3d(0,0,0)
+	.catalog__content
+		transform: translate3d(-200px,0,0)
+		+rmin($tablet)
+			transform: translate3d(-275px,0,0)
 
 // -----
 
-.catalog__item
-	display: block
+.catalog__ctrl
+	margin: 0 -30px
+	padding: 0 10px
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			padding: 0 10px
+	
+	+rmin($tablet)
+		margin: 0
+		padding: 0
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+
+.catalog__sorting
 	position: relative
-	z-index: 10
-	backface-visibility: hidden
-	margin: 0 0 40px
-	& *
-		backface-visibility: hidden
-	&:after
-		content: ''
-		display: block
-		position: absolute
-		top: -40px
+	margin: 0 0 30px
+	display: inline-block
+	+rmin($tablet)
+		margin: 0 0 40px
+
+.catalog__sorting-btn
+	display: block
+	font: 900 12px/1 $fontBase
+	text-transform: lowercase
+	padding: 8px 0
+	border-bottom: 3px solid #000
+	color: #000
+	background: none
+	cursor: pointer
+	mark
+		display: none
+		background: none
+	+rmin($tablet)
+		font-size: 15px
+		mark
+			display: inline
+
+.catalog__sorting-dropdown
+	position: absolute
+	top: -30px
+	left: -10px
+	right: -10px
+	visibility: hidden
+	opacity: 0
+	transition: 0.25s
+	background: #fff
+	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+	z-index: 100
+	padding: 30px 10px
+	min-width: 225px
+	.ui__check
+		padding: 0
+		margin: 0
+	+rmin($tablet)
 		left: -40px
 		right: -40px
-		bottom: -40px
-		background: #fff
-		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
-		z-index: -1
-		transition: 0.25s
-		opacity: 0
-		visibility: hidden
-	&:hover
-		z-index: 20
-		&:after
-			opacity: 1
-			visibility: visible
-			top: -40px
-			left: -40px
-			right: -40px
-			bottom: -40px
-		.catalog__item-image
-			border-color: #202020
-			img
-				transform: translate(-50%,-40%) scale(2)
+		padding: 30px 20px
 
-.catalog__item-image
-	position: relative
-	margin: 0 0 20px
-	background: #fff
-	overflow: hidden
-	border: 2px solid transparent
-	transition: 0.25s
-	&:before
-		content: ''
-		float: left
-		padding: 100% 0 0
-	img
-		transition: inherit
-		display: block
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%,-50%)
-		max-width: 80%
-		max-height: 80%
-
-
-.catalog__item-title
+.catalog__sorting-text
 	display: block
-	margin: 0
-
-.catalog__item-price
-	display: block
-	margin: 0
-
-.catalog__item-desc
-	margin: 0
-	padding: 0
-	letter-spacing: normal
-	overflow: hidden
-	max-height: 0
-	& > li
+	font: 900 12px/15px $fontBase
+	text-transform: lowercase
+	padding: 8px 0
+	display: none
+	+rmin($tablet)
 		display: block
+		font-size: 15px
+		padding: 8px 20px
+		margin: 0 0 20px
+
+
+.is-sorting-open
+	.catalog__sorting-dropdown
+		opacity: 1
+		visibility: visible
+
+.catalog__display
+	display: flex
+	.ui__check
+		margin: 0 10px 0 0
+
+// -----
+
+
+
+.catalog__grid
+	margin: 0 -30px
+	padding: 0 10px
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			padding: 0 10px
+	+rmin($tablet)
+		margin: 0
+		padding: 0
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+
+
+.catalog__load
+	padding: 34px 0 0
+	+rmin($tablet)
+		padding: 34px 20px 0 7.2%
+		margin: 0 -20px
+	+rmin($desktop)
+		margin: 0
+		padding: 34px 0 0
