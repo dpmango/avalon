@@ -1,0 +1,252 @@
+.delivery
+	// outline: 1px solid #000
+.delivery__title
+	font-size: 50px
+	margin-top: 62px
+.delivery__sub-title
+	font-size: 25px
+	line-height: 34px
+	margin-top: 1.4em
+.delivery__list-item
+	display: flex
+	justify-content: flex-start
+	padding-left: 30px
+	// margin-right: 28px
+	max-width: 27%
+	&:nth-child(2)
+		max-width: 28%
+	&:nth-child(1)
+		.delivery__list-number
+			margin-right: 18px		
+.delivery__list-number
+	font-size: 125px
+	font-weight: 900
+	color: #E2E1DE
+	margin: 0
+	line-height: 1
+	margin-right: 38px
+	min-width: 50px
+	// outline: 1px solid red
+.delivery__list-info
+	color: #252525;
+	font-size: 18px
+	line-height: 25px
+	margin: 0
+	line-height: 1.45
+	max-width: 210px
+.address__title
+	font-size: 25px
+	line-height: 32px
+	text-transform: uppercase
+	font-weight: 900
+	margin-top: 57px
+.bg-grey
+	background: #F2F1ED
+.cities
+	// padding-top: 6px
+	// padding-bottom: 80px
+	padding: 6px 0 80px
+.cities__item
+	background: #fff
+	margin-top: 34px
+	padding: 5px 0
+	.col-lg-3
+		padding-left: 35px
+.cities__title
+	font-size: 20px
+	font-weight: 900
+	text-transform: uppercase
+.cities__info
+	// padding-left: 21px
+	font-size: 18px
+	margin: 0.5em 0
+	line-height: 2
+.payments
+	padding: 80px 0 0 0
+	margin-bottom: -26px
+	.col-lg-5
+		p.payments__info
+			&:nth-child(2)
+				margin-top: 26px
+	.col-lg-6
+		padding-left: 65px
+.payments__title
+	font-size: 25px
+	line-height: 32px
+	text-transform: uppercase
+	font-weight: 900
+	margin: 0
+.payments__info
+	line-height: 25px
+	font-size: 18px
+	
+// editable Breadcrumbs
+
+.breadcrumbs
+	font-size: 15px
+	line-height: 10px
+
+
+@media (max-width: 768px)
+	.delivery
+		.col-sm-11
+			padding: 0
+			margin-left: 7.4%
+		// editable Breadcrumbs
+		.breadcrumbs
+			margin: 0 0 25px
+			margin-left: 3px
+	.delivery__title
+		margin-top: 32px
+		margin-bottom: 20px
+	.delivery__sub-title
+		margin: 0
+		line-height: 35px
+	.nopadding
+		padding: 0
+	.delivery__list-item
+		max-width: 50%
+		margin-top: 27px
+		&:nth-child(1)
+			.delivery__list-number
+				margin-right: 31px
+		&:nth-child(2)
+			max-width: 50%
+		&:nth-child(3)
+			padding-top: 6px
+			margin-top: 0
+	.delivery__list-info
+		line-height: 25px
+	.delivery__list-number
+		margin-right: 33px
+	.address__title
+		margin-top: 54px
+		margin-left: 2px
+	.cities__item
+		flex: 0 0 95%
+		max-width: 100%
+	    width: 100%
+		padding: 5px 19px
+		margin: 39px 20px 0
+		min-height: 130px
+
+		.col-sm-4
+			padding-left: 20px
+	.cities
+		padding: 8px 0 80px
+		.row
+			margin: 0
+			&:first-child
+				.cities__item
+					margin-top: 33px
+			
+	.cities__info
+		line-height: 25px
+		padding-left: 5px
+		&:first-child
+			margin-top: 13px
+			min-height: 45px
+		&:last-child
+			margin-top: 25px
+	.payments__title
+		margin-top: 8px
+	.payments
+		padding-left: 60px;
+		margin-bottom: -47px
+		.col-sm-12
+			padding-left: 0
+	.payments__info
+		&.mt-7
+			margin-top: 7px
+
+@media (max-width: 575px)
+	.delivery
+		.col-12
+			margin-left: 20px
+		// editable Breadcrumbs
+		.breadcrumbs
+			margin-left: 0
+			margin-bottom: 18px
+			font-size: 12px
+			line-height: 10px
+	.delivery__title
+		font-size: 30px
+		margin-top: 10px
+		margin-bottom: 11px
+
+	.delivery__sub-title
+		font-size: 20px
+		line-height: 25px
+	.col-12
+		max-width: 96%
+	.delivery__list-item
+		padding-left: 0
+		margin-top: 16px
+		&:nth-child(2),
+		&:nth-child(3)
+			max-width: 100%
+		&:nth-child(1)
+			.delivery__list-number
+				margin-right: 0
+		&:nth-child(2)
+			margin-top: 9px
+		&:nth-child(3)
+			margin-top: 4px
+	.delivery__list-number
+		font-size: 70px
+		margin-left: -4px
+		margin-right: 0
+	.delivery__list-info
+		font-size: 15px
+		line-height: 20px
+	.address__title
+		line-height: 25px
+		margin: 40px 0 25px 0
+	.cities
+		.col-12
+			max-width: 90%
+		.col-lg-3.col-sm-4
+			padding: 0
+	.cities__title
+		font-size: 15px
+		line-height: 20px
+		margin: 10px 0
+	.cities__info
+		font-size: 15px
+		line-height: 20px
+		min-height: 0
+		padding-left: 0
+		margin-top: 2px
+		&:first-child
+			min-height: 0
+			margin-top: 2px
+		&:last-child
+			margin-top: 10px
+	.cities__item
+		margin-top: 20px
+		padding: 5px 9px
+	.cities
+		padding: 8px 0 60px
+		.row
+			&:first-child
+				.cities__item
+					margin-top: 22px
+	.payments
+		padding-left: 20px
+		padding-top: 56px
+		margin-bottom: -72px
+		.col-sm-12.no-gutters
+			padding-right: 4px
+	.payments__title
+		font-size: 20px
+		line-height: 25px
+	.payments__info
+		line-height: 20px
+		font-size: 15px
+		margin-top: 11px
+	.payments 
+		.col-lg-5 
+			p.payments__info
+				&:nth-child(2)
+					margin-top: 20px
+					margin-bottom: 13px

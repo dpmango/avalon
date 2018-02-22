@@ -12,7 +12,7 @@ PageList:
 - file: services.html
   ready: 0
 - file: delivery.html
-  ready: 0
+  ready: 100
 - file: contacts.html
   ready: 0
 - file: company.html
