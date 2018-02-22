@@ -1,9 +1,9 @@
 // Sku
 
 .sku
-
+	margin: 0 -20px 0 0
 	+rmin($tablet)
-		padding: 46px 0 0
+		// padding: 46px 0 0
 
 // .sku__head, .sku__main
 	// +rmin($tablet)
@@ -14,15 +14,22 @@
 
 .sku__price
 	display: block
-	font-size: 50px
-	line-height: 60px
+	font-size: 30px
+	line-height: 40px
 	font-weight: 400
-	margin: 0 0 60px
+	margin: 0 0 47px
+	white-space: nowrap
+	+rmin($tablet)
+		font-size: 50px
+		line-height: 60px
+		margin: 0 0 60px
 
 .sku__action
-	margin: 0 0 60px
+	margin: 0 0 47px
 	float: right
 	position: relative
+	+rmin($tablet)
+		margin: 0 0 60px
 
 
 .is-form-open
@@ -43,14 +50,18 @@
 		transition-delay: 0.25s
 
 .sku__action-btn
-	@extend .btn
-	@extend .btn--red
-	transition: 0.25s
+	font: 900 15px/20px $fontBase
+	padding: 10px 20px
 	position: relative
 	z-index: 110
 	overflow: hidden
-	width: 200px
+	width: 135px
+	transition: 0.25s
 	transition-delay: 0.4s
+	background: #c43939
+	color: #fff
+	&:hover
+		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 	.ico
 		position: absolute
 		top: 50%
@@ -61,6 +72,11 @@
 		display: block
 		transition: inherit
 		opacity: 0
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 30px
+		padding: 15px 30px
+		width: 200px
 
 
 .sku__action-form
@@ -84,24 +100,31 @@
 
 
 .sku__caption
-	font-size: 25px
-	line-height: 35px
+	font-size: 20px
+	line-height: 25px
 	padding: 0 0 77px
-	margin: 0 -20px 0 0
+	margin: 0
 	p
 		margin: 0 0 20px
 		&:last-child
 			margin: 0
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 35px
+		margin: 0 -20px 0 0
 
 
 
 
 .sku__info
-	font-size: 18px
-	line-height: 25px
+	font-size: 15px
+	line-height: 20px
 	margin: 0 0 40px
 	h2
 		text-transform: uppercase
+	+rmin($tablet)
+		font-size: 18px
+		line-height: 25px
 
 .sku__info-list
 	margin: 0

@@ -361,7 +361,7 @@ $(document).ready(function(){
     });
     $('.js-gallery-thumbs').slick({
         vertical: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.js-gallery-slides',
         arrows: false,
