@@ -1,0 +1,63 @@
+---
+title: Контакты - Avalon
+bodyClass: page-contacts
+---
+extends shared/_layout
+block content
+	
+	
+	// Contacts :: Start
+	.contacts
+		.container
+
+			.row
+				.col-12.col-indent
+
+					h1 Контакты
+
+					ul.breadcrumbs
+						li
+							a(href="#").breadcrumbs__link Главная 
+						li
+							a(href="#").breadcrumbs__link Контакты
+
+
+			.row
+				.col-lg-4
+
+					.row
+						.col-md-6.col-lg-12
+
+							address.contacts__address.contacts__address--primary
+								strong Москва
+								p 127018 3-й проезд Марьиной Рощи, д. 40, строение 1, корп. 6, офис 404
+								p info@avalonmebel.ru
+								p +7 (495) 181 52 64 <br> +7 (495) 585 74 86
+
+						.col-md-6.col-lg-12
+
+							.slides-contacts.js-slides-contacts
+
+								address.contacts__address
+									strong Санкт-Петербург
+									p 1пр. Обуховской Обороны, д.120, лит. 3
+									p info@avalonmebel.ru
+									p +7 (812) 306 54 06
+
+								address.contacts__address
+									strong Астана
+									p ул.Джангильдина, 25
+									p info@avalonmebel.ru
+									p +7 (700) 306 54 06
+
+					
+
+				.col-lg-8
+
+					.contacts__map#contacts__map
+
+					
+
+	// Contacts :: End
+
+

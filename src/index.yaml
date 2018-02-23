@@ -2,7 +2,7 @@ ProjectTitle: Avalon
 
 PageList:
 - file: homepage.html
-  ready: 100
+  ready: 80
 - file: catalogue.html
   ready: 80
 - file: sku.html
@@ -11,19 +11,21 @@ PageList:
   ready: 80
 - file: cases-single.html
   ready: 80
-- file: services.html
-  ready: 0
-- file: delivery.html
-  ready: 0
 - file: contacts.html
-  ready: 0
-- file: company.html
-  ready: 0
-- file: search.html
-  ready: 0
+  ready: 5
+- file: services.html
+  ready: 5
+- file: delivery.html
+  ready: 5
 - file: dealers.html
-  ready: 0
-- file: credentials.html
-  ready: 0
+  ready: 5
+- file: requisites.html
+  ready: 5
+- file: company.html
+  ready: 5
+- file: results.html
+  ready: 1
+- file: results-notfound.html
+  ready: 50
 - file: styleguide.html
-  ready: 10
+  ready: 5
