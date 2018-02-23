@@ -51,6 +51,7 @@
 	color: #252525
 	margin: 0 0 22px 18px
 	transition: none
+	max-width: 210px
 	&:hover
 		color: #c43939
 		.categories__item-icon
@@ -66,11 +67,6 @@
 		font-size: 20px
 		line-height: 25px
 		margin: 0 0 32px 40px
-		&:hover
-			.categories__item-icon:after
-				// left: -60px
-			.ico
-				// transform: translate(-30px,0)
 	+rmin($desktop)
 		font-size: 25px
 		line-height: 30px
@@ -116,7 +112,6 @@
 		transition: transform 0.25s, color 0.25s, left 0.25s
 		transform: translate(-40px,0)
 		position: relative
-		
 	.ico-categories-1
 		font-size: 52px
 		left: 6px
@@ -148,7 +143,6 @@
 	.ico-categories-10
 		font-size: 75px
 		left: -11px
-
 
 	+rmin($tablet)
 		height: 150px
@@ -196,9 +190,83 @@
 
 
 
+.categories__item-image
+	display: block
+	position: relative
+	z-index: 10
+	height: 105px
+	margin: 0 0 12px
+	color: #fff
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 44px
+		right: 0
+		bottom: 0
+		background: #f2f1ed
+		z-index: -1
+		transition: 0.25s
+	img
+		display: block
+		max-height: 75px
+		max-width: 120px
+	+rmin($tablet)
+		height: 150px
+		margin: 0 0 18px
+		&:after
+			left: 0
+		img
+			max-height: 100px
+	+rmin($desktop)
+		margin: 0 0 28px
 
+
+.categories__item-front, .categories__item-back
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	transition: 0.25s
+	transform: translate(-40px,0)
+	+rmin($tablet)
+		transform: translate(-58px,0)
+	+rmin($desktop)
+		transform: translate(-90px,0)
+
+.categories__item-front
+	opacity: 0
 
 
 .categories__item-text
 	margin: 0
 	transition: color 0.25s
+
+
+
+.categories__item
+
+	&:hover
+		.categories__item-image:after
+			left: -20px
+		
+		.categories__item-back
+			transform: translate(-10px,0)
+			opacity: 0
+
+		.categories__item-front
+			transform: translate(-10px,0)
+			opacity: 1
+
+	+rmin($desktop)
+		&:hover
+			.categories__item-image:after
+				left: -60px
+			.categories__item-back, .categories__item-front
+				transform: translate(-30px,0)

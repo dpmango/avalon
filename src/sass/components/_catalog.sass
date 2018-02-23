@@ -100,6 +100,9 @@
 		visibility: visible
 		transform: translate3d(0,0,0)
 
+
+
+
 .is-filter-open
 	.btn--filter
 		.ico-filter
@@ -116,6 +119,42 @@
 		transform: translate3d(-200px,0,0)
 		+rmin($tablet)
 			transform: translate3d(-275px,0,0)
+
+
+// -----
+
+.catalog__categories
+	position: absolute
+	top: 0
+	left: 50%
+	width: 100vw
+	max-width: 500px
+	z-index: 1000
+	background: #fff
+	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+	padding: 50px
+	margin: 0 0 0 -50vw
+	overflow: auto
+
+	.categories__item
+		font-size: 15px
+		line-height: 20px
+		margin: 0 0 22px 18px
+		&:hover
+			.categories__item-image:after
+				left: -20px
+			.categories__item-front, .categories__item-back
+				transform: translate(-10px,0)
+
+	.categories__item-image
+		height: 105px
+		&:after
+			left: 44px
+		img
+			max-height: 75px
+
+	.categories__item-front, .categories__item-back
+		transform: translate(-40px,0)
 
 // -----
 
