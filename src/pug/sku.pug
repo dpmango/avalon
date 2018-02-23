@@ -11,7 +11,7 @@ block content
 		.container
 			
 			.row
-				.col-lg-10.offset-lg-1
+				.col-12.col-indent
 
 					h1.sku__heading Кресло 3402BM
 
@@ -66,49 +66,57 @@ block content
 								.col-6
 
 									.sku__action
-										button.sku__action-btn.js-form-trigger
+										button.sku__action-btn.js-sku-trigger
 											| заказать
 											+icon('ico-close')
 										.sku__action-form
-											form(action="#")
+											form(action="#").js-validate
 
 										
 												legend.ui__legend Офомление заказа
 
+
+
 												p.ui__caption Для оформления заказа, пожалуйста, заполните и отправьте форму.
 
 												.row
-													.col-6
+													.col-md-6
 														label.ui__group
 															span.ui__placeholder Имя
-															input(type="text").ui__input
+															input(type="text" name="name").ui__input
 
-													.col-6
+													.col-md-6
 
 														label.ui__group
 															span.ui__placeholder Телефон
-															input(type="tel").ui__input
+															input(type="tel" name="tel").ui__input
 
 													.col-12
 
 														label.ui__group
 															span.ui__placeholder Электронная почта
-															input(type="email").ui__input
+															input(type="email" name="email").ui__input
 
 													.col-12
 
 														label.ui__group
 															span.ui__placeholder.ui__placeholder--textarea Дополнительная информация
-															textarea.ui__textarea
+															textarea(name="message").ui__textarea
+												
+												.ui__ctrl
 
-												.row
-													.col-md-6
+													p.ui__error Пожалуйста, заполните подсвеченные поля <br>и повторите попытку.
+													p.ui__success Заказ отправлен в обработку. В ближайшее время для уточнения деталей с вами свяжется наш менеджер. Спасибо!
 
-														.ui__capcha
+													.row
+														.col-md-6
 
-													.col-md-6
+															.ui__capcha
+																img(src="img/pic-capcha.png", alt="")
 
-														button.btn.btn--red Отправить
+														.col-md-6
+
+															button.btn.btn--red Отправить
 
 							.sku__caption
 								p Кресло металлическое. Корпус — ABS-палстик. Вращающееся. Окраска высококачественный лак, цвет металлик. Гарантийный срок эксплуатации 1 год. Обивка искусственная кожа.
@@ -159,7 +167,7 @@ block content
 	.related
 		.container
 			.row
-				.col-lg-10.offset-lg-1
+				.col-12.col-indent
 
 					h2.related__heading Похожие товары
 					
@@ -170,60 +178,60 @@ block content
 
 						.related__grid
 							.row
-								.col-6.col-sm-4.col-lg-3.col-xl-20
+								.col-6.col-sm-4.col-xl-20
 					
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-9.png", alt="")
-										h2.product__title Складной стол 1206NM
-										p.product__price 8300 ₽
+											img(src="img/pic-17.png", alt="")
+										h2.product__title Стул 1405GM
+										p.product__price 3500 ₽
 										ul.product__desc
 											li Размеры (см): <b>160х87х99</b>
 											li Вес: <b>5.5 кг</b>
 											li Наличие: <b>есть</b>
 
-								.col-6.col-sm-4.col-lg-3.col-xl-20
+								.col-6.col-sm-4.col-xl-20
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-10.png", alt="")
-										h2.product__title Стул 3302GM
-										p.product__price 1250 ₽
+											img(src="img/pic-18.png", alt="")
+										h2.product__title Стул 1406GM
+										p.product__price 2900 ₽
 										ul.product__desc
 											li Размеры (см): <b>160х87х99</b>
 											li Вес: <b>5.5 кг</b>
 											li Наличие: <b>есть</b>
 
-								.col-6.col-sm-4.col-lg-3.col-xl-20
+								.col-6.col-sm-4.col-xl-20
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-11.png", alt="")
-										h2.product__title Складной стол 1202NM
-										p.product__price 10000 ₽
+											img(src="img/pic-19.png", alt="")
+										h2.product__title Складной стул 6420NM
+										p.product__price 4200 ₽
 										ul.product__desc
 											li Размеры (см): <b>160х87х99</b>
 											li Вес: <b>5.5 кг</b>
 											li Наличие: <b>есть</b>
 
-								.col-6.col-sm-4.col-lg-3.col-xl-20
+								.col-6.col-sm-4.col-xl-20
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-12.png", alt="")
-										h2.product__title Стул 1404GM
-										p.product__price 3400 ₽
+											img(src="img/pic-20.png", alt="")
+										h2.product__title 6416NM
+										p.product__price 5800 ₽
 										ul.product__desc
 											li Размеры (см): <b>160х87х99</b>
 											li Вес: <b>5.5 кг</b>
 
-								.col-6.col-sm-4.col-lg-3.col-xl-20
+								.col-6.col-sm-4.col-xl-20
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-12.png", alt="")
-										h2.product__title Стул 1404GM
-										p.product__price 3400 ₽
+											img(src="img/pic-21.png", alt="")
+										h2.product__title Кресло эмилия
+										p.product__price 6670 ₽
 										ul.product__desc
 											li Размеры (см): <b>160х87х99</b>
 											li Вес: <b>5.5 кг</b>

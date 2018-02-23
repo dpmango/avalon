@@ -1,0 +1,190 @@
+// Cases
+
+
+.cases__heading
+	display: block
+	font-size: 30px
+	+rmin($tablet)
+		font-size: 50px
+
+
+.cases__caption
+	display: block
+	font-size: 20px
+	line-height: 25px
+	margin: 0 0 20px
+	p:last-child
+		margin: 0
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 35px
+		margin: 0 0 30px
+	+rmin($desktop)
+		margin: 24px 0 30px
+
+.cases__address
+	display: block
+	font-style: normal
+	position: relative
+	margin: 0 0 20px
+	font-size: 15px
+	line-height: 35px
+	.ico
+		font-size: 28px
+		display: inline-block
+		vertical-align: middle
+		margin: 0 10px 0 0
+	+rmin($tablet)
+		font-size: 18px
+		margin: 0 0 30px
+	+rmin($desktop)
+		margin: 24px 0 30px
+		text-align: right
+
+// -----
+
+.cases__grid
+	position: relative
+	z-index: 10
+	color: #fff
+	padding: 30px 0 0
+	background: #252525
+	margin: 0 -30px
+	padding: 30px 30px 0
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		width: 120vw
+		margin: 0 0 0 -60vw
+		background: #252525
+		z-index: -1
+		display: none
+
+	.row
+		& > [class^="col"]
+			position: relative
+			&:nth-child(even)
+				// top: 80px
+	
+	+rmin($mobile)
+		.row
+			& > [class^="col"]
+				&:nth-child(even)
+					top: 100px
+	+rmin($tablet)
+		padding: 40px 7.2% 0
+		margin: 0 -20px
+	+rmin($desktop)
+		padding: 40px 9.2% 0
+		margin: 0 -20px
+		.row
+			& > [class^="col"]
+				&:nth-child(even)
+					top: 80px
+
+.cases__item
+	display: block
+	margin: 0 -30px 60px 0
+	color: #fff
+	transition: 0.25s
+	&:hover
+		color: #c43939
+		.cases__item-image
+			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
+	+rmin($mobile)
+		margin: 0 0 80px
+
+.cases__item-image
+	margin: 0 0 20px
+	overflow: hidden
+	position: relative
+	transition: 0.25s
+	&:before
+		content: ''
+		float: left
+		padding: 65% 0 0
+	img
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+	+rmin($tablet)
+		margin: 0 0 30px
+		&:before
+			padding: 67% 0 0
+
+.cases__item-caption
+	display: block
+	font-size: 23px
+	line-height: 25px
+	font-weight: 900
+	padding: 0 30px 0 0
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 30px
+		padding: 0
+
+// ------
+
+.cases__images
+	margin: 0 -30px
+	padding: 40px 10px 50px
+	.row
+		display: block
+		margin: 0 -10px
+		&:after
+			content: ''
+			display: table
+			width: 100%
+			clear: both
+		& > [class^="col"]
+			float: left
+			padding: 0 10px
+			&:nth-child(1)
+				.cases__images-item
+					margin-left: -10px
+	+rmin($tablet)
+		padding: 50px 0
+		margin: 0
+		.row
+			& > [class^="col"]
+				&:nth-child(1)
+					.cases__images-item
+						margin-left: -20px
+				&:nth-child(3)
+				 	clear: left
+				&:nth-child(5)
+					.cases__images-item
+						margin-right: -20px
+				&:nth-child(6)
+					clear: left
+
+.cases__images-item
+	margin: 0 0 30px
+	img
+		display: block
+		width: 100%
+	+rmin($desktop)
+		margin: 0 0 80px
+
+
+
+// -----
+
+.cases__other
+
+.cases__other-heading
+	display: block
+	font-size: 30px
+	line-height: 1
+	margin: 0 0 22px
+	+rmin($tablet)
+		font-size: 50px
+		margin: 0 0 28px

@@ -7,8 +7,10 @@ PageList:
   ready: 80
 - file: sku.html
   ready: 80
-- file: portfolio.html
-  ready: 0
+- file: cases.html
+  ready: 80
+- file: cases-single.html
+  ready: 80
 - file: services.html
   ready: 0
 - file: delivery.html

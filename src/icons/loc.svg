@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="27px" viewBox="0 0 20 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.01722801,16.0238373 C0.750987872,14.3484512 0,12.2619269 0,10 C0,4.4771525 4.4771525,0 10,0 C15.5228475,0 20,4.4771525 20,10 C20,12.2619269 19.2490121,14.3484512 17.982772,16.0238373 L10,27.0690918 L2.01722801,16.0238373 Z" id="path-1"></path>
+        <circle id="path-2" cx="10" cy="10" r="5"></circle>
+    </defs>
+    <g id="avalon_portfolio_item_dt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1102.000000, -364.000000)">
+        <g id="description" transform="translate(140.000000, 354.000000)">
+            <g id="pin" transform="translate(962.000000, 10.000000)">
+                <g id="Combined-Shape">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#252525" stroke-width="2" d="M10.0000143,25.3619356 L17.1849947,15.4208851 C18.3565128,13.8708274 19,11.9855288 19,10 C19,5.02943725 14.9705627,1 10,1 C5.02943725,1 1,5.02943725 1,10 C1,11.9855288 1.64348715,13.8708274 2.81500535,15.4208851 L2.82771063,15.4380746 L10.0000143,25.3619356 Z"></path>
+                </g>
+                <g id="Oval-2">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <circle stroke="#252525" stroke-width="2" cx="10" cy="10" r="4"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

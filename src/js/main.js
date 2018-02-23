@@ -179,14 +179,14 @@ $(document).ready(function(){
 
     // Sticky
 
-    $('.js-sticky').stick_in_parent({
-        offset_top: 0
-    });
+    // $('.js-sticky').stick_in_parent({
+    //     offset_top: 0
+    // });
 
 
-    $(window).on('resize', function(event) {
-       $('.js-sticky').trigger("sticky_kit:recalc");
-    });
+    // $(window).on('resize', function(event) {
+    //    $('.js-sticky').trigger("sticky_kit:recalc");
+    // });
 
 
 
@@ -367,7 +367,16 @@ $(document).ready(function(){
         arrows: false,
         // dots: true,
         centerMode: false,
-        focusOnSelect: true
+        focusOnSelect: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 5
+                }
+            }
+        ]
     });
 
 
@@ -380,13 +389,13 @@ $(document).ready(function(){
 
     // Sku
 
-    $(document).on('click', '.js-form-trigger', function(event) {
+    $(document).on('click', '.js-sku-trigger', function(event) {
         event.preventDefault();
-        if ($('html').is('.is-form-open')) {
-            $('html').removeClass('is-form-open');
+        if ($('html').is('.is-sku-open')) {
+            $('html').removeClass('is-sku-open');
         }
         else {
-            $('html').addClass('is-form-open');
+            $('html').addClass('is-sku-open');
         }
     });
 
@@ -685,7 +694,7 @@ $(document).ready(function(){
 
   // Masked input
   $(".js-dateMask").mask("99.99.99",{placeholder:"ДД.ММ.ГГ"});
-  // $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
+  $("input[type='tel']").mask("+7 (000) 000-00-00");
 
 
   ////////////

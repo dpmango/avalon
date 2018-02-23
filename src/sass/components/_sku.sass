@@ -3,6 +3,7 @@
 .sku
 	margin: 0 -20px 0 0
 	+rmin($tablet)
+		margin: 0
 		// padding: 46px 0 0
 
 // .sku__head, .sku__main
@@ -24,6 +25,27 @@
 		line-height: 60px
 		margin: 0 0 60px
 
+
+.is-sku-open
+	.sku__action-btn
+		width: 40px
+		color: transparent
+		background: #999999
+		&:hover
+			background: #c43939
+
+		+rmin($tablet)
+			width: 60px
+
+		.ico
+			opacity: 1
+
+
+	.sku__action-form
+		opacity: 1
+		visibility: visible
+		transform: scale(1)
+
 .sku__action
 	margin: 0 0 47px
 	float: right
@@ -31,23 +53,6 @@
 	+rmin($tablet)
 		margin: 0 0 60px
 
-
-.is-form-open
-	.sku__action-btn
-		width: 60px
-		color: transparent
-		background: #999999
-		transition-delay: 0s
-
-		&:hover
-			background: #c43939
-		.ico
-			opacity: 1
-	.sku__action-form
-		opacity: 1
-		visibility: visible
-		transform: scale(1)
-		transition-delay: 0.25s
 
 .sku__action-btn
 	font: 900 15px/20px $fontBase
@@ -57,16 +62,19 @@
 	overflow: hidden
 	width: 135px
 	transition: 0.25s
-	transition-delay: 0.4s
 	background: #c43939
 	color: #fff
+	cursor: pointer
 	&:hover
 		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+	&:active
+		transition: none
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25)
 	.ico
 		position: absolute
 		top: 50%
 		left: 50%
-		font-size: 24px
+		font-size: 16px
 		transform: translate(-50%,-50%)
 		margin: 0
 		display: block
@@ -77,18 +85,20 @@
 		line-height: 30px
 		padding: 15px 30px
 		width: 200px
+		.ico
+			font-size: 24px
 
 
 .sku__action-form
 	position: absolute
 	top: 0
 	right: 0
-	padding: 56px 60px
+	padding: 28px 10px 60px 30px
 	background-color: #ffffff
 	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 	z-index: 100
-	width: 650px
-	max-width: 100vw
+	max-width: 650px
+	width: calc(100vw - 40px)
 	transition: 0.4s
 	transform: scale(0)
 	transform-origin: 100% 0
@@ -96,6 +106,10 @@
 	visibility: hidden
 	.ui__legend
 		margin: 0 0 22px
+	+rmin($tablet)
+		padding: 56px 60px
+		.btn
+			float: right
 
 
 
@@ -119,12 +133,25 @@
 .sku__info
 	font-size: 15px
 	line-height: 20px
-	margin: 0 0 40px
-	h2
+	margin: 0 0 50px
+	h2, h3
 		text-transform: uppercase
+		font-size: 20px
+		line-height: 1
+		font-weight: 900
+		margin: 0 0 20px
+	p
+		margin: 0 0 20px
 	+rmin($tablet)
 		font-size: 18px
 		line-height: 25px
+		margin: 0 0 78px
+		h2, h3
+			margin: 0 0 27px
+			font-size: 25px
+		p
+			margin: 0 0 25px
+		// margin: 0 0 40px
 
 .sku__info-list
 	margin: 0

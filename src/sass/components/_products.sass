@@ -13,10 +13,10 @@
 		content: ''
 		display: block
 		position: absolute
-		top: -40px
-		left: -40px
-		right: -40px
-		bottom: -40px
+		top: -20px
+		left: -20px
+		right: -20px
+		bottom: -20px
 		background: #fff
 		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 		z-index: -1
@@ -28,10 +28,7 @@
 		&:after
 			opacity: 1
 			visibility: visible
-			top: -40px
-			left: -40px
-			right: -40px
-			bottom: -40px
+			
 		.product__image
 			border-color: #202020
 			img
@@ -41,6 +38,11 @@
 			padding: 22px 0 0
 	+rmin($tablet)
 		margin: 0 0 40px
+		&:after
+			top: -40px
+			left: -40px
+			right: -40px
+			bottom: -40px
 
 .product__image
 	position: relative
@@ -81,6 +83,7 @@
 	line-height: 20px
 	+rmin($tablet)
 		font-size: 20px
+		line-height: 28px
 
 .product__desc
 	display: none
