@@ -80,7 +80,7 @@
 		margin: 0 -20px
 	+rmin($desktop)
 		padding: 40px 9.2% 0
-		margin: 0 -20px
+		margin: 0 -10px
 		.row
 			& > [class^="col"]
 				&:nth-child(even)
@@ -96,7 +96,7 @@
 		.cases__item-image
 			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
 	+rmin($mobile)
-		margin: 0 0 80px
+		margin: 0 0 74px
 
 .cases__item-image
 	margin: 0 0 20px
@@ -119,6 +119,8 @@
 		margin: 0 0 30px
 		&:before
 			padding: 67% 0 0
+	+rmin($desktop)
+		margin: 0 0 36px
 
 .cases__item-caption
 	display: block
@@ -129,7 +131,8 @@
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 30px
-		padding: 0
+	+rmin($desktop)
+		padding: 0 40px 0 0
 
 // ------
 
@@ -179,6 +182,7 @@
 // -----
 
 .cases__other
+	margin: 0 0 28px
 
 .cases__other-heading
 	display: block

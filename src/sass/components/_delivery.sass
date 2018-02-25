@@ -1,0 +1,164 @@
+// Delivery
+
+.delivery
+	margin: 0 0 -25px
+	+rmin($tablet)
+		margin: 0
+	h2, h3
+		text-transform: uppercase
+		margin: 0 0 22px
+		+rmin($tablet)
+			margin: 0 0 27px
+
+	p
+		margin: 0 0 21px
+		+rmin($tablet)
+			margin: 0 0 25px
+
+
+.delivery__caption
+	display: block
+	max-width: 920px
+	margin: 0 0 26px
+
+.delivery__steps
+	margin: 0 0 38px
+	padding: 0
+	list-style: none
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	top: -13px
+	& > li
+		counter-increment: step-counter
+		position: relative
+		padding: 0 0 0 46px
+		margin: 0 0 20px
+		width: 260px
+		&:after
+			content: counter(step-counter)
+			display: block
+			font-size: 70px
+			line-height: 1
+			font-weight: 900
+			color: #e2e1de
+			position: absolute
+			top: 0
+			left: -5px
+			width: 40px
+	+rmin($tablet)
+		top: 0
+		margin: 0 0 62px -25px
+		& > li
+			padding: 0 30px 12px 100px
+			width: 325px
+			
+			&:after
+				font-size: 125px
+				left: 0
+				width: 90px
+				top: -4px
+	+rmin($desktop)
+		margin: 0 0 44px
+		max-width: 1080px
+		& > li
+			padding: 0 35px 0 120px
+			min-height: 105px
+			width: 33.333%
+			&:after
+				top: -6px
+				left: 30px
+
+
+
+.delivery__offices
+	margin: 0 0 54px
+	+rmin($tablet)
+		margin: 0 0 74px
+	+rmin($desktop)
+		margin: 0 0 80px
+
+.delivery__offices-list
+	margin: 0
+	padding: 30px 0 60px
+	list-style: none
+	position: relative
+	top: 0
+	z-index: 1
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 50%
+		bottom: 0
+		width: 120vw
+		margin: 0 0 0 -60vw
+		z-index: -1
+		background: #f2f1ed
+	& > li
+		margin: 0 0 20px
+		&:last-child
+			margin: 0
+	+rmin($tablet)
+		top: 0
+		padding: 40px 0 80px
+		& > li
+			margin: 0 0 40px
+	+rmin($desktop)
+		& > li
+			margin: 0 0 37px
+
+.delivery__offices-item
+	display: block
+	position: relative
+	background: #fff
+	display: flex
+	flex-wrap: wrap
+	padding: 17px 20px 12px
+	max-width: 1080px
+	min-height: 130px
+	margin: 0 -20px
+	+rmin($tablet)
+		margin: 0 0 0 -40px
+		padding: 19px 40px 12px
+		flex-wrap: nowrap
+	+rmin($desktop)
+		min-height: 105px
+
+.delivery__offices-city
+	display: block
+	min-width: 178px
+	margin: 0 0 10px
+	font-size: 15px
+	line-height: 20px
+	font-weight: 900
+	color: #202020
+	text-transform: uppercase
+	+rmin($tablet)
+		font-size: 20px
+		line-height: 25px
+		margin: 0 40px 10px 0
+	+rmin($desktop)
+		min-width: 200px
+
+.delivery__offices-address
+	margin: auto 0 0
+	padding: 0
+	list-style: none
+	& > li
+		margin: 0 0 10px
+		&:last-child
+			margin: 0
+
+	+rmin($tablet)
+		margin: 0
+		& > li
+			margin: 0 0 24px
+
+
+.delivery__payments
+	margin: 0 -20px 0 0
+	+rmin($tablet)
+		margin: 0
+

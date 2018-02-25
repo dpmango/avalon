@@ -1,26 +1,114 @@
 // Typography
 
+
+.typography
+	ul
+		@extend .list__ul
+	br
+		line-height: 42px
+
+
+.list__ul
+	padding: 0 0 0 37px
+	margin: 0 0 25px
+	list-style: none
+	li
+		position: relative
+		&:after
+			content: ''
+			display: block
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: #252525
+			position: absolute
+			top: 8px
+			left: -25px
+
+
+body
+	font: 400 15px/20px $fontBase
+	+rmin($tablet)
+		font-size: 18px
+		line-height: 25px
+
 h1
 	font-size: 30px
 	line-height: 1
 	font-weight: 900
-	margin: 0 0 16px
+	margin: 0 0 18px
 	+rmin($tablet)
 		font-size: 50px
 		margin: 0 0 24px
+	+rmin($desktop)
+		// text-indent: 4px
 
 h2
-	font-size: 25px
-	line-height: 1
+	font-size: 20px
+	line-height: 25px
 	font-weight: 900
-	// text-transform: uppercase
-	margin: 0 0 20px
+	// margin: 0 0 22px
+	margin: 0 0 27px
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 35px
+		margin: 0 0 27px
 
 
-p
-	margin: 0 0 20px
+p, figure
+	margin: 0 0 25px
+
+ul, ol
+	padding: 0 0 0 37px
+	margin: 0 0 25px
+
+em
+	display: block
+	font-size: 20px
+	line-height: 25px
+	font-style: normal
+	margin: 0 -20px 49px 0
+	max-width: 912px
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 35px
+		margin: 0 0 64px 0
+		// margin: 0 0 36px
+	+rmin($desktop)
+		// margin: 0 0 64px
+		// margin: 0 0 36px
 
 img
 	max-width: 100%
 
 
+
+
+dl
+	margin: 0
+	padding: 0
+dt
+	display: block
+	margin: 0 0 16px
+	font-size: 20px
+	line-height: 25px
+	font-weight: 900
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 30px
+		margin: 0 0 24px
+dd
+	display: block
+	padding: 0
+	margin: 0 0 48px
+	+rmin($tablet)
+		margin: 0 0 46px
+	+rmin($desktop)
+		margin: 0 0 50px
+
+
+a
+	color: #252525
+	text-decoration: none
+	&:hover
+		text-decoration: none

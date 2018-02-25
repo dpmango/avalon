@@ -12,17 +12,17 @@ PageList:
 - file: cases-single.html
   ready: 80
 - file: contacts.html
-  ready: 5
+  ready: 80
 - file: services.html
-  ready: 5
+  ready: 80
 - file: delivery.html
-  ready: 5
+  ready: 80
 - file: dealers.html
-  ready: 5
+  ready: 80
 - file: requisites.html
-  ready: 5
+  ready: 80
 - file: company.html
-  ready: 5
+  ready: 20
 - file: results.html
   ready: 1
 - file: results-notfound.html

@@ -155,31 +155,55 @@ button
     +rmin($tablet)
         width: 60px
         height: 60px
+        .ico-close
+            font-size: 24px
+
 
 .btn--categories
     position: absolute
-    bottom: 75px
+    top: -115px
     right: -20px
+    z-index: 110
     +rmin($tablet)
-        // right: 0
-        bottom: 105px
+        top: -165px
+        right: 0
     +rmin($desktop)
-        position: fixed
-        top: 50%
-        left: 0
         right: auto
-        margin: -60px 0 0
-        z-index: 200
+        top: 105px
+        left: 50%
+        margin: 0 0 0 -50vw
+    // position: absolute
+    // bottom: 75px
+    // right: -20px
+    // +rmin($tablet)
+    //     // right: 0
+    //     bottom: 105px
+    // +rmin($desktop)
+    //     position: fixed
+    //     top: 50%
+    //     left: 0
+    //     right: auto
+    //     margin: -60px 0 0
+    //     z-index: 200
 
 .btn--filter
     position: absolute
-    bottom: 30px
+    top: -70px
     right: -20px
+    z-index: 90
     +rmin($tablet)
-        // right: 0
-        bottom: 40px
+        top: -100px
+        right: 0
     +rmin($desktop)
         display: none
+    // position: absolute
+    // bottom: 30px
+    // right: -20px
+    // +rmin($tablet)
+    //     // right: 0
+    //     bottom: 40px
+    // +rmin($desktop)
+    //     display: none
     
 
 

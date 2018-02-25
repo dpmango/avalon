@@ -1,0 +1,37 @@
+// Requisites
+
+.requisites
+	padding: 0 0 10px
+
+
+.requisites__container
+	background: #f2f1ed
+	padding: 23px 10px 55px 0
+	position: relative
+	top: 6px
+	z-index: 1
+	max-width: 1010px
+	margin: 0 -30px 0 0
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		right: -30px
+		bottom: 0
+		width: 120vw
+		background: #f2f1ed
+		z-index: -1
+	+rmin($tablet)
+		top: 4px
+		padding: 34px 50px 76px 0
+	+rmin($desktop)
+		top: -26px
+		padding: 32px 20px 76px 0
+
+.requisites__caption
+	margin: 0
+	display: block
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 35px

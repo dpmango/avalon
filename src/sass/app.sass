@@ -43,6 +43,11 @@
 @import components/gallery
 @import components/related
 @import components/cases
+@import components/requisites
+@import components/delivery
+@import components/services
+@import components/contacts
+@import components/company
 
 .grid-buttons
 	position: fixed
@@ -83,12 +88,13 @@
     +rmin($wide)
         display: block
 
-.categories__grid
-    +r($mobile)
-        .row
-            & > [class^="col"]
-                &:nth-child(3), &:nth-child(6), &:nth-child(9)
-                    display: none
+
+// .categories__grid
+//     +r($mobile)
+//         .row
+//             & > [class^="col"]
+//                 &:nth-child(3), &:nth-child(6), &:nth-child(9)
+//                     display: none
 
 // .promo, .portfolio, .news
 // 	.container
@@ -105,11 +111,13 @@
     // height: 3065px
     margin: 0 0 0 -720px
     z-index: 10000
-    background: url(../img/grid.png) 0 0 no-repeat
+    background: url(../img/grid-company-desktop.png) 0 0 no-repeat
     opacity: 0.5
     visibility: hidden
+    display: none
     &.is-active
         visibility: visible
+        display: block
 
 #grid-tablet
     display: block
@@ -121,11 +129,13 @@
     // height: 3065px
     margin: 0 0 0 -384px
     z-index: 10000
-    background: url(../img/grid-tablet.png) 0 0 no-repeat
+    background: url(../img/grid-company-tablet.png) 0 0 no-repeat
     opacity: 0.5
     visibility: hidden
+    display: none
     &.is-active
         visibility: visible
+        display: block
 
 #grid-mobile
     display: block
@@ -137,11 +147,13 @@
     // height: 3065px
     margin: 0 0 0 -188px
     z-index: 10000
-    background: url(../img/grid-mobile.png) 0 0 no-repeat
+    background: url(../img/grid-company-phone.png) 0 0 no-repeat
     opacity: 0.5
     visibility: hidden
+    display: none
     &.is-active
         visibility: visible
+        display: block
 
 
 .row-0
@@ -150,4 +162,6 @@
         padding: 0
 
 
+#grid-desktop, #grid-tablet, #grid-mobile, .js-desktop, .js-tablet, .js-mobile
+    // display: none !important
 

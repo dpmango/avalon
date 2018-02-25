@@ -1,5 +1,64 @@
 $(document).ready(function(){
 
+
+    // Barba
+
+    // Barba.Pjax.Dom.containerClass = "barba-container";
+
+    // var FadeTransition = Barba.BaseTransition.extend({
+    //     start: function() {
+    //         Promise
+    //             .all([this.newContainerLoading, this.fadeOut()])
+    //             .then(this.fadeIn.bind(this));
+    //     },
+
+    //     fadeOut: function() {
+    //         return $(this.oldContainer).animate({ opacity: .5 }, 200).promise();
+    //     },
+
+    //     fadeIn: function() {
+
+    //         var _this = this;
+    //         var $el = $(this.newContainer);
+
+    //         $(this.oldContainer).hide();
+
+
+    //         $el.css({
+    //             visibility : 'visible',
+    //             opacity : .5
+    //         });
+
+    //         $el.animate({ opacity: 1 }, 200, function() {
+    //             document.body.scrollTop = 0;
+    //             _this.done();
+    //         });
+
+
+
+    //     }
+    // });
+
+    // Barba.Pjax.getTransition = function() {
+    //     return FadeTransition;
+    // };
+
+    // Barba.Prefetch.init();
+
+    // Barba.Pjax.start();
+
+    // Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+
+    //     var response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML);
+    //     var bodyClasses = $(response).filter('notbody').attr('class');
+    //     $('html').removeClass();
+    //     $('body').attr('class', bodyClasses);
+
+
+    //     init();
+
+    // });
+
     // Grid
 
     $('.js-desktop').on('click', function(event) {
@@ -15,6 +74,62 @@ $(document).ready(function(){
     });
 
 
+
+    // --------------------------------------------------------------------------
+    // Functions :: Map
+    // --------------------------------------------------------------------------
+
+
+    function initMap() {
+
+
+        if ($('#contacts__map').length) {
+
+            var map = new google.maps.Map(document.getElementById('contacts__map'), {
+                center: { lat: 54.3181598, lng: 48.3837915 },
+                zoom: 4,
+                disableDefaultUI: true,
+                styles: [{
+                    "featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#636363"}]},
+                    {"featureType":"landscape","elementType":"all","stylers":[{"color":"#fffcf2"}]},
+                    {"featureType":"water","elementType":"all","stylers":[{"color":"#aad3e6"},{"visibility":"on"}]}]
+            });
+
+            // Москва
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(55.797139, 37.6093601),
+                map: map,
+                icon: {
+                    url: "img/pin.png",
+                    scaledSize: new google.maps.Size(44, 60)
+                }
+            });
+
+            // Санкт-Петербург
+            var marker2 = new google.maps.Marker({
+                position: new google.maps.LatLng(59.854462, 30.4811287),
+                map: map,
+                icon: {
+                    url: "img/pin.png",
+                    scaledSize: new google.maps.Size(44, 60)
+                }
+            });
+
+            // Астана
+            var marker3 = new google.maps.Marker({
+                position: new google.maps.LatLng(51.174037, 71.4223829),
+                map: map,
+                icon: {
+                    url: "img/pin.png",
+                    scaledSize: new google.maps.Size(44, 60)
+                }
+            });
+
+        }
+
+    }
+
+    initMap();
 
 
     // Header Fixed
@@ -296,6 +411,28 @@ $(document).ready(function(){
         prevArrow: slidesNext
     });
 
+
+    $('.js-slides-contacts').slick({
+        arrows: true,
+        dots: true,
+        mobileFirst: true,
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+        nextArrow: slidesPrev,
+        prevArrow: slidesNext,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: true
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: 'unslick'
+            }
+        ]
+    });
+
     // Catalog
 
     $(document).on('click', '.catalog__sorting-btn', function(event) {
@@ -325,6 +462,22 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on('click', '.js-categories-trigger', function(event) {
+        event.preventDefault();
+        if ($('html').is('.is-categories-open')) {
+            $('html').removeClass('is-categories-open');
+        }
+        else {
+            $('html').addClass('is-categories-open');
+        }
+    });
+
+
+    $(document).on('click', function(e) {
+        if($(e.target).closest('.catalog__categories, .js-categories-trigger').length == 0) {
+           $('html').removeClass('is-categories-open')
+        }
+    });
 
     $(document).on('click', function(e) {
         if($(e.target).closest('.catalog__sorting').length == 0) {

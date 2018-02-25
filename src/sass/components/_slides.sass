@@ -101,19 +101,12 @@
 	+rmin($desktop)
 		margin: 0 -20px 0 0
 	+rmin($xl)
-		// padding: 0 0 205px
-		// margin: 0 0 205px
 		.slick-slide
 			padding: 0 0 205px
 
 	.slick-track
 		display: flex
 		align-items: center
-	// .slick-slide
-	// 	display: flex
-	// 	align-items: center
-	// 	justify-content: center
- //    	height: auto
 	
 	.slick-list
 		height: 100%
@@ -192,8 +185,6 @@
 	.slick-next
 		right: 20px
 
-	+rmin($tablet)
-		// .slick-arrow
 
 	+rmin($xl)
 		.slick-arrow
@@ -616,3 +607,93 @@
 		
 .slides-portfolio__next
 	right: 0
+
+
+
+// Slides Contacts
+
+.slides-contacts
+	position: relative
+	padding: 0 0 78px
+	min-height: 100%
+	.slick-dots
+		margin: 0
+		padding: 15px 0
+		list-style: none
+		display: flex
+		justify-content: center
+		position: absolute
+		bottom: 30px
+		left: 0
+		right: 0
+		+rmin($tablet)
+			bottom: 40px
+		& > li
+			margin: 0 10px
+		button
+			display: block
+			width: 10px
+			height: 10px
+			padding: 0
+			text-indent: -9999px
+			border: 2px solid #252525
+			border-radius: 50%
+			background: none
+			transition: 0.25s
+			cursor: pointer
+			&:hover
+				border-color: #c43939
+
+		.slick-active button
+			background: #252525
+			border-color: #252525
+
+	.slick-arrow
+		display: block
+		display: flex
+		align-items: center
+		justify-content: center
+		line-height: 1
+		padding: 0
+		background: none
+		border-radius: 50%
+		position: absolute
+		bottom: 30px
+		font-size: 42px
+		cursor: pointer
+		z-index: 10
+		color: #252525
+		+rmin($tablet)
+			bottom: 40px
+		.ico
+			transition: 0.4s
+			stroke-dasharray: 160 160
+		&:hover
+			color: #c43939
+			.ico-prev
+				stroke-dashoffset: 160
+			.ico-next
+				stroke-dashoffset: 160
+
+
+
+	.slick-prev
+		left: 30px
+
+	.slick-next
+		right: 30px
+
+
+	+rmin($tablet)
+
+		.slick-prev
+			left: 20px
+
+		.slick-next
+			right: 20px
+
+
+
+.slides-contacts__item
+	display: block
+	width: 100%

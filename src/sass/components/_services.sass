@@ -1,0 +1,101 @@
+// Services
+
+.services
+	padding: 0 0 24px
+	h2
+		text-transform: uppercase
+		margin-bottom: 20px
+	p
+		margin-bottom: 20px
+
+	em
+		margin-bottom: 24px
+	
+	+rmin($tablet)
+		padding: 0 0 40px
+		h2
+			margin-bottom: 28px
+		em
+			margin-bottom: 20px
+		p
+			margin-bottom: 24px
+	+rmin($desktop)
+		padding: 0 0 80px
+		em
+			margin-bottom: 36px
+
+.services__image
+	margin: 0 0 28px
+	+rmin($tablet)
+		margin: 0 0 22px
+		&--left
+			margin-right: -150px
+		&--right
+			margin-right: -167px
+	+rmin($desktop)
+		margin: 0 0 25px
+		&--left
+			margin-right: 0
+			margin-left: -118px
+		&--right
+			margin-right: -128px
+
+.services__type
+	padding: 40px 0 0
+	&:nth-of-type(2)
+		padding: 42px 0 0
+	&:nth-of-type(3)
+		padding: 12px 0 25px
+	+rmin($tablet)
+		padding: 65px 150px 0 0
+		&:nth-of-type(2)
+			padding: 44px 150px 0 0
+		&:nth-of-type(3)
+			padding: 20px 150px 25px 0
+	+rmin($desktop)
+		padding: 68px 0 0
+		&:nth-of-type(2)
+			padding: 48px 0 0
+		&:nth-of-type(3)
+			padding: 40px 0 25px
+
+.services__company
+	
+	margin: 0 -20px
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			padding: 0 10px
+	+rmin($tablet)
+		max-width: 580px
+		margin: 0 -25px 0 0
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+	+rmin($desktop)
+		max-width: 440px
+		margin: 0
+
+.services__company-item
+	height: 114px
+	position: relative
+	border-bottom: 10px solid #f2f1ed
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 10px
+	margin: 0 0 35px
+	img
+		display: block
+		max-width: 80%
+		max-height: 80%
+	+rmin($tablet)
+		height: 220px
+		margin: 0
+		img
+			max-width: 100%
+			max-height: 100%
+	+rmin($desktop)
+		height: 180px
+		margin: 0 0 5px
