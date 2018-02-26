@@ -1,1 +1,162 @@
 // Company
+
+.company
+	padding: 0 0 62px
+	h2
+		text-transform: uppercase
+		margin: 0 0 20px
+	p
+		margin: 0 0 20px
+
+	+rmin($tablet)
+		h2
+			margin: 0 0 28px
+		p
+			margin: 0 0 24px
+		em
+			margin: 0 0 34px
+
+
+
+// -----
+
+.certificates
+	padding: 0 0 6px
+	+rmin($tablet)
+		padding: 32px 0 0
+
+.certificates__grid
+	margin: 0 -20px
+	padding: 5px 0 60px
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			padding: 0 10px
+			position: relative
+			&:nth-child(2n)
+				// top: 60px
+	+rmin($tablet)
+		margin: 0 0 0 -7.4%
+		padding: 0 0 26px 10px
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+				position: relative
+				&:nth-child(2n)
+					top: 0
+				&:nth-child(3n-1)
+					top: 160px
+				&:nth-child(3n)
+					top: 80px
+	+rmin($desktop)
+		margin: 0
+		padding: 0 0 24px
+		max-width: 1040px
+
+.certificates__item
+	display: block
+	margin: 0 0 20px
+	border: solid 5px #f2f1ed
+	img
+		display: block
+		width: 100%
+	+rmin($tablet)
+		margin: 0 0 40px
+
+// -----
+
+.clients
+	padding: 0 0 15px
+	+rmin($tablet)
+		padding: 0 0 10px
+	+rmin($desktop)
+		padding: 0 0 5px
+
+.clients__grid
+	margin: 0 -10px
+	.row
+		margin: 0 -20px
+		align-items: center
+		& > [class^="col"]
+			padding: 0 20px
+			position: relative
+	+rmin($tablet)
+		margin: 0 0 0 -7.4%
+		padding: 22px 0 0 10px
+	+rmin($desktop)
+		margin: 0
+		padding: 22px 0 0
+		max-width: 1160px
+
+
+.clients__item
+	display: block
+	text-align: center
+	margin: 0 auto
+	padding: 10px 0
+	max-width: 130px
+	img
+		display: inline-block
+		visibility: middle
+	+rmin($tablet)
+		max-width: none
+		margin: 0 0 48px
+
+// -----
+
+.profession
+	margin: 0 -10px 0 0
+	padding: 0 0 34px
+	+rmin($tablet)
+		margin: 0
+		padding: 0 0 45px
+
+.profession__image
+	margin: 0 -20px 20px 0
+	+rmin($tablet)
+		margin: 10px -20px 20px 0
+
+
+// -----
+
+.team
+	+rmin($tablet)
+		h2
+			margin: 0 0 22px
+
+
+.team__grid
+	margin: 0 -20px
+	padding: 2px 0 60px
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			padding: 0 10px
+			position: relative
+			&:nth-child(2n)
+				top: 60px
+	+rmin($tablet)
+		margin: 0 0 0 -7.4%
+		padding: 10px 0 168px 10px
+		
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+				position: relative
+				&:nth-child(2n)
+					top: 0
+				&:nth-child(3n-2)
+					top: 160px
+				&:nth-child(3n)
+					top: 80px
+
+.team__item
+	display: block
+	margin: 0 0 22px
+	img
+		display: block
+		width: 100%
+	+rmin($tablet)
+		margin: 0 0 38px

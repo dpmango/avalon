@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="60px" viewBox="0 0 44 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="avalon_contacts_dt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-574.000000, -492.000000)">
+        <g id="pins" transform="translate(574.000000, 492.000000)">
+            <g id="pin">
+                <rect id="Rectangle-2" fill="#252525" x="0" y="0" width="3" height="60"></rect>
+                <rect id="Rectangle-2" fill="#C43939" x="4" y="0" width="40" height="40"></rect>
+                <path d="M12,28.1428571 L18.8237326,15.1142857 L21.3676462,19.9991842 L18.7837015,24.662078 L23.8914932,24.648975 L25.7142857,28.1428571 L12,28.1428571 Z M18.8571429,11 L26.9988294,11 L36,28.1428571 L27.7927512,28.1428571 L18.8571429,11 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

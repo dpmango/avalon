@@ -22,7 +22,7 @@ PageList:
 - file: requisites.html
   ready: 80
 - file: company.html
-  ready: 20
+  ready: 50
 - file: results.html
   ready: 1
 - file: results-notfound.html
