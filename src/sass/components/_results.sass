@@ -1,0 +1,74 @@
+// Results
+
+.results
+
+.results__heading
+	display: block
+	text-transform: uppercase
+	font-size: 20px
+	line-height: 25px
+	font-weight: 900
+	padding: 10px 0 0
+	margin: 0 0 20px
+	+rmin($tablet)
+		font-size: 25px
+		line-height: 30px
+		margin: 0 0 35px
+
+.results__display
+	display: flex
+	margin: 0 0 28px
+	.ui__check
+		margin: 0 10px 0 0
+
+.results__container
+	position: relative
+	top: 6px
+	z-index: 1
+	padding: 18px 0 60px
+	margin: 0 -20px 10px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 50%
+		bottom: 0
+		width: 120vw
+		margin: 0 0 0 -60vw
+		background: #f2f1ed
+		z-index: -1
+	.row
+		margin: 0 -10px
+		& > [class^="col"]
+			padding: 0 10px
+	+rmin($tablet)
+		margin: 0 0 10px
+		top: 4px
+		padding: 30px 0 72px
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+	+rmin($desktop)
+		margin: 0 -20px
+		padding: 30px 9.8% 72px 9.8%
+		top: -28px
+		&:after
+			left: auto
+			right: 20px
+
+
+
+.results__catalog, .results__categories
+	padding: 0 0 30px
+	+rmin($desktop)
+		padding: 0 0 20px
+
+
+.results__load
+	padding: 2px 20px 0
+	+rmin($tablet)
+		padding: 2px 40px
+	+rmin($desktop)
+		padding: 0

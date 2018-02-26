@@ -1,30 +1,29 @@
 ---
-title: Результаты поиска - Avalon
-bodyClass: page-results
+title: Ошибка 404 - Avalon
+bodyClass: page-error
 ---
 extends shared/_layout
 block content
 	
 	
-	// Results :: Start
-	.results
+	// Error :: Start
+	.error
 		.container
 
 			.row
 				.col-12.col-indent
 
-					h1 Результаты поиска
+					h1 Ошибка 404
 
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная 
-						li
-							a(href="#").breadcrumbs__link Результаты поиска
+							a(href="#").breadcrumbs__link Главная
+						li Ошибка 404
 
-					em.results__caption По запросу «Столик» результатов не найдено. Пожалуйста, попробуйте снова. Также, вы можете найти товар самостоятельно в одном из разделов нашего каталога.
+					em.error__caption Страница, которую вы запросили, не существует. Вы можете перейти на <a href="#">главную</a>, <a href="#">в портфолио</a>, или в один из разделов нашего каталога.
 
 			
-			.results__categories
+			.error__categories
 
 				.categories__grid
 					.row
@@ -128,6 +127,6 @@ block content
 
 
 
-	// Results :: End
+	// error :: End
 
 

@@ -34,7 +34,7 @@
 			padding: 0 10px
 			position: relative
 			&:nth-child(2n)
-				// top: 60px
+				top: 60px
 	+rmin($tablet)
 		margin: 0 0 0 -7.4%
 		padding: 0 0 26px 10px
@@ -111,11 +111,15 @@
 	+rmin($tablet)
 		margin: 0
 		padding: 0 0 45px
+	+rmin($desktop)
+		padding: 0 0 48px
 
 .profession__image
 	margin: 0 -20px 20px 0
 	+rmin($tablet)
 		margin: 10px -20px 20px 0
+	+rmin($desktop)
+		margin: 5px -20px 20px 50px
 
 
 // -----
@@ -151,6 +155,10 @@
 					top: 160px
 				&:nth-child(3n)
 					top: 80px
+	+rmin($desktop)
+		margin: 0
+		max-width: 1040px
+		padding-bottom: 180px
 
 .team__item
 	display: block

@@ -6,7 +6,8 @@
 	position: relative
 	z-index: 10
 	// backface-visibility: hidden
-	margin: 0 0 16px
+	// margin: 0 0 16px
+	margin: 0 0 14px
 	& *
 		// backface-visibility: hidden
 	&:after
@@ -37,12 +38,14 @@
 			max-height: none
 			padding: 22px 0 0
 	+rmin($tablet)
-		margin: 0 0 40px
+		margin: 0 0 32px
 		&:after
 			top: -40px
 			left: -40px
 			right: -40px
 			bottom: -40px
+	+rmin($desktop)
+		// margin: 0 0 40px
 
 .product__image
 	position: relative
