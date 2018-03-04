@@ -17,29 +17,22 @@ block content
 	// Results :: Start
 	.results
 		.container
-
 			.row
 				.col-12.col-indent
-
 					h1 Результаты поиска
-
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная 
+							a(href="homepage.html").breadcrumbs__link Главная 
 						li
-							a(href="#").breadcrumbs__link Результаты поиска
+							.breadcrumbs__link Результаты поиска
 
 			.results__container
-				
 				.row
 					.col-6.col-md-8.col-xl
-
 						h2.results__heading Товары
 
 					.col-6.col-md-4.col-xl-20
-
 						.results__display
-
 								label.ui__check
 									input(type="radio" name="display").ui__check-input
 									span.ui__check-link 8
@@ -56,7 +49,7 @@ block content
 									input(type="radio" name="display").ui__check-input
 									span.ui__check-link все
 				
-
+				// results catalog
 				.results__catalog
 					.row
 						.col-6.col-sm-4.col-xl-20
@@ -241,9 +234,6 @@ block content
 							a(href="#").categories__link Кресла для клубов и баров
 
 				.results__load
-
 					a(href="#").btn.btn--load загрузить еще
-
-
 
 	// Results :: End
