@@ -21,146 +21,141 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body class="page-error">
-    <div id="grid-desktop"></div>
-    <div id="grid-tablet"></div>
-    <div id="grid-mobile"></div>
-    <div class="grid-buttons">
-      <div class="js-desktop">Grid Desktop</div>
-      <div class="js-tablet">Grid Tablet</div>
-      <div class="js-mobile">Grid Mobile</div>
-    </div>
-    <div class="btn btn--chat">Задать вопрос</div>
-    <div class="page">
-      <div class="page__content">
-        <!-- HEADER :: START-->
-        <header class="header">
-          <div class="container">
-            <div class="logo">
-              <button class="btn btn--nav js-nav-trigger"><span></span><span></span><span></span></button><a href="/homepage.html" title="На главную">
-                <svg class="ico ico-logo">
-                  <use xlink:href="img/sprite.svg#ico-logo"></use>
-                </svg></a>
-            </div>
-            <nav class="nav">
-              <div class="nav__menu">
-                <div class="row">
-                  <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Каталог</a></div>
-                  <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Компания</a></div>
-                  <div class="col-12">
-                    <div class="nav__collapse js-nav-collapse">
-                      <div class="row">
-                        <div class="col-6">
-                          <ul class="nav__collapse-menu">
-                            <li><a class="nav__collapse-link" href="#">Столешницы</a></li>
-                            <li><a class="nav__collapse-link" href="#">Подстолья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Дизайнерская мебель</a></li>
-                            <li><a class="nav__collapse-link" href="#">Барные стулья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Стулья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Диваны</a></li>
-                            <li><a class="nav__collapse-link" href="#">Столы</a></li>
-                            <li><a class="nav__collapse-link" href="#">Кресла</a></li>
-                            <li><a class="nav__collapse-link" href="#">Складная мебель</a></li>
-                            <li><a class="nav__collapse-link" href="#">Мебель для </a></li>
-                            <li><a class="nav__collapse-link" href="#">конференц-залов</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-6">
-                          <ul class="nav__collapse-menu">
-                            <li><a class="nav__collapse-link" href="#">Услуги</a></li>
-                            <li><a class="nav__collapse-link" href="#">Доставка и оплата</a></li>
-                            <li><a class="nav__collapse-link" href="#">Дилерам</a></li>
-                            <li><a class="nav__collapse-link" href="#">Реквизиты</a></li>
-                          </ul>
+    <!-- required for barba bindgins-->
+    <div id="barba-wrapper">
+      <div class="page">
+        <!-- this will be changed with every pjax request-->
+        <div class="page__content">
+          <!-- HEADER :: START-->
+          <header class="header">
+            <div class="container">
+              <div class="logo">
+                <button class="btn btn--nav js-nav-trigger"><span></span><span></span><span></span></button><a href="/homepage.html" title="На главную">
+                  <svg class="ico ico-logo">
+                    <use xlink:href="img/sprite.svg#ico-logo"></use>
+                  </svg></a>
+              </div>
+              <nav class="nav">
+                <div class="nav__menu">
+                  <div class="row">
+                    <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Каталог</a></div>
+                    <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Компания</a></div>
+                    <div class="col-12">
+                      <div class="nav__collapse js-nav-collapse">
+                        <div class="row">
+                          <div class="col-6">
+                            <ul class="nav__collapse-menu">
+                              <li><a class="nav__collapse-link" href="#">Столешницы</a></li>
+                              <li><a class="nav__collapse-link" href="#">Подстолья</a></li>
+                              <li><a class="nav__collapse-link" href="#">Дизайнерская мебель</a></li>
+                              <li><a class="nav__collapse-link" href="#">Барные стулья</a></li>
+                              <li><a class="nav__collapse-link" href="#">Стулья</a></li>
+                              <li><a class="nav__collapse-link" href="#">Диваны</a></li>
+                              <li><a class="nav__collapse-link" href="#">Столы</a></li>
+                              <li><a class="nav__collapse-link" href="#">Кресла</a></li>
+                              <li><a class="nav__collapse-link" href="#">Складная мебель</a></li>
+                              <li><a class="nav__collapse-link" href="#">Мебель для </a></li>
+                              <li><a class="nav__collapse-link" href="#">конференц-залов</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav__collapse-menu">
+                              <li><a class="nav__collapse-link" href="#">Услуги</a></li>
+                              <li><a class="nav__collapse-link" href="#">Доставка и оплата</a></li>
+                              <li><a class="nav__collapse-link" href="#">Дилерам</a></li>
+                              <li><a class="nav__collapse-link" href="#">Реквизиты</a></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="col-6"><a class="nav__link" href="#">Портфолио</a></div>
+                    <div class="col-6"><a class="nav__link" href="#">Контакты</a></div>
                   </div>
-                  <div class="col-6"><a class="nav__link" href="#">Портфолио</a></div>
-                  <div class="col-6"><a class="nav__link" href="#">Контакты</a></div>
+                </div>
+              </nav>
+              <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
+              <div class="search js-search">
+                <form action="#">
+                  <input class="search__input js-search-input" type="search" placeholder="Поиск">
+                  <button class="search__clear js-search-clear" type="reset">
+                    <svg class="ico ico-search-clear">
+                      <use xlink:href="img/sprite.svg#ico-search-clear"></use>
+                    </svg>
+                  </button>
+                  <button class="search__btn js-search-open">
+                    <svg class="ico ico-search">
+                      <use xlink:href="img/sprite.svg#ico-search"></use>
+                    </svg>
+                  </button>
+                  <div class="search__progress js-search-progress"></div>
+                  <div class="search__dropdown">
+                    <div class="search__results">
+                      <div class="search__group">
+                        <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
+                        <ul class="search__list">
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-2.png" alt=""></figure><span class="search__item-name">Кресло Денди</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-3.png" alt=""></figure><span class="search__item-name">Кресло красное</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-4.png" alt=""></figure><span class="search__item-name">Кресло 6811bm</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-5.png" alt=""></figure><span class="search__item-name">Диван красный</span></a></li>
+                        </ul>
+                      </div>
+                      <div class="search__group">
+                        <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
+                        <ul class="search__list">
+                          <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
+                          <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
+                        </ul>
+                      </div>
+                      <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
+                    </div>
+                    <p class="search__notfind">К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </header>
+          <!-- HEADER :: END-->
+          <!-- Error :: Start-->
+          <div class="error">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-indent">
+                  <h1>Ошибка 404</h1>
+                  <ul class="breadcrumbs">
+                    <li><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li>Ошибка 404</li>
+                  </ul><em class="error__caption">Страница, которую вы запросили, не существует. Вы можете перейти на <a href="#">главную</a>, <a href="#">в портфолио</a>, или в один из разделов нашего каталога.</em>
                 </div>
               </div>
-            </nav>
-            <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
-            <div class="search js-search">
-              <form action="#">
-                <input class="search__input js-search-input" type="search" placeholder="Поиск">
-                <button class="search__clear js-search-clear" type="reset">
-                  <svg class="ico ico-search-clear">
-                    <use xlink:href="img/sprite.svg#ico-search-clear"></use>
-                  </svg>
-                </button>
-                <button class="search__btn js-search-open">
-                  <svg class="ico ico-search">
-                    <use xlink:href="img/sprite.svg#ico-search"></use>
-                  </svg>
-                </button>
-                <div class="search__progress js-search-progress"></div>
-                <div class="search__dropdown">
-                  <div class="search__results">
-                    <div class="search__group">
-                      <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
-                      <ul class="search__list">
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-2.png" alt=""></figure><span class="search__item-name">Кресло Денди</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-3.png" alt=""></figure><span class="search__item-name">Кресло красное</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-4.png" alt=""></figure><span class="search__item-name">Кресло 6811bm</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-5.png" alt=""></figure><span class="search__item-name">Диван красный</span></a></li>
-                      </ul>
-                    </div>
-                    <div class="search__group">
-                      <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
-                      <ul class="search__list">
-                        <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
-                        <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
-                      </ul>
-                    </div>
-                    <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
+              <div class="error__categories">
+                <div class="categories__grid">
+                  <div class="row">
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-1.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-1_h.svg" alt=""></span></span><span class="categories__item-text">Столешницы</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-2.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-2_h.svg" alt=""></span></span><span class="categories__item-text">Подстолья</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-3.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-3_h.svg" alt=""></span></span><span class="categories__item-text">Барные стулья</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-4.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-4_h.svg" alt=""></span></span><span class="categories__item-text">Стулья</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-5.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-5_h.svg" alt=""></span></span><span class="categories__item-text">Мебель для конференц-залов</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-6.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-6_h.svg" alt=""></span></span><span class="categories__item-text">Столы</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-7.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-7_h.svg" alt=""></span></span><span class="categories__item-text">Кресла</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-8.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-8_h.svg" alt=""></span></span><span class="categories__item-text">Диваны</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-9.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-9_h.svg" alt=""></span></span><span class="categories__item-text">Складная мебель</span></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-10.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-10_h.svg" alt=""></span></span><span class="categories__item-text">Дизайнерская мебель</span></a></div>
                   </div>
-                  <p class="search__notfind">К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.</p>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
-        </header>
-        <!-- HEADER :: END-->
-        <!-- Error :: Start-->
-        <div class="error">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-indent">
-                <h1>Ошибка 404</h1>
-                <ul class="breadcrumbs">
-                  <li><a class="breadcrumbs__link" href="#">Главная</a></li>
-                  <li>Ошибка 404</li>
-                </ul><em class="error__caption">Страница, которую вы запросили, не существует. Вы можете перейти на <a href="#">главную</a>, <a href="#">в портфолио</a>, или в один из разделов нашего каталога.</em>
-              </div>
-            </div>
-            <div class="error__categories">
-              <div class="categories__grid">
-                <div class="row">
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-1.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-1_h.svg" alt=""></span></span><span class="categories__item-text">Столешницы</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-2.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-2_h.svg" alt=""></span></span><span class="categories__item-text">Подстолья</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-3.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-3_h.svg" alt=""></span></span><span class="categories__item-text">Барные стулья</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-4.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-4_h.svg" alt=""></span></span><span class="categories__item-text">Стулья</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-5.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-5_h.svg" alt=""></span></span><span class="categories__item-text">Мебель для конференц-залов</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-6.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-6_h.svg" alt=""></span></span><span class="categories__item-text">Столы</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-7.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-7_h.svg" alt=""></span></span><span class="categories__item-text">Кресла</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-8.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-8_h.svg" alt=""></span></span><span class="categories__item-text">Диваны</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-9.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-9_h.svg" alt=""></span></span><span class="categories__item-text">Складная мебель</span></a></div>
-                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-10.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-10_h.svg" alt=""></span></span><span class="categories__item-text">Дизайнерская мебель</span></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- error :: End-->
         </div>
-        <!-- error :: End-->
         <!-- FOOTER :: START-->
-        <footer class="footer">
+        <footer class="footer" js-reveal-footer>
           <div class="container">
             <div class="row">
               <div class="col-lg-10 col-indent">
@@ -215,10 +210,19 @@
           </div>
         </footer>
         <!-- FOOTER :: END-->
-        <script src="js/vendor.js"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
-        <script src="js/app.js"></script>
+        <div class="btn btn--chat">Задать вопрос</div>
+        <div id="grid-desktop"></div>
+        <div id="grid-tablet"></div>
+        <div id="grid-mobile"></div>
+        <div class="grid-buttons">
+          <div class="js-desktop">Grid Desktop</div>
+          <div class="js-tablet">Grid Tablet</div>
+          <div class="js-mobile">Grid Mobile</div>
+        </div>
       </div>
+      <script src="js/vendor.js"></script>
+      <script src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
+      <script src="js/app.js"></script>
     </div>
   </body>
 </html>

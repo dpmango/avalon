@@ -1,5 +1,9 @@
 // FOOTER
 .footer
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
 	// padding: 128px 0 75px
 	padding: 75px 0
 	font-size: 18px
@@ -41,14 +45,14 @@
 		display: block
 
 .footer__nav-link
-	transition: 0.25s
+	transition: 0.3s $ease
 	color: #252525
 	display: inline-block
 	vertical-align: top
 	position: relative
 	padding: 5px 0
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 // -----
 
@@ -88,7 +92,7 @@
 			margin: 0
 	+rmin($desktop)
 		margin: 0 0 0 -3px
-		
+
 
 // -----
 
@@ -97,21 +101,21 @@
 	display: block
 	margin: 0
 	padding: 10px 0
-	
+
 	p
 		margin: 0 0 25px
 		&:last-child
 			margin: 0
 
 .footer__copyright-link
-	transition: 0.25s
+	transition: 0.3s $ease
 	border-bottom: 1px solid #252525
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 
 .footer__copyright-studio
-	transition: 0.25s
+	transition: 0.3s $ease
 	font-weight: 900
 	&:hover
-		color: #c43939
+		color: $primaryColor

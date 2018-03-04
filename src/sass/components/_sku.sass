@@ -32,7 +32,7 @@
 		color: transparent
 		background: #999999
 		&:hover
-			background: #c43939
+			background: $primaryColor
 
 		+rmin($tablet)
 			width: 60px
@@ -61,8 +61,8 @@
 	z-index: 110
 	overflow: hidden
 	width: 135px
-	transition: 0.25s
-	background: #c43939
+	transition: 0.3s $ease
+	background: $primaryColor
 	color: #fff
 	cursor: pointer
 	&:hover
@@ -99,7 +99,7 @@
 	z-index: 100
 	max-width: 650px
 	width: calc(100vw - 40px)
-	transition: 0.4s
+	transition: 0.4s $ease
 	transform: scale(0)
 	transform-origin: 100% 0
 	opacity: 0

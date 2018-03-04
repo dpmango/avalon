@@ -9,7 +9,7 @@
 	z-index: 1000
 	height: 60px
 	background: #fff
-	transition: 0.25s
+	transition: 0.3s $ease
 	backface-visibility: hidden
 	width: 100%
 	.container
@@ -34,10 +34,10 @@
 	+rmin($desktop)
 		&:after
 			left: 50%
-		
 
-	
-	
+
+
+
 
 
 // ------
@@ -90,13 +90,13 @@
         height: 2px
         background: #fff
         margin: -1px 0 0 -10px
-        transition: 0.25s
+        transition: 0.3s $ease
         &:nth-child(1)
             transform: translate(0,-7px)
         &:nth-child(3)
             transform: translate(0,7px)
     &:hover span
-        background: #c43939
+        background: $primaryColor
 
     +rmin($tablet)
     	width: 60px
@@ -118,7 +118,7 @@
 // ------
 
 .nav
-	transition: 0.25s
+	transition: 0.3s $ease
 	font-size: 15px
 	line-height: 30px
 	font-weight: 900
@@ -176,9 +176,9 @@
 	padding: 10px 0
 	display: block
 	color: #252525
-	transition: 0.25s
+	transition: 0.3s $ease
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 
 // -----
@@ -204,9 +204,9 @@
 .nav__collapse-link
 	display: block
 	color: #252525
-	transition: 0.25s
+	transition: 0.3s $ease
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 
 // ------
@@ -218,7 +218,7 @@
 	font-size: 25px
 	line-height: 40px
 	font-weight: 900
-	transition: 0.25s
+	transition: 0.3s $ease
 	// overflow: hidden
 	display: none
 	+rmin($tablet)
@@ -237,7 +237,7 @@
 	position: relative
 	display: block
 	color: #252525
-	transition: 0.25s
+	transition: 0.3s $ease
 	&:nth-child(1)
 		z-index: 2
 	&:nth-child(2)
@@ -255,7 +255,7 @@
 	width: 25px
 	z-index: 20
 	background: #fff
-	transition: 0.25s
+	transition: 0.3s $ease
 	z-index: 100
 	&:after
 		content: ''
@@ -268,8 +268,8 @@
 		background: #fff
 		z-index: -1
 		display: none
-	
-	// &:before 
+
+	// &:before
 	// 	content: ''
 	// 	display: block
 	// 	position: absolute
@@ -307,7 +307,7 @@
 
 
 .search__input
-	transition: 0.25s
+	transition: 0.3s $ease
 	display: block
 	height: 50px
 	padding: 10px 25px 10px 0
@@ -321,7 +321,7 @@
 	position: relative
 	border-radius: 0
 	-webkit-appearance: none
-	// transition-delay: 0.25s
+	// transition-delay: 0.3s
 	// opacity: 0
 	// visibility: hidden
 	// text-indent: -9999px
@@ -334,7 +334,7 @@
 		font-size: 25px
 		line-height: 40px
 
-	
+
 
 
 .search__btn
@@ -353,7 +353,7 @@
 	z-index: 10
 	background: none
 	cursor: pointer
-	transition: 0.25s
+	transition: 0.3s $ease
 	color: #252525
 
 	.ico
@@ -363,7 +363,7 @@
 		transform: translate(0,-50%)
 		margin: -2.5px 0 0 -1px
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 	+rmin($tablet)
 		right: 0
@@ -385,7 +385,7 @@
 	padding: 0
 	width: 25px
 	z-index: 15
-	transition: 0.25s
+	transition: 0.3s $ease
 	color: #252525
 	opacity: 0
 	visibility: hidden
@@ -394,7 +394,7 @@
 	text-align: center
 	transform: scale(0)
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 .search__dropdown
 	position: absolute
@@ -408,7 +408,7 @@
 	font-size: 15px
 	line-height: 20px
 	font-weight: 400
-	transition: 0.25s
+	transition: 0.3s $ease
 	opacity: 0
 	visibility: hidden
 	overflow-y: auto
@@ -419,7 +419,7 @@
 	position: absolute
 	left: 0
 	bottom: 0
-	background: #c43939
+	background: $primaryColor
 	width: 0
 	z-index: 20
 
@@ -433,9 +433,9 @@
 
 .search__count-link
 	colot: #000
-	transition: 0.25s
+	transition: 0.3s $ease
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 .search__list
 	margin: 0 -10px
@@ -444,7 +444,7 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
-	
+
 	& > li
 		padding: 0 10px
 		margin: 0 0 10px
@@ -465,8 +465,8 @@
 		opacity: 1
 
 
-	
-		
+
+
 .search__item
 	position: relative
 	display: block
@@ -475,14 +475,14 @@
 	max-width: 170px
 	margin: 0 auto
 	colot: #000
-	transition: 0.25s
+	transition: 0.3s $ease
 	z-index: 10
 	&:hover
-		color: #c43939
+		color: $primaryColor
 	&:hover
 		z-index: 20
 		.search__item-image
-			border-color: #202020
+			border-color: $blackColor
 			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 			img
 				transform: translate(-50%,-40%) scale(2)
@@ -504,7 +504,7 @@
 		transform: translate(-50%,-50%)
 		max-width: 90%
 		max-height: 90%
-		transition: 0.25s
+		transition: 0.3s $ease
 
 .search__item-name
 	display: block
@@ -558,7 +558,7 @@
 		visibility: visible
 
 .is-search-keyup
-	
+
 	.search__clear
 		opacity: 1
 		visibility: visible
@@ -576,18 +576,18 @@
 			width: calc(100% - 360px)
 		+rmin($desktop)
 			width: calc(41.66667% - 86px)
-	
+
 	.search__input
 		opacity: 1
 		visibility: visible
 		text-indent: 0
 		color: #252525
-		
+
 		&::placeholder
 			color: rgba(37, 37, 37, 0.25)
 
 
-			
+
 
 
 
@@ -595,7 +595,7 @@
 
 
 .is-headerFixed
-	
+
 	.header
 		background: none
 		height: 60px
@@ -608,7 +608,7 @@
 	.search
 		height: 50px
 		&:after, &:before
-	
+
 	.search__input
 		height: 50px
 	.nav
@@ -642,7 +642,7 @@
 			&:nth-child(3)
 				transform: translate(0,0) rotate(-45deg)
 
-	
+
 
 
 .is-navOpen
@@ -659,7 +659,3 @@
 // 		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 // 		opacity: 1
 // 		visibility: visible
-
-
-
-

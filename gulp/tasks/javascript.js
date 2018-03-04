@@ -11,7 +11,7 @@ gulp.task('javascript:vendor', function() {
       path.resolve('bower_components', 'jquery/dist/jquery.min.js'),
       path.resolve('bower_components', 'svg4everybody/dist/svg4everybody.min.js'),
       path.resolve('bower_components', 'viewport-units-buggyfill/viewport-units-buggyfill.js'),
-      path.resolve('bower_components', 'viewport-units-buggyfill/viewport-units-buggyfill.hacks.js'),
+      // path.resolve('bower_components', 'viewport-units-buggyfill/viewport-units-buggyfill.hacks.js'),
       path.resolve('bower_components', 'slick-carousel/slick/slick.min.js'),
       path.resolve('bower_components', 'magnific-popup/dist/jquery.magnific-popup.min.js'),
       path.resolve('bower_components', 'scrollMonitor/scrollMonitor.js'),
@@ -20,10 +20,12 @@ gulp.task('javascript:vendor', function() {
       path.resolve('bower_components', 'sticky-kit/jquery.sticky-kit.min.js'),
       path.resolve('bower_components', 'matchHeight/dist/jquery.matchHeight.js'),
       path.resolve('bower_components', 'readmore-js/readmore.min.js'),
+      path.resolve('bower_components', 'barba.js/dist/barba.min.js'),
+      path.resolve('bower_components', 'jquery-lazy/jquery.lazy.min.js'),
+      path.resolve('bower_components', 'animejs/anime.min.js'),
       // path.resolve('bower_components', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
       // path.resolve('bower_components', 'scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js'),
       // path.resolve('bower_components', 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js'),
-
       config.src.js + '/vendor/**/*.js'
      ])
     .pipe(plumber({ errorHandler: config.errorHandler }))

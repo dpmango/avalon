@@ -23,7 +23,7 @@
 		&:last-child:after
 			display: none
 		&:first-child .breadcrumbs__link
-			border-color: #202020
+			border-color: $blackColor
 	+rmin($tablet)
 		font-size: 15px
 		line-height: 18px
@@ -34,9 +34,11 @@
 
 .breadcrumbs__link
 	display: block
-	color: #202020
+	color: $blackColor
 	border-bottom: 1px solid transparent
-	transition: 0.25s
+	transition: 0.3s $ease
+
+a.breadcrumbs__link
 	&:hover
-		color: #C43939
-		border-color: #202020
+		color: $primaryColor
+		border-color: $blackColor

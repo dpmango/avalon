@@ -1,295 +1,231 @@
 // UI
 
 .ui__fieldset
-    display: block
-    margin: 0
-    padding: 0 0 20px
-    border: none
+  display: block
+  margin: 0
+  padding: 0 0 20px
+  border: none
 
 .ui__legend
-    display: block
-    font-size: 20px
-    line-height: 20px
-    font-weight: 900
-    margin: 0 0 20px
-    text-transform: uppercase
-    +rmin($tablet)
-        font-size: 25px
-        line-height: 30px
-        margin: 0 0 35px
+  display: block
+  font-size: 20px
+  line-height: 20px
+  font-weight: 900
+  margin: 0 0 20px
+  text-transform: uppercase
+  +rmin($tablet)
+    font-size: 25px
+    line-height: 30px
+    margin: 0 0 35px
 
 .ui__label
-    display: block
-    font-size: 15px
-    line-height: 1
-    font-weight: 900
-    margin: 0 0 15px
-    text-transform: uppercase
+  display: block
+  font-size: 15px
+  line-height: 1
+  font-weight: 900
+  margin: 0 0 15px
+  text-transform: uppercase
 
 
 .ui__caption
-    max-width: 480px
-    color: #c8c8c8
-    display: block
-    font-size: 15px
-    line-height: 20px
-    margin: 0 0 20px
-    transition: opacity 0.25s
-    +rmin($tablet)
-        font-size: 18px
-        line-height: 25px
-
-// -----
+  max-width: 480px
+  color: #c8c8c8
+  display: block
+  font-size: 15px
+  line-height: 20px
+  margin: 0 0 20px
+  transition: opacity 0.3s $ease
+  +rmin($tablet)
+    font-size: 18px
+    line-height: 25px
 
 .ui__check
-    display: block
-    position: relative
-    cursor: pointer
-    font-size: 15px
-    line-height: 1
-    margin: 0 0 20px
-    min-height: 20px
+  display: block
+  position: relative
+  cursor: pointer
+  font-size: 15px
+  line-height: 1
+  margin: 0 0 20px
+  min-height: 20px
 
 
 .ui__check-input
-    position: absolute
-    top: 0
-    left: 0
-    opacity: 0
-    visibility: hidden
-    &:checked ~ .ui__checkbox:after
-        opacity: 1
-    &:checked ~ .ui__check-link
-        color: #c43939
-    &:checked ~ .ui__check-btn
-        background: #c43939
-        color: #fff
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  visibility: hidden
+  &:checked ~ .ui__checkbox:after
+    opacity: 1
+  &:checked ~ .ui__check-link
+    color: $primaryColor
+    border-color: $primaryColor
+  &:checked ~ .ui__check-btn
+    background: $primaryColor
+    color: #fff
 
 .ui__checkbox
+  display: block
+  width: 20px
+  height: 20px
+  border: 2px solid #252525
+  position: absolute
+  top: 0
+  left: 0
+  transition: .3s $ease
+  &:after
+    content: ''
     display: block
-    width: 20px
-    height: 20px
-    border: 2px solid #252525
     position: absolute
-    top: 0
-    left: 0
-    &:after
-        content: ''
-        display: block
-        position: absolute
-        top: 50%
-        left: 50%
-        width: 12px
-        height: 12px
-        margin: -6px 0 0 -6px
-        background: #c43939
-        transition: 0.25s
-        opacity: 0
+    top: 50%
+    left: 50%
+    width: 12px
+    height: 12px
+    margin: -6px 0 0 -6px
+    background: $primaryColor
+    transition: 0.3s $ease
+    opacity: 0
+  &:hover
+    border-color: $primaryColor
 
 .ui__check-text
-    display: block
-    padding: 3px 0 0 35px
-    transition: 0.25s
-    &:hover
-        color: #c43939
+  display: block
+  padding: 3px 0 0 35px
+  transition: 0.3s $ease
+  &:hover
+    color: $primaryColor
 
 .ui__check-btn
-    font: 400 15px/1 $fontBase
-    display: block
-    padding: 8px 10px 7px
-    cursor: pointer
-    transition: 0.25s
-    &:hover
-        color: #c43939
-    +rmin($tablet)
-        padding-left: 20px
-        padding-right: 20px
+  font: 400 15px/1 $fontBase
+  display: block
+  padding: 8px 10px 7px
+  cursor: pointer
+  transition: 0.3s $ease
+  &:hover
+    color: $primaryColor
+  +rmin($tablet)
+    padding-left: 20px
+    padding-right: 20px
 
 
 .ui__check-link
-    font: 900 12px/1 $fontBase
-    text-transform: lowercase
-    padding: 8px 0
-    border-bottom: 3px solid #000
-    color: #000
-    display: block
-    min-width: 18px
-    text-align: center
-    margin: 0
-
-    &:hover
-        border-color: #c43939
-    +rmin($tablet)
-        font-size: 15px
-        min-width: 25px
+  font: 900 12px/1 $fontBase
+  text-transform: lowercase
+  padding: 8px 0
+  border-bottom: 3px solid #000
+  color: #000
+  display: block
+  min-width: 18px
+  text-align: center
+  margin: 0
+  transition: .3s $ease
+  &:hover
+    border-color: $primaryColor
+  +rmin($tablet)
+    font-size: 15px
+    min-width: 25px
 
 .ui__group
-    position: relative
-    display: block
-    transition: opacity 0.25s
-    &.is-focused
-        .ui__placeholder
-            top: -10px
-            font-size: 15px
-            line-height: 20px
-            padding: 0
-            +rmin($tablet)
-                font-size: 18px
-                line-height: 25px
-                top: -20px
+  position: relative
+  display: block
+  transition: opacity 0.3s $ease
+  &.is-focused
+    .ui__placeholder
+      top: -10px
+      font-size: 15px
+      line-height: 20px
+      padding: 0
+      +rmin($tablet)
+        font-size: 18px
+        line-height: 25px
+        top: -20px
 
-        .ui__placeholder--textarea
-            top: -30px
-            +rmin($tablet)
-                top: -40px
+    .ui__placeholder--textarea
+      top: -30px
+      +rmin($tablet)
+        top: -40px
 
 .ui__placeholder
-    display: block
-    font: 400 20px/40px $fontBase
-    color: #c8c8c8
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    transition: 0.25s
-    cursor: pointer
-    +rmin($tablet)
-        font-size: 25px
+  display: block
+  font: 400 20px/40px $fontBase
+  color: #c8c8c8
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transition: 0.3s $ease
+  cursor: pointer
+  +rmin($tablet)
+    font-size: 25px
 
 .ui__placeholder--textarea
-    padding: 7px 20px
-    +rmin($tablet)
-        padding: 15px 30px
+  padding: 7px 20px
+  +rmin($tablet)
+    padding: 15px 30px
 
 .ui__input
-    width: 100%
-    font: 400 20px/40px $fontBase
-    padding: 0 0 3px
-    border: none
-    display: block
-    border-bottom: 3px solid #252525
-    margin: 0 0 40px
-    cursor: pointer
-    &.is-error
-        border-color: #c43939
-    +rmin($tablet)
-        font-size: 25px
-        +rmin($tablet)
-            margin: 0 0 50px
+  -webkit-apperance: none
+  width: 100%
+  font: 400 20px/40px $fontBase
+  padding: 0 0 3px
+  border: none
+  display: block
+  border-bottom: 3px solid #252525
+  margin: 0 0 40px
+  cursor: pointer
+  &.is-error
+    border-color: $primaryColor
+  +rmin($tablet)
+    font-size: 25px
+    margin: 0 0 50px
 
 .ui__textarea
-    @extend .ui__input
-    border: 3px solid #252525
-    padding: 15px 30px
-    height: 150px
-    margin-top: 20px
-    +rmin($tablet)
-        margin-top: 15px
+  @extend .ui__input
+  border: 3px solid #252525
+  padding: 15px 30px
+  height: 150px
+  margin-top: 20px
+  resize: vertical
 
+  +rmin($tablet)
+    margin-top: 15px
+
+// states
 .ui__ctrl
-    position: relative
+  position: relative
 
 .ui__error, .ui__success
-    display: block
-    position: absolute
-    top: -20px
-    left: 0
-    right: 0
-    bottom: 0
-    background: #fff
-    z-index: 10
-    font-size: 25px
-    line-height: 30px
-    margin: 0
-    transition: 0.25s
-    opacity: 0
-    visibility: hidden
-    min-height: 120px
+  display: block
+  position: absolute
+  top: -20px
+  left: 0
+  right: 0
+  bottom: 0
+  background: #fff
+  z-index: 10
+  font-size: 25px
+  line-height: 30px
+  margin: 0
+  transition: 0.3s $ease
+  opacity: 0
+  visibility: hidden
+  min-height: 120px
 
 .ui__error
-    color: #c43939
+  color: $primaryColor
 
 .ui__success
-    color: #252525
-
+  color: #252525
 
 .is-invalid
-    .ui__error
-        opacity: 1
-        visibility: visible
+  .ui__error
+    opacity: 1
+    visibility: visible
 
 .is-valid
-    .ui__caption, .ui__group
-        opacity: 0.1
-    .ui__success
-        opacity: 1
-        visibility: visible
-
-// THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
-// .ui-input
-//   display: block
-//   width: 100%
-//   -webkit-appearance: none
-//   background: white
-//   color: $grayColor
-//   border: 1px solid $borderColor
-//   border-radius: 4px
-//   padding: 12px 15px
-
-
-// // Checkbox
-// .ui-checkbox
-//   input
-//     display: none
-//     width: 0.1px
-//     height: 0.1px
-//     opacity: 0
-//     position: absolute
-//     top: 0
-//     left: 0
-//     &:checked
-//       + label
-//         &::before
-//           border-color: $colorGreen
-//         &::after
-//           transform: translateY(-50%) scale(1)
-//   label
-//     display: block
-//     width: 100%
-//     position: relative
-//     cursor: pointer
-//     &::before
-//       position: absolute
-//       left: 0
-//       top: 50%
-//       transform: translateY(-50%)
-//       display: inline-block
-//       content: ' '
-//       size: 20px
-//       background-color: white
-//       border: 1px solid #AFB7C0
-//       border-radius: 4px
-//       cursor: pointer
-//       vertical-align: middle
-//       cursor: pointer
-//       transition: all $transitionSpeed ease-in-out
-//     &::after
-//       position: absolute
-//       left: 1px
-//       top: 50%
-//       transform: translateY(-50%) scale(0)
-//       display: inline-block
-//       content: ' '
-//       size: 20px
-//       // background-image: svg-load('../../images/svg/checkbox.svg')
-//       background-repeat: no-repeat
-//       background-position: center
-//       transition: transform .2s ease
-//     span
-//       display: inline-block
-//       padding-left: 35px
-//       vertical-align: top
-//       line-height: 1.3
-//       font-size: 14px
-//       cursor: pointer
+  .ui__caption, .ui__group
+    opacity: 0.1
+  .ui__success
+    opacity: 1
+    visibility: visible

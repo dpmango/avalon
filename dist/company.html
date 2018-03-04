@@ -21,263 +21,258 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body class="page-company">
-    <div id="grid-desktop"></div>
-    <div id="grid-tablet"></div>
-    <div id="grid-mobile"></div>
-    <div class="grid-buttons">
-      <div class="js-desktop">Grid Desktop</div>
-      <div class="js-tablet">Grid Tablet</div>
-      <div class="js-mobile">Grid Mobile</div>
-    </div>
-    <div class="btn btn--chat">Задать вопрос</div>
-    <div class="page">
-      <div class="page__content">
-        <!-- HEADER :: START-->
-        <header class="header">
-          <div class="container">
-            <div class="logo">
-              <button class="btn btn--nav js-nav-trigger"><span></span><span></span><span></span></button><a href="/homepage.html" title="На главную">
-                <svg class="ico ico-logo">
-                  <use xlink:href="img/sprite.svg#ico-logo"></use>
-                </svg></a>
-            </div>
-            <nav class="nav">
-              <div class="nav__menu">
-                <div class="row">
-                  <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Каталог</a></div>
-                  <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Компания</a></div>
-                  <div class="col-12">
-                    <div class="nav__collapse js-nav-collapse">
-                      <div class="row">
-                        <div class="col-6">
-                          <ul class="nav__collapse-menu">
-                            <li><a class="nav__collapse-link" href="#">Столешницы</a></li>
-                            <li><a class="nav__collapse-link" href="#">Подстолья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Дизайнерская мебель</a></li>
-                            <li><a class="nav__collapse-link" href="#">Барные стулья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Стулья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Диваны</a></li>
-                            <li><a class="nav__collapse-link" href="#">Столы</a></li>
-                            <li><a class="nav__collapse-link" href="#">Кресла</a></li>
-                            <li><a class="nav__collapse-link" href="#">Складная мебель</a></li>
-                            <li><a class="nav__collapse-link" href="#">Мебель для </a></li>
-                            <li><a class="nav__collapse-link" href="#">конференц-залов</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-6">
-                          <ul class="nav__collapse-menu">
-                            <li><a class="nav__collapse-link" href="#">Услуги</a></li>
-                            <li><a class="nav__collapse-link" href="#">Доставка и оплата</a></li>
-                            <li><a class="nav__collapse-link" href="#">Дилерам</a></li>
-                            <li><a class="nav__collapse-link" href="#">Реквизиты</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6"><a class="nav__link" href="#">Портфолио</a></div>
-                  <div class="col-6"><a class="nav__link" href="#">Контакты</a></div>
-                </div>
+    <!-- required for barba bindgins-->
+    <div id="barba-wrapper">
+      <div class="page">
+        <!-- this will be changed with every pjax request-->
+        <div class="page__content">
+          <!-- HEADER :: START-->
+          <header class="header">
+            <div class="container">
+              <div class="logo">
+                <button class="btn btn--nav js-nav-trigger"><span></span><span></span><span></span></button><a href="/homepage.html" title="На главную">
+                  <svg class="ico ico-logo">
+                    <use xlink:href="img/sprite.svg#ico-logo"></use>
+                  </svg></a>
               </div>
-            </nav>
-            <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
-            <div class="search js-search">
-              <form action="#">
-                <input class="search__input js-search-input" type="search" placeholder="Поиск">
-                <button class="search__clear js-search-clear" type="reset">
-                  <svg class="ico ico-search-clear">
-                    <use xlink:href="img/sprite.svg#ico-search-clear"></use>
-                  </svg>
-                </button>
-                <button class="search__btn js-search-open">
-                  <svg class="ico ico-search">
-                    <use xlink:href="img/sprite.svg#ico-search"></use>
-                  </svg>
-                </button>
-                <div class="search__progress js-search-progress"></div>
-                <div class="search__dropdown">
-                  <div class="search__results">
-                    <div class="search__group">
-                      <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
-                      <ul class="search__list">
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-2.png" alt=""></figure><span class="search__item-name">Кресло Денди</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-3.png" alt=""></figure><span class="search__item-name">Кресло красное</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-4.png" alt=""></figure><span class="search__item-name">Кресло 6811bm</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-5.png" alt=""></figure><span class="search__item-name">Диван красный</span></a></li>
-                      </ul>
-                    </div>
-                    <div class="search__group">
-                      <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
-                      <ul class="search__list">
-                        <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
-                        <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
-                      </ul>
-                    </div>
-                    <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
-                  </div>
-                  <p class="search__notfind">К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.</p>
-                </div>
-              </form>
-            </div>
-          </div>
-        </header>
-        <!-- HEADER :: END-->
-        <!-- Company :: Start-->
-        <div class="company">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-indent">
-                <h1>О нас</h1>
-                <ul class="breadcrumbs">
-                  <li><a class="breadcrumbs__link" href="#">Главная</a></li>
-                  <li><a class="breadcrumbs__link" href="#">Компания</a></li>
-                  <li><a class="breadcrumbs__link" href="#">О нас</a></li>
-                </ul><em>Компания «Авалон» является одним из заслуженных участников российского рынка мебели. Мы работаем в этой сфере с 2003 года, но за это время наш особенный подход к работе позволил взять сходу не одну и не две вершины. Весь коллектив нашей компании продолжает и дальше целеустремлённо трудиться в интересах наших клиентов.</em><em>Мы поставляем мебель прямо от производителя. Сработавшаяся команда менеджеров уверенно руководит развитием компании и всеми её отделами. Основывается на удобстве работы, скорости оформления заказа. В то же время, наши заказчики могут располагаться в любой точке России и за её пределами!</em>
-                <div class="certificates">
-                  <h2>Наши достижения</h2>
-                  <div class="certificates__grid">
-                    <div class="row">
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-1.png" alt=""></a></div>
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-2.png" alt=""></a></div>
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-3.png" alt=""></a></div>
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-4.png" alt=""></a></div>
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-5.png" alt=""></a></div>
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-6.png" alt=""></a></div>
-                      <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-7.png" alt=""></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="clients">
-                  <h2>Наши клиенты</h2>
+              <nav class="nav">
+                <div class="nav__menu">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <p>Мы не просто продаём мебель, мы помогаем её купить. Наши консультанты с радостью подберут самые подходящие для вас наборы мебели, помогут выбрать из нескольких наиболее симпатичных вариантов, или оформить заказ на индивидуальное изготовление мебели.</p>
-                    </div>
-                  </div>
-                  <div class="clients__grid">
-                    <div class="row">
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-1.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-2.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-3.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-4.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-5.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-6.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-7.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-8.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-9.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4 col-lg-3 col-xl-20">
-                        <div class="clients__item"><img src="img/pic-clients-10.png" alt=""></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="profession">
-                  <h2>Наша профессия – мебель</h2>
-                  <div class="row">
-                    <div class="col-md-10 col-lg-5">
-                      <p>А если говорить точнее, то крупные оптовые партии специализированной мебели. Мы реализуем мебель для баров и кафе, барные стулья и столы для уличных кафе. Мы предлагаем нашему клиенту всё, что может потребоваться ему для оформления зала. </p>
-                      <p>Кроме большого выбора, мы готовы завоевать расположение клиентов превосходным сервисом и опытом в преодолении трудностей, связанных с оформлением заказа и доставкой мебели заказчику. Сработавшаяся команда менеджеров уверенно руководит развитием компании и всеми её отделами.</p>
-                    </div>
-                    <div class="col-lg-7">
-                      <figure class="profession__image"><img src="img/pic-profession-1.png" alt=""></figure>
-                    </div>
-                  </div>
-                </div>
-                <div class="team">
-                  <h2>Наши сотрудники</h2>
-                  <div class="row">
-                    <div class="col-md-11">
-                      <div class="row">
-                        <div class="col-md-10 col-lg-6">
-                          <p>Наши сотрудники составляют наше основное конкурентное преимущество. Консультанты компании «Авалон» проходят специальное обучение, так что ваше с ними общение не оставит неприятного осадка. </p>
-                        </div>
-                        <div class="col-md-10 col-lg-6">
-                          <p>Кроме того, чтобы упростить и ускорить получение технического задания или указаний по оформлению зала, мы разработали специальную технику приёма информации. Технический цех, работающий над созданием мебели по индивидуальному заказу, состоит из профессионалов, готовых воплотить в дереве, пластике, ткани и коже любую идею нашего заказчика.</p>
+                    <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Каталог</a></div>
+                    <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Компания</a></div>
+                    <div class="col-12">
+                      <div class="nav__collapse js-nav-collapse">
+                        <div class="row">
+                          <div class="col-6">
+                            <ul class="nav__collapse-menu">
+                              <li><a class="nav__collapse-link" href="#">Столешницы</a></li>
+                              <li><a class="nav__collapse-link" href="#">Подстолья</a></li>
+                              <li><a class="nav__collapse-link" href="#">Дизайнерская мебель</a></li>
+                              <li><a class="nav__collapse-link" href="#">Барные стулья</a></li>
+                              <li><a class="nav__collapse-link" href="#">Стулья</a></li>
+                              <li><a class="nav__collapse-link" href="#">Диваны</a></li>
+                              <li><a class="nav__collapse-link" href="#">Столы</a></li>
+                              <li><a class="nav__collapse-link" href="#">Кресла</a></li>
+                              <li><a class="nav__collapse-link" href="#">Складная мебель</a></li>
+                              <li><a class="nav__collapse-link" href="#">Мебель для </a></li>
+                              <li><a class="nav__collapse-link" href="#">конференц-залов</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="nav__collapse-menu">
+                              <li><a class="nav__collapse-link" href="#">Услуги</a></li>
+                              <li><a class="nav__collapse-link" href="#">Доставка и оплата</a></li>
+                              <li><a class="nav__collapse-link" href="#">Дилерам</a></li>
+                              <li><a class="nav__collapse-link" href="#">Реквизиты</a></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="team__grid">
-                    <div class="row">
-                      <div class="col-6 col-md-4">
-                        <div class="team__item"><img src="img/pic-team-1.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="team__item"><img src="img/pic-team-2.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="team__item"><img src="img/pic-team-3.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="team__item"><img src="img/pic-team-4.png" alt=""></div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="team__item"><img src="img/pic-team-5.png" alt=""></div>
-                      </div>
-                    </div>
+                    <div class="col-6"><a class="nav__link" href="#">Портфолио</a></div>
+                    <div class="col-6"><a class="nav__link" href="#">Контакты</a></div>
                   </div>
                 </div>
+              </nav>
+              <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
+              <div class="search js-search">
+                <form action="#">
+                  <input class="search__input js-search-input" type="search" placeholder="Поиск">
+                  <button class="search__clear js-search-clear" type="reset">
+                    <svg class="ico ico-search-clear">
+                      <use xlink:href="img/sprite.svg#ico-search-clear"></use>
+                    </svg>
+                  </button>
+                  <button class="search__btn js-search-open">
+                    <svg class="ico ico-search">
+                      <use xlink:href="img/sprite.svg#ico-search"></use>
+                    </svg>
+                  </button>
+                  <div class="search__progress js-search-progress"></div>
+                  <div class="search__dropdown">
+                    <div class="search__results">
+                      <div class="search__group">
+                        <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
+                        <ul class="search__list">
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-2.png" alt=""></figure><span class="search__item-name">Кресло Денди</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-3.png" alt=""></figure><span class="search__item-name">Кресло красное</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-4.png" alt=""></figure><span class="search__item-name">Кресло 6811bm</span></a></li>
+                          <li class="col-6"><a class="search__item" href="#">
+                              <figure class="search__item-image"><img src="img/pic-5.png" alt=""></figure><span class="search__item-name">Диван красный</span></a></li>
+                        </ul>
+                      </div>
+                      <div class="search__group">
+                        <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
+                        <ul class="search__list">
+                          <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
+                          <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
+                        </ul>
+                      </div>
+                      <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
+                    </div>
+                    <p class="search__notfind">К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.</p>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- Company :: End-->
-        <!-- Cases Other :: End-->
-        <div class="cases__other">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-indent">
-                <h2 class="cases__other-heading">Наши проекты</h2>
-              </div>
-            </div>
-            <div class="cases__grid">
+          </header>
+          <!-- HEADER :: END-->
+          <!-- Company :: Start-->
+          <div class="company">
+            <div class="container">
               <div class="row">
-                <div class="col-12 col-sm-6"><a class="cases__item" href="#">
-                    <figure class="cases__item-image"><img src="img/pic-cases-1.png" alt=""></figure>
-                    <p class="cases__item-caption">Оснащение зоны питания LOREAL в Калужской области</p></a></div>
-                <div class="col-12 col-sm-6"><a class="cases__item" href="#">
-                    <figure class="cases__item-image"><img src="img/pic-cases-2.png" alt=""></figure>
-                    <p class="cases__item-caption">Компания AVALON поставила мебель в отель Rodina</p></a></div>
-                <div class="col-12 col-sm-6"><a class="cases__item" href="#">
-                    <figure class="cases__item-image"><img src="img/pic-cases-3.png" alt=""></figure>
-                    <p class="cases__item-caption">Дизайнерские диваны для тату-салона GOENHENTZ</p></a></div>
-                <div class="col-12 col-sm-6"><a class="cases__item" href="#">
-                    <figure class="cases__item-image"><img src="img/pic-cases-4.png" alt=""></figure>
-                    <p class="cases__item-caption">Ресторан «Веранда 13» в Мытищах</p></a></div>
-                <div class="col-12 col-sm-6"><a class="cases__item" href="#">
-                    <figure class="cases__item-image"><img src="img/pic-cases-5.png" alt=""></figure>
-                    <p class="cases__item-caption">Ресторан «Лепешка», г.Королёв</p></a></div>
+                <div class="col-12 col-indent">
+                  <h1>О нас</h1>
+                  <ul class="breadcrumbs">
+                    <li><a class="breadcrumbs__link" href="#">Главная</a></li>
+                    <li><a class="breadcrumbs__link" href="#">Компания</a></li>
+                    <li><a class="breadcrumbs__link" href="#">О нас</a></li>
+                  </ul><em>Компания «Авалон» является одним из заслуженных участников российского рынка мебели. Мы работаем в этой сфере с 2003 года, но за это время наш особенный подход к работе позволил взять сходу не одну и не две вершины. Весь коллектив нашей компании продолжает и дальше целеустремлённо трудиться в интересах наших клиентов.</em><em>Мы поставляем мебель прямо от производителя. Сработавшаяся команда менеджеров уверенно руководит развитием компании и всеми её отделами. Основывается на удобстве работы, скорости оформления заказа. В то же время, наши заказчики могут располагаться в любой точке России и за её пределами!</em>
+                  <div class="certificates">
+                    <h2>Наши достижения</h2>
+                    <div class="certificates__grid">
+                      <div class="row">
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-1.png" alt=""></a></div>
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-2.png" alt=""></a></div>
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-3.png" alt=""></a></div>
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-4.png" alt=""></a></div>
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-5.png" alt=""></a></div>
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-6.png" alt=""></a></div>
+                        <div class="col-6 col-md-4"><a class="certificates__item" href="#"><img src="img/pic-certificates-7.png" alt=""></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clients">
+                    <h2>Наши клиенты</h2>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <p>Мы не просто продаём мебель, мы помогаем её купить. Наши консультанты с радостью подберут самые подходящие для вас наборы мебели, помогут выбрать из нескольких наиболее симпатичных вариантов, или оформить заказ на индивидуальное изготовление мебели.</p>
+                      </div>
+                    </div>
+                    <div class="clients__grid">
+                      <div class="row">
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-1.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-2.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-3.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-4.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-5.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-6.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-7.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-8.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-9.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-20">
+                          <div class="clients__item"><img src="img/pic-clients-10.png" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profession">
+                    <h2>Наша профессия – мебель</h2>
+                    <div class="row">
+                      <div class="col-md-10 col-lg-5">
+                        <p>А если говорить точнее, то крупные оптовые партии специализированной мебели. Мы реализуем мебель для баров и кафе, барные стулья и столы для уличных кафе. Мы предлагаем нашему клиенту всё, что может потребоваться ему для оформления зала. </p>
+                        <p>Кроме большого выбора, мы готовы завоевать расположение клиентов превосходным сервисом и опытом в преодолении трудностей, связанных с оформлением заказа и доставкой мебели заказчику. Сработавшаяся команда менеджеров уверенно руководит развитием компании и всеми её отделами.</p>
+                      </div>
+                      <div class="col-lg-7">
+                        <figure class="profession__image"><img src="img/pic-profession-1.png" alt=""></figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team">
+                    <h2>Наши сотрудники</h2>
+                    <div class="row">
+                      <div class="col-md-11">
+                        <div class="row">
+                          <div class="col-md-10 col-lg-6">
+                            <p>Наши сотрудники составляют наше основное конкурентное преимущество. Консультанты компании «Авалон» проходят специальное обучение, так что ваше с ними общение не оставит неприятного осадка. </p>
+                          </div>
+                          <div class="col-md-10 col-lg-6">
+                            <p>Кроме того, чтобы упростить и ускорить получение технического задания или указаний по оформлению зала, мы разработали специальную технику приёма информации. Технический цех, работающий над созданием мебели по индивидуальному заказу, состоит из профессионалов, готовых воплотить в дереве, пластике, ткани и коже любую идею нашего заказчика.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__grid">
+                      <div class="row">
+                        <div class="col-6 col-md-4">
+                          <div class="team__item"><img src="img/pic-team-1.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div class="team__item"><img src="img/pic-team-2.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div class="team__item"><img src="img/pic-team-3.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div class="team__item"><img src="img/pic-team-4.png" alt=""></div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div class="team__item"><img src="img/pic-team-5.png" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Company :: End-->
+          <!-- Cases Other :: End-->
+          <div class="cases__other">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-indent">
+                  <h2 class="cases__other-heading">Наши проекты</h2>
+                </div>
+              </div>
+              <div class="cases__grid">
+                <div class="row">
+                  <div class="col-12 col-sm-6"><a class="cases__item" href="#">
+                      <figure class="cases__item-image"><img src="img/pic-cases-1.png" alt=""></figure>
+                      <p class="cases__item-caption">Оснащение зоны питания LOREAL в Калужской области</p></a></div>
+                  <div class="col-12 col-sm-6"><a class="cases__item" href="#">
+                      <figure class="cases__item-image"><img src="img/pic-cases-2.png" alt=""></figure>
+                      <p class="cases__item-caption">Компания AVALON поставила мебель в отель Rodina</p></a></div>
+                  <div class="col-12 col-sm-6"><a class="cases__item" href="#">
+                      <figure class="cases__item-image"><img src="img/pic-cases-3.png" alt=""></figure>
+                      <p class="cases__item-caption">Дизайнерские диваны для тату-салона GOENHENTZ</p></a></div>
+                  <div class="col-12 col-sm-6"><a class="cases__item" href="#">
+                      <figure class="cases__item-image"><img src="img/pic-cases-4.png" alt=""></figure>
+                      <p class="cases__item-caption">Ресторан «Веранда 13» в Мытищах</p></a></div>
+                  <div class="col-12 col-sm-6"><a class="cases__item" href="#">
+                      <figure class="cases__item-image"><img src="img/pic-cases-5.png" alt=""></figure>
+                      <p class="cases__item-caption">Ресторан «Лепешка», г.Королёв</p></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cases Other :: End-->
         </div>
-        <!-- Cases Other :: End-->
         <!-- FOOTER :: START-->
-        <footer class="footer">
+        <footer class="footer" js-reveal-footer>
           <div class="container">
             <div class="row">
               <div class="col-lg-10 col-indent">
@@ -332,10 +327,19 @@
           </div>
         </footer>
         <!-- FOOTER :: END-->
-        <script src="js/vendor.js"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
-        <script src="js/app.js"></script>
+        <div class="btn btn--chat">Задать вопрос</div>
+        <div id="grid-desktop"></div>
+        <div id="grid-tablet"></div>
+        <div id="grid-mobile"></div>
+        <div class="grid-buttons">
+          <div class="js-desktop">Grid Desktop</div>
+          <div class="js-tablet">Grid Tablet</div>
+          <div class="js-mobile">Grid Mobile</div>
+        </div>
       </div>
+      <script src="js/vendor.js"></script>
+      <script src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
+      <script src="js/app.js"></script>
     </div>
   </body>
 </html>
