@@ -17,20 +17,19 @@ block content
 	// SKU :: Start
 	.sku
 		.container
-			
 			.row
 				.col-12.col-indent
-
 					h1.sku__heading Кресло 3402BM
-
 					ul.breadcrumbs
 						li
 							a(href="#").breadcrumbs__link Главная 
 						li
-							a(href="#").breadcrumbs__link Каталог 
+							.breadcrumbs__link Каталог 
 						li
 							a(href="#").breadcrumbs__link Мебель для конференц-залов
-
+						li
+							.breadcrumbs__link Кресло 3402BM
+							
 					.row
 						.col-lg-6
 
@@ -109,7 +108,7 @@ block content
 
 														label.ui__group
 															span.ui__placeholder.ui__placeholder--textarea Дополнительная информация
-															textarea(name="message").ui__textarea
+															textarea(name="message" rows="4" data-min-rows="3").ui__textarea
 												
 												.ui__ctrl
 
@@ -120,11 +119,12 @@ block content
 														.col-md-6
 
 															.ui__capcha
-																img(src="img/pic-capcha.png", alt="")
+																.g-recaptcha(data-sitekey="6LcJdEoUAAAAAPg3ngA5OkQO-EyH0Q7MGIZWFtzR")
+																//- img(src="img/pic-capcha.png", alt="")
 
 														.col-md-6
 
-															button.btn.btn--red Отправить
+															button.btn.btn--red отправить
 
 							.sku__caption
 								p Кресло металлическое. Корпус — ABS-палстик. Вращающееся. Окраска высококачественный лак, цвет металлик. Гарантийный срок эксплуатации 1 год. Обивка искусственная кожа.
@@ -190,7 +190,8 @@ block content
 					
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-17.png", alt="")
+											img(src="img/pic-17.png", alt="").product__image-main
+											img(src="img/pic-1.png", alt="").product__image-hover
 										h2.product__title Стул 1405GM
 										p.product__price 3500 ₽
 										ul.product__desc
@@ -202,7 +203,8 @@ block content
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-18.png", alt="")
+											img(src="img/pic-18.png", alt="").product__image-main
+											img(src="img/pic-1.png", alt="").product__image-hover
 										h2.product__title Стул 1406GM
 										p.product__price 2900 ₽
 										ul.product__desc
@@ -214,7 +216,8 @@ block content
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-19.png", alt="")
+											img(src="img/pic-19.png", alt="").product__image-main
+											img(src="img/pic-1.png", alt="").product__image-hover
 										h2.product__title Складной стул 6420NM
 										p.product__price 4200 ₽
 										ul.product__desc
@@ -226,7 +229,8 @@ block content
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-20.png", alt="")
+											img(src="img/pic-20.png", alt="").product__image-main
+											img(src="img/pic-1.png", alt="").product__image-hover
 										h2.product__title 6416NM
 										p.product__price 5800 ₽
 										ul.product__desc
@@ -237,7 +241,8 @@ block content
 						
 									a(href="#").product
 										figure.product__image
-											img(src="img/pic-21.png", alt="")
+											img(src="img/pic-21.png", alt="").product__image-main
+											img(src="img/pic-1.png", alt="").product__image-hover
 										h2.product__title Кресло эмилия
 										p.product__price 6670 ₽
 										ul.product__desc
@@ -249,5 +254,3 @@ block content
 
 	
 	// Related :: End
-
-	

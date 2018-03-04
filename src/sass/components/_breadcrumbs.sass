@@ -23,8 +23,7 @@
 			text-align: center
 		&:last-child:after
 			display: none
-		&:first-child .breadcrumbs__link
-			border-color: $blackColor
+
 	+rmin($tablet)
 		font-size: 15px
 		line-height: 18px
@@ -41,6 +40,7 @@
 	transition: 0.3s $ease
 
 a.breadcrumbs__link
+	border-color: $blackColor
 	&:hover
 		color: $primaryColor
 		border-color: $blackColor
