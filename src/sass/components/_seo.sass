@@ -10,50 +10,65 @@
 		line-height: 25px
 	+rmin($desktop)
 
+	&__row
+		.col-lg-6
+			&:nth-child(1)
+				padding-right: 5%
+				display: flex
+				flex-direction: column
+				align-items: flex-start
 
+			&:nth-child(2)
+				margin-left: -5%
+				flex-basis: 55%
+				max-width: 55%
 
 .seo__heading
 	font-size: 20px
 	line-height: 25px
 	font-weight: 900
-	margin: 0 0 20px
+	margin: 0 0 18px
 	text-transform: uppercase
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 1
-		margin: 0 0 30px
+		margin: 0 0 26px
 
 .seo__collapse
+	flex: 1 0 100%
+	display: flex
+	flex-direction: column
 	position: relative
 	max-height: 240px
 	overflow: hidden
 	transition: 0.4s $ease
-	margin: 0 0 20px
+	margin: 0 0 0px
 	&:after
 		content: ''
 		display: block
 		position: absolute
 		left: 0
-		bottom: 0
-		height: 78px
+		bottom: -15px
+		height: 100px
 		width: 100%
-		// background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 3%, #ffffff)
-		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,0.90) 3%,rgba(255,255,255,0.99) 100%)
 		transition: inherit
 	p
-		margin: 0 0 20px
+		margin: 0 0 25px
 		&:last-child
 			margin: 0
 	&[aria-expanded="true"]:after
 		height: 0
+	& + .btn
+		transform: translateY(-22px)
 	+rmin($desktop)
-		max-height: 475px
+		// max-height: 100%
 
 .seo__image
 	display: none
 	margin: 0
 	img
 		display: block
-		width: 100%
+		width: 105%
 	+rmin($desktop)
 		display: block

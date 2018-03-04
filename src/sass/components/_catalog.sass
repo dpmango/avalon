@@ -13,7 +13,10 @@
 		margin: 0 -20px
 		padding: 0 120px 0 7.2%
 	+rmin($desktop)
-		padding-left: 9.2%
+		padding-left: 9.8%
+
+	h1
+		transform: translateX(-0.05em)
 
 
 // .catalog__main
@@ -40,7 +43,7 @@
 // 	+rmin($tablet)
 // 		padding-bottom: 80px
 // 	+rmin($desktop)
-// 		padding: 30px 60px 80px 9.2%
+// 		padding: 30px 60px 80px 9.8%
 // 		margin: 0 0 0 -20px
 // 		&:after
 // 			right: 0
@@ -104,11 +107,11 @@
 		padding-bottom: 80px
 
 	+rmin($desktop)
-		padding: 30px 300px 80px 9.2%
+		padding: 30px 24.2% 80px 9.8%
 		margin: 0 0 0 -20px
 		transform: translate3d(0,0,0)
 		&:after
-			right: 240px
+			right: 220px
 
 
 .catalog__filter
@@ -131,8 +134,8 @@
 		transform: translate3d(275px,0,0)
 	+rmin($desktop)
 		left: 0
-		width: 240px
-		margin: 0 0 0 -240px
+		width: 220px
+		margin: 0 0 0 -220px
 		opacity: 1
 		visibility: visible
 		transform: translate3d(0,0,0)
@@ -244,6 +247,12 @@
 
 .is-categories-open, .is-categories-open-fixed
 
+	.catalog__categories
+		transform: scale(1)
+		opacity: 1
+		visibility: visible
+
+.is-categories-open-fixed
 	.btn--categories
 		.ico-categories
 			opacity: 0
@@ -251,11 +260,6 @@
 		.ico-close
 			opacity: 1
 			transform: translate(-50%,-50%) scale(1)
-
-	.catalog__categories
-		transform: scale(1)
-		opacity: 1
-		visibility: visible
 
 // -----
 
@@ -373,4 +377,4 @@
 		margin: 0 -20px
 	+rmin($desktop)
 		margin: 0
-		padding: 34px 0 0
+		padding: 55px 0 0
