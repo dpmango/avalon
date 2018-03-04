@@ -3,9 +3,15 @@ title: Avalon
 bodyClass: page-homepage
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-mobile.png")
 block content
-	
-
 	// Promo :: Start
 	.promo
 		.container

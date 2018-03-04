@@ -3,8 +3,17 @@ title: Компания - Avalon
 bodyClass: page-company
 ---
 extends shared/_layout
+
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-company-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-company-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-company-phone.png")
+				
 block content
-	
 	
 	// Company :: Start
 	.company
@@ -211,5 +220,3 @@ block content
 
 				
 	// Cases Other :: End
-
-

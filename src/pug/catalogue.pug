@@ -3,6 +3,16 @@ title: Каталог - Avalon
 bodyClass: page-catalog
 ---
 extends shared/_layout
+
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-catalog-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-catalog-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-catalog-phone.png")
+
 block content
 	
 	// Catalog :: Start

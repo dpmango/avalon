@@ -3,8 +3,15 @@ title: Контакты - Avalon
 bodyClass: page-contacts
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-contacts-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-contacts-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-contacts-phone.png")
 block content
-	
 	
 	// Contacts :: Start
 	.contacts
@@ -62,5 +69,3 @@ block content
 					
 
 	// Contacts :: End
-
-

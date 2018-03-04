@@ -33,8 +33,10 @@ $(document).ready(function() {
     revealFooter();
     _window.on('resize', throttle(revealFooter, 100));
 
-    // development helper
+    // development helper's
     _window.on('resize', debounce(setBreakpoint, 200))
+    pixelPerfect();
+    // _window.on('resize', debounce(pixelPerfect, 200))
   }
 
   // this is a master function which should have all functionality
@@ -832,17 +834,28 @@ $(document).ready(function() {
   //////////
   // PIXEL PERFECT GRID
   //////////
-  $('.js-desktop').on('click', function(event) {
-    $('#grid-desktop').toggleClass('is-active');
-  });
+  function pixelPerfect(){
+    var wHost = window.location.host.toLowerCase()
+    var displayCondition = wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0
+    if (displayCondition) {
+      $('body').addClass('is-dev-env');
 
-  $('.js-tablet').on('click', function(event) {
-    $('#grid-tablet').toggleClass('is-active');
-  });
+      _document
+        .on('click', '[js-pixelPerfect]', function(event) {
+          var target = $(this).data('target');
 
-  $('.js-mobile').on('click', function(event) {
-    $('#grid-mobile').toggleClass('is-active');
-  });
+          $(this).toggleClass('is-active')
+          $(target).siblings().removeClass('is-active')
+          $(target).toggleClass('is-active')
+        })
+
+        .on('click', '[js-pixelPerfectInvert]', function(event) {
+          $(this).toggleClass('is-active')
+          $('body').toggleClass('grid-inverted');
+        })
+
+    }
+  }
 
 
   //////////
@@ -852,7 +865,6 @@ $(document).ready(function() {
     var wHost = window.location.host.toLowerCase()
     var displayCondition = wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0
     if (displayCondition) {
-      console.log(displayCondition)
       var wWidth = _window.width();
 
       var content = "<div class='dev-bp-debug'>" + wWidth + "</div>";

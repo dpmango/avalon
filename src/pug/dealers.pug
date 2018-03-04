@@ -3,8 +3,15 @@ title: Дилерам - Avalon
 bodyClass: page-dealers
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-dealers-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-dealers-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-dealers-phone.png")
 block content
-	
 	
 	// Dealers :: Start
 	.dealers
@@ -71,5 +78,3 @@ block content
 					
 
 	// Dealers :: End
-
-

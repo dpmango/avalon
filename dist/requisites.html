@@ -236,13 +236,16 @@
         </footer>
         <!-- FOOTER :: END-->
         <div class="btn btn--chat">Задать вопрос</div>
-        <div id="grid-desktop"></div>
-        <div id="grid-tablet"></div>
-        <div id="grid-mobile"></div>
-        <div class="grid-buttons">
-          <div class="js-desktop">Grid Desktop</div>
-          <div class="js-tablet">Grid Tablet</div>
-          <div class="js-mobile">Grid Mobile</div>
+        <div class="pixel-perfect">
+          <div id="grid-desktop"><img src="img/grid/grid-cred-desktop.png"></div>
+          <div id="grid-tablet"><img src="img/grid/grid-cred-tablet.png"></div>
+          <div id="grid-mobile"><img src="img/grid/grid-cred-phone.png"></div>
+        </div>
+        <div class="pp-buttons">
+          <div class="pp-buttons__desktop" js-pixelPerfect data-target="#grid-desktop">1440</div>
+          <div class="pp-buttons__tablet" js-pixelPerfect data-target="#grid-tablet">768</div>
+          <div class="pp-buttons__mobile" js-pixelPerfect data-target="#grid-mobile">375</div>
+          <div class="pp-buttons__invert" js-pixelPerfectInvert>invert</div>
         </div>
       </div>
       <script src="js/vendor.js"></script>
