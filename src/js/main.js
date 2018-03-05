@@ -678,7 +678,7 @@ $(document).ready(function() {
 
   // Barba PJAX
 
-  Barba.Pjax.Dom.containerClass = "page__content";
+  Barba.Pjax.Dom.containerClass = "page";
 
   var FadeTransition = Barba.BaseTransition.extend({
     start: function() {

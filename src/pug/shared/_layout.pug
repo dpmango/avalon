@@ -7,12 +7,12 @@ html(lang="ru")
   body(class=bodyClass)
     // required for barba bindgins
     #barba-wrapper
-      .page(class=outClass)
-        // this will be changed with every pjax request
+      block header
+        include ../components/_header
+      // this will be changed with every pjax request
+      .page
         .page__content
-            block header
-              include ../components/_header
-            block content
+          block content
 
         block footer
           include ../components/_footer
