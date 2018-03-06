@@ -884,7 +884,8 @@ $(document).ready(function() {
   $('.js-sticky').each(function(i, sticky){
     var
       $el, elHeight, parent, parentDimensions, wHeight,
-      scrollPastBottom, scrollStart, scrollEnd, pastScroll = 0
+      scrollPastBottom, scrollStart, scrollEnd, pastScroll = 0,
+      fixedByMarginTop = 0, fixedByMarginBottom = 0
 
     function stickyParse(){
       // general selectors and params get's cached
@@ -910,7 +911,7 @@ $(document).ready(function() {
     function stickyScroll(){
       // parse scroll and do manupilations based on it
       var wScroll = _window.scrollTop();
-      var scrollDirection = pastScroll > wScroll ? 'up' : 'down'
+      var scrollDirection = pastScroll >= wScroll ? 'up' : 'down'
 
       // debug
       // console.log(
@@ -918,43 +919,83 @@ $(document).ready(function() {
       //   'scrollStart', scrollStart,
       //   'scrollPastBottom', scrollPastBottom,
       //   'scrollEnd', scrollEnd,
+      //   'fixedByMarginTop', fixedByMarginTop
       // )
 
       // styles object
       var elStyles = {
         'position': "",
         'bottom': "",
+        'top': "",
         'width': "",
-        'margin-top': ""
+        'marginTop': "",
+        'classFixed': ""
       }
 
       // calculate which styles to apply
       if ( wScroll > scrollStart ){
         // element at the top of viewport, start monitoring
-        $el.addClass('is-fixed')
+        elStyles.classFixed = "is-fixed"
+        elStyles.width = parentDimensions.width // prevent fixed/abs jump
 
         if ( wScroll > scrollPastBottom ){
           // element at the bottom of viewport
           // stick it !
           elStyles.position = "fixed"
           elStyles.bottom = 0
-          elStyles.width = parentDimensions.width // prevent fixed/abs jump
 
           // but monitor END POINT and absolute it
           if ( wScroll > scrollEnd ){
             elStyles.position = "absolute"
-            $el.removeClass('is-fixed')
+            elStyles.classFixed = ""
           }
         } else {
           elStyles.position = "static"
         }
 
+        // make scrollable to the up dir
+        if (scrollDirection == "up" && wScroll < scrollEnd) {
+
+          // if fixed is zero - than it's a first time
+          if ( fixedByMarginTop == 0 ){
+
+            fixedByMarginTop = pastScroll // store the point when it's fixed with margin
+
+          } else {
+            // fixedByMarginTop = pastScroll
+          }
+
+          // if momentum is kept
+          if ( wScroll < fixedByMarginTop){
+            elStyles.position = "static"
+            elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
+          } else {
+            // momentum is broken
+          }
+
+          console.log( wScroll, fixedByMarginTop - (elHeight - wHeight) )
+
+          if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
+            // scrolled all with margin fixed
+            elStyles.position = "fixed"
+            elStyles.top = 0
+            elStyles.marginTop = 0
+            elStyles.bottom = "auto"
+          }
+
+        } else if ( scrollDirection == "down" ){
+
+        }
+
       } else {
-        $el.removeClass('is-fixed')
+        // scrilling somewhere above sticky el
+        elStyles.classFixed = ""
       }
+
 
       // apply styles
       $el.css(elStyles)
+      // $el.addClass(elStyles.classFixed)
 
       // required for scroll direction
       pastScroll = wScroll

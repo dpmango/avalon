@@ -8169,6 +8169,8 @@ input:-webkit-autofill {
 
 .news__sticky {
   margin: 0 -30px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 @media only screen and (min-width: 992px) {
@@ -8178,8 +8180,8 @@ input:-webkit-autofill {
 }
 
 .js-sticky.is-fixed {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   z-index: 2;
 }
 
