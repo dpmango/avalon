@@ -78,10 +78,6 @@
 			position: relative
 
 
-
-
-
-
 .news__item
 	display: block
 	position: relative
@@ -281,8 +277,10 @@
 
 .news__sticky
 	margin: 0 -30px
-	backface-visibility: hidden
+	// backface-visibility: hidden
 	// transform: translate3d(0,0,0)
+  position: sticky
+	top: 0
 	+rmin($desktop)
 		margin: 0 -20px
 

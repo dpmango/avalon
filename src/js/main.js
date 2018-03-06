@@ -882,14 +882,17 @@ $(document).ready(function() {
 
   // Sticky
 
-  // $('.js-sticky').stick_in_parent({
-  //     offset_top: 0
-  // });
+  $('.js-sticky').stick_in_parent({
+    offset_top: 0
+  });
+  $('.contacts__map').stick_in_parent({
+    inner_scrolling: false,
+    offset_top: 0
+  });
 
-
-  // $(window).on('resize', function(event) {
-  //    $('.js-sticky').trigger("sticky_kit:recalc");
-  // });
+  _window.on('resize', debounce(function(event) {
+    $('.js-sticky').trigger("sticky_kit:recalc");
+  },300));
 
 
 

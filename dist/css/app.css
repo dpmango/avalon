@@ -8166,8 +8166,7 @@ input:-webkit-autofill {
 
 .news__sticky {
   margin: 0 -30px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  top: 0;
 }
 
 @media only screen and (min-width: 992px) {
@@ -10296,6 +10295,13 @@ a.breadcrumbs__link:hover {
   padding: 0;
 }
 
+.contacts__container .row {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .contacts__container:after {
   content: '';
   display: block;
@@ -10434,7 +10440,8 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 1200px) {
   .contacts__map {
-    height: 100%;
+    height: 100vh;
+    max-height: 840px;
     margin: 0;
     min-width: 66.666vw;
   }

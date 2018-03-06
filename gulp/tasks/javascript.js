@@ -17,7 +17,8 @@ gulp.task('javascript:vendor', function() {
       path.resolve('bower_components', 'scrollMonitor/scrollMonitor.js'),
       path.resolve('bower_components', 'jquery-validation/dist/jquery.validate.min.js'),
       path.resolve('bower_components', 'jquery-mask-plugin/dist/jquery.mask.min.js'),
-      path.resolve('bower_components', 'sticky-kit/jquery.sticky-kit.min.js'),
+      // sticky kit moved to vendor file and refactored
+      // path.resolve('bower_components', 'sticky-kit/jquery.sticky-kit.min.js'),
       path.resolve('bower_components', 'matchHeight/dist/jquery.matchHeight.js'),
       path.resolve('bower_components', 'readmore-js/readmore.min.js'),
       path.resolve('bower_components', 'barba.js/dist/barba.min.js'),
