@@ -881,18 +881,106 @@ $(document).ready(function() {
 
 
   // Sticky
+  $('.js-sticky').each(function(i, sticky){
+    var
+      $el, elHeight, parent, parentDimensions, wHeight,
+      scrollPastBottom, scrollStart, scrollEnd, pastScroll = 0
 
-  $('.js-sticky').stick_in_parent({
-    offset_top: 0
-  });
-  $('.contacts__map').stick_in_parent({
-    inner_scrolling: false,
-    offset_top: 0
-  });
+    function stickyParse(){
+      // general selectors and params get's cached
+      $el = $(sticky);
+      elHeight = $el.height();
+      parent = $el.parent();
+      parentDimensions = {
+        'top': parent.offset().top,
+        'left': parent.offset().left,
+        'height': parent.height(),
+        'width': parent.outerWidth()
+      }
+      wHeight = _window.height();
 
-  _window.on('resize', debounce(function(event) {
-    $('.js-sticky').trigger("sticky_kit:recalc");
-  },300));
+      // we need parent top offset because $el would be fixed
+      scrollStart = Math.floor(parentDimensions.top)
+      scrollPastBottom = Math.floor((parentDimensions.top + elHeight) - wHeight)
+      scrollEnd = Math.floor(scrollStart + parentDimensions.height - wHeight)
+    }
+
+
+    // stick in parent emulation
+    function stickyScroll(){
+      // parse scroll and do manupilations based on it
+      var wScroll = _window.scrollTop();
+      var scrollDirection = pastScroll > wScroll ? 'up' : 'down'
+
+      // debug
+      // console.log(
+      //   'wScroll', wScroll, scrollDirection,
+      //   'scrollStart', scrollStart,
+      //   'scrollPastBottom', scrollPastBottom,
+      //   'scrollEnd', scrollEnd,
+      // )
+
+      // styles object
+      var elStyles = {
+        'position': "",
+        'bottom': "",
+        'width': "",
+        'margin-top': ""
+      }
+
+      // calculate which styles to apply
+      if ( wScroll > scrollStart ){
+        // element at the top of viewport, start monitoring
+        $el.addClass('is-fixed')
+
+        if ( wScroll > scrollPastBottom ){
+          // element at the bottom of viewport
+          // stick it !
+          elStyles.position = "fixed"
+          elStyles.bottom = 0
+          elStyles.width = parentDimensions.width // prevent fixed/abs jump
+
+          // but monitor END POINT and absolute it
+          if ( wScroll > scrollEnd ){
+            elStyles.position = "absolute"
+            $el.removeClass('is-fixed')
+          }
+        } else {
+          elStyles.position = "static"
+        }
+
+      } else {
+        $el.removeClass('is-fixed')
+      }
+
+      // apply styles
+      $el.css(elStyles)
+
+      // required for scroll direction
+      pastScroll = wScroll
+    }
+
+    // event bindings
+
+    stickyParse();
+    stickyScroll();
+
+    _window.on('scroll', throttle(stickyScroll, 5)) // just a minor delay
+    _window.on('resize', debounce(stickyParse, 250))
+
+  })
+
+  // $('.js-sticky').stick_in_parent({
+  //   offset_top: 0
+  // });
+  // $('.contacts__map').stick_in_parent({
+  //   inner_scrolling: false,
+  //   offset_top: 0
+  // });
+  //
+  // _window.on('resize', debounce(function(event) {
+  //   $('.js-sticky').trigger("sticky_kit:recalc");
+  // },300));
 
 
 

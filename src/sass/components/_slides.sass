@@ -50,7 +50,7 @@
 		content: ''
 		display: block
 		float: left
-		padding: 80.555% 0 0
+		padding: calc(80.555% - 60px) 0 0
 	img
 		display: block
 		position: absolute
@@ -61,10 +61,10 @@
 		object-fit: cover
 	+rmin($tablet)
 		&:before
-			padding: 102.555% 0 0
+			padding: calc(102.555% - 60px) 0 0
 	+rmin($desktop)
 		&:before
-			padding: 80.555% 0 0
+			padding: calc(80.555% - 60px) 0 0
 			// padding: calc(80.555% - 60px) 0 0
 
 
