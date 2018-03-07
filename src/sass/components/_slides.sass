@@ -211,17 +211,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Slides Vertical
 
 
@@ -234,6 +223,9 @@
 
 	.slick-slide .slides-v__item-in
 		transform: translate(0,100%)
+		opacity: 0
+	.slick-removing .slides-v__item-in
+		transform: translate(0,-100%)
 		opacity: 0
 	.slick-active .slides-v__item-in
 		transform: translate(0,0)
@@ -282,7 +274,7 @@
 
 
 	&:hover
-		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75);
+		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
 	+rmin($tablet)
 		margin: 0
 		margin: 0 -12px 0 40px
@@ -319,7 +311,7 @@
 .slides-v__item-in
 	width: 100%
 	position: relative
-	transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	transition: 0.5s $ease
 
 .slides-v__title
 	display: block

@@ -79,6 +79,10 @@ $(document).ready(function() {
     $('body').addClass('is-ie');
   }
 
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+  isChrome ? $('body').addClass('is-chrome') : null
+
   //////////
   // COMMON
   //////////
@@ -170,12 +174,13 @@ $(document).ready(function() {
   _document.on('click', function(e) {
     if ($(e.target).closest('.js-search').length == 0) {
       $('html').removeClass('is-search-open is-search-keyup is-search-found is-search-notfound')
+      closeSearch();
     }
   });
 
   // Search :: Keyup
 
-  $('.js-search-input').on('input', function(event) {
+  $('.js-search-input').on('input', debounce(function(event) {
 
     var searchValue = this.value.toLowerCase(),
       searchLength = this.value.length;
@@ -212,22 +217,34 @@ $(document).ready(function() {
               elLengthVisible = $('.search__item-name').closest('li.is-visible').length;
 
             if (elLengthVisible == 0) {
-              $('html').removeClass('is-search-found').addClass('is-search-notfound');
+              // $('html').removeClass('is-search-found').addClass('is-search-notfound');
+              $('.search__results').slideUp('fast');
+              $('.search__notfind').slideDown('fast');
+              $('.search__dropdown').slideDown('fast');
             } else {
-              $('html').removeClass('is-search-notfound').addClass('is-search-found');
+              // $('html').removeClass('is-search-notfound').addClass('is-search-found');
+              $('.search__results').slideDown('fast');
+              $('.search__notfind').slideUp('fast');
+              $('.search__dropdown').slideDown('fast');
             }
           });
         });
     } else {
       // Keyup Reset
       $('html').removeClass('is-search-keyup is-search-found is-search-notfound');
+      closeSearch();
 
       // Progress Reset
       $('.js-search-progress').stop().width(0);
     }
 
-  });
+  }, 200));
 
+  function closeSearch(){
+    $('.search__results').slideUp('fast');
+    $('.search__notfind').slideUp('fast');
+    $('.search__dropdown').slideUp('fast');
+  }
 
   //////////
   // CATALOG
@@ -302,6 +319,16 @@ $(document).ready(function() {
     $(this).parents('.ui__group').toggleClass('is-focused', (e.type === 'focus' || this.value.length > 0));
   }).trigger('blur');
 
+  _document.on('click', '.btn--load', function(){
+    var _btn = $(this)
+    _btn.addClass('is-loading');
+
+    // some fancy ajax staff here
+
+    setTimeout(function(){
+      _btn.removeClass('is-loading');
+    }, 1500)
+  })
 
   //////////
   // SKU
@@ -449,6 +476,16 @@ $(document).ready(function() {
         }
       ]
     });
+
+    // control removing class for animations
+    $('.js-slides-v').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $(slick.$slides[currentSlide]).addClass('slick-removing');
+    });
+    $('.js-slides-v').on('afterChange', function(event, slick, currentSlide, nextSlide){
+      $('.slides-v .slick-slide').removeClass('slick-removing');
+    });
+
+
 
     $('.js-slides-h').slick({
       arrows: false,
@@ -904,6 +941,9 @@ $(document).ready(function() {
       scrollStart = Math.floor(parentDimensions.top)
       scrollPastBottom = Math.floor((parentDimensions.top + elHeight) - wHeight)
       scrollEnd = Math.floor(scrollStart + parentDimensions.height - wHeight)
+
+      // envoke scroll
+      stickyScroll();
     }
 
 
@@ -973,10 +1013,9 @@ $(document).ready(function() {
             // momentum is broken
           }
 
-          console.log( wScroll, fixedByMarginTop - (elHeight - wHeight) )
-
           if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
             // scrolled all with margin fixed
+            // stick to top
             elStyles.position = "fixed"
             elStyles.top = 0
             elStyles.marginTop = 0
@@ -1004,7 +1043,6 @@ $(document).ready(function() {
     // event bindings
 
     stickyParse();
-    stickyScroll();
 
     _window.on('scroll', throttle(stickyScroll, 5)) // just a minor delay
     _window.on('resize', debounce(stickyParse, 250))
