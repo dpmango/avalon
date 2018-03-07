@@ -3,24 +3,28 @@ title: Кейсы - Avalon
 bodyClass: page-cases
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-cases-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-cases-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-cases-phone.png")
+				
 block content
-	
 	
 	// Cases :: Start
 	.cases
 		.container
-
 			.row
 				.col-12.col-indent
-
 					h1.cases__heading Портфолио
-
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная 
+							a(href="homepage.html").breadcrumbs__link Главная 
 						li
-							a(href="#").breadcrumbs__link Портфолио 
-
+							.breadcrumbs__link Портфолио 
 
 			.cases__grid
 				.row

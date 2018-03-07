@@ -13,7 +13,10 @@
 		margin: 0 -20px
 		padding: 0 120px 0 7.2%
 	+rmin($desktop)
-		padding-left: 9.2%
+		padding-left: 9.8%
+
+	h1
+		transform: translateX(-0.05em)
 
 
 // .catalog__main
@@ -26,7 +29,7 @@
 // 	z-index: 10
 // 	flex: 1
 // 	padding: 30px 0 60px
-// 	transition: 0.4s
+// 	transition: 0.3s $ease
 // 	&:after
 // 		content: ''
 // 		display: block
@@ -40,7 +43,7 @@
 // 	+rmin($tablet)
 // 		padding-bottom: 80px
 // 	+rmin($desktop)
-// 		padding: 30px 60px 80px 9.2%
+// 		padding: 30px 60px 80px 9.8%
 // 		margin: 0 0 0 -20px
 // 		&:after
 // 			right: 0
@@ -51,7 +54,7 @@
 // 	top: 0
 // 	right: -30px
 // 	width: 200px
-// 	transition: 0.4s
+// 	transition: 0.3s $ease
 // 	z-index: 80
 // 	opacity: 0
 // 	visibility: hidden
@@ -88,7 +91,7 @@
 	padding: 30px 0 60px
 	width: 100%
 	float: left
-	transition: 0.4s
+	transition: 0.3s $ease
 	&:after
 		content: ''
 		display: block
@@ -104,11 +107,11 @@
 		padding-bottom: 80px
 
 	+rmin($desktop)
-		padding: 30px 300px 80px 9.2%
+		padding: 30px 24.2% 80px 9.8%
 		margin: 0 0 0 -20px
 		transform: translate3d(0,0,0)
 		&:after
-			right: 240px
+			right: 220px
 
 
 .catalog__filter
@@ -116,7 +119,7 @@
 	left: 30px
 	z-index: 80
 	padding: 0 0 20px 20px
-	transition: 0.4s
+	transition: 0.3s $ease
 	float: left
 	width: 200px
 	margin: 0 0 0 -200px
@@ -131,11 +134,14 @@
 		transform: translate3d(275px,0,0)
 	+rmin($desktop)
 		left: 0
-		width: 240px
-		margin: 0 0 0 -240px
+		width: 220px
+		margin: 0 0 0 -220px
 		opacity: 1
 		visibility: visible
 		transform: translate3d(0,0,0)
+
+	&-hidden
+		display: none
 
 
 .is-filter-open
@@ -197,7 +203,7 @@
 	right: -30px
 	z-index: 100
 	padding: 80px 10px
-	transition: 0.25s
+	transition: 0.3s $ease
 	transform: scale(0)
 	opacity: 0
 	visibility: hidden
@@ -239,8 +245,14 @@
 		transform: translate(-40px,0)
 
 
-.is-categories-open
+.is-categories-open, .is-categories-open-fixed
 
+	.catalog__categories
+		transform: scale(1)
+		opacity: 1
+		visibility: visible
+
+.is-categories-open-fixed
 	.btn--categories
 		.ico-categories
 			opacity: 0
@@ -248,11 +260,6 @@
 		.ico-close
 			opacity: 1
 			transform: translate(-50%,-50%) scale(1)
-	
-	.catalog__categories
-		transform: scale(1)
-		opacity: 1
-		visibility: visible
 
 // -----
 
@@ -263,7 +270,7 @@
 		margin: 0 -10px
 		& > [class^="col"]
 			padding: 0 10px
-	
+
 	+rmin($tablet)
 		margin: 0
 		padding: 0
@@ -288,9 +295,12 @@
 	color: #000
 	background: none
 	cursor: pointer
+	transition: .3s $ease
 	mark
 		display: none
 		background: none
+	&:hover
+		border-color: $primaryColor
 	+rmin($tablet)
 		font-size: 15px
 		mark
@@ -303,7 +313,7 @@
 	right: -10px
 	visibility: hidden
 	opacity: 0
-	transition: 0.25s
+	transition: 0.3s $ease
 	background: #fff
 	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
 	z-index: 100
@@ -367,4 +377,4 @@
 		margin: 0 -20px
 	+rmin($desktop)
 		margin: 0
-		padding: 34px 0 0
+		padding: 55px 0 0

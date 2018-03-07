@@ -72,14 +72,10 @@
 		// 	left: -50%
 		// 	margin: 0
 
-		
+
 
 		.row > [class^="col"]
 			position: relative
-
-
-
-
 
 
 .news__item
@@ -102,7 +98,7 @@
 		.news__item-image
 		    box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.5)
 		.news__item-title
-			color: #c43939
+			color: $primaryColor
 	+rmin($tablet)
 		padding: 60px 0 56px 4px
 		&:nth-child(2):not(.news__item--dark)
@@ -121,7 +117,7 @@
 	margin: 0 0 20px
 	overflow: hidden
 	position: relative
-	transition: 0.25s
+	transition: 0.3s $ease
 
 	&:before
 		content: ''
@@ -147,7 +143,7 @@
 	line-height: 25px
 	font-weight: 900
 	margin: 0 0 17px
-	transition: 0.25s
+	transition: 0.3s $ease
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 30px
@@ -174,7 +170,7 @@
 	background: #252525
 	color: #fff
 	padding: 0
-	transition: 0.25s
+	transition: 0.3s $ease
 	&:after
 		display: none
 
@@ -186,7 +182,7 @@
 
 	.news__item-title
 		margin: 0 25px 20px 0
-	
+
 	+rmin($tablet)
 		.news__item-image:before
 			padding: 49% 0 0
@@ -206,14 +202,14 @@
 	+rmin($desktop)
 		.news__item-image:before
 			padding: 53.6% 0 0
-	
+
 	+rmin($wide)
 		.news__item-title
 			font-size: 50px
 			line-height: 60px
 			font-weight: 400
 			margin: 0 20px 34px 0
-			
+
 		.news__item-text
 			font-size: 25px
 			line-height: 35px
@@ -243,14 +239,14 @@
 	// padding: 6px 0 8px
 	// border-bottom: 3px solid #252525
 	// margin: 20px 0
-	// transition: 0.25s
+	// transition: 0.3s
 	position: absolute
 	top: 100%
 	left: 0
 	right: 0
 	padding: 15px 0
 	// &:hover
-		// color: #c43939
+		// color: $primaryColor
 
 	+rmin($mobile)
 		// left: 8.333%
@@ -271,7 +267,7 @@
 		// padding: 106px 0 55px 19.333%
 		padding: 106px 0 106px 19.333%
 		// padding: 106px 0 55px 140px
-		
+
 	+rmin($wide)
 		// margin-left: 77px
 		// font-size: 25px
@@ -281,11 +277,14 @@
 
 .news__sticky
 	margin: 0 -30px
-	backface-visibility: hidden
-	// transform: translate3d(0,0,0)
+	transform: translate3d(0,0,0)
 	+rmin($desktop)
 		margin: 0 -20px
 
+.js-sticky
+	&.is-fixed
+		transform: translate3d(0,0,0)
+		z-index: 2
+
 
 // -----
-

@@ -3,8 +3,17 @@ title: Компания - Avalon
 bodyClass: page-company
 ---
 extends shared/_layout
+
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-company-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-company-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-company-phone.png")
+				
 block content
-	
 	
 	// Company :: Start
 	.company
@@ -17,11 +26,11 @@ block content
 
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная
+							a(href="homepage.html").breadcrumbs__link Главная
 						li
-							a(href="#").breadcrumbs__link Компания
+							.breadcrumbs__link Компания
 						li
-							a(href="#").breadcrumbs__link О нас
+							.breadcrumbs__link О нас
 
 					em Компания «Авалон» является одним из заслуженных участников российского рынка мебели. Мы работаем в этой сфере с 2003 года, но за это время наш особенный подход к работе позволил взять сходу не одну и не две вершины. Весь коллектив нашей компании продолжает и дальше целеустремлённо трудиться в интересах наших клиентов.
 
@@ -211,5 +220,3 @@ block content
 
 				
 	// Cases Other :: End
-
-

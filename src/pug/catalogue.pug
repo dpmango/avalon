@@ -3,43 +3,41 @@ title: Каталог - Avalon
 bodyClass: page-catalog
 ---
 extends shared/_layout
+
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-catalog-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-catalog-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-catalog-phone.png")
+
 block content
 	
-
 	// Catalog :: Start
 	.catalog
 		.container
-
-
 			.catalog__head
-
 				h1 Мебель для конференц-залов
-
 				ul.breadcrumbs
 					li
-						a(href="#").breadcrumbs__link Главная 
+						a(href="homepage.html").breadcrumbs__link Главная 
 					li
-						a(href="#").breadcrumbs__link Каталог 
+						.breadcrumbs__link Каталог 
 					li
-						a(href="#").breadcrumbs__link Мебель для конференц-залов
-
-				
-
+						.breadcrumbs__link Мебель для конференц-залов
 
 			.catalog__main
-
 				button.btn.btn--categories.js-categories-trigger
 					+icon('ico-categories')
 					+icon('ico-close')
-
 				button.btn.btn--filter.js-filter-trigger
 					+icon('ico-filter')
 					+icon('ico-close')
 				
 				.catalog__wrapper
-
 					.catalog__content
-
 						.catalog__ctrl
 							.row
 								.col-6.col-sm-8.col-xl-6
@@ -86,9 +84,10 @@ block content
 							.row
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-1.png", alt="")
+											img(src="img/pic-1.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло 3402B
 										p.product__price 3560 ₽
 										ul.product__desc
@@ -98,9 +97,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-2.png", alt="")
+											img(src="img/pic-2.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло Денди
 										p.product__price 4200 ₽
 										ul.product__desc
@@ -110,9 +110,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-3.png", alt="")
+											img(src="img/pic-3.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло 0623B
 										p.product__price 5360 ₽
 										ul.product__desc
@@ -122,9 +123,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-4.png", alt="")
+											img(src="img/pic-4.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло орион
 										p.product__price 4800 ₽
 										ul.product__desc
@@ -135,9 +137,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-5.png", alt="")
+											img(src="img/pic-5.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло красное
 										p.product__price 8750 ₽
 										ul.product__desc
@@ -147,9 +150,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-6.png", alt="")
+											img(src="img/pic-6.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло 6811bm
 										p.product__price 2340 ₽
 										ul.product__desc
@@ -159,9 +163,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-7.png", alt="")
+											img(src="img/pic-7.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло эмилия
 										p.product__price 6670 ₽
 										ul.product__desc
@@ -171,9 +176,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-8.png", alt="")
+											img(src="img/pic-8.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Кресло 6811bm
 										p.product__price 5250 ₽
 										ul.product__desc
@@ -184,9 +190,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-9.png", alt="")
+											img(src="img/pic-9.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Складной стол 1206NM
 										p.product__price 8300 ₽
 										ul.product__desc
@@ -196,9 +203,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-10.png", alt="")
+											img(src="img/pic-10.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Стул 3302GM
 										p.product__price 1250 ₽
 										ul.product__desc
@@ -208,9 +216,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-11.png", alt="")
+											img(src="img/pic-11.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Складной стол 1202NM
 										p.product__price 10000 ₽
 										ul.product__desc
@@ -220,9 +229,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-12.png", alt="")
+											img(src="img/pic-12.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Стул 1404GM
 										p.product__price 3400 ₽
 										ul.product__desc
@@ -233,9 +243,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-13.png", alt="")
+											img(src="img/pic-13.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Стул 1405GM
 										p.product__price 3500 ₽
 										ul.product__desc
@@ -245,9 +256,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-14.png", alt="")
+											img(src="img/pic-14.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Стул 1406GM
 										p.product__price 2900 ₽
 										ul.product__desc
@@ -257,9 +269,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-15.png", alt="")
+											img(src="img/pic-15.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title Складной стул 6420NM
 										p.product__price 4200 ₽
 										ul.product__desc
@@ -269,9 +282,10 @@ block content
 
 								.col-6.col-sm-4.col-xl-3
 						
-									a(href="#").product
+									a(href="sku.html").product
 										figure.product__image
-											img(src="img/pic-16.png", alt="")
+											img(src="img/pic-16.png", alt="").product__image-main
+											img(src="img/pic-2.png", alt="").product__image-hover
 										h2.product__title 6416NM
 										p.product__price 5800 ₽
 										ul.product__desc
@@ -351,8 +365,39 @@ block content
 									span.ui__checkbox
 									span.ui__check-text Красный
 
-
-							.catalog__filter-all
+							// hidden params
+							.catalog__filter-hidden(js-hiddenCheckboxes)
+								label.ui__label Вес
+								.catalog__filter-checkboxes
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										span.ui__check-text Легкие
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										span.ui__check-text Средние
+						
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										span.ui__check-text Тяжелые
+								
+								// next
+								label.ui__label Размер
+								.catalog__filter-checkboxes
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										span.ui__check-text Крупногабаритные
+							
+									label.ui__check
+										input(type="checkbox").ui__check-input
+										span.ui__checkbox
+										span.ui__check-text Мелкогабаритные
+											
+							.catalog__filter-all(js-showAllCheckboxes data-text-less="свернуть" data-text-more="все параметры")
 								button.btn.btn--link все параметры
 
 							.catalog__filter-action
@@ -498,8 +543,8 @@ block content
 
 					h2.seo__heading Покупка мебели для конференц-залов
 
-					.row
-						.col-lg-5
+					.row.seo__row
+						.col-lg-6
 
 							.seo__collapse.js-readmore
 								p Многие на личном опыте знают, что такое «комната-пенал» или как говорят дизайнеры «эффект трамвая». Места много — поставить ничего нельзя. AVALON взялись решить эту задачу на отдельно взятой даче. Что же получилось? А получились раздвижные стены, гостиная и кухня с барной стойкой. Все в современном ритме: фрески, пробковые полы, натяжные потолки, камень и деревья, травы, цветы! 
@@ -509,7 +554,7 @@ block content
 								p Как успешно провести переговоры любого уровня и добиться поставленной цели? Обеспечьте своим собеседникам максимальный комфорт. Это можно сделать при помощи правильного оформления интерьера, выбора удобной мебели и создания общей приятной атмосферы в переговорной комнате. Для начала при обустройстве переговорной комнаты обратите 
 							
 
-						.col-lg-7
+						.col-lg-6
 							
 							figure.seo__image
 								img(src="img/pic-seo-1.png", alt="")

@@ -21,260 +21,262 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body class="page-homepage">
-    <div id="grid-desktop"></div>
-    <div id="grid-tablet"></div>
-    <div id="grid-mobile"></div>
-    <div class="grid-buttons">
-      <div class="js-desktop">Grid Desktop</div>
-      <div class="js-tablet">Grid Tablet</div>
-      <div class="js-mobile">Grid Mobile</div>
-    </div>
-    <div class="btn btn--chat">Задать вопрос</div>
-    <div class="page">
-      <div class="page__content">
-        <!-- HEADER :: START-->
-        <header class="header">
-          <div class="container">
-            <div class="logo">
-              <button class="btn btn--nav js-nav-trigger"><span></span><span></span><span></span></button><a href="/homepage.html" title="На главную">
-                <svg class="ico ico-logo">
-                  <use xlink:href="img/sprite.svg#ico-logo"></use>
-                </svg></a>
-            </div>
-            <nav class="nav">
-              <div class="nav__menu">
-                <div class="row">
-                  <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Каталог</a></div>
-                  <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Компания</a></div>
-                  <div class="col-12">
-                    <div class="nav__collapse js-nav-collapse">
-                      <div class="row">
-                        <div class="col-6">
-                          <ul class="nav__collapse-menu">
-                            <li><a class="nav__collapse-link" href="#">Столешницы</a></li>
-                            <li><a class="nav__collapse-link" href="#">Подстолья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Дизайнерская мебель</a></li>
-                            <li><a class="nav__collapse-link" href="#">Барные стулья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Стулья</a></li>
-                            <li><a class="nav__collapse-link" href="#">Диваны</a></li>
-                            <li><a class="nav__collapse-link" href="#">Столы</a></li>
-                            <li><a class="nav__collapse-link" href="#">Кресла</a></li>
-                            <li><a class="nav__collapse-link" href="#">Складная мебель</a></li>
-                            <li><a class="nav__collapse-link" href="#">Мебель для </a></li>
-                            <li><a class="nav__collapse-link" href="#">конференц-залов</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-6">
-                          <ul class="nav__collapse-menu">
-                            <li><a class="nav__collapse-link" href="#">Услуги</a></li>
-                            <li><a class="nav__collapse-link" href="#">Доставка и оплата</a></li>
-                            <li><a class="nav__collapse-link" href="#">Дилерам</a></li>
-                            <li><a class="nav__collapse-link" href="#">Реквизиты</a></li>
-                          </ul>
-                        </div>
+    <!-- required for barba bindgins-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <button class="btn btn--nav js-nav-trigger"><span></span><span></span><span></span></button><a href="/homepage.html" title="На главную">
+              <svg class="ico ico-logo">
+                <use xlink:href="img/sprite.svg#ico-logo"></use>
+              </svg></a>
+          </div>
+          <nav class="nav">
+            <div class="nav__menu">
+              <div class="row">
+                <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Каталог</a></div>
+                <div class="col-6"><a class="nav__link js-nav-trigger" href="#">Компания</a></div>
+                <div class="col-12">
+                  <div class="nav__collapse js-nav-collapse">
+                    <div class="row">
+                      <div class="col-6">
+                        <ul class="nav__collapse-menu">
+                          <li><a class="nav__collapse-link" href="#">Столешницы</a></li>
+                          <li><a class="nav__collapse-link" href="#">Подстолья</a></li>
+                          <li><a class="nav__collapse-link" href="#">Дизайнерская мебель</a></li>
+                          <li><a class="nav__collapse-link" href="#">Барные стулья</a></li>
+                          <li><a class="nav__collapse-link" href="#">Стулья</a></li>
+                          <li><a class="nav__collapse-link" href="#">Диваны</a></li>
+                          <li><a class="nav__collapse-link" href="#">Столы</a></li>
+                          <li><a class="nav__collapse-link" href="#">Кресла</a></li>
+                          <li><a class="nav__collapse-link" href="#">Складная мебель</a></li>
+                          <li><a class="nav__collapse-link" href="#">Мебель для </a></li>
+                          <li><a class="nav__collapse-link" href="#">конференц-залов</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="nav__collapse-menu">
+                          <li><a class="nav__collapse-link" href="services.html">Услуги</a></li>
+                          <li><a class="nav__collapse-link" href="delivery.html">Доставка и оплата</a></li>
+                          <li><a class="nav__collapse-link" href="dealers.html">Дилерам</a></li>
+                          <li><a class="nav__collapse-link" href="requisites.html">Реквизиты</a></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="col-6"><a class="nav__link" href="#">Портфолио</a></div>
-                  <div class="col-6"><a class="nav__link" href="#">Контакты</a></div>
+                </div>
+                <div class="col-6"><a class="nav__link" href="cases.html">Портфолио</a></div>
+                <div class="col-6"><a class="nav__link" href="contacts.html">Контакты</a></div>
+              </div>
+            </div>
+          </nav>
+          <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
+          <div class="search js-search">
+            <form action="#">
+              <input class="search__input js-search-input" type="search" placeholder="Поиск">
+              <button class="search__clear js-search-clear" type="reset">
+                <svg class="ico ico-search-clear">
+                  <use xlink:href="img/sprite.svg#ico-search-clear"></use>
+                </svg>
+              </button>
+              <button class="search__btn js-search-open">
+                <svg class="ico ico-search">
+                  <use xlink:href="img/sprite.svg#ico-search"></use>
+                </svg>
+              </button>
+              <div class="search__progress js-search-progress"></div>
+              <div class="search__dropdown">
+                <div class="search__results">
+                  <div class="search__group">
+                    <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
+                    <ul class="search__list">
+                      <li class="col-6"><a class="search__item" href="#">
+                          <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
+                      <li class="col-6"><a class="search__item" href="#">
+                          <figure class="search__item-image"><img src="img/pic-2.png" alt=""></figure><span class="search__item-name">Кресло Денди</span></a></li>
+                      <li class="col-6"><a class="search__item" href="#">
+                          <figure class="search__item-image"><img src="img/pic-3.png" alt=""></figure><span class="search__item-name">Кресло красное</span></a></li>
+                      <li class="col-6"><a class="search__item" href="#">
+                          <figure class="search__item-image"><img src="img/pic-4.png" alt=""></figure><span class="search__item-name">Кресло 6811bm</span></a></li>
+                      <li class="col-6"><a class="search__item" href="#">
+                          <figure class="search__item-image"><img src="img/pic-5.png" alt=""></figure><span class="search__item-name">Диван красный</span></a></li>
+                    </ul>
+                  </div>
+                  <div class="search__group search__group--count">
+                    <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
+                    <ul class="search__list search__categories">
+                      <li class="col-12">
+                        <div class="search__item"><span class="search__item-name">Кресла</span></div>
+                      </li>
+                      <li class="col-12">
+                        <div class="search__item"><span class="search__item-name">Кресла для клубов</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
+                </div>
+                <p class="search__notfind">К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- this will be changed with every pjax request-->
+      <div class="page">
+        <div class="page__content">
+          <!-- Promo :: Start-->
+          <div class="promo">
+            <div class="container">
+              <div class="row">
+                <div class="col-8 col-xl-6">
+                  <div class="slides-fade js-slides-fade">
+                    <div class="slides-fade__item"><img data-src="img/pic-promo-1.png" alt="" js-lazy></div>
+                    <div class="slides-fade__item"><img data-src="img/pic-promo-2.png" alt="" js-lazy></div>
+                    <div class="slides-fade__item"><img data-src="img/pic-promo-3.png" alt="" js-lazy></div>
+                  </div>
+                </div>
+                <div class="col-4 col-xl-6">
+                  <div class="slides-h js-slides-h">
+                    <div class="slides-h__item"><img data-src="img/pic-promo-1-small.png" alt="" js-lazy></div>
+                    <div class="slides-h__item"><img data-src="img/pic-promo-2-small.png" alt="" js-lazy></div>
+                    <div class="slides-h__item"><img data-src="img/pic-promo-3-small.png" alt="" js-lazy></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-10 col-xl-6 push-xl-6 offset-xl-0">
+                  <div class="slides-v js-slides-v"><a class="slides-v__item" href="#">
+                      <div class="slides-v__item-in">
+                        <h2 class="slides-v__title"><b>Металлическое подстолье</b> 0655A</h2>
+                        <p class="slides-v__text">Коллекция мягкой мебели LOFT — это смелое гармоничное сочетание современного дизайна с чертами индустриального прошлого.</p><span class="slides-v__link">перейти в каталог</span>
+                      </div></a><a class="slides-v__item" href="#">
+                      <div class="slides-v__item-in">
+                        <h2 class="slides-v__title">Коллекция <b>VEGETAL</b></h2>
+                        <p class="slides-v__text">Кресла, будто сплетенные из ветвей, с удобными формами и прочным устойчивым каркасом. Возможно размещение внутри и снаружи.</p><span class="slides-v__link">перейти в каталог</span>
+                      </div></a><a class="slides-v__item" href="#">
+                      <div class="slides-v__item-in">
+                        <h2 class="slides-v__title">Стильные диваны <b>LOFT DESIGN</b></h2>
+                        <p class="slides-v__text">Кресла, будто сплетенные из ветвей, с удобными формами и прочным устойчивым каркасом. Возможно размещение внутри и снаружи.</p><span class="slides-v__link">перейти в каталог</span>
+                      </div></a></div>
                 </div>
               </div>
-            </nav>
-            <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
-            <div class="search js-search">
-              <form action="#">
-                <input class="search__input js-search-input" type="search" placeholder="Поиск">
-                <button class="search__clear js-search-clear" type="reset">
-                  <svg class="ico ico-search-clear">
-                    <use xlink:href="img/sprite.svg#ico-search-clear"></use>
-                  </svg>
-                </button>
-                <button class="search__btn js-search-open">
-                  <svg class="ico ico-search">
-                    <use xlink:href="img/sprite.svg#ico-search"></use>
-                  </svg>
-                </button>
-                <div class="search__progress js-search-progress"></div>
-                <div class="search__dropdown">
-                  <div class="search__results">
-                    <div class="search__group">
-                      <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
-                      <ul class="search__list">
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-2.png" alt=""></figure><span class="search__item-name">Кресло Денди</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-3.png" alt=""></figure><span class="search__item-name">Кресло красное</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-4.png" alt=""></figure><span class="search__item-name">Кресло 6811bm</span></a></li>
-                        <li class="col-6"><a class="search__item" href="#">
-                            <figure class="search__item-image"><img src="img/pic-5.png" alt=""></figure><span class="search__item-name">Диван красный</span></a></li>
-                      </ul>
+            </div>
+          </div>
+          <!-- Promo :: End-->
+          <!-- Categories :: Start-->
+          <div class="categories">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-indent">
+                  <h2 class="categories__heading">Каталог</h2>
+                </div>
+              </div>
+              <div class="categories__grid">
+                <div class="row">
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-1.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-1_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Столешницы</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-2.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-2_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Подстолья</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-3.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-3_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Барные стулья</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-4.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-4_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Стулья</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-5.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-5_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Мебель для конференц-залов</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-6.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-6_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Столы</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-7.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-7_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Кресла</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-8.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-8_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Диваны</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-9.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-9_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Складная мебель</span></a></div>
+                  <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="catalogue.html"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-10.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-10_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Дизайнерская мебель</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Categories :: End-->
+          <!-- Portfolio :: Start-->
+          <div class="portfolio">
+            <div class="container">
+              <div class="row align-items-end">
+                <div class="col-md-7 col-lg-7 col-indent">
+                  <h2 class="portfolio__heading">Портфолио</h2>
+                </div>
+                <div class="col-md-5"><a class="portfolio__link" href="#">смотреть все проекты</a></div>
+              </div>
+              <div class="portfolio__grid">
+                <div class="row">
+                  <div class="col col-12 col-md-7">
+                    <div class="slides-portfolio js-slides-portfolio">
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-1.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-2.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</a></div>
                     </div>
-                    <div class="search__group">
-                      <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
-                      <ul class="search__list">
-                        <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
-                        <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
-                      </ul>
+                  </div>
+                  <div class="col col-8 offset-4 col-md-5 offset-md-0">
+                    <div class="slides-portfolio js-slides-portfolio">
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-2.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
                     </div>
-                    <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
                   </div>
-                  <p class="search__notfind">К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.</p>
+                  <div class="col col-10 col-md-3 offset-md-2">
+                    <div class="slides-portfolio js-slides-portfolio">
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-3.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
+                    </div>
+                  </div>
+                  <div class="col col-6 offset-6 col-md-7 offset-md-0">
+                    <div class="slides-portfolio js-slides-portfolio">
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-4.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
+                    </div>
+                  </div>
+                  <div class="col col-8 col-md-5">
+                    <div class="slides-portfolio js-slides-portfolio">
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-5.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-4.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
+                      <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img data-src="img/pic-portfolio-3.png" alt="" js-lazy></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
+                    </div>
+                  </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </header>
-        <!-- HEADER :: END-->
-        <!-- Promo :: Start-->
-        <div class="promo">
-          <div class="container">
-            <div class="row">
-              <div class="col-8 col-xl-6">
-                <div class="slides-fade js-slides-fade">
-                  <div class="slides-fade__item"><img src="img/pic-promo-1.png" alt=""></div>
-                  <div class="slides-fade__item"><img src="img/pic-promo-2.png" alt=""></div>
-                  <div class="slides-fade__item"><img src="img/pic-promo-3.png" alt=""></div>
-                </div>
-              </div>
-              <div class="col-4 col-xl-6">
-                <div class="slides-h js-slides-h">
-                  <div class="slides-h__item"><img src="img/pic-promo-1-small.png" alt=""></div>
-                  <div class="slides-h__item"><img src="img/pic-promo-2-small.png" alt=""></div>
-                  <div class="slides-h__item"><img src="img/pic-promo-3-small.png" alt=""></div>
-                </div>
-              </div>
-              <div class="col-12 col-md-10 col-xl-6 push-xl-6 offset-xl-0">
-                <div class="slides-v js-slides-v"><a class="slides-v__item" href="#">
-                    <div class="slides-v__item-in">
-                      <h2 class="slides-v__title"><b>Металлическое подстолье</b> 0655A</h2>
-                      <p class="slides-v__text">Коллекция мягкой мебели LOFT — это смелое гармоничное сочетание современного дизайна с чертами индустриального прошлого.</p><span class="slides-v__link">перейти в каталог</span>
-                    </div></a><a class="slides-v__item" href="#">
-                    <div class="slides-v__item-in">
-                      <h2 class="slides-v__title">Коллекция <b>VEGETAL</b></h2>
-                      <p class="slides-v__text">Кресла, будто сплетенные из ветвей, с удобными формами и прочным устойчивым каркасом. Возможно размещение внутри и снаружи.</p><span class="slides-v__link">перейти в каталог</span>
-                    </div></a><a class="slides-v__item" href="#">
-                    <div class="slides-v__item-in">
-                      <h2 class="slides-v__title">Стильные диваны <b>LOFT DESIGN</b></h2>
-                      <p class="slides-v__text">Кресла, будто сплетенные из ветвей, с удобными формами и прочным устойчивым каркасом. Возможно размещение внутри и снаружи.</p><span class="slides-v__link">перейти в каталог</span>
-                    </div></a></div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Promo :: End-->
-        <!-- Categories :: Start-->
-        <div class="categories">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-indent">
-                <h2 class="categories__heading">Каталог</h2>
-              </div>
-            </div>
-            <div class="categories__grid">
+          <!-- Portfolio :: End-->
+          <!-- News :: Start-->
+          <div class="news">
+            <div class="container">
               <div class="row">
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-1.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-1_h.svg" alt=""></span></span><span class="categories__item-text">Столешницы</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-2.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-2_h.svg" alt=""></span></span><span class="categories__item-text">Подстолья</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-3.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-3_h.svg" alt=""></span></span><span class="categories__item-text">Барные стулья</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-4.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-4_h.svg" alt=""></span></span><span class="categories__item-text">Стулья</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-5.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-5_h.svg" alt=""></span></span><span class="categories__item-text">Мебель для конференц-залов</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-6.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-6_h.svg" alt=""></span></span><span class="categories__item-text">Столы</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-7.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-7_h.svg" alt=""></span></span><span class="categories__item-text">Кресла</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-8.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-8_h.svg" alt=""></span></span><span class="categories__item-text">Диваны</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-9.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-9_h.svg" alt=""></span></span><span class="categories__item-text">Складная мебель</span></a></div>
-                <div class="col-6 col-md-4 col-xl-3"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-10.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-10_h.svg" alt=""></span></span><span class="categories__item-text">Дизайнерская мебель</span></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Categories :: End-->
-        <!-- Portfolio :: Start-->
-        <div class="portfolio">
-          <div class="container">
-            <div class="row align-items-end">
-              <div class="col-md-7 col-lg-7 col-indent">
-                <h2 class="portfolio__heading">Портфолио</h2>
-              </div>
-              <div class="col-md-5"><a class="portfolio__link" href="#">смотреть все проекты</a></div>
-            </div>
-            <div class="portfolio__grid">
-              <div class="row">
-                <div class="col col-12 col-md-7">
-                  <div class="slides-portfolio js-slides-portfolio">
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-1.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-2.png" alt=""></span><a class="slides-portfolio__caption" href="#">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</a></div>
-                  </div>
-                </div>
-                <div class="col col-8 offset-4 col-md-5 offset-md-0">
-                  <div class="slides-portfolio js-slides-portfolio">
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-2.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                  </div>
-                </div>
-                <div class="col col-10 col-md-3 offset-md-2">
-                  <div class="slides-portfolio js-slides-portfolio">
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-3.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                  </div>
-                </div>
-                <div class="col col-6 offset-6 col-md-7 offset-md-0">
-                  <div class="slides-portfolio js-slides-portfolio">
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-4.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                  </div>
-                </div>
-                <div class="col col-8 col-md-5">
-                  <div class="slides-portfolio js-slides-portfolio">
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-5.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-4.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                    <div class="slides-portfolio__item"><span class="slides-portfolio__image"><img src="img/pic-portfolio-3.png" alt=""></span><a class="slides-portfolio__caption" href="#">Джаз-клуб «Эссе»</a></div>
-                  </div>
+                <div class="col-12 col-indent">
+                  <h2 class="news__heading">Новости</h2>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- Portfolio :: End-->
-        <!-- News :: Start-->
-        <div class="news">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-indent">
-                <h2 class="news__heading">Новости</h2>
-              </div>
-            </div>
-            <div class="news__grid">
-              <div class="row">
-                <div class="col-lg-6 offset-lg-1 push-lg-5">
-                  <div class="news__sticky js-sticky"><a class="news__item news__item--dark" href="#">
-                      <figure class="news__item-image"><img src="img/pic-news-4.png" alt=""></figure>
-                      <div class="news__item-desc">
-                        <div class="row">
-                          <div class="col-lg-12 col-indent">
-                            <h3 class="news__item-title">Оснащение гостевых зон и ресторанного комплекса <b>нового бизнес-отеля Sheraton</b></h3>
-                            <p class="news__item-text">Многие на личном опыте знают, что такое «комната-пенал» или как говорят дизайнеры «эффект трамвая». Места много — поставить ничего нельзя. AVALON взялись решить эту задачу на отдельно взятой даче. Что же получилось? А получились раздвижные стены, гостиная и кухня с барной стойкой. Все в современном ритме: фрески, пробковые полы, натяжные потолки, камень и деревья, травы, цветы!</p>
+              <div class="news__grid">
+                <div class="row">
+                  <div class="col-lg-6 offset-lg-1 push-lg-5">
+                    <div class="news__sticky js-sticky"><a class="news__item news__item--dark" href="#">
+                        <figure class="news__item-image"><img data-src="img/pic-news-4.png" alt="" js-lazy></figure>
+                        <div class="news__item-desc">
+                          <div class="row">
+                            <div class="col-lg-12 col-indent">
+                              <h3 class="news__item-title">Оснащение гостевых зон и ресторанного комплекса <b>нового бизнес-отеля Sheraton</b></h3>
+                              <p class="news__item-text">Многие на личном опыте знают, что такое «комната-пенал» или как говорят дизайнеры «эффект трамвая». Места много — поставить ничего нельзя. AVALON взялись решить эту задачу на отдельно взятой даче. Что же получилось? А получились раздвижные стены, гостиная и кухня с барной стойкой. Все в современном ритме: фрески, пробковые полы, натяжные потолки, камень и деревья, травы, цветы!</p>
+                            </div>
                           </div>
-                        </div>
-                      </div></a>
-                    <div class="news__load"><a class="btn btn--load" href="#">загрузить еще</a></div>
+                        </div></a>
+                      <div class="news__load"><a class="btn btn--load" href="#">загрузить еще</a></div>
+                    </div>
                   </div>
+                  <div class="col-md-8 col-lg-5 col-indent pull-lg-7"><a class="news__item" href="#">
+                      <figure class="news__item-image"><img data-src="img/pic-news-1.png" alt="" js-lazy></figure>
+                      <h3 class="news__item-title">Оснащение зоны питания LOREAL <br>в Калужской области</h3>
+                      <p class="news__item-text">Коллекция мягкой мебели LOFT — это смелое гармоничное сочетание современного дизайна с чертами индустриального прошлого. Минимум изысков и продуманная эргономика сделали эту мебель востребованной и популярной.</p></a><a class="news__item" href="#">
+                      <figure class="news__item-image"><img data-src="img/pic-news-2.png" alt="" js-lazy></figure>
+                      <h3 class="news__item-title">Компания AVALON поставила мебель в отель Rodina</h3>
+                      <p class="news__item-text">В процессе реновации номеров отеля, руководством компании осуществлялся поиск подрядчика, способного поставить качественную продукцию для отеля.</p></a><a class="news__item" href="#">
+                      <figure class="news__item-image"><img data-src="img/pic-news-3.png" alt="" js-lazy></figure>
+                      <h3 class="news__item-title">Новый проект мебели для дома Avalonhome</h3>
+                      <p class="news__item-text">Стулья «Чикаго Люкс» в тонировке «тёмный орех» и «Сиэтл» с отделкой декоративными гвоздиками и прошитые контрастными нитями, в тандеме с диванами «Аояма» обеспечивают удобную посадку и комфортную атмосферу зоны лобби.</p></a><a class="news__item" href="#">
+                      <figure class="news__item-image"><img data-src="img/pic-news-2.png" alt="" js-lazy></figure>
+                      <h3 class="news__item-title">Компания AVALON поставила мебель в отель Rodina</h3>
+                      <p class="news__item-text">В процессе реновации номеров отеля, руководством компании осуществлялся поиск подрядчика, способного поставить качественную продукцию для отеля.</p></a></div>
                 </div>
-                <div class="col-md-8 col-lg-5 col-indent pull-lg-7"><a class="news__item" href="#">
-                    <figure class="news__item-image"><img src="img/pic-news-1.png" alt=""></figure>
-                    <h3 class="news__item-title">Оснащение зоны питания LOREAL <br>в Калужской области</h3>
-                    <p class="news__item-text">Коллекция мягкой мебели LOFT — это смелое гармоничное сочетание современного дизайна с чертами индустриального прошлого. Минимум изысков и продуманная эргономика сделали эту мебель востребованной и популярной.</p></a><a class="news__item" href="#">
-                    <figure class="news__item-image"><img src="img/pic-news-2.png" alt=""></figure>
-                    <h3 class="news__item-title">Компания AVALON поставила мебель в отель Rodina</h3>
-                    <p class="news__item-text">В процессе реновации номеров отеля, руководством компании осуществлялся поиск подрядчика, способного поставить качественную продукцию для отеля.</p></a><a class="news__item" href="#">
-                    <figure class="news__item-image"><img src="img/pic-news-3.png" alt=""></figure>
-                    <h3 class="news__item-title">Новый проект мебели для дома Avalonhome</h3>
-                    <p class="news__item-text">Стулья «Чикаго Люкс» в тонировке «тёмный орех» и «Сиэтл» с отделкой декоративными гвоздиками и прошитые контрастными нитями, в тандеме с диванами «Аояма» обеспечивают удобную посадку и комфортную атмосферу зоны лобби.</p></a></div>
               </div>
             </div>
           </div>
+          <!-- News :: End-->
         </div>
-        <!-- News :: End-->
         <!-- FOOTER :: START-->
-        <footer class="footer">
+        <footer class="footer" js-reveal-footer>
           <div class="container">
             <div class="row">
               <div class="col-lg-10 col-indent">
@@ -319,7 +321,7 @@
                       <div class="footer__copyright">
                         <p><a href="#" class="footer__copyright-link">Положение об обработке персональных данных</a></p>
                         <p>© 2003—2017 «Авалон»</p>
-                        <p>Сделано в <a href="#" class="footer__copyright-studio">GLYF</a></p>
+                        <p>Создание сайта — <a href="#" class="footer__copyright-studio">GLYF</a></p>
                       </div>
                     </div>
                   </div>
@@ -329,10 +331,23 @@
           </div>
         </footer>
         <!-- FOOTER :: END-->
-        <script src="js/vendor.js"></script>
-        <script src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
-        <script src="js/app.js"></script>
+        <div class="btn btn--chat">Задать вопрос</div>
+        <div class="pixel-perfect">
+          <div id="grid-desktop"><img src="img/grid/grid.png"></div>
+          <div id="grid-tablet"><img src="img/grid/grid-tablet.png"></div>
+          <div id="grid-mobile"><img src="img/grid/grid-mobile.png"></div>
+        </div>
+        <div class="pp-buttons">
+          <div class="pp-buttons__desktop" js-pixelPerfect data-target="#grid-desktop">1440</div>
+          <div class="pp-buttons__tablet" js-pixelPerfect data-target="#grid-tablet">768</div>
+          <div class="pp-buttons__mobile" js-pixelPerfect data-target="#grid-mobile">375</div>
+          <div class="pp-buttons__invert" js-pixelPerfectInvert>invert</div>
+        </div>
       </div>
+      <script src="js/vendor.js"></script>
+      <script src="http://maps.google.com/maps/api/js?key=AIzaSyD5oswumLUaPeyYKa0zpFR7gNsobVkS7eI"></script>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <script src="js/app.js"></script>
     </div>
   </body>
 </html>

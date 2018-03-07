@@ -1,0 +1,80 @@
+.pp-buttons
+  position: fixed
+  display: flex
+  align-items: center
+  left: 0
+  bottom: 10px
+  z-index: 10000
+
+  &__desktop, &__tablet, &__-mobile, &__invert
+    font-weight: 900
+    background: #000
+    z-index: 100000
+    font-size: 12px
+    color: #fff
+    padding: 10px
+    cursor: pointer
+    transition: 0.25s
+    display: none
+    margin-right: 10px
+    &:hover
+      background: $primaryColor
+    &.is-active
+      background: $primaryColor
+
+  &__invert
+    display: block
+
+  &__mobile
+    display: block
+    +rmin($tablet)
+      display: none
+
+  &__tablet
+    +rmin($tablet)
+      display: block
+    +rmin($wide)
+      display: none
+
+  &__desktop
+    +rmin($wide)
+      display: block
+
+//grid
+
+#grid-desktop, #grid-tablet, #grid-mobile
+  display: block
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 9999
+  background-position: 0 0
+  background-repeat: no-repeat
+  opacity: 0.5
+  visibility: hidden
+  pointer-events: none
+  user-select: none
+  display: none
+  img
+    width: 100%
+  &.is-active
+    visibility: visible
+    display: block
+
+#grid-desktop
+  width: 1440px
+
+#grid-tablet
+  width: 768px
+
+#grid-mobile
+  width: 376px
+
+.grid-inverted
+  #grid-desktop, #grid-tablet, #grid-mobile
+    filter: invert(1)
+
+body:not(.is-dev-env)
+	#grid-desktop, #grid-tablet, #grid-mobile, .js-desktop, .js-tablet, .js-mobile
+	  display: none !important

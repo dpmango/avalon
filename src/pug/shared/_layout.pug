@@ -1,31 +1,28 @@
 include _mixins
 doctype html
 html(lang="ru")
-    head
-        include _head
+  head
+    include _head
 
-    body(class=bodyClass)
+  body(class=bodyClass)
+    // required for barba bindgins
+    #barba-wrapper
+      block header
+        include ../components/_header
+      // this will be changed with every pjax request
+      .page
+        .page__content
+          block content
+
+        block footer
+          include ../components/_footer
+      
+        block callback
+          include ../components/_callback
         
-        #grid-desktop
-        #grid-tablet
-        #grid-mobile
-
-        .grid-buttons
-            .js-desktop Grid Desktop
-            .js-tablet Grid Tablet
-            .js-mobile Grid Mobile
-
-        .btn.btn--chat Задать вопрос
-
+        block pixelPerfect
+          
+        include ../components/_grid
         
-        .page(class=outClass)
-            .page__content
-
-                block header
-                    include ../components/_header
-                block content
-
-                block footer
-                    include ../components/_footer
-                block scripts
-                    include _scripts
+      block scripts
+        include _scripts

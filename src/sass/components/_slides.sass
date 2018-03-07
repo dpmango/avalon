@@ -1,10 +1,5 @@
 // Slides Fade
-
-
 // .slides-fade__item, .slides-h__item
-
-
-
 .slides-fade
 	position: relative
 	margin: 0 0 0 -30px
@@ -33,10 +28,10 @@
 			border: 3px solid #252525
 			border-radius: 50%
 			background: none
-			transition: 0.25s
+			transition: 0.3s $ease
 			cursor: pointer
 			&:hover
-				border-color: #c43939
+				border-color: $primaryColor
 
 		.slick-active button
 			background: #252525
@@ -55,7 +50,7 @@
 		content: ''
 		display: block
 		float: left
-		padding: 80.555% 0 0
+		padding: calc(80.555% - 60px) 0 0
 	img
 		display: block
 		position: absolute
@@ -66,10 +61,10 @@
 		object-fit: cover
 	+rmin($tablet)
 		&:before
-			padding: 102.555% 0 0
+			padding: calc(102.555% - 60px) 0 0
 	+rmin($desktop)
 		&:before
-			padding: 80.555% 0 0
+			padding: calc(80.555% - 60px) 0 0
 			// padding: calc(80.555% - 60px) 0 0
 
 
@@ -94,8 +89,8 @@
 	margin: 0 -30px 0 0
 	height: 100%
 	background-image: radial-gradient(circle at 51% 32%, #ffffff, #f6f6f6)
-	
-	
+
+
 	+rmin($tablet)
 		margin: 0 -20px 0 -12px
 	+rmin($desktop)
@@ -107,7 +102,7 @@
 	.slick-track
 		display: flex
 		align-items: center
-	
+
 	.slick-list
 		height: 100%
 	.slick-track
@@ -115,7 +110,7 @@
 	.slick-slide
 		height: 100%
 
-	
+
 	.slick-dots
 		margin: 0
 		padding: 30px 0
@@ -137,10 +132,10 @@
 			border: 2px solid #252525
 			border-radius: 50%
 			background: none
-			transition: 0.25s
+			transition: 0.3s $ease
 			cursor: pointer
 			&:hover
-				border-color: #c43939
+				border-color: $primaryColor
 
 		.slick-active button
 			background: #252525
@@ -168,10 +163,10 @@
 		z-index: 10
 		color: #252525
 		.ico
-			transition: 0.4s
+			transition: 0.4s $ease
 			stroke-dasharray: 160 160
 		&:hover
-			color: #c43939
+			color: $primaryColor
 			.ico-prev
 				stroke-dashoffset: 160
 			.ico-next
@@ -216,17 +211,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Slides Vertical
 
 
@@ -234,11 +218,14 @@
 	position: relative
 	top: -30px
 	margin: 0 32px 0 -30px
-	transition: 0.25s
+	transition: 0.3s $ease
 	background: #252525
 
 	.slick-slide .slides-v__item-in
 		transform: translate(0,100%)
+		opacity: 0
+	.slick-removing .slides-v__item-in
+		transform: translate(0,-100%)
 		opacity: 0
 	.slick-active .slides-v__item-in
 		transform: translate(0,0)
@@ -270,10 +257,10 @@
 		z-index: 10
 		color: #252525
 		.ico
-			transition: 0.4s
+			transition: 0.4s $ease
 			stroke-dasharray: 160 160
 		&:hover
-			color: #c43939
+			color: $primaryColor
 			.ico-prev
 				stroke-dashoffset: 160
 			.ico-next
@@ -284,10 +271,10 @@
 
 	.slick-next
 		top: 60px
-		
+
 
 	&:hover
-		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75);
+		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
 	+rmin($tablet)
 		margin: 0
 		margin: 0 -12px 0 40px
@@ -320,11 +307,11 @@
 	+rmin($wide)
 		min-height: 410px
 		padding-bottom: 41px
-	
+
 .slides-v__item-in
 	width: 100%
 	position: relative
-	transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
+	transition: 0.5s $ease
 
 .slides-v__title
 	display: block
@@ -346,7 +333,7 @@
 
 .slides-v__text
 	display: block
-	transition: 0.25s
+	transition: 0.3s $ease
 	font-size: 15px
 	line-height: 20px
 	// margin: 0 0 20px
@@ -366,8 +353,8 @@
 	line-height: 1
 	padding: 0 0 6px
 	border-bottom: 3px solid #fff
-	color: #c43939
-	transition: 0.25s
+	color: $primaryColor
+	transition: 0.3s $ease
 	opacity: 0
 	transform: translate(0,180px)
 	position: absolute
@@ -378,15 +365,15 @@
 		// position: absolute
 		// bottom: 43px
 		// left: 57px
-		
+
 	+rmin($desktop)
 		font-size: 25px
 		// left: 81px
 		// bottom: 80px
 	+rmin($wide)
 		bottom: 40px
-		
-	
+
+
 
 
 
@@ -401,11 +388,11 @@
 	z-index: 10
 	width: auto
 	min-width: 100%
-	transition: 0.25s
+	transition: 0.3s $ease
 	margin: 0 0 58px
 	// overflow: hidden
 	// background: #252525
-	
+
 	&:after
 		content: ''
 		display: block
@@ -417,7 +404,7 @@
 		z-index: -1
 
 	// 	display: none
-	
+
 	.slick-track
 		max-width: 100%
 		white-space: nowrap
@@ -449,9 +436,9 @@
 		font-size: 40px
 		cursor: pointer
 		color: #fff
-		transition: 0.25s
+		transition: 0.3s $ease
 		padding: 0
-		
+
 		// margin: 4px 0 0
 		z-index: 100
 		overflow: hidden
@@ -461,30 +448,30 @@
 			stroke-dasharray: 160 160
 			stroke-dashoffset: 160
 		&:hover
-			color: #c43939
+			color: $primaryColor
 
 		&:hover
-			color: #c43939
+			color: $primaryColor
 		+rmin($desktop)
 			margin: 26px 0 0
 
 	.slick-prev
 		right: 30px
-		
+
 	.slick-next
 		right: -10px
-		
+
 	&:hover
 		.slick-arrow
 			transform: translate(0,0)
 			opacity: 1
 		.slides-portfolio__image
 			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
-			
+
 		.slides-portfolio__caption, .slick-arrow
 			transform: translate(0,0)
 			opacity: 1
-	
+
 	+rmin($tablet)
 		margin: 0 0 88px
 	+rmin($desktop)
@@ -499,8 +486,8 @@
 	display: block
 	position: relative
 	// background: #252525
-		
-		
+
+
 
 
 
@@ -508,7 +495,7 @@
 	display: block
 	position: relative
 	width: 100%
-	transition: 0.25s
+	transition: 0.3s $ease
 	overflow: hidden
 	background: #252525
 	// &:after
@@ -547,7 +534,7 @@
 	font-size: 16px
 	line-height: 20px
 	font-weight: 400
-	transition: 0.25s
+	transition: 0.3s $ease
 	// margin: 0
 	transform: translate(0,-40px)
 	opacity: 0
@@ -559,7 +546,7 @@
 	-webkit-box-orient: vertical
 	z-index: 120
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 
 	+rmin($desktop)
@@ -586,7 +573,7 @@
 	font-size: 40px
 	cursor: pointer
 	color: #fff
-	transition: 0.25s
+	transition: 0.3s $ease
 	// margin: 4px 0 0
 	z-index: 100
 	// transform: translate(0,-40px)
@@ -595,16 +582,16 @@
 		stroke-dasharray: 160 160
 		stroke-dashoffset: 160
 	&:hover
-		color: #c43939
+		color: $primaryColor
 
 	&:hover
-		color: #c43939
+		color: $primaryColor
 	+rmin($desktop)
 		// margin: 24px 0 0
 
 .slides-portfolio__prev
 	right: 30px
-		
+
 .slides-portfolio__next
 	right: 0
 
@@ -639,10 +626,10 @@
 			border: 2px solid #252525
 			border-radius: 50%
 			background: none
-			transition: 0.25s
+			transition: 0.3s $ease
 			cursor: pointer
 			&:hover
-				border-color: #c43939
+				border-color: $primaryColor
 
 		.slick-active button
 			background: #252525
@@ -666,10 +653,10 @@
 		+rmin($tablet)
 			bottom: 40px
 		.ico
-			transition: 0.4s
+			transition: 0.4s $ease
 			stroke-dasharray: 160 160
 		&:hover
-			color: #c43939
+			color: $primaryColor
 			.ico-prev
 				stroke-dashoffset: 160
 			.ico-next

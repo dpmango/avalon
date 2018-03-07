@@ -19,7 +19,6 @@ header.header
                     .col-6
                         a(href="#").nav__link.js-nav-trigger Компания
                     .col-12
-
                         .nav__collapse.js-nav-collapse
                             .row
                                 .col-6
@@ -49,21 +48,19 @@ header.header
                                 .col-6
                                     ul.nav__collapse-menu
                                         li
-                                            a(href="#").nav__collapse-link Услуги
+                                            a(href="services.html").nav__collapse-link Услуги
                                         li
-                                            a(href="#").nav__collapse-link Доставка и оплата
+                                            a(href="delivery.html").nav__collapse-link Доставка и оплата
                                         li
-                                            a(href="#").nav__collapse-link Дилерам
+                                            a(href="dealers.html").nav__collapse-link Дилерам
                                         li
-                                            a(href="#").nav__collapse-link Реквизиты
+                                            a(href="requisites.html").nav__collapse-link Реквизиты
 
                     .col-6
-                        a(href="#").nav__link Портфолио
+                        a(href="cases.html").nav__link Портфолио
                     .col-6
-                        a(href="#").nav__link Контакты
+                        a(href="contacts.html").nav__link Контакты
            
-
-
         p.phone
             a(href="tel:88007778904").phone__number 8 (800) 777 89 04
             a(href="tel:74951815264").phone__number 7 (495) 181 52 64
@@ -112,17 +109,17 @@ header.header
                                             img(src="img/pic-5.png", alt="")
                                         span.search__item-name Диван красный
                         
-                        .search__group
+                        .search__group.search__group--count
                             
                             p.search__count
                                 a(href="#").search__count-link категории товаров (5)
 
-                            ul.search__list
+                            ul.search__list.search__categories
                                 li.col-12
-                                    a(href="#").search__item
+                                    .search__item
                                         span.search__item-name Кресла
                                 li.col-12
-                                    a(href="#").search__item
+                                    .search__item
                                         span.search__item-name Кресла для клубов
 
                         .search__action
@@ -130,7 +127,5 @@ header.header
 
                     p.search__notfind К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.
         
-       
 
-        
 // HEADER :: END

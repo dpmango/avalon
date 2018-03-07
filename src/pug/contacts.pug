@@ -3,23 +3,27 @@ title: Контакты - Avalon
 bodyClass: page-contacts
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-contacts-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-contacts-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-contacts-phone.png")
 block content
-	
 	
 	// Contacts :: Start
 	.contacts
 		.container
-
 			.row
 				.col-12.col-indent
-
 					h1 Контакты
-
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная 
+							a(href="homepage.html").breadcrumbs__link Главная 
 						li
-							a(href="#").breadcrumbs__link Контакты
+							.breadcrumbs__link Контакты
 
 			.contacts__container
 				.row
@@ -40,21 +44,30 @@ block content
 
 									.slides-contacts.js-slides-contacts
 										
-									
 										address.contacts__address
 											strong Санкт-Петербург
 											p пр. Обуховской Обороны, д.120, лит. 3
 											p info@avalonmebel.ru
 											p +7 (812) 306 54 06
 									
-									
 										address.contacts__address
 											strong Астана
 											p ул.Джангильдина, 25
 											p info@avalonmebel.ru
 											p +7 (700) 306 54 06
+										
+										address.contacts__address
+											strong Бишкек
+											p ул.Джангильдина, 25
+											p info@avalonmebel.ru
+											p +7 (700) 306 54 06
+											
+										address.contacts__address
+											strong Самара
+											p ул.Джангильдина, 25
+											p info@avalonmebel.ru
+											p +7 (700) 306 54 06
 
-						
 					.col-xl-8
 
 						.contacts__map#contacts__map
@@ -62,5 +75,3 @@ block content
 					
 
 	// Contacts :: End
-
-

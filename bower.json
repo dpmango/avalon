@@ -27,6 +27,9 @@
     "rellax": "*",
     "sticky.js": "^1.2.0",
     "readmore-js": "^2.2.0",
-    "matchHeight": "matchheight#^0.7.2"
+    "matchHeight": "matchheight#^0.7.2",
+    "animejs": "^2.2.0",
+    "jquery-lazy": "^1.7.7",
+    "barba.js": "luruke/barba.js#^1.0.0"
   }
 }

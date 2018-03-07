@@ -3,35 +3,36 @@ title: Результаты поиска - Avalon
 bodyClass: page-results
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-search-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-search-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-search-phone.png")
 block content
 	
 	
 	// Results :: Start
 	.results
 		.container
-
 			.row
 				.col-12.col-indent
-
 					h1 Результаты поиска
-
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная 
+							a(href="homepage.html").breadcrumbs__link Главная 
 						li
-							a(href="#").breadcrumbs__link Результаты поиска
+							.breadcrumbs__link Результаты поиска
 
 			.results__container
-				
 				.row
 					.col-6.col-md-8.col-xl
-
 						h2.results__heading Товары
 
 					.col-6.col-md-4.col-xl-20
-
 						.results__display
-
 								label.ui__check
 									input(type="radio" name="display").ui__check-input
 									span.ui__check-link 8
@@ -48,12 +49,12 @@ block content
 									input(type="radio" name="display").ui__check-input
 									span.ui__check-link все
 				
-
+				// results catalog
 				.results__catalog
 					.row
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-1.png", alt="")
 								h2.product__title Кресло 3402B
@@ -65,7 +66,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-2.png", alt="")
 								h2.product__title Кресло Денди
@@ -77,7 +78,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-3.png", alt="")
 								h2.product__title Кресло 0623B
@@ -89,7 +90,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-4.png", alt="")
 								h2.product__title Кресло орион
@@ -102,7 +103,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-5.png", alt="")
 								h2.product__title Складной стол 1206NM
@@ -114,7 +115,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-6.png", alt="")
 								h2.product__title Кресло 6811bm
@@ -126,7 +127,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-7.png", alt="")
 								h2.product__title Кресло эмилия
@@ -138,7 +139,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-8.png", alt="")
 								h2.product__title Кресло 6811bm
@@ -151,7 +152,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-9.png", alt="")
 								h2.product__title Складной стол 1206NM
@@ -163,7 +164,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-10.png", alt="")
 								h2.product__title Стул 3302GM
@@ -175,7 +176,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-11.png", alt="")
 								h2.product__title Складной стол 1202NM
@@ -187,7 +188,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-12.png", alt="")
 								h2.product__title Стул 1404GM
@@ -200,7 +201,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-13.png", alt="")
 								h2.product__title Стул 1405GM
@@ -212,7 +213,7 @@ block content
 
 						.col-6.col-sm-4.col-xl-20
 				
-							a(href="#").product
+							a(href="sku.html").product
 								figure.product__image
 									img(src="img/pic-14.png", alt="")
 								h2.product__title Стул 1406GM
@@ -233,11 +234,6 @@ block content
 							a(href="#").categories__link Кресла для клубов и баров
 
 				.results__load
-
 					a(href="#").btn.btn--load загрузить еще
 
-
-
 	// Results :: End
-
-

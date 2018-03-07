@@ -19,8 +19,6 @@
 @import elements/ui
 @import elements/wow
 
-
-
 @import components/header
 @import components/footer
 
@@ -50,46 +48,15 @@
 @import components/company
 @import components/results
 @import components/error
+@import components/1920
 
-.grid-buttons
-	position: fixed
-	left: 0
-	bottom: 0
-	z-index: 10000
+@import components/pixel-perfect
 
-.js-desktop, .js-tablet, .js-mobile
-    display: block
-    padding: 0 10px
-    font-weight: 900
-    line-height: 40px
-    height: 40px
-    background: #000
-    z-index: 100000
-    font-size: 12px
-    color: #fff
-    width: 100px
-    cursor: pointer
-    transition: 0.25s
-    margin: 0 0 10px
-    display: none
-    &:hover
-        background: #C43939
-
-.js-mobile
-    display: block
-    +rmin($tablet)
-        display: none
-
-.js-tablet
-    +rmin($tablet)
-        display: block
-    +rmin($wide)
-        display: none
-
-.js-desktop
-    +rmin($wide)
-        display: block
-
+// what's up ?
+.row-0
+  margin: 0
+  & > [class^="col"]
+    padding: 0
 
 // .categories__grid
 //     +r($mobile)
@@ -97,73 +64,3 @@
 //             & > [class^="col"]
 //                 &:nth-child(3), &:nth-child(6), &:nth-child(9)
 //                     display: none
-
-// .promo, .portfolio, .news
-// 	.container
-// 		max-width: 1920px
-
-
-#grid-desktop
-    display: block
-    position: absolute
-    top: 0
-    left: 50%
-    width: 1440px
-    height: 7230px
-    // height: 3065px
-    margin: 0 0 0 -720px
-    z-index: 10000
-    background: url(../img/grid-search-desktop.png) 0 0 no-repeat
-    opacity: 0.5
-    visibility: hidden
-    display: none
-    &.is-active
-        visibility: visible
-        display: block
-
-#grid-tablet
-    display: block
-    position: absolute
-    top: 0
-    left: 50%
-    width: 768px
-    height: 6930px
-    // height: 3065px
-    margin: 0 0 0 -384px
-    z-index: 10000
-    background: url(../img/grid-search-tablet.png) 0 0 no-repeat
-    opacity: 0.5
-    visibility: hidden
-    display: none
-    &.is-active
-        visibility: visible
-        display: block
-
-#grid-mobile
-    display: block
-    position: absolute
-    top: 0
-    left: 50%
-    width: 376px
-    height: 5865px
-    // height: 3065px
-    margin: 0 0 0 -188px
-    z-index: 10000
-    background: url(../img/grid-search-phone.png) 0 0 no-repeat
-    opacity: 0.5
-    visibility: hidden
-    display: none
-    &.is-active
-        visibility: visible
-        display: block
-
-
-.row-0
-    margin: 0
-    & > [class^="col"]
-        padding: 0
-
-
-#grid-desktop, #grid-tablet, #grid-mobile, .js-desktop, .js-tablet, .js-mobile
-    // display: none !important
-

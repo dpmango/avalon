@@ -1,12 +1,9 @@
 // Cases
-
-
 .cases__heading
 	display: block
 	font-size: 30px
 	+rmin($tablet)
 		font-size: 50px
-
 
 .cases__caption
 	display: block
@@ -69,7 +66,7 @@
 			position: relative
 			&:nth-child(even)
 				// top: 80px
-	
+
 	+rmin($mobile)
 		.row
 			& > [class^="col"]
@@ -92,9 +89,9 @@
 	display: block
 	margin: 0 -30px 60px 0
 	color: #fff
-	transition: 0.25s
+	transition: 0.3s $ease
 	&:hover
-		color: #c43939
+		color: $primaryColor
 		.cases__item-image
 			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
 	+rmin($mobile)
@@ -104,7 +101,7 @@
 	margin: 0 0 20px
 	overflow: hidden
 	position: relative
-	transition: 0.25s
+	transition: 0.3s
 	&:before
 		content: ''
 		float: left

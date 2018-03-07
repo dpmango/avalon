@@ -3,38 +3,39 @@ title: Джаз Клуб Эссе - Кейсы - Avalon
 bodyClass: page-cases
 ---
 extends shared/_layout
+block pixelPerfect
+	.pixel-perfect
+		#grid-desktop
+			img(src="img/grid/grid-cases-single-desktop.png")
+		#grid-tablet
+			img(src="img/grid/grid-cases-single-tablet.png")
+		#grid-mobile
+			img(src="img/grid/grid-cases-single-phone.png")
 block content
-	
 	
 	// Cases :: Start
 	.cases
 		.container
-
 			.row
 				.col-12.col-indent
-
 					h1.cases__heading Джаз Клуб Эссе
-
 					ul.breadcrumbs
 						li
-							a(href="#").breadcrumbs__link Главная 
+							a(href="homepage.html").breadcrumbs__link Главная 
 						li
-							a(href="#").breadcrumbs__link Портфолио
+							a(href="cases.html").breadcrumbs__link Портфолио
 						li
-							a(href="#").breadcrumbs__link Джаз Клуб Эссе
-
+							.breadcrumbs__link Джаз Клуб Эссе
+							
 					.row
 						.col-lg-8
-
 							.cases__caption
 								p «Эссе» – джазовый клуб, расположенный в самом центре Москвы на ул. Пятницкая. Вот уже несколько лет клуб уверенно держит позиции одного из лучших джазовых мест Москвы благодаря оригинальным проектам, лучшим именам российских и зарубежных музыкантов, составляющих ежедневную афишу клуба.
 
 						.col-lg-4
-
 							address.cases__address
 								+icon('ico-loc')
 								| ул. Пятницкая, д. 27, стр. 3А
-
 
 			.cases__images
 				.row

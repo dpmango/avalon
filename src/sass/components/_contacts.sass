@@ -14,6 +14,8 @@
 	// 	margin: 0
 	// 	& > [class^="col"]
 	// 		padding: 0
+	.row
+		align-items: flex-start
 	&:after
 		content: ''
 		display: block
@@ -101,9 +103,11 @@
 		padding-left: 0
 		&:last-of-type
 			border: none
-	
+
 
 .contacts__map
+	// position: sticky
+	// top: 0px
 	display: block
 	height: 549px
 	background: #ccc
@@ -112,7 +116,9 @@
 		height: 590px
 		margin: 0 -20px
 	+rmin($xl)
-		height: 100%
+		// height: 100%
+		height: 100vh
+		max-height: 840px
 		margin: 0
 		min-width: 66.666vw
 		// // height: 840px
