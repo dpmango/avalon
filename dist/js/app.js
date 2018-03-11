@@ -93,7 +93,7 @@ $(document).ready(function() {
 
     // Viewport units buggyfill
     window.viewportUnitsBuggyfill.init({
-      force: true,
+      force: false,
       refreshDebounceWait: 150,
       appendToBody: true
     });

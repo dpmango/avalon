@@ -62,58 +62,56 @@ block content
 										img(data-src="img/pic-5.png", alt="" js-lazy)
 									
 
-						.col-lg-6
-							.row
-								.col-6
-									p.sku__price 8150 ₽
+						.col-lg-6.sku-info
+							.sku-info__top
+								p.sku__price 8150 ₽
 
-								.col-6
-									.sku__action
-										button.sku__action-btn.js-sku-trigger
-											| заказать
-											+icon('ico-close')
-										.sku__action-form
-											form(action="#").js-validate
-												legend.ui__legend Офомление заказа
-												p.ui__caption Для оформления заказа, пожалуйста, заполните и отправьте форму.
+								.sku__action
+									button.sku__action-btn.js-sku-trigger
+										| заказать
+										+icon('ico-close')
+									.sku__action-form
+										form(action="#").js-validate
+											legend.ui__legend Офомление заказа
+											p.ui__caption Для оформления заказа, пожалуйста, заполните и отправьте форму.
+
+											.row
+												.col-md-6
+													label.ui__group
+														span.ui__placeholder Имя
+														input(type="text" name="name").ui__input
+
+												.col-md-6
+													label.ui__group
+														span.ui__placeholder Телефон
+														input(type="tel" name="tel").ui__input
+
+												.col-12
+													label.ui__group
+														span.ui__placeholder Электронная почта
+														input(type="email" name="email").ui__input
+
+												.col-12
+													label.ui__group
+														span.ui__placeholder.ui__placeholder--textarea Дополнительная информация
+														textarea(name="message" rows="4" data-min-rows="3").ui__textarea
+											
+											.ui__ctrl
+												p.ui__error Пожалуйста, заполните подсвеченные поля <br>и повторите попытку.
+												p.ui__success Заказ отправлен в обработку. В ближайшее время для уточнения деталей с вами свяжется наш менеджер. Спасибо!
 
 												.row
 													.col-md-6
-														label.ui__group
-															span.ui__placeholder Имя
-															input(type="text" name="name").ui__input
+														.ui__capcha
+															.g-recaptcha(data-sitekey="6LcJdEoUAAAAAPg3ngA5OkQO-EyH0Q7MGIZWFtzR")
 
 													.col-md-6
-														label.ui__group
-															span.ui__placeholder Телефон
-															input(type="tel" name="tel").ui__input
-
-													.col-12
-														label.ui__group
-															span.ui__placeholder Электронная почта
-															input(type="email" name="email").ui__input
-
-													.col-12
-														label.ui__group
-															span.ui__placeholder.ui__placeholder--textarea Дополнительная информация
-															textarea(name="message" rows="4" data-min-rows="3").ui__textarea
-												
-												.ui__ctrl
-													p.ui__error Пожалуйста, заполните подсвеченные поля <br>и повторите попытку.
-													p.ui__success Заказ отправлен в обработку. В ближайшее время для уточнения деталей с вами свяжется наш менеджер. Спасибо!
-
-													.row
-														.col-md-6
-															.ui__capcha
-																.g-recaptcha(data-sitekey="6LcJdEoUAAAAAPg3ngA5OkQO-EyH0Q7MGIZWFtzR")
-
-														.col-md-6
-															button.btn.btn--red отправить
+														button.btn.btn--red отправить
 
 							.sku__caption
 								p Кресло металлическое. Корпус — ABS-палстик. Вращающееся. Окраска высококачественный лак, цвет металлик. Гарантийный срок эксплуатации 1 год. Обивка искусственная кожа.
 
-							.sku__info
+							.sku__chars
 								h2 характеристики
 								
 								.row
@@ -128,7 +126,7 @@ block content
 											li Глубина, см <b>90</b>
 											li Высота, см <b>80</b>
 
-					.row
+					.row.sku-info__text
 						.col-lg-6
 							.sku__info
 								h2 Доставка и оплата

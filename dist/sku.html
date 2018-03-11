@@ -163,67 +163,63 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="row">
-                        <div class="col-6">
-                          <p class="sku__price">8150 ₽</p>
-                        </div>
-                        <div class="col-6">
-                          <div class="sku__action">
-                            <button class="sku__action-btn js-sku-trigger">заказать
-                              <svg class="ico ico-close">
-                                <use xlink:href="img/sprite.svg#ico-close"></use>
-                              </svg>
-                            </button>
-                            <div class="sku__action-form">
-                              <form class="js-validate" action="#">
-                                <legend class="ui__legend">Офомление заказа</legend>
-                                <p class="ui__caption">Для оформления заказа, пожалуйста, заполните и отправьте форму.</p>
+                    <div class="col-lg-6 sku-info">
+                      <div class="sku-info__top">
+                        <p class="sku__price">8150 ₽</p>
+                        <div class="sku__action">
+                          <button class="sku__action-btn js-sku-trigger">заказать
+                            <svg class="ico ico-close">
+                              <use xlink:href="img/sprite.svg#ico-close"></use>
+                            </svg>
+                          </button>
+                          <div class="sku__action-form">
+                            <form class="js-validate" action="#">
+                              <legend class="ui__legend">Офомление заказа</legend>
+                              <p class="ui__caption">Для оформления заказа, пожалуйста, заполните и отправьте форму.</p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <label class="ui__group"><span class="ui__placeholder">Имя</span>
+                                    <input class="ui__input" type="text" name="name">
+                                  </label>
+                                </div>
+                                <div class="col-md-6">
+                                  <label class="ui__group"><span class="ui__placeholder">Телефон</span>
+                                    <input class="ui__input" type="tel" name="tel">
+                                  </label>
+                                </div>
+                                <div class="col-12">
+                                  <label class="ui__group"><span class="ui__placeholder">Электронная почта</span>
+                                    <input class="ui__input" type="email" name="email">
+                                  </label>
+                                </div>
+                                <div class="col-12">
+                                  <label class="ui__group"><span class="ui__placeholder ui__placeholder--textarea">Дополнительная информация</span>
+                                    <textarea class="ui__textarea" name="message" rows="4" data-min-rows="3"></textarea>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="ui__ctrl">
+                                <p class="ui__error">Пожалуйста, заполните подсвеченные поля <br>и повторите попытку.</p>
+                                <p class="ui__success">Заказ отправлен в обработку. В ближайшее время для уточнения деталей с вами свяжется наш менеджер. Спасибо!</p>
                                 <div class="row">
                                   <div class="col-md-6">
-                                    <label class="ui__group"><span class="ui__placeholder">Имя</span>
-                                      <input class="ui__input" type="text" name="name">
-                                    </label>
+                                    <div class="ui__capcha">
+                                      <div class="g-recaptcha" data-sitekey="6LcJdEoUAAAAAPg3ngA5OkQO-EyH0Q7MGIZWFtzR"></div>
+                                    </div>
                                   </div>
                                   <div class="col-md-6">
-                                    <label class="ui__group"><span class="ui__placeholder">Телефон</span>
-                                      <input class="ui__input" type="tel" name="tel">
-                                    </label>
-                                  </div>
-                                  <div class="col-12">
-                                    <label class="ui__group"><span class="ui__placeholder">Электронная почта</span>
-                                      <input class="ui__input" type="email" name="email">
-                                    </label>
-                                  </div>
-                                  <div class="col-12">
-                                    <label class="ui__group"><span class="ui__placeholder ui__placeholder--textarea">Дополнительная информация</span>
-                                      <textarea class="ui__textarea" name="message" rows="4" data-min-rows="3"></textarea>
-                                    </label>
+                                    <button class="btn btn--red">отправить</button>
                                   </div>
                                 </div>
-                                <div class="ui__ctrl">
-                                  <p class="ui__error">Пожалуйста, заполните подсвеченные поля <br>и повторите попытку.</p>
-                                  <p class="ui__success">Заказ отправлен в обработку. В ближайшее время для уточнения деталей с вами свяжется наш менеджер. Спасибо!</p>
-                                  <div class="row">
-                                    <div class="col-md-6">
-                                      <div class="ui__capcha">
-                                        <div class="g-recaptcha" data-sitekey="6LcJdEoUAAAAAPg3ngA5OkQO-EyH0Q7MGIZWFtzR"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <button class="btn btn--red">отправить</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
+                              </div>
+                            </form>
                           </div>
                         </div>
                       </div>
                       <div class="sku__caption">
                         <p>Кресло металлическое. Корпус — ABS-палстик. Вращающееся. Окраска высококачественный лак, цвет металлик. Гарантийный срок эксплуатации 1 год. Обивка искусственная кожа.</p>
                       </div>
-                      <div class="sku__info">
+                      <div class="sku__chars">
                         <h2>характеристики</h2>
                         <div class="row">
                           <div class="col-md-6">
@@ -244,7 +240,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row sku-info__text">
                     <div class="col-lg-6">
                       <div class="sku__info">
                         <h2>Доставка и оплата</h2>
