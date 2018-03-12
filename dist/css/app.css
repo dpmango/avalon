@@ -9662,6 +9662,7 @@ a.breadcrumbs__link:hover {
   font-size: 20px;
   line-height: 25px;
   margin: 0 0 20px;
+  padding-right: 20px;
 }
 
 .cases__caption p:last-child {
@@ -9678,7 +9679,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 992px) {
   .cases__caption {
-    margin: 24px 0 30px;
+    margin: 43px 0 0px;
   }
 }
 
@@ -9707,8 +9708,9 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 992px) {
   .cases__address {
-    margin: 24px 0 30px;
-    text-align: right;
+    margin: 43px 0 30px;
+    text-align: center;
+    padding-left: 22px;
   }
 }
 
@@ -9887,8 +9889,14 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .cases__images {
-    padding: 50px 0;
+    padding: 52px 0 29px 0;
     margin: 0;
+  }
+  .cases__images .row {
+    margin: 0 -20px;
+  }
+  .cases__images .row > [class^="col"] {
+    padding: 0 20px;
   }
   .cases__images .row > [class^="col"]:nth-child(1) .cases__images-item {
     margin-left: -20px;
@@ -10996,7 +11004,7 @@ a.breadcrumbs__link:hover {
   max-width: 100%;
 }
 
-.cases .container {
+.cases .container, .cases__other .container {
   max-width: 100%;
 }
 

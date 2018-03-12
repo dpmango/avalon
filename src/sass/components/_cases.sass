@@ -10,6 +10,7 @@
 	font-size: 20px
 	line-height: 25px
 	margin: 0 0 20px
+	padding-right: 20px
 	p:last-child
 		margin: 0
 	+rmin($tablet)
@@ -17,7 +18,7 @@
 		line-height: 35px
 		margin: 0 0 30px
 	+rmin($desktop)
-		margin: 24px 0 30px
+		margin: 43px 0 0px
 
 .cases__address
 	display: block
@@ -35,8 +36,9 @@
 		font-size: 18px
 		margin: 0 0 30px
 	+rmin($desktop)
-		margin: 24px 0 30px
-		text-align: right
+		margin: 43px 0 30px
+		text-align: center
+		padding-left: 22px
 
 // -----
 
@@ -156,10 +158,12 @@
 				.cases__images-item
 					margin-left: -10px
 	+rmin($tablet)
-		padding: 50px 0
+		padding: 52px 0 29px 0
 		margin: 0
 		.row
+			margin: 0 -20px
 			& > [class^="col"]
+				padding: 0 20px
 				&:nth-child(1)
 					.cases__images-item
 						margin-left: -20px
