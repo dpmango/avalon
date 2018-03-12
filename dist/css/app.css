@@ -9718,7 +9718,7 @@ a.breadcrumbs__link:hover {
   color: #fff;
   padding: 30px 0 0;
   background: #252525;
-  margin: 0 -30px;
+  margin: 7px -30px;
   padding: 30px 30px 0;
 }
 
@@ -9748,8 +9748,8 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .cases__grid {
-    padding: 40px 7.2% 0;
-    margin: 0 -20px;
+    padding: 40px 2.8% 0;
+    margin: 4px -20px 0;
   }
 }
 
@@ -9768,7 +9768,7 @@ a.breadcrumbs__link:hover {
 
 .cases__item {
   display: block;
-  margin: 0 -30px 60px 0;
+  margin: 0 -30px 55px 0;
   color: #fff;
   -webkit-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -9784,14 +9784,20 @@ a.breadcrumbs__link:hover {
           box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75);
 }
 
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 768px) {
+  .cases__item {
+    margin: 0 0 71px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .cases__item {
     margin: 0 0 74px;
   }
 }
 
 .cases__item-image {
-  margin: 0 0 20px;
+  margin: 0 0 27px;
   overflow: hidden;
   position: relative;
   -webkit-transition: 0.3s;
@@ -9818,7 +9824,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .cases__item-image {
-    margin: 0 0 30px;
+    margin: 0 0 39px;
   }
   .cases__item-image:before {
     padding: 67% 0 0;
@@ -9836,13 +9842,14 @@ a.breadcrumbs__link:hover {
   font-size: 23px;
   line-height: 25px;
   font-weight: 900;
-  padding: 0 30px 0 0;
+  padding: 0 20px 0 0;
 }
 
 @media only screen and (min-width: 768px) {
   .cases__item-caption {
     font-size: 25px;
     line-height: 30px;
+    padding: 0 30px 0 0;
   }
 }
 
@@ -10986,6 +10993,10 @@ a.breadcrumbs__link:hover {
 }
 
 .promo .container, .portfolio .container, .news .container {
+  max-width: 100%;
+}
+
+.cases .container {
   max-width: 100%;
 }
 
