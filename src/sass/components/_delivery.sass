@@ -60,14 +60,21 @@
 				top: -4px
 	+rmin($desktop)
 		margin: 0 0 44px
-		max-width: 1080px
+		max-width: 1060px
 		& > li
-			padding: 0 35px 0 120px
+			padding: 0 29px 0 120px
 			min-height: 105px
+			flex: 0 0 33.333%
 			width: 33.333%
+			&:nth-child(2)
+				padding-left: 130px
+				&:after
+					left: 25px
+			&:nth-child(3)
+				padding-left: 135px
 			&:after
-				top: -6px
-				left: 30px
+				top: -2px
+				left: 32px
 
 
 
@@ -102,7 +109,7 @@
 			margin: 0
 	+rmin($tablet)
 		top: 0
-		padding: 40px 0 80px
+		padding: 42px 0 80px
 		& > li
 			margin: 0 0 40px
 	+rmin($desktop)
@@ -160,4 +167,6 @@
 .delivery__payments
 	margin: 0 -20px 0 0
 	+rmin($tablet)
-		margin: 0
+		margin: 0 0 -35px 0
+		p
+			padding-right: 40px

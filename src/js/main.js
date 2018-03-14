@@ -364,11 +364,11 @@ $(document).ready(function() {
     $('.product').closest('[class^="col"]').matchHeight({
       byRow: true,
       property: 'height',
-      target: $('.product'),
+      // target: $('.product'),
       remove: false
     });
 
-    matchHeightFix();
+    // matchHeightFix();
 
     // $.fn.matchHeight._update()
   }
@@ -953,91 +953,96 @@ $(document).ready(function() {
       var wScroll = _window.scrollTop();
       var scrollDirection = pastScroll >= wScroll ? 'up' : 'down'
 
-      // debug
-      // console.log(
-      //   'wScroll', wScroll, scrollDirection,
-      //   'scrollStart', scrollStart,
-      //   'scrollPastBottom', scrollPastBottom,
-      //   'scrollEnd', scrollEnd,
-      //   'fixedByMarginTop', fixedByMarginTop
-      // )
+      if ( _window.width() > 992 ){
+        // debug
+        // console.log(
+        //   'wScroll', wScroll, scrollDirection,
+        //   'scrollStart', scrollStart,
+        //   'scrollPastBottom', scrollPastBottom,
+        //   'scrollEnd', scrollEnd,
+        //   'fixedByMarginTop', fixedByMarginTop
+        // )
 
-      // styles object
-      var elStyles = {
-        'position': "",
-        'bottom': "",
-        'top': "",
-        'width': "",
-        'marginTop': "",
-        'classFixed': ""
-      }
-
-      // calculate which styles to apply
-      if ( wScroll > scrollStart ){
-        // element at the top of viewport, start monitoring
-        elStyles.classFixed = "is-fixed"
-        elStyles.width = parentDimensions.width // prevent fixed/abs jump
-
-        if ( wScroll > scrollPastBottom ){
-          // element at the bottom of viewport
-          // stick it !
-          elStyles.position = "fixed"
-          elStyles.bottom = 0
-
-          // but monitor END POINT and absolute it
-          if ( wScroll > scrollEnd ){
-            elStyles.position = "absolute"
-            elStyles.classFixed = ""
-          }
-        } else {
-          elStyles.position = "static"
+        // styles object
+        var elStyles = {
+          'position': "",
+          'bottom': "",
+          'top': "",
+          'width': "",
+          'marginTop': "",
+          'classFixed': ""
         }
 
-        // make scrollable to the up dir
-        if (scrollDirection == "up" && wScroll < scrollEnd) {
+        // calculate which styles to apply
+        if ( wScroll > scrollStart ){
+          // element at the top of viewport, start monitoring
+          elStyles.classFixed = "is-fixed"
+          elStyles.width = parentDimensions.width // prevent fixed/abs jump
 
-          // if fixed is zero - than it's a first time
-          if ( fixedByMarginTop == 0 ){
-
-            fixedByMarginTop = pastScroll // store the point when it's fixed with margin
-
-          } else {
-            // fixedByMarginTop = pastScroll
-          }
-
-          // if momentum is kept
-          if ( wScroll < fixedByMarginTop){
-            elStyles.position = "static"
-            elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
-          } else {
-            // momentum is broken
-          }
-
-          if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
-            // scrolled all with margin fixed
-            // stick to top
+          if ( wScroll > scrollPastBottom ){
+            // element at the bottom of viewport
+            // stick it !
             elStyles.position = "fixed"
-            elStyles.top = 0
-            elStyles.marginTop = 0
-            elStyles.bottom = "auto"
+            elStyles.bottom = 0
+
+            // but monitor END POINT and absolute it
+            if ( wScroll > scrollEnd ){
+              elStyles.position = "absolute"
+              elStyles.classFixed = ""
+            }
+          } else {
+            elStyles.position = "static"
           }
 
-        } else if ( scrollDirection == "down" ){
+          // make scrollable to the up dir
+          if (scrollDirection == "up" && wScroll < scrollEnd) {
 
+            // if fixed is zero - than it's a first time
+            if ( fixedByMarginTop == 0 ){
+
+              fixedByMarginTop = pastScroll // store the point when it's fixed with margin
+
+            } else {
+              // fixedByMarginTop = pastScroll
+            }
+
+            // if momentum is kept
+            if ( wScroll < fixedByMarginTop){
+              elStyles.position = "static"
+              elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
+            } else {
+              // momentum is broken
+            }
+
+            if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
+              // scrolled all with margin fixed
+              // stick to top
+              elStyles.position = "fixed"
+              elStyles.top = 0
+              elStyles.marginTop = 0
+              elStyles.bottom = "auto"
+            }
+
+          } else if ( scrollDirection == "down" ){
+
+          }
+
+        } else {
+          // scrilling somewhere above sticky el
+          elStyles.classFixed = ""
         }
 
+
+        // apply styles
+        $el.css(elStyles)
+        // $el.addClass(elStyles.classFixed)
+
+        // required for scroll direction
+        pastScroll = wScroll
       } else {
-        // scrilling somewhere above sticky el
-        elStyles.classFixed = ""
+        $el.attr('style', '')
       }
 
-
-      // apply styles
-      $el.css(elStyles)
-      // $el.addClass(elStyles.classFixed)
-
-      // required for scroll direction
-      pastScroll = wScroll
     }
 
     // event bindings

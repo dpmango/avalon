@@ -1151,7 +1151,7 @@ em {
   line-height: 25px;
   font-style: normal;
   margin: 0 -20px 49px 0;
-  max-width: 918px;
+  max-width: 915px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7665,6 +7665,14 @@ a.search__item:hover .search__item-name mark {
   padding: 24px 20px 21px;
   color: #202020;
   margin: 0 0 20px;
+  -webkit-transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.categories__link:hover {
+  background-color: #C43939;
+  color: white;
 }
 
 @media only screen and (min-width: 768px) {
@@ -8795,6 +8803,16 @@ a.search__item:hover .search__item-name mark {
   }
 }
 
+.services .breadcrumbs, .delivery .breadcrumbs, .dealers .breadcrumbs, .requisites .breadcrumbs, .results .breadcrumbs {
+  padding-bottom: 25px;
+}
+
+@media only screen and (min-width: 992px) {
+  .dealers .typography {
+    margin-bottom: -32px;
+  }
+}
+
 .breadcrumbs__link {
   display: block;
   color: #202020;
@@ -9673,7 +9691,7 @@ a.breadcrumbs__link:hover {
   .cases__caption {
     font-size: 25px;
     line-height: 35px;
-    margin: 0 0 30px;
+    margin: 0 0 23px;
   }
 }
 
@@ -9889,7 +9907,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .cases__images {
-    padding: 52px 0 29px 0;
+    padding: 46px 0 29px 0;
     margin: 0;
   }
   .cases__images .row {
@@ -9900,6 +9918,7 @@ a.breadcrumbs__link:hover {
   }
   .cases__images .row > [class^="col"]:nth-child(1) .cases__images-item {
     margin-left: -20px;
+    margin-right: 10px;
   }
   .cases__images .row > [class^="col"]:nth-child(3) {
     clear: left;
@@ -9912,6 +9931,22 @@ a.breadcrumbs__link:hover {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .cases__images {
+    padding: 52px 0 29px 0;
+  }
+  .cases__images .row {
+    margin: 0 -20px;
+  }
+  .cases__images .row > [class^="col"]:nth-child(1) .cases__images-item {
+    margin-left: -20px;
+    margin-right: 0;
+  }
+  .cases__images .row > [class^="col"]:nth-child(5) .cases__images-item {
+    margin-right: -20px;
+  }
+}
+
 .cases__images-item {
   margin: 0 0 30px;
 }
@@ -9919,6 +9954,12 @@ a.breadcrumbs__link:hover {
 .cases__images-item img {
   display: block;
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .cases__images-item {
+    margin: 0 0 80px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -9981,7 +10022,8 @@ a.breadcrumbs__link:hover {
 @media only screen and (min-width: 992px) {
   .requisites__container {
     top: -26px;
-    padding: 32px 20px 76px 0;
+    padding: 32px 20px 71px 0;
+    margin-bottom: -37px;
   }
 }
 
@@ -10090,16 +10132,29 @@ a.breadcrumbs__link:hover {
 @media only screen and (min-width: 992px) {
   .delivery__steps {
     margin: 0 0 44px;
-    max-width: 1080px;
+    max-width: 1060px;
   }
   .delivery__steps > li {
-    padding: 0 35px 0 120px;
+    padding: 0 29px 0 120px;
     min-height: 105px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.333%;
+        -ms-flex: 0 0 33.333%;
+            flex: 0 0 33.333%;
     width: 33.333%;
   }
+  .delivery__steps > li:nth-child(2) {
+    padding-left: 130px;
+  }
+  .delivery__steps > li:nth-child(2):after {
+    left: 25px;
+  }
+  .delivery__steps > li:nth-child(3) {
+    padding-left: 135px;
+  }
   .delivery__steps > li:after {
-    top: -6px;
-    left: 30px;
+    top: -2px;
+    left: 32px;
   }
 }
 
@@ -10152,7 +10207,7 @@ a.breadcrumbs__link:hover {
 @media only screen and (min-width: 768px) {
   .delivery__offices-list {
     top: 0;
-    padding: 40px 0 80px;
+    padding: 42px 0 80px;
   }
   .delivery__offices-list > li {
     margin: 0 0 40px;
@@ -10252,7 +10307,10 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .delivery__payments {
-    margin: 0;
+    margin: 0 0 -35px 0;
+  }
+  .delivery__payments p {
+    padding-right: 40px;
   }
 }
 
@@ -10322,7 +10380,8 @@ a.breadcrumbs__link:hover {
     margin-left: -118px;
   }
   .services__image--right {
-    margin-right: -128px;
+    margin-top: 5px;
+    margin-right: -118px;
   }
 }
 
@@ -10420,6 +10479,26 @@ a.breadcrumbs__link:hover {
   max-height: 80%;
 }
 
+.services__company-item img[src="img/pic-company-1.png"] {
+  margin-top: -30px;
+}
+
+.services__company-item img[src="img/pic-company-2.png"] {
+  margin-top: -30px;
+}
+
+.services__company-item img[src="img/pic-company-3.png"] {
+  margin-top: 30px;
+}
+
+.services__company-item img[src="img/pic-company-4.png"] {
+  margin-top: 33px;
+}
+
+.services__company-item img[src="img/pic-company-5.png"] {
+  margin-top: 60px;
+}
+
 @media only screen and (min-width: 768px) {
   .services__company-item {
     height: 220px;
@@ -10442,6 +10521,30 @@ a.breadcrumbs__link:hover {
   padding: 0 0 10px;
 }
 
+.contacts__left, .contacts__right {
+  position: relative;
+  min-width: 1px;
+  min-height: 1px;
+  padding: 0 20px;
+}
+
+.contacts__left {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 361px;
+      -ms-flex: 0 0 361px;
+          flex: 0 0 361px;
+  max-width: 361px;
+}
+
+.contacts__right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
 .contacts__container {
   position: relative;
   z-index: 1;
@@ -10451,11 +10554,10 @@ a.breadcrumbs__link:hover {
   padding: 0;
 }
 
-.contacts__container .row {
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.contacts__container > .row {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 .contacts__container:after {
@@ -10479,10 +10581,14 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 1200px) {
   .contacts__container {
-    top: -28px;
+    top: -1px;
     margin: 0 -20px;
-    padding: 0 20px 0 9.2%;
+    padding: 0 20px 0 9.9%;
   }
+}
+
+.contacts__group {
+  margin-right: -20px;
 }
 
 .contacts__group .row {
@@ -10534,7 +10640,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 1200px) {
   .contacts__address--dark:after {
-    right: -40px;
+    right: -20px;
   }
 }
 
@@ -10543,7 +10649,7 @@ a.breadcrumbs__link:hover {
   font-size: 20px;
   line-height: 1;
   font-weight: 900;
-  margin: 0 0 22px;
+  margin: 0 0 25px;
   text-transform: uppercase;
 }
 
@@ -10559,14 +10665,17 @@ a.breadcrumbs__link:hover {
   .contacts__address {
     font-size: 18px;
     line-height: 25px;
-    padding: 38px 20px 38px;
+    padding: 38px 20px 30px;
+  }
+  .contacts__address.contacts__address--dark {
+    padding-bottom: 33px;
   }
   .contacts__address strong {
     font-size: 25px;
     line-height: 30px;
   }
   .contacts__address p {
-    margin: 0 0 26px;
+    margin: 0 0 25px;
   }
 }
 
@@ -10581,7 +10690,9 @@ a.breadcrumbs__link:hover {
 }
 
 .contacts__map {
+  position: relative;
   display: block;
+  overflow: hidden !important;
   height: 549px;
   background: #ccc;
   margin: 0 -30px;
@@ -10598,8 +10709,10 @@ a.breadcrumbs__link:hover {
   .contacts__map {
     height: 100vh;
     max-height: 840px;
-    margin: 0;
-    min-width: 66.666vw;
+    margin: 0 -20px;
+    -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+            transform: translateX(20px);
   }
 }
 
@@ -10968,7 +11081,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 992px) {
   .results__catalog, .results__categories {
-    padding: 0 0 20px;
+    padding: 0 0 15px;
   }
 }
 
@@ -10984,7 +11097,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 992px) {
   .results__load {
-    padding: 0;
+    padding: 13px 0 0;
   }
 }
 
@@ -11023,7 +11136,7 @@ a.breadcrumbs__link:hover {
   z-index: 10000;
 }
 
-.pp-buttons__desktop, .pp-buttons__tablet, .pp-buttons__-mobile, .pp-buttons__invert {
+.pp-buttons__desktop, .pp-buttons__tablet, .pp-buttons__mobile, .pp-buttons__invert {
   font-weight: 900;
   background: #000;
   z-index: 100000;
@@ -11038,11 +11151,11 @@ a.breadcrumbs__link:hover {
   margin-right: 10px;
 }
 
-.pp-buttons__desktop:hover, .pp-buttons__tablet:hover, .pp-buttons__-mobile:hover, .pp-buttons__invert:hover {
+.pp-buttons__desktop:hover, .pp-buttons__tablet:hover, .pp-buttons__mobile:hover, .pp-buttons__invert:hover {
   background: #C43939;
 }
 
-.pp-buttons__desktop.is-active, .pp-buttons__tablet.is-active, .pp-buttons__-mobile.is-active, .pp-buttons__invert.is-active {
+.pp-buttons__desktop.is-active, .pp-buttons__tablet.is-active, .pp-buttons__mobile.is-active, .pp-buttons__invert.is-active {
   background: #C43939;
 }
 
