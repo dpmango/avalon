@@ -23,8 +23,10 @@ $(document).ready(function() {
     initSliders();
     initMasks();
     initReadmore();
-    matchHeight();
-    _window.on('resize', debounce(matchHeightFix, 200));
+    // matchHeight();
+    // _window.on('resize', debounce(matchHeightFix, 200));
+    matchHeight()
+    _window.on('resize', debounce(matchHeight, 200));
 
     initScrollMonitor();
     initLazyLoad();
@@ -363,26 +365,48 @@ $(document).ready(function() {
 
   function matchHeight(){
 
-    $('.product').closest('[class^="col"]').matchHeight({
-      byRow: true,
-      property: 'height',
-      // target: $('.product'),
-      remove: false
-    });
+    // $('.product').closest('[class^="col"]').matchHeight({
+    //   byRow: true,
+    //   property: 'height',
+    //   // target: $('.product'),
+    //   remove: false
+    // });
 
     // matchHeightFix();
-
+    //
     // $.fn.matchHeight._update()
+
+    $('.product').each(function(i, product){
+      var desc = $(product).find('.product__desc');
+      var descHeight = desc.find('li').length * 20;
+      var boxOffset = 40;
+      if ( _window.width() < 768 ){
+        boxOffset = 30
+      }
+      var calcHeight =
+        Math.abs(parseInt($(desc).css('top')))
+        + $(product).find('.product__image').outerHeight()
+        + parseInt($(product).find('.product__image').css('margin-bottom'))
+        + $(product).find('.product__title').height()
+        + $(product).find('.product__price').height()
+        + 22
+
+      console.log(descHeight)
+      desc.css({
+        'padding-top': calcHeight,
+        'bottom': '-' + ((boxOffset * 2) + descHeight) + 'px'
+      })
+    })
   }
 
   function matchHeightFix(){
-    $('.product').each(function(i, product){
-      var closestRow = $(product).closest('[class^="col"]')
-
-      closestRow.css({
-        'margin-bottom': $(product).css('margin-bottom')
-      })
-    })
+    // $('.product').each(function(i, product){
+    //   var closestRow = $(product).closest('[class^="col"]')
+    //
+    //   closestRow.css({
+    //     'margin-bottom': $(product).css('margin-bottom')
+    //   })
+    // })
 
   }
 
