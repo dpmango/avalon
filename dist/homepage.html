@@ -89,7 +89,9 @@
               <div class="search__dropdown">
                 <div class="search__results">
                   <div class="search__group">
-                    <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
+                    <p class="search__count">
+                      <div class="search__count-link">товары (48)</div>
+                    </p>
                     <ul class="search__list">
                       <li class="col-6"><a class="search__item" href="#">
                           <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
@@ -104,14 +106,12 @@
                     </ul>
                   </div>
                   <div class="search__group search__group--count">
-                    <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
+                    <p class="search__count">
+                      <div class="search__count-link">категории товаров (5)</div>
+                    </p>
                     <ul class="search__list search__categories">
-                      <li class="col-12">
-                        <div class="search__item"><span class="search__item-name">Кресла</span></div>
-                      </li>
-                      <li class="col-12">
-                        <div class="search__item"><span class="search__item-name">Кресла для клубов</span></div>
-                      </li>
+                      <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
+                      <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
                     </ul>
                   </div>
                   <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
@@ -253,7 +253,7 @@
                             </div>
                           </div>
                         </div></a>
-                      <div class="news__load"><a class="btn btn--load" href="#">загрузить еще</a></div>
+                      <div class="news__load" js-teleport data-teleport-to="mobile-load" data-teleport-condition="&lt;992"><a class="btn btn--load" href="#">загрузить еще</a></div>
                     </div>
                   </div>
                   <div class="col-md-8 col-lg-5 col-indent pull-lg-7"><a class="news__item" href="#">
@@ -269,6 +269,7 @@
                       <figure class="news__item-image"><img data-src="img/pic-news-2.png" alt="" js-lazy></figure>
                       <h3 class="news__item-title">Компания AVALON поставила мебель в отель Rodina</h3>
                       <p class="news__item-text">В процессе реновации номеров отеля, руководством компании осуществлялся поиск подрядчика, способного поставить качественную продукцию для отеля.</p></a></div>
+                  <div class="news__load" data-teleport-target="mobile-load"></div>
                 </div>
               </div>
             </div>

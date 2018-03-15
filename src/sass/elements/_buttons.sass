@@ -75,7 +75,7 @@ button
     font-size: 15px
     line-height: 1
     color: #252525
-    padding: 8px 0 11px
+    padding: 8px 0 5px
     overflow: hidden
     &:after, &:before
         content: ''
@@ -102,9 +102,10 @@ button
         animation-direction: both
 
     +rmin($tablet)
-        font-size: 20px
+      font-size: 20px
     +rmin($wide)
-        font-size: 25px
+      padding: 8px 0 11px
+      font-size: 25px
 
 @keyframes loadBtn
   from

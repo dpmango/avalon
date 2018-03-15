@@ -29,6 +29,7 @@ $(document).ready(function() {
     initScrollMonitor();
     initLazyLoad();
     initMap();
+    initTeleport();
 
     revealFooter();
     _window.on('resize', throttle(revealFooter, 100));
@@ -168,6 +169,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('.js-search').find('form').trigger('reset');
     $('html').removeClass('is-search-keyup is-search-found is-search-notfound');
+    closeSearch()
   });
 
   // Search :: Focusout
@@ -1053,6 +1055,45 @@ $(document).ready(function() {
     _window.on('resize', debounce(stickyParse, 250))
 
   })
+
+  ////////////
+  // TELEPORT PLUGIN
+  ////////////
+  function initTeleport(){
+    $('[js-teleport]').each(function (i, val) {
+      var self = $(val)
+      var objHtml = $(val).html();
+      var target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
+      var conditionMedia = $(val).data('teleport-condition').substring(1);
+      var conditionPosition = $(val).data('teleport-condition').substring(0, 1);
+
+      if (target && objHtml && conditionPosition) {
+
+        function teleport() {
+          var condition;
+
+          if (conditionPosition === "<") {
+            condition = _window.width() < conditionMedia;
+          } else if (conditionPosition === ">") {
+            condition = _window.width() > conditionMedia;
+          }
+
+          if (condition) {
+            target.html(objHtml)
+            self.html('')
+          } else {
+            self.html(objHtml)
+            target.html("")
+          }
+        }
+
+        teleport();
+        _window.on('resize', debounce(teleport, 100));
+
+
+      }
+    })
+  }
 
   // $('.js-sticky').stick_in_parent({
   //   offset_top: 0
