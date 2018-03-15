@@ -361,7 +361,7 @@ $(document).ready(function() {
   //////////
   // MATCHHEIGHT
   //////////
-  $.fn.matchHeight._throttle = 200;
+  // $.fn.matchHeight._throttle = 200;
 
   function matchHeight(){
 

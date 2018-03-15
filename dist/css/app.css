@@ -4260,6 +4260,12 @@ body *::selection {
   fill: initial;
 }
 
+.ico-categories-mobile {
+  width: 1em;
+  height: 1em;
+  fill: none;
+}
+
 .ico-categories {
   width: 1em;
   height: 1em;
@@ -4274,6 +4280,12 @@ body *::selection {
 
 .ico-filter {
   width: 0.83em;
+  height: 1em;
+  fill: none;
+}
+
+.ico-filter2 {
+  width: 0.88em;
   height: 1em;
   fill: none;
 }
@@ -4619,10 +4631,26 @@ button:focus {
   z-index: 110;
 }
 
+.btn--categories .ico-categories {
+  display: none;
+  font-size: 30px;
+}
+
+.btn--categories .ico-categories-mobile {
+  display: inline-block;
+  font-size: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   .btn--categories {
     top: -165px;
     right: 0;
+  }
+  .btn--categories .ico-categories {
+    display: inline-block;
+  }
+  .btn--categories .ico-categories-mobile {
+    display: none;
   }
 }
 
@@ -4642,10 +4670,17 @@ button:focus {
   z-index: 90;
 }
 
+.btn--filter .ico {
+  font-size: 22px;
+}
+
 @media only screen and (min-width: 768px) {
   .btn--filter {
     top: -100px;
     right: 0;
+  }
+  .btn--filter .ico {
+    font-size: 32px;
   }
 }
 
@@ -8279,12 +8314,13 @@ a.search__item:hover .search__item-name mark {
 @media only screen and (min-width: 768px) {
   .catalog__head {
     margin: 0 -20px;
-    padding: 0 120px 0 7.2%;
+    padding: 15px 120px 0 7.9%;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .catalog__head {
+    padding-top: 0;
     padding-left: 9.8%;
   }
 }
@@ -8391,7 +8427,7 @@ a.search__item:hover .search__item-name mark {
   display: none;
 }
 
-.is-filter-open .btn--filter .ico-filter {
+.is-filter-open .btn--filter .ico-filter2 {
   opacity: 0;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);

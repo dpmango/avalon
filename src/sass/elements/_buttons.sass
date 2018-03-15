@@ -180,14 +180,26 @@ button
     top: -115px
     right: -20px
     z-index: 110
+    .ico-categories
+      display: none
+      font-size: 30px
+    .ico-categories-mobile
+      display: inline-block
+      font-size: 20px
+
     +rmin($tablet)
         top: -165px
         right: 0
+        .ico-categories
+          display: inline-block
+        .ico-categories-mobile
+          display: none
     +rmin($desktop)
         right: auto
         top: 105px
         left: 50%
         margin: 0 0 0 -50vw
+
     // position: absolute
     // bottom: 75px
     // right: -20px
@@ -207,9 +219,13 @@ button
     top: -70px
     right: -20px
     z-index: 90
+    .ico
+      font-size: 22px
     +rmin($tablet)
         top: -100px
         right: 0
+        .ico
+          font-size: 32px
     +rmin($desktop)
         display: none
     // position: absolute
