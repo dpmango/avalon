@@ -8803,7 +8803,7 @@ a.search__item:hover .search__item-name mark {
   }
 }
 
-.services .breadcrumbs, .delivery .breadcrumbs, .dealers .breadcrumbs, .requisites .breadcrumbs, .results .breadcrumbs {
+.services .breadcrumbs, .delivery .breadcrumbs, .dealers .breadcrumbs, .requisites .breadcrumbs, .results .breadcrumbs, .company .breadcrumbs {
   padding-bottom: 25px;
 }
 
@@ -10729,6 +10729,10 @@ a.breadcrumbs__link:hover {
   margin: 0 0 20px;
 }
 
+.company em {
+  max-width: 918px;
+}
+
 @media only screen and (min-width: 768px) {
   .company h2 {
     margin: 0 0 28px;
@@ -10784,18 +10788,25 @@ a.breadcrumbs__link:hover {
   .certificates__grid .row > [class^="col"]:nth-child(2n) {
     top: 0;
   }
-  .certificates__grid .row > [class^="col"]:nth-child(3n-1) {
-    top: 160px;
+  .certificates__grid .row > [class^="col"]:nth-child(2) {
+    top: 165px;
+  }
+  .certificates__grid .row > [class^="col"]:nth-child(5) {
+    top: 120px;
   }
   .certificates__grid .row > [class^="col"]:nth-child(3n) {
-    top: 80px;
+    top: 82px;
+  }
+  .certificates__grid .row > [class^="col"]:nth-child(7) {
+    top: -30px;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .certificates__grid {
     margin: 0;
-    padding: 0 0 24px;
+    padding: 0 0 0px;
+    margin-bottom: -5px;
     max-width: 1040px;
   }
 }
@@ -10813,7 +10824,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .certificates__item {
-    margin: 0 0 40px;
+    margin: 0 0 50px;
   }
 }
 
@@ -10824,6 +10835,9 @@ a.breadcrumbs__link:hover {
 @media only screen and (min-width: 768px) {
   .clients {
     padding: 0 0 10px;
+  }
+  .clients p {
+    padding-right: 50px;
   }
 }
 
@@ -10860,7 +10874,8 @@ a.breadcrumbs__link:hover {
 @media only screen and (min-width: 992px) {
   .clients__grid {
     margin: 0;
-    padding: 22px 0 0;
+    padding: 0px 0 0;
+    margin-top: -10px;
     max-width: 1160px;
   }
 }
@@ -10895,11 +10910,14 @@ a.breadcrumbs__link:hover {
     margin: 0;
     padding: 0 0 45px;
   }
+  .profession p {
+    margin-right: -10%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .profession {
-    padding: 0 0 48px;
+    padding: 7px 0 48px;
   }
 }
 
