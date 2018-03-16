@@ -6375,6 +6375,10 @@ a.search__item:hover .search__item-name mark {
   .slides-h .slick-slide {
     padding: 27px 0 230px;
   }
+  .slides-h .slick-slide img {
+    max-width: 200%;
+    min-height: 100%;
+  }
 }
 
 .slides-h .slick-track {
@@ -7287,6 +7291,9 @@ a.search__item:hover .search__item-name mark {
   display: block;
   position: relative;
   margin: 0 0 34px -4px;
+  -webkit-transform: translateX(-0.05em);
+      -ms-transform: translateX(-0.05em);
+          transform: translateX(-0.05em);
 }
 
 @media only screen and (min-width: 768px) {
@@ -7373,7 +7380,7 @@ a.search__item:hover .search__item-name mark {
   .categories__item {
     font-size: 25px;
     line-height: 30px;
-    margin: 0 0 52px 120px;
+    margin: 0 0 52px 37.5%;
   }
   .categories__item:hover .categories__item-icon:after {
     left: -60px;
@@ -11179,14 +11186,52 @@ a.breadcrumbs__link:hover {
   max-width: 100%;
 }
 
-.catalog .container {
+.catalog .container, .sku .container, .related .container, .contacts .container, .services .container, .dealers .container, .requisites .container {
+  max-width: 100%;
+}
+
+.delivery .container {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1441px) {
+  .requisites__container {
+    max-width: 87%;
+  }
+  .team__grid, .certificates__grid {
+    max-width: 81%;
+  }
+  .clients__grid {
+    max-width: 90.5%;
+  }
+  .company em {
+    max-width: 70%;
+  }
+}
+
+.company .container {
+  max-width: 100%;
+}
+
+.results .container {
+  max-width: 100%;
+}
+
+.error .container {
   max-width: 100%;
 }
 
 @media only screen and (min-width: 1750px) {
-  .categories .col-xl-3, .catalog__grid .col-xl-3 {
+  .catalog__grid .col-xl-3 {
     width: 20%;
     max-width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .results .col-xl-20 {
+    width: 16.66%;
+    max-width: 16.66%;
   }
 }
 
