@@ -7,6 +7,8 @@
 		margin: 0 0 20px
 	p
 		margin: 0 0 20px
+	em
+		max-width: 918px
 
 	+rmin($tablet)
 		h2
@@ -45,13 +47,18 @@
 				position: relative
 				&:nth-child(2n)
 					top: 0
-				&:nth-child(3n-1)
-					top: 160px
+				&:nth-child(2)
+					top: 165px
+				&:nth-child(5)
+					top: 120px
 				&:nth-child(3n)
-					top: 80px
+					top: 82px
+				&:nth-child(7)
+					top: -30px
 	+rmin($desktop)
 		margin: 0
-		padding: 0 0 24px
+		padding: 0 0 0px
+		margin-bottom: -5px
 		max-width: 1040px
 
 .certificates__item
@@ -62,7 +69,7 @@
 		display: block
 		width: 100%
 	+rmin($tablet)
-		margin: 0 0 40px
+		margin: 0 0 50px
 
 // -----
 
@@ -70,8 +77,11 @@
 	padding: 0 0 15px
 	+rmin($tablet)
 		padding: 0 0 10px
+		p
+			padding-right: 50px
 	+rmin($desktop)
 		padding: 0 0 5px
+
 
 .clients__grid
 	margin: 0 -10px
@@ -86,7 +96,8 @@
 		padding: 22px 0 0 10px
 	+rmin($desktop)
 		margin: 0
-		padding: 22px 0 0
+		padding: 0px 0 0
+		margin-top: -10px
 		max-width: 1160px
 
 
@@ -111,8 +122,10 @@
 	+rmin($tablet)
 		margin: 0
 		padding: 0 0 45px
+		p
+			margin-right: -10%
 	+rmin($desktop)
-		padding: 0 0 48px
+		padding: 7px 0 48px
 
 .profession__image
 	margin: 0 -20px 20px 0
@@ -143,7 +156,7 @@
 	+rmin($tablet)
 		margin: 0 0 0 -7.4%
 		padding: 10px 0 168px 10px
-		
+
 		.row
 			margin: 0 -20px
 			& > [class^="col"]

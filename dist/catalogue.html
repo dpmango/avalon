@@ -89,7 +89,9 @@
               <div class="search__dropdown">
                 <div class="search__results">
                   <div class="search__group">
-                    <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
+                    <p class="search__count">
+                      <div class="search__count-link">товары (48)</div>
+                    </p>
                     <ul class="search__list">
                       <li class="col-6"><a class="search__item" href="#">
                           <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
@@ -104,14 +106,12 @@
                     </ul>
                   </div>
                   <div class="search__group search__group--count">
-                    <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
+                    <p class="search__count">
+                      <div class="search__count-link">категории товаров (5)</div>
+                    </p>
                     <ul class="search__list search__categories">
-                      <li class="col-12">
-                        <div class="search__item"><span class="search__item-name">Кресла</span></div>
-                      </li>
-                      <li class="col-12">
-                        <div class="search__item"><span class="search__item-name">Кресла для клубов</span></div>
-                      </li>
+                      <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
+                      <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
                     </ul>
                   </div>
                   <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
@@ -146,13 +146,16 @@
                   <svg class="ico ico-categories">
                     <use xlink:href="img/sprite.svg#ico-categories"></use>
                   </svg>
+                  <svg class="ico ico-categories-mobile">
+                    <use xlink:href="img/sprite.svg#ico-categories-mobile"></use>
+                  </svg>
                   <svg class="ico ico-close">
                     <use xlink:href="img/sprite.svg#ico-close"></use>
                   </svg>
                 </button>
                 <button class="btn btn--filter js-filter-trigger">
-                  <svg class="ico ico-filter">
-                    <use xlink:href="img/sprite.svg#ico-filter"></use>
+                  <svg class="ico ico-filter2">
+                    <use xlink:href="img/sprite.svg#ico-filter2"></use>
                   </svg>
                   <svg class="ico ico-close">
                     <use xlink:href="img/sprite.svg#ico-close"></use>
@@ -202,7 +205,7 @@
                     <div class="catalog__grid">
                       <div class="row">
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-1.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-1.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло 3402B</h2>
                             <p class="product__price">3560 ₽</p>
                             <ul class="product__desc">
@@ -211,7 +214,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-2.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-2.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло Денди</h2>
                             <p class="product__price">4200 ₽</p>
                             <ul class="product__desc">
@@ -220,7 +223,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-3.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-3.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло 0623B</h2>
                             <p class="product__price">5360 ₽</p>
                             <ul class="product__desc">
@@ -229,7 +232,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-4.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-4.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло орион</h2>
                             <p class="product__price">4800 ₽</p>
                             <ul class="product__desc">
@@ -238,7 +241,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-5.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-5.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло красное</h2>
                             <p class="product__price">8750 ₽</p>
                             <ul class="product__desc">
@@ -247,7 +250,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-6.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-6.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло 6811bm</h2>
                             <p class="product__price">2340 ₽</p>
                             <ul class="product__desc">
@@ -256,7 +259,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-7.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-7.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло эмилия</h2>
                             <p class="product__price">6670 ₽</p>
                             <ul class="product__desc">
@@ -265,7 +268,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-8.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-8.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Кресло 6811bm</h2>
                             <p class="product__price">5250 ₽</p>
                             <ul class="product__desc">
@@ -274,7 +277,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-9.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-9.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Складной стол 1206NM</h2>
                             <p class="product__price">8300 ₽</p>
                             <ul class="product__desc">
@@ -283,7 +286,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-10.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-10.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Стул 3302GM</h2>
                             <p class="product__price">1250 ₽</p>
                             <ul class="product__desc">
@@ -292,7 +295,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-11.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-11.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Складной стол 1202NM</h2>
                             <p class="product__price">10000 ₽</p>
                             <ul class="product__desc">
@@ -301,7 +304,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-12.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-12.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Стул 1404GM</h2>
                             <p class="product__price">3400 ₽</p>
                             <ul class="product__desc">
@@ -310,7 +313,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-13.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-13.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Стул 1405GM</h2>
                             <p class="product__price">3500 ₽</p>
                             <ul class="product__desc">
@@ -319,7 +322,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-14.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-14.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Стул 1406GM</h2>
                             <p class="product__price">2900 ₽</p>
                             <ul class="product__desc">
@@ -328,7 +331,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-15.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-15.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">Складной стул 6420NM</h2>
                             <p class="product__price">4200 ₽</p>
                             <ul class="product__desc">
@@ -337,7 +340,7 @@
                               <li>Наличие: <b>есть</b></li>
                             </ul></a></div>
                         <div class="col-6 col-sm-4 col-xl-3"><a class="product" href="sku.html">
-                            <figure class="product__image"><img class="product__image-main" src="img/pic-16.png" alt=""><img class="product__image-hover" src="img/pic-2.png" alt=""></figure>
+                            <figure class="product__image"><img class="product__image-main" data-src="img/pic-16.png" alt="" js-lazy><img class="product__image-hover" data-src="img/pic-2.png" alt="" js-lazy></figure>
                             <h2 class="product__title">6416NM</h2>
                             <p class="product__price">5800 ₽</p>
                             <ul class="product__desc">
@@ -444,16 +447,16 @@
                   <div class="catalog__categories">
                     <div class="categories__grid">
                       <div class="row">
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-1.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-1_h.svg" alt=""></span></span><span class="categories__item-text">Столешницы</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-2.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-2_h.svg" alt=""></span></span><span class="categories__item-text">Подстолья</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-3.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-3_h.svg" alt=""></span></span><span class="categories__item-text">Барные стулья</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-4.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-4_h.svg" alt=""></span></span><span class="categories__item-text">Стулья</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-5.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-5_h.svg" alt=""></span></span><span class="categories__item-text">Мебель для конференц-залов</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-6.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-6_h.svg" alt=""></span></span><span class="categories__item-text">Столы</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-7.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-7_h.svg" alt=""></span></span><span class="categories__item-text">Кресла</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-8.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-8_h.svg" alt=""></span></span><span class="categories__item-text">Диваны</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-9.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-9_h.svg" alt=""></span></span><span class="categories__item-text">Складная мебель</span></a></div>
-                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img src="img/categories/categories-10.svg" alt=""></span><span class="categories__item-front"><img src="img/categories/categories-10_h.svg" alt=""></span></span><span class="categories__item-text">Дизайнерская мебель</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-1.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-1_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Столешницы</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-2.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-2_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Подстолья</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-3.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-3_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Барные стулья</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-4.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-4_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Стулья</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-5.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-5_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Мебель для конференц-залов</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-6.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-6_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Столы</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-7.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-7_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Кресла</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-8.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-8_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Диваны</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-9.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-9_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Складная мебель</span></a></div>
+                        <div class="col-6"><a class="categories__item" href="#"><span class="categories__item-image"><span class="categories__item-back"><img data-src="img/categories/categories-10.svg" alt="" js-lazy></span><span class="categories__item-front"><img data-src="img/categories/categories-10_h.svg" alt="" js-lazy></span></span><span class="categories__item-text">Дизайнерская мебель</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -477,7 +480,7 @@
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <figure class="seo__image"><img src="img/pic-seo-1.png" alt=""></figure>
+                      <figure class="seo__image"><img data-src="img/pic-seo-1.png" alt="" js-lazy></figure>
                     </div>
                   </div>
                 </div>

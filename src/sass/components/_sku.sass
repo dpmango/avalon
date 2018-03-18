@@ -12,6 +12,18 @@
 	// +rmin($desktop)
 	// 	padding: 0 0 0 9.2%
 
+.sku-info
+	padding-left: 6%
+	padding-right: 6%
+	&__top
+		display: flex
+	&__text
+		.col-lg-6
+			+rmin($desktop)
+				max-width: 43%
+				flex-basis: 43%
+				&:nth-child(even)
+					margin-left: 11.5%
 
 .sku__price
 	display: block
@@ -23,7 +35,7 @@
 	+rmin($tablet)
 		font-size: 50px
 		line-height: 60px
-		margin: 0 0 60px
+		margin: 0 0 70px
 
 
 .is-sku-open
@@ -47,11 +59,11 @@
 		transform: scale(1)
 
 .sku__action
-	margin: 0 0 47px
+	margin: 0 0 47px 19%
 	float: right
 	position: relative
 	+rmin($tablet)
-		margin: 0 0 60px
+		margin: 0 0 60px 19%
 
 
 .sku__action-btn
@@ -119,7 +131,7 @@
 .sku__caption
 	font-size: 20px
 	line-height: 25px
-	padding: 0 0 77px
+	padding: 0 0 70px
 	margin: 0
 	p
 		margin: 0 0 20px
@@ -132,8 +144,7 @@
 
 
 
-
-.sku__info
+.sku__chars
 	font-size: 15px
 	line-height: 20px
 	margin: 0 0 50px
@@ -150,7 +161,34 @@
 		line-height: 25px
 		margin: 0 0 78px
 		h2, h3
-			margin: 0 0 27px
+			margin: 0 0 20px
+			font-size: 25px
+		p
+			margin: 0 0 25px
+		// margin: 0 0 40px
+	.col-md-6
+		+rmin($tablet)
+			max-width: 45%
+			flex-basis: 45%
+
+.sku__info
+	font-size: 15px
+	line-height: 20px
+	margin: 6px 0 50px
+	h2, h3
+		text-transform: uppercase
+		font-size: 20px
+		line-height: 1
+		font-weight: 900
+		margin: 0 0 25px
+	p
+		margin: 0 0 20px
+	+rmin($tablet)
+		font-size: 18px
+		line-height: 25px
+		margin: 6px 0 103px
+		h2, h3
+			margin: 0 0 32px
 			font-size: 25px
 		p
 			margin: 0 0 25px
@@ -165,7 +203,7 @@
 	& > li
 		position: relative
 		z-index: 10
-		padding: 10px 0
+		padding: 8px 0
 		display: flex
 		&:after
 			content: ''

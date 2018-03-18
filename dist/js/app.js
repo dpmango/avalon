@@ -23,12 +23,15 @@ $(document).ready(function() {
     initSliders();
     initMasks();
     initReadmore();
-    matchHeight();
-    _window.on('resize', debounce(matchHeightFix, 200));
+    // matchHeight();
+    // _window.on('resize', debounce(matchHeightFix, 200));
+    matchHeight()
+    _window.on('resize', debounce(matchHeight, 200));
 
     initScrollMonitor();
     initLazyLoad();
     initMap();
+    initTeleport();
 
     revealFooter();
     _window.on('resize', throttle(revealFooter, 100));
@@ -93,7 +96,7 @@ $(document).ready(function() {
 
     // Viewport units buggyfill
     window.viewportUnitsBuggyfill.init({
-      force: true,
+      force: false,
       refreshDebounceWait: 150,
       appendToBody: true
     });
@@ -168,6 +171,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('.js-search').find('form').trigger('reset');
     $('html').removeClass('is-search-keyup is-search-found is-search-notfound');
+    closeSearch()
   });
 
   // Search :: Focusout
@@ -357,30 +361,52 @@ $(document).ready(function() {
   //////////
   // MATCHHEIGHT
   //////////
-  $.fn.matchHeight._throttle = 200;
+  // $.fn.matchHeight._throttle = 200;
 
   function matchHeight(){
 
-    $('.product').closest('[class^="col"]').matchHeight({
-      byRow: true,
-      property: 'height',
-      target: $('.product'),
-      remove: false
-    });
+    // $('.product').closest('[class^="col"]').matchHeight({
+    //   byRow: true,
+    //   property: 'height',
+    //   // target: $('.product'),
+    //   remove: false
+    // });
 
-    matchHeightFix();
-
+    // matchHeightFix();
+    //
     // $.fn.matchHeight._update()
+
+    $('.product').each(function(i, product){
+      var desc = $(product).find('.product__desc');
+      var descHeight = desc.find('li').length * 20;
+      var boxOffset = 40;
+      if ( _window.width() < 768 ){
+        boxOffset = 30
+      }
+      var calcHeight =
+        Math.abs(parseInt($(desc).css('top')))
+        + $(product).find('.product__image').outerHeight()
+        + parseInt($(product).find('.product__image').css('margin-bottom'))
+        + $(product).find('.product__title').height()
+        + $(product).find('.product__price').height()
+        + 22
+
+      console.log(descHeight)
+      desc.css({
+        'padding-top': calcHeight,
+        'bottom': '-' + ((boxOffset * 2) + descHeight) + 'px'
+      })
+    })
   }
 
   function matchHeightFix(){
-    $('.product').each(function(i, product){
-      var closestRow = $(product).closest('[class^="col"]')
-
-      closestRow.css({
-        'margin-bottom': $(product).css('margin-bottom')
-      })
-    })
+    // $('.product').each(function(i, product){
+    //   var closestRow = $(product).closest('[class^="col"]')
+    //
+    //   closestRow.css({
+    //     'margin-bottom': $(product).css('margin-bottom')
+    //   })
+    // })
 
   }
 
@@ -953,91 +979,96 @@ $(document).ready(function() {
       var wScroll = _window.scrollTop();
       var scrollDirection = pastScroll >= wScroll ? 'up' : 'down'
 
-      // debug
-      // console.log(
-      //   'wScroll', wScroll, scrollDirection,
-      //   'scrollStart', scrollStart,
-      //   'scrollPastBottom', scrollPastBottom,
-      //   'scrollEnd', scrollEnd,
-      //   'fixedByMarginTop', fixedByMarginTop
-      // )
+      if ( _window.width() > 992 ){
+        // debug
+        // console.log(
+        //   'wScroll', wScroll, scrollDirection,
+        //   'scrollStart', scrollStart,
+        //   'scrollPastBottom', scrollPastBottom,
+        //   'scrollEnd', scrollEnd,
+        //   'fixedByMarginTop', fixedByMarginTop
+        // )
 
-      // styles object
-      var elStyles = {
-        'position': "",
-        'bottom': "",
-        'top': "",
-        'width': "",
-        'marginTop': "",
-        'classFixed': ""
-      }
-
-      // calculate which styles to apply
-      if ( wScroll > scrollStart ){
-        // element at the top of viewport, start monitoring
-        elStyles.classFixed = "is-fixed"
-        elStyles.width = parentDimensions.width // prevent fixed/abs jump
-
-        if ( wScroll > scrollPastBottom ){
-          // element at the bottom of viewport
-          // stick it !
-          elStyles.position = "fixed"
-          elStyles.bottom = 0
-
-          // but monitor END POINT and absolute it
-          if ( wScroll > scrollEnd ){
-            elStyles.position = "absolute"
-            elStyles.classFixed = ""
-          }
-        } else {
-          elStyles.position = "static"
+        // styles object
+        var elStyles = {
+          'position': "",
+          'bottom': "",
+          'top': "",
+          'width': "",
+          'marginTop': "",
+          'classFixed': ""
         }
 
-        // make scrollable to the up dir
-        if (scrollDirection == "up" && wScroll < scrollEnd) {
+        // calculate which styles to apply
+        if ( wScroll > scrollStart ){
+          // element at the top of viewport, start monitoring
+          elStyles.classFixed = "is-fixed"
+          elStyles.width = parentDimensions.width // prevent fixed/abs jump
 
-          // if fixed is zero - than it's a first time
-          if ( fixedByMarginTop == 0 ){
-
-            fixedByMarginTop = pastScroll // store the point when it's fixed with margin
-
-          } else {
-            // fixedByMarginTop = pastScroll
-          }
-
-          // if momentum is kept
-          if ( wScroll < fixedByMarginTop){
-            elStyles.position = "static"
-            elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
-          } else {
-            // momentum is broken
-          }
-
-          if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
-            // scrolled all with margin fixed
-            // stick to top
+          if ( wScroll > scrollPastBottom ){
+            // element at the bottom of viewport
+            // stick it !
             elStyles.position = "fixed"
-            elStyles.top = 0
-            elStyles.marginTop = 0
-            elStyles.bottom = "auto"
+            elStyles.bottom = 0
+
+            // but monitor END POINT and absolute it
+            if ( wScroll > scrollEnd ){
+              elStyles.position = "absolute"
+              elStyles.classFixed = ""
+            }
+          } else {
+            elStyles.position = "static"
           }
 
-        } else if ( scrollDirection == "down" ){
+          // make scrollable to the up dir
+          if (scrollDirection == "up" && wScroll < scrollEnd) {
 
+            // if fixed is zero - than it's a first time
+            if ( fixedByMarginTop == 0 ){
+
+              fixedByMarginTop = pastScroll // store the point when it's fixed with margin
+
+            } else {
+              // fixedByMarginTop = pastScroll
+            }
+
+            // if momentum is kept
+            if ( wScroll < fixedByMarginTop){
+              elStyles.position = "static"
+              elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
+            } else {
+              // momentum is broken
+            }
+
+            if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
+              // scrolled all with margin fixed
+              // stick to top
+              elStyles.position = "fixed"
+              elStyles.top = 0
+              elStyles.marginTop = 0
+              elStyles.bottom = "auto"
+            }
+
+          } else if ( scrollDirection == "down" ){
+
+          }
+
+        } else {
+          // scrilling somewhere above sticky el
+          elStyles.classFixed = ""
         }
 
+
+        // apply styles
+        $el.css(elStyles)
+        // $el.addClass(elStyles.classFixed)
+
+        // required for scroll direction
+        pastScroll = wScroll
       } else {
-        // scrilling somewhere above sticky el
-        elStyles.classFixed = ""
+        $el.attr('style', '')
       }
 
-
-      // apply styles
-      $el.css(elStyles)
-      // $el.addClass(elStyles.classFixed)
-
-      // required for scroll direction
-      pastScroll = wScroll
     }
 
     // event bindings
@@ -1048,6 +1079,45 @@ $(document).ready(function() {
     _window.on('resize', debounce(stickyParse, 250))
 
   })
+
+  ////////////
+  // TELEPORT PLUGIN
+  ////////////
+  function initTeleport(){
+    $('[js-teleport]').each(function (i, val) {
+      var self = $(val)
+      var objHtml = $(val).html();
+      var target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
+      var conditionMedia = $(val).data('teleport-condition').substring(1);
+      var conditionPosition = $(val).data('teleport-condition').substring(0, 1);
+
+      if (target && objHtml && conditionPosition) {
+
+        function teleport() {
+          var condition;
+
+          if (conditionPosition === "<") {
+            condition = _window.width() < conditionMedia;
+          } else if (conditionPosition === ">") {
+            condition = _window.width() > conditionMedia;
+          }
+
+          if (condition) {
+            target.html(objHtml)
+            self.html('')
+          } else {
+            self.html(objHtml)
+            target.html("")
+          }
+        }
+
+        teleport();
+        _window.on('resize', debounce(teleport, 100));
+
+
+      }
+    })
+  }
 
   // $('.js-sticky').stick_in_parent({
   //   offset_top: 0

@@ -9,27 +9,11 @@
 	// backface-visibility: hidden
 	// margin: 0 0 16px
 	margin: 0 0 14px
+	transition: .25s $ease
 	& *
 		// backface-visibility: hidden
-	&:after
-		content: ''
-		display: block
-		position: absolute
-		top: -20px
-		left: -20px
-		right: -20px
-		bottom: -20px
-		background: #fff
-		box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
-		z-index: -1
-		transition: 0.3s $ease
-		opacity: 0
-		visibility: hidden
 	&:hover
 		z-index: 20
-		&:after
-			opacity: 1
-			visibility: visible
 
 		.product__image
 			border-color: $blackColor
@@ -39,17 +23,9 @@
 				&.product__image-hover
 					opacity: 1
 		.product__desc
-			max-height: none
-			padding: 22px 0 0
+			opacity: 1
 	+rmin($tablet)
-		margin: 0 0 26px
-		&:after
-			top: -40px
-			left: -40px
-			right: -40px
-			bottom: -40px
-	+rmin($desktop)
-		// margin: 0 0 40px
+		margin: 0 0 32px
 
 .product__image
 	position: relative
@@ -90,7 +66,7 @@
 
 .product__price
 	display: block
-	margin: -2px 0 0 0
+	margin: -4px 0 0 0
 	font-size: 15px
 	line-height: 20px
 	+rmin($tablet)
@@ -98,19 +74,29 @@
 		line-height: 28px
 
 .product__desc
-	display: none
+	position: absolute -20px
 	margin: 0
 	padding: 0
 	letter-spacing: normal
 	overflow: hidden
-	max-height: 0
+	// max-height: 0
 	font-size: 15px
 	line-height: 20px
 	transition: .3s $ease
+	background: #fff
+	box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.25)
+	z-index: -1
+	transition: 0.3s $ease
+	opacity: 0
+	// visibility: hidden
+	pointer-events: none
+	padding: 20px
+
 	& > li
 		display: block
 		margin: 0 0 10px
 		&:last-child
 			margin: 0
-	+rmin($desktop)
-		display: block
+	+rmin($tablet)
+		padding: 40px
+		position: absolute -40px

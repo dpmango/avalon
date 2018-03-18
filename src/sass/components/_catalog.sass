@@ -11,8 +11,9 @@
 	width: 100%
 	+rmin($tablet)
 		margin: 0 -20px
-		padding: 0 120px 0 7.2%
+		padding: 15px 120px 0 7.9%
 	+rmin($desktop)
+		padding-top: 0
 		padding-left: 9.8%
 
 	h1
@@ -146,7 +147,7 @@
 
 .is-filter-open
 	.btn--filter
-		.ico-filter
+		.ico-filter2
 			opacity: 0
 			transform: scale(0)
 		.ico-close
@@ -300,7 +301,7 @@
 		display: none
 		background: none
 	&:hover
-		border-color: $primaryColor
+		color: $primaryColor
 	+rmin($tablet)
 		font-size: 15px
 		mark
@@ -377,4 +378,5 @@
 		margin: 0 -20px
 	+rmin($desktop)
 		margin: 0
-		padding: 55px 0 0
+		padding: 30px 0 0
+		// posible conflict with other page
