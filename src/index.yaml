@@ -16,7 +16,7 @@ PageList:
 - file: services.html
   ready: 100
 - file: delivery.html
-  ready: 90
+  ready: 100
 - file: dealers.html
   ready: 90
 - file: requisites.html
