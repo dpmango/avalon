@@ -10,7 +10,7 @@ PageList:
 - file: cases.html
   ready: 100
 - file: cases-single.html
-  ready: 90
+  ready: 100
 - file: contacts.html
   ready: 100
 - file: services.html

@@ -9,14 +9,15 @@
 	display: block
 	font-size: 20px
 	line-height: 25px
-	margin: 0 0 20px
-	padding-right: 20px
+	margin: 0 5px 20px 0
+	padding-right: 0px
 	p:last-child
 		margin: 0
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 35px
 		margin: 0 0 23px
+		padding-right: 20px
 	+rmin($desktop)
 		margin: 43px 0 0px
 
@@ -170,6 +171,10 @@
 						margin-right: 10px
 				&:nth-child(3)
 				 	clear: left
+				&:nth-child(4)
+					.cases__images-item
+						margin-bottom: 40px
+						margin-left: -10px
 				&:nth-child(5)
 					.cases__images-item
 						margin-right: -20px
@@ -184,6 +189,10 @@
 					.cases__images-item
 						margin-left: -20px
 						margin-right: 0
+				&:nth-child(4)
+					.cases__images-item
+						margin-bottom: 80px
+						margin-left: 0px
 				&:nth-child(5)
 					.cases__images-item
 						margin-right: -20px
@@ -195,11 +204,8 @@
 		width: 100%
 	+rmin($tablet)
 		margin: 0 0 80px
-
-
 	+rmin($desktop)
 		margin: 0 0 80px
-
 
 
 // -----

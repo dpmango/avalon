@@ -9737,8 +9737,8 @@ a.breadcrumbs__link:hover {
   display: block;
   font-size: 20px;
   line-height: 25px;
-  margin: 0 0 20px;
-  padding-right: 20px;
+  margin: 0 5px 20px 0;
+  padding-right: 0px;
 }
 
 .cases__caption p:last-child {
@@ -9750,6 +9750,7 @@ a.breadcrumbs__link:hover {
     font-size: 25px;
     line-height: 35px;
     margin: 0 0 23px;
+    padding-right: 20px;
   }
 }
 
@@ -9981,6 +9982,10 @@ a.breadcrumbs__link:hover {
   .cases__images .row > [class^="col"]:nth-child(3) {
     clear: left;
   }
+  .cases__images .row > [class^="col"]:nth-child(4) .cases__images-item {
+    margin-bottom: 40px;
+    margin-left: -10px;
+  }
   .cases__images .row > [class^="col"]:nth-child(5) .cases__images-item {
     margin-right: -20px;
   }
@@ -9999,6 +10004,10 @@ a.breadcrumbs__link:hover {
   .cases__images .row > [class^="col"]:nth-child(1) .cases__images-item {
     margin-left: -20px;
     margin-right: 0;
+  }
+  .cases__images .row > [class^="col"]:nth-child(4) .cases__images-item {
+    margin-bottom: 80px;
+    margin-left: 0px;
   }
   .cases__images .row > [class^="col"]:nth-child(5) .cases__images-item {
     margin-right: -20px;
