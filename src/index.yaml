@@ -20,12 +20,12 @@ PageList:
 - file: dealers.html
   ready: 100
 - file: requisites.html
-  ready: 90
+  ready: 100
 - file: company.html
-  ready: 90
+  ready: 100
 - file: results.html
-  ready: 90
+  ready: 100
 - file: results-notfound.html
-  ready: 90
+  ready: 100
 - file: 404.html
-  ready: 90
+  ready: 100
