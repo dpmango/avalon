@@ -9272,7 +9272,7 @@ a.breadcrumbs__link:hover {
 }
 
 .sku__action {
-  margin: 0 0 47px 19%;
+  margin: 0 0 47px auto;
   float: right;
   position: relative;
 }
@@ -9598,6 +9598,8 @@ a.breadcrumbs__link:hover {
 }
 
 .gallery-thumbs .slick-slide {
+  position: relative;
+  z-index: 2;
   width: 60px;
   height: 60px;
   border: 2px solid #252525;
@@ -9605,6 +9607,7 @@ a.breadcrumbs__link:hover {
   margin: 10px 0 0;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  overflow: hidden;
   cursor: pointer;
   -webkit-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -9613,7 +9616,7 @@ a.breadcrumbs__link:hover {
 
 .gallery-thumbs .slick-slide img {
   display: block;
-  width: 100%;
+  width: 300%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;

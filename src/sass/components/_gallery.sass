@@ -54,17 +54,20 @@
 		// overflow: visible
 
 	.slick-slide
+		position: relative
+		z-index: 2
 		width: 60px
 		height: 60px
 		border: 2px solid #252525
 		padding: 2px
 		margin: 10px 0 0
 		border-radius: 50%
+		overflow: hidden
 		cursor: pointer
 		transition: .3s $ease
 		img
 			display: block
-			width: 100%
+			width: 300%
 			height: 100%
 			object-fit: cover
 			border-radius: 50%
