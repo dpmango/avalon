@@ -4,7 +4,7 @@ PageList:
 - file: homepage.html
   ready: 100
 - file: catalogue.html
-  ready: 90
+  ready: 100
 - file: sku.html
   ready: 90
 - file: cases.html

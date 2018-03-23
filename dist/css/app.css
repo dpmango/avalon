@@ -9116,9 +9116,9 @@ a.breadcrumbs__link:hover {
 
 .seo__collapse {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100%;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9162,14 +9162,18 @@ a.breadcrumbs__link:hover {
   margin: 0;
 }
 
-.seo__collapse[aria-expanded="true"]:after {
-  height: 0;
+.seo__collapse img {
+  max-width: 100%;
 }
 
 .seo__collapse + .btn {
-  -webkit-transform: translateY(-22px);
-      -ms-transform: translateY(-22px);
-          transform: translateY(-22px);
+  -webkit-transform: translateY(16px);
+      -ms-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+.seo__collapse[aria-expanded="true"]:after {
+  height: 0;
 }
 
 .seo__image {
