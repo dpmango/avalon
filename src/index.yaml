@@ -18,7 +18,7 @@ PageList:
 - file: delivery.html
   ready: 100
 - file: dealers.html
-  ready: 90
+  ready: 100
 - file: requisites.html
   ready: 90
 - file: company.html
@@ -29,5 +29,3 @@ PageList:
   ready: 90
 - file: 404.html
   ready: 90
-# - file: styleguide.html
-#   ready: 5

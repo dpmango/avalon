@@ -1074,9 +1074,15 @@ img.mfp-img {
 }
 
 .list__ul, .typography ul {
-  padding: 0 0 0 37px;
+  padding: 0 0 0 55px;
   margin: 0 0 25px;
   list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .list__ul, .typography ul {
+    padding: 0 0 0 37px;
+  }
 }
 
 .list__ul li, .typography ul li {
@@ -10424,6 +10430,30 @@ a.breadcrumbs__link:hover {
 @media only screen and (min-width: 992px) {
   .delivery__payments p {
     padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dealers .col-lg-6 {
+    padding-right: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dealers .col-lg-6 {
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dealers ul {
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dealers ul {
+    padding-right: 0;
   }
 }
 
