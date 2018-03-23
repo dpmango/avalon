@@ -8858,8 +8858,10 @@ a.search__item:hover .search__item-name mark {
   }
 }
 
-.services .breadcrumbs, .delivery .breadcrumbs, .dealers .breadcrumbs, .requisites .breadcrumbs, .results .breadcrumbs, .company .breadcrumbs {
-  padding-bottom: 25px;
+@media only screen and (min-width: 992px) {
+  .services .breadcrumbs, .delivery .breadcrumbs, .dealers .breadcrumbs, .requisites .breadcrumbs, .results .breadcrumbs, .company .breadcrumbs {
+    padding-bottom: 25px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -10402,15 +10404,29 @@ a.breadcrumbs__link:hover {
   margin: 0 0 28px;
 }
 
+.services__image--left {
+  margin-right: -20px;
+  margin-bottom: 17px;
+}
+
+.services__image--right {
+  margin-top: 10px;
+  margin-right: -20px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (min-width: 768px) {
   .services__image {
     margin: 0 0 22px;
   }
   .services__image--left {
     margin-right: -150px;
+    margin-bottom: 22px;
   }
   .services__image--right {
     margin-right: -167px;
+    margin-top: 0;
+    margin-bottom: 22px;
   }
 }
 
@@ -10520,36 +10536,32 @@ a.breadcrumbs__link:hover {
   display: block;
   max-width: 80%;
   max-height: 80%;
-}
-
-.services__company-item img[src="img/pic-company-1.png"] {
-  margin-top: -30px;
-}
-
-.services__company-item img[src="img/pic-company-2.png"] {
-  margin-top: -30px;
-}
-
-.services__company-item img[src="img/pic-company-3.png"] {
-  margin-top: 30px;
-}
-
-.services__company-item img[src="img/pic-company-4.png"] {
-  margin-top: 33px;
-}
-
-.services__company-item img[src="img/pic-company-5.png"] {
-  margin-top: 60px;
+  width: 80%;
 }
 
 @media only screen and (min-width: 768px) {
   .services__company-item {
-    height: 220px;
+    height: 218px;
     margin: 0;
   }
   .services__company-item img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .services__company-item img[src="img/pic-company-1.png"] {
+    margin-top: -30px;
+  }
+  .services__company-item img[src="img/pic-company-2.png"] {
+    margin-top: 20px;
+  }
+  .services__company-item img[src="img/pic-company-3.png"] {
+    margin-top: 30px;
+  }
+  .services__company-item img[src="img/pic-company-4.png"] {
+    margin-top: 22px;
+  }
+  .services__company-item img[src="img/pic-company-5.png"] {
+    margin-top: 60px;
   }
 }
 
@@ -10557,6 +10569,15 @@ a.breadcrumbs__link:hover {
   .services__company-item {
     height: 180px;
     margin: 0 0 5px;
+  }
+  .services__company-item img {
+    width: auto;
+  }
+  .services__company-item img[src="img/pic-company-2.png"] {
+    margin-top: -30px;
+  }
+  .services__company-item img[src="img/pic-company-4.png"] {
+    margin-top: 33px;
   }
 }
 
