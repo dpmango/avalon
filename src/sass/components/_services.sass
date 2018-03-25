@@ -27,12 +27,22 @@
 
 .services__image
 	margin: 0 0 28px
+	&--left
+		margin-right: -20px
+		margin-bottom: 17px
+	&--right
+		margin-top: 10px
+		margin-right: -20px
+		margin-bottom: 10px
 	+rmin($tablet)
 		margin: 0 0 22px
 		&--left
 			margin-right: -150px
+			margin-bottom: 22px
 		&--right
 			margin-right: -167px
+			margin-top: 0
+			margin-bottom: 22px
 	+rmin($desktop)
 		margin: 0 0 25px
 		&--left
@@ -92,22 +102,31 @@
 		display: block
 		max-width: 80%
 		max-height: 80%
-		&[src="img/pic-company-1.png"]
-			margin-top: -30px
-		&[src="img/pic-company-2.png"]
-			margin-top: -30px
-		&[src="img/pic-company-3.png"]
-			margin-top: 30px
-		&[src="img/pic-company-4.png"]
-			margin-top: 33px
-		&[src="img/pic-company-5.png"]
-			margin-top: 60px
+		width: 80%
+
 	+rmin($tablet)
-		height: 220px
+		height: 218px
 		margin: 0
 		img
 			max-width: 100%
 			max-height: 100%
+			&[src="img/pic-company-1.png"]
+				margin-top: -30px
+			&[src="img/pic-company-2.png"]
+				margin-top: 20px
+			&[src="img/pic-company-3.png"]
+				margin-top: 30px
+			&[src="img/pic-company-4.png"]
+				margin-top: 22px
+			&[src="img/pic-company-5.png"]
+				margin-top: 60px
+
 	+rmin($desktop)
 		height: 180px
 		margin: 0 0 5px
+		img
+			width: auto
+			&[src="img/pic-company-2.png"]
+				margin-top: -30px
+			&[src="img/pic-company-4.png"]
+				margin-top: 33px

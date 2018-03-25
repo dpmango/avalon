@@ -23,8 +23,6 @@ $(document).ready(function() {
     initSliders();
     initMasks();
     initReadmore();
-    // matchHeight();
-    // _window.on('resize', debounce(matchHeightFix, 200));
     matchHeight()
     _window.on('resize', debounce(matchHeight, 200));
 
@@ -371,21 +369,8 @@ $(document).ready(function() {
   //////////
   // MATCHHEIGHT
   //////////
-  // $.fn.matchHeight._throttle = 200;
 
   function matchHeight(){
-
-    // $('.product').closest('[class^="col"]').matchHeight({
-    //   byRow: true,
-    //   property: 'height',
-    //   // target: $('.product'),
-    //   remove: false
-    // });
-
-    // matchHeightFix();
-    //
-    // $.fn.matchHeight._update()
-
     $('.product').each(function(i, product){
       var desc = $(product).find('.product__desc');
       var descHeight = desc.find('li').length * 20;
@@ -409,16 +394,6 @@ $(document).ready(function() {
     })
   }
 
-  function matchHeightFix(){
-    // $('.product').each(function(i, product){
-    //   var closestRow = $(product).closest('[class^="col"]')
-    //
-    //   closestRow.css({
-    //     'margin-bottom': $(product).css('margin-bottom')
-    //   })
-    // })
-
-  }
 
   //////////
   // FOOTER REVEAL

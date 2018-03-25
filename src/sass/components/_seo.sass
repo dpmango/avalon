@@ -35,7 +35,7 @@
 		margin: 0 0 26px
 
 .seo__collapse
-	flex: 1 0 100%
+	flex: 1 1 auto
 	display: flex
 	flex-direction: column
 	position: relative
@@ -59,12 +59,16 @@
 		margin: 0 0 25px
 		&:last-child
 			margin: 0
-	&[aria-expanded="true"]:after
-		height: 0
+	img
+		max-width: 100%
 	& + .btn
-		transform: translateY(-22px)
-	+rmin($desktop)
-		// max-height: 100%
+		transform: translateY(16px)
+	&[aria-expanded="true"]
+		&:after
+			height: 0
+		& + .btn
+			// transform: translateY(-0px)
+
 
 .seo__image
 	display: none
