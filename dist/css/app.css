@@ -6086,10 +6086,6 @@ a.search__item:hover .search__item-name mark {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 75px 0;
   font-size: 18px;
   line-height: 25px;
@@ -7575,6 +7571,7 @@ a.search__item:hover .search__item-name mark {
   height: 105px;
   margin: 0 0 12px;
   color: #fff;
+  pointer-events: none;
 }
 
 .categories__item-image:after {
@@ -8862,6 +8859,12 @@ a.search__item:hover .search__item-name mark {
   padding-bottom: 25px;
 }
 
+@media only screen and (max-width: 768px) {
+  .results .breadcrumbs, .dealers .breadcrumbs {
+    padding-bottom: 0px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .dealers .typography {
     margin-bottom: -32px;
@@ -9059,7 +9062,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .seo {
-    padding: 115px 0 20px;
+    padding: 115px 0 0px;
     font-size: 18px;
     line-height: 25px;
   }
@@ -9133,10 +9136,14 @@ a.breadcrumbs__link:hover {
   content: '';
   display: block;
   position: absolute;
-  left: 0;
+  left: -10px;
+  right: -10px;
   bottom: -15px;
   height: 100px;
-  width: 100%;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.99)));
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9) 3%, rgba(255, 255, 255, 0.99) 100%);
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0.9) 3%, rgba(255, 255, 255, 0.99) 100%);
@@ -10818,7 +10825,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .certificates__grid {
-    margin: 0 0 0 -7.4%;
+    margin: 0 0 0 -6.8%;
     padding: 0 0 26px 10px;
   }
   .certificates__grid .row {
@@ -11006,7 +11013,7 @@ a.breadcrumbs__link:hover {
 
 @media only screen and (min-width: 768px) {
   .team__grid {
-    margin: 0 0 0 -7.4%;
+    margin: 0 0 0 -6.8%;
     padding: 10px 0 168px 10px;
   }
   .team__grid .row {
@@ -11051,6 +11058,42 @@ a.breadcrumbs__link:hover {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .dealers {
+    margin-right: -10%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dealers {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dealers .col-lg-6 {
+    padding-right: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dealers .col-lg-6 {
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dealers ul {
+    padding-right: 7%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dealers ul {
+    padding-right: 0;
+  }
+}
+
 .results__heading {
   display: block;
   text-transform: uppercase;
@@ -11074,7 +11117,13 @@ a.breadcrumbs__link:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 28px;
+  margin: 0 0 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .results__display {
+    margin: 0 0 28px;
+  }
 }
 
 .results__display .ui__check {
@@ -11186,7 +11235,7 @@ a.breadcrumbs__link:hover {
   max-width: 100%;
 }
 
-.catalog .container, .sku .container, .related .container, .contacts .container, .services .container, .dealers .container, .requisites .container {
+.catalog .container, .sku .container, .related .container, .contacts .container, .services .container, .dealers .container, .requisites .container, .seo .container {
   max-width: 100%;
 }
 

@@ -74,7 +74,7 @@
           <p class="phone"><a class="phone__number" href="tel:88007778904">8 (800) 777 89 04</a><a class="phone__number" href="tel:74951815264">7 (495) 181 52 64</a></p>
           <div class="search js-search">
             <form action="#">
-              <input class="search__input js-search-input" type="search" placeholder="Поиск">
+              <input class="search__input js-search-input" type="search" placeholder="Поиск" value="Кресло">
               <button class="search__clear js-search-clear" type="reset">
                 <svg class="ico ico-search-clear">
                   <use xlink:href="img/sprite.svg#ico-search-clear"></use>
@@ -126,6 +126,7 @@
       <!-- this will be changed with every pjax request-->
       <div class="page">
         <div class="page__content">
+          <div class="js-toggle-body-class" data-class="is-search-open"></div>
           <!-- Results :: Start-->
           <div class="results">
             <div class="container">

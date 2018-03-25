@@ -5,7 +5,7 @@
 	font-size: 15px
 	line-height: 20px
 	+rmin($tablet)
-		padding: 115px 0 20px
+		padding: 115px 0 0px
 		font-size: 18px
 		line-height: 25px
 	+rmin($desktop)
@@ -47,10 +47,12 @@
 		content: ''
 		display: block
 		position: absolute
-		left: 0
+		left: -10px
+		right: -10px
 		bottom: -15px
 		height: 100px
-		width: 100%
+		width: calc(100% + 20px)
+		filter: blur(4px)
 		background: linear-gradient(to bottom, rgba(255,255,255,0.90) 3%,rgba(255,255,255,0.99) 100%)
 		transition: inherit
 	p

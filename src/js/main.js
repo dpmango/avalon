@@ -33,8 +33,10 @@ $(document).ready(function() {
     initMap();
     initTeleport();
 
-    revealFooter();
-    _window.on('resize', throttle(revealFooter, 100));
+    toggleBodyClass();
+
+    // revealFooter();
+    // _window.on('resize', throttle(revealFooter, 100));
 
     // development helper's
     _window.on('resize', debounce(setBreakpoint, 200))
@@ -149,6 +151,14 @@ $(document).ready(function() {
       }
     })
 
+  function toggleBodyClass(){
+    var targetClass = $('.js-toggle-body-class').data('class');
+
+    if ( targetClass ){
+      $('body').addClass(targetClass);
+    }
+
+  }
 
   //////////
   // SEARCH
@@ -279,11 +289,11 @@ $(document).ready(function() {
     }
   });
 
-  _document.on('mouseenter', '.js-categories-trigger', function(){
+  _document.on('mouseenter', '.js-categories-trigger, .catalog__categories', function(){
     $('html').addClass('is-categories-open')
   })
 
-  _document.on('mouseleave', '.js-categories-trigger', function(){
+  _document.on('mouseleave', '.js-categories-trigger, .catalog__categories', function(){
     $('html').removeClass('is-categories-open')
   })
 
