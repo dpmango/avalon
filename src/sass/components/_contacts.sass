@@ -75,30 +75,38 @@
 	font-style: normal
 	padding: 30px 30px 22px
 	min-height: 100%
-
-	&--dark
+	cursor: pointer
+	transition: .25s $ease
+	&.is-disabled
+		cursor: auto
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 50%
+		bottom: 0
+		width: 120vw
+		margin: 0 0 0 -60vw
+		z-index: -1
+		opacity: 0
 		background: #252525
+		transition: .25s $ease
+		+rmin($tablet)
+			margin: 0
+			left: auto
+			right: 10px
+		+rmin($desktop)
+			right: -20px
+	// &--dark
+	&.is-active
+		// background: #252525
 		color: #fff
 		border: none
 		+r($desktop)
 			background: transparent
-		&:after
-			content: ''
-			display: block
-			position: absolute
-			top: 0
-			left: 50%
-			bottom: 0
-			width: 120vw
-			margin: 0 0 0 -60vw
-			z-index: -1
-			background: #252525
-			+rmin($tablet)
-				margin: 0
-				left: auto
-				right: 10px
-			+rmin($desktop)
-				right: -20px
+		&::after
+			opacity: 1
 
 
 	strong
@@ -116,7 +124,7 @@
 		font-size: 18px
 		line-height: 25px
 		padding: 38px 20px 37px
-		&.contacts__address--dark
+		&.contacts__address--dark, &.is-active
 			padding-bottom: 33px
 		strong
 			font-size: 25px

@@ -33,8 +33,8 @@ block content
 
 							.row
 								.col-md-6.col-lg-12
-
-									address.contacts__address.contacts__address--dark
+									// .contacts__address--dark
+									address.contacts__address(data-marker-id="1").is-active
 										strong Москва
 										p 127018 3-й проезд Марьиной Рощи, <br>д. 40, строение 1, корп. 6, офис 404
 										p info@avalonmebel.ru
@@ -44,29 +44,25 @@ block content
 
 									.slides-contacts.js-slides-contacts
 										
-										address.contacts__address
+										address.contacts__address(data-marker-id="2")
 											strong Санкт-Петербург
 											p пр. Обуховской Обороны, д.120, лит. 3
 											p info@avalonmebel.ru
 											p +7 (812) 306 54 06
 									
-										address.contacts__address
+										address.contacts__address(data-marker-id="3")
 											strong Астана
 											p ул.Джангильдина, 25
 											p info@avalonmebel.ru
 											p +7 (700) 306 54 06
 										
-										address.contacts__address
+										address.contacts__address.is-disabled
 											strong Бишкек
-											p ул.Джангильдина, 25
-											p info@avalonmebel.ru
-											p +7 (700) 306 54 06
+											p скоро открытие
 											
-										address.contacts__address
+										address.contacts__address.is-disabled
 											strong Самара
-											p ул.Джангильдина, 25
-											p info@avalonmebel.ru
-											p +7 (700) 306 54 06
+											p скоро открытие
 
 					.contacts__right
 

@@ -9,6 +9,33 @@ $(document).ready(function() {
 
   var easingSwing = [.02, .01, .47, 1]; // default jQuery easing for anime.js
 
+  // maps settings
+  // should be on top
+  var map;
+  var markers = [];
+  var markerDefault = {
+    url: "img/pin.png",
+    scaledSize: new google.maps.Size(44, 60)
+  }
+  var markerHover = {
+    url: "img/pin_hover.png",
+    scaledSize: new google.maps.Size(44, 60)
+  }
+  var markersCoord = [
+    {
+      lat: 55.797139,
+      lng: 37.6093601
+    },
+    {
+      lat: 59.854462,
+      lng: 30.4811287
+    },
+    {
+      lat: 51.174037,
+      lng: 71.4223829
+    }
+  ]
+
   ////////////
   // READY - triggered when PJAX DONE
   ////////////
@@ -873,10 +900,11 @@ $(document).ready(function() {
   //////////
   // MAP
   //////////
+
   function initMap() {
     if ($('#contacts__map').length) {
 
-      var map = new google.maps.Map(document.getElementById('contacts__map'), {
+      map = new google.maps.Map(document.getElementById('contacts__map'), {
         center: {
           lat: 54.3181598,
           lng: 48.3837915
@@ -909,38 +937,61 @@ $(document).ready(function() {
         ]
       });
 
-      // Москва
-      var marker1 = new google.maps.Marker({
-        position: new google.maps.LatLng(55.797139, 37.6093601),
-        map: map,
-        icon: {
-          url: "img/pin.png",
-          scaledSize: new google.maps.Size(44, 60)
-        }
-      });
+      $.each(markersCoord, function(i, coords){
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(coords.lat, coords.lng),
+          map: map,
+          icon: markerDefault
+        });
+        markers.push(marker);
 
-      // Санкт-Петербург
-      var marker2 = new google.maps.Marker({
-        position: new google.maps.LatLng(59.854462, 30.4811287),
-        map: map,
-        icon: {
-          url: "img/pin.png",
-          scaledSize: new google.maps.Size(44, 60)
-        }
-      });
+        // click handler
+        google.maps.event.addListener(marker, 'click', function() {
+          changeMapsMarker(null, marker)
+        });
+      })
 
-      // Астана
-      var marker3 = new google.maps.Marker({
-        position: new google.maps.LatLng(51.174037, 71.4223829),
-        map: map,
-        icon: {
-          url: "img/pin.png",
-          scaledSize: new google.maps.Size(44, 60)
-        }
-      });
     }
   }
 
+  // change marker onclick
+  _document
+    .on('click', '.contacts__address', function(){
+      var markerId = $(this).data('marker-id') - 1;
+      if ( markerId !== undefined ){
+        changeMapsMarker(markerId)
+      }
+    })
+
+  function changeMapsMarker(id, marker){
+    if ( id !== null){
+    } else if ( marker ){
+      id = markers.indexOf(marker) // get id
+    }
+    var targetMarker = markers[id];
+
+    // maps controls
+    if ( targetMarker ){
+      // reset all markers first
+      $.each(markers, function(i, m){
+        m.setIcon(markerDefault)
+      });
+
+      targetMarker.setIcon(markerHover) // set target new image
+
+      map.setCenter(targetMarker.getPosition());
+    }
+
+    // set active class
+    var linkedControl = $('.contacts__address[data-marker-id='+ (id + 1) +']');
+
+    console.log(linkedControl)
+    if ( linkedControl.length > 0 ){
+      $('.contacts__address').removeClass('is-active');
+      linkedControl.addClass('is-active');
+    }
+
+  }
 
   //////////
   // PIXEL PERFECT GRID
