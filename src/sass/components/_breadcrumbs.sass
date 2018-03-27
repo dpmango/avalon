@@ -32,6 +32,20 @@
 		// margin: 0 0 58px
 		margin: 0 0 32px
 
+.services, .delivery, .dealers, .requisites, .results, .company
+	.breadcrumbs
+		+rmin($desktop)
+			padding-bottom: 25px
+
+.results, .dealers
+	.breadcrumbs
+		+r($tablet)
+			padding-bottom: 0px
+
+.dealers
+	.typography
+		+rmin($desktop)
+			margin-bottom: -32px
 
 .breadcrumbs__link
 	display: block

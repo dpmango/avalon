@@ -17,6 +17,7 @@
 	position: relative
 	// margin: 0 0 34px -3px
 	margin: 0 0 34px -4px
+	transform: translateX(-.05em)
 	+rmin($tablet)
 		font-size: 80px
 		margin: 0 0 40px
@@ -70,7 +71,7 @@
 	+rmin($desktop)
 		font-size: 25px
 		line-height: 30px
-		margin: 0 0 52px 120px
+		margin: 0 0 52px 37.5%
 		&:hover
 			.categories__item-icon:after
 				left: -60px
@@ -197,6 +198,7 @@
 	height: 105px
 	margin: 0 0 12px
 	color: #fff
+	pointer-events: none
 	&:after
 		content: ''
 		display: block
@@ -282,6 +284,10 @@
 	padding: 24px 20px 21px
 	color: $blackColor
 	margin: 0 0 20px
+	transition: .25s $ease
+	&:hover
+		background-color: $primaryColor
+		color: white
 	+rmin($tablet)
 		padding: 32px 40px 28px 40px
 		font-size: 20px

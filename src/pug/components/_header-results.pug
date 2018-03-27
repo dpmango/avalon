@@ -1,0 +1,131 @@
+// HEADER :: START
+
+header.header
+    .container
+
+        .logo
+            button.btn.btn--nav.js-nav-trigger
+                span
+                span
+                span
+            a(href="/homepage.html" title="На главную")
+                +icon('ico-logo')
+
+        nav.nav
+            .nav__menu
+                .row
+                    .col-6
+                        a(href="#").nav__link.js-nav-trigger Каталог
+                    .col-6
+                        a(href="#").nav__link.js-nav-trigger Компания
+                    .col-12
+                        .nav__collapse.js-nav-collapse
+                            .row
+                                .col-6
+                                    ul.nav__collapse-menu
+                                        li
+                                            a(href="#").nav__collapse-link Столешницы
+                                        li
+                                            a(href="#").nav__collapse-link Подстолья
+                                        li
+                                            a(href="#").nav__collapse-link Дизайнерская мебель
+                                        li
+                                            a(href="#").nav__collapse-link Барные стулья
+                                        li
+                                            a(href="#").nav__collapse-link Стулья
+                                        li
+                                            a(href="#").nav__collapse-link Диваны
+                                        li
+                                            a(href="#").nav__collapse-link Столы
+                                        li
+                                            a(href="#").nav__collapse-link Кресла
+                                        li
+                                            a(href="#").nav__collapse-link Складная мебель
+                                        li
+                                            a(href="#").nav__collapse-link Мебель для 
+                                        li
+                                            a(href="#").nav__collapse-link конференц-залов
+                                .col-6
+                                    ul.nav__collapse-menu
+                                        li
+                                            a(href="services.html").nav__collapse-link Услуги
+                                        li
+                                            a(href="delivery.html").nav__collapse-link Доставка и оплата
+                                        li
+                                            a(href="dealers.html").nav__collapse-link Дилерам
+                                        li
+                                            a(href="requisites.html").nav__collapse-link Реквизиты
+
+                    .col-6
+                        a(href="cases.html").nav__link Портфолио
+                    .col-6
+                        a(href="contacts.html").nav__link Контакты
+           
+        p.phone
+            a(href="tel:88007778904").phone__number 8 (800) 777 89 04
+            a(href="tel:74951815264").phone__number 7 (495) 181 52 64
+
+        .search.js-search
+            form(action="#")
+                input(type="search" placeholder="Поиск" value="Кресло").search__input.js-search-input
+                button(type="reset").search__clear.js-search-clear
+                    +icon('ico-search-clear')
+                button.search__btn.js-search-open
+                    +icon('ico-search')
+                
+                .search__progress.js-search-progress
+                .search__dropdown
+                    .search__results
+                        
+                        .search__group
+
+                            p.search__count
+                                .search__count-link товары (48)
+
+                            ul.search__list
+                                li.col-6
+                                    a(href="#").search__item
+                                        figure.search__item-image
+                                            img(src="img/pic-1.png", alt="")
+                                        span.search__item-name Кресло 3402BM
+                                li.col-6
+                                    a(href="#").search__item
+                                        figure.search__item-image
+                                            img(src="img/pic-2.png", alt="")
+                                        span.search__item-name Кресло Денди
+                                li.col-6
+                                    a(href="#").search__item
+                                        figure.search__item-image
+                                            img(src="img/pic-3.png", alt="")
+                                        span.search__item-name Кресло красное
+                                li.col-6
+                                    a(href="#").search__item
+                                        figure.search__item-image
+                                            img(src="img/pic-4.png", alt="")
+                                        span.search__item-name Кресло 6811bm
+                                li.col-6
+                                    a(href="#").search__item
+                                        figure.search__item-image
+                                            img(src="img/pic-5.png", alt="")
+                                        span.search__item-name Диван красный
+                        
+                        .search__group.search__group--count
+                            
+                            p.search__count
+                                .search__count-link категории товаров (5)
+
+                            ul.search__list.search__categories
+                                li.col-12
+                                    a(href="#").search__item
+                                        span.search__item-name Кресла
+                                li.col-12
+                                    a(href="#").search__item
+                                        span.search__item-name Кресла для клубов
+
+                        .search__action
+                            a(href="#").btn.btn--red показать все (53)
+
+                    p.search__notfind К сожалению, по вашему запросу ничего не найдено. Возможно, вы ошиблись при вводе, или такого товара нет на нашем сайте.
+        
+
+// HEADER :: END

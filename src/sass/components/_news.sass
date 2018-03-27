@@ -7,7 +7,7 @@
 	+rmin($tablet)
 		padding: 18px 0 0
 		// margin: 0
-		margin: 0 0 25px
+		margin: 0 0 105px
 	+rmin($desktop)
 		padding: 114px 0 0
 		margin: 0
@@ -91,9 +91,12 @@
 		position: absolute
 		bottom: 2px
 		right: 0
-		width: 560px
+		min-width: 560px
+		width: 39vw
 		height: 3px
 		background: #252525
+		+rmin(1600)
+			width: 39.6vw
 	&:hover
 		.news__item-image
 		    box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.5)
@@ -241,9 +244,10 @@
 	// margin: 20px 0
 	// transition: 0.3s
 	position: absolute
-	top: 100%
+	// top: 100%
 	left: 0
 	right: 0
+	bottom: -65px
 	padding: 15px 0
 	// &:hover
 		// color: $primaryColor
@@ -256,12 +260,14 @@
 		padding: 42px 0
 		// left: 4px
 		padding-left: 7.2%
-		left: -10px
-		right: -10px
+		top: auto
+		bottom: -127px
 
 	+rmin($desktop)
 		position: relative
+		padding-left: 7.2%
 		top: 0
+		bottom: auto
 		left: 0
 		// padding: 106px 20px 55px 20px
 		// padding: 106px 0 55px 19.333%

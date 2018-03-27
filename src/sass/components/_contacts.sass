@@ -2,6 +2,23 @@
 
 .contacts
 	padding: 0 0 10px
+	&__left, &__right
+		position: relative
+		min-width: 1px
+		min-height: 1px
+		padding: 0 20px
+	&__left
+		flex: 0 0 361px
+		max-width: 361px
+		+r($desktop)
+			flex-basis: 100%
+			max-width: 100%
+	&__right
+		flex: 1 1 auto
+		width: 100%
+		max-width: 100%
+		+r($desktop)
+			flex-basis: 100%
 
 .contacts__container
 	position: relative
@@ -14,8 +31,11 @@
 	// 	margin: 0
 	// 	& > [class^="col"]
 	// 		padding: 0
-	.row
-		align-items: flex-start
+	> .row
+		flex-wrap: nowrap
+		// align-items: flex-start
+		+r($desktop)
+			flex-wrap: wrap
 	&:after
 		content: ''
 		display: block
@@ -29,18 +49,19 @@
 		z-index: -1
 	+rmin($tablet)
 		margin: 0 -20px
-	+rmin($xl)
-		top: -28px
+	+rmin($desktop)
+		top: -1px
 		margin: 0 -20px
-		padding: 0 20px 0 9.2%
+		padding: 0 20px 0 9.9%
 
 
 .contacts__group
+	margin-right: -20px
 	.row
 		margin: 0
 		& > [class^="col"]
 			padding: 0
-	+rmin($xl)
+	+rmin($desktop)
 		// width: 370px
 		// padding: 0 0 0 10px
 
@@ -59,6 +80,8 @@
 		background: #252525
 		color: #fff
 		border: none
+		+r($desktop)
+			background: transparent
 		&:after
 			content: ''
 			display: block
@@ -73,9 +96,9 @@
 			+rmin($tablet)
 				margin: 0
 				left: auto
-				right: 0
-			+rmin($xl)
-				right: -40px
+				right: 10px
+			+rmin($desktop)
+				right: -20px
 
 
 	strong
@@ -83,7 +106,7 @@
 		font-size: 20px
 		line-height: 1
 		font-weight: 900
-		margin: 0 0 22px
+		margin: 0 0 25px
 		text-transform: uppercase
 	p
 		margin: 0 0 20px
@@ -92,40 +115,41 @@
 	+rmin($tablet)
 		font-size: 18px
 		line-height: 25px
-		padding: 38px 20px 38px
+		padding: 38px 20px 37px
+		&.contacts__address--dark
+			padding-bottom: 33px
 		strong
 			font-size: 25px
 			line-height: 30px
 		p
-			margin: 0 0 26px
-	+rmin($xl)
+			margin: 0 0 25px
+	+rmin($desktop)
+		padding-bottom: 30px
 		border-bottom: 3px solid #252525
 		padding-left: 0
 		&:last-of-type
 			border: none
 
 
+.slides-contacts
+	margin-left: 0px
+	+rmin($tablet)
+		margin-left: -10px
+	+rmin($desktop)
+		margin-left: 0
+
 .contacts__map
-	// position: sticky
-	// top: 0px
+	position: relative
 	display: block
+	overflow: hidden !important
 	height: 549px
 	background: #ccc
 	margin: 0 -30px
 	+rmin($tablet)
 		height: 590px
 		margin: 0 -20px
-	+rmin($xl)
-		// height: 100%
+	+rmin($desktop)
 		height: 100vh
-		max-height: 840px
-		margin: 0
-		min-width: 66.666vw
-		// // height: 840px
-		// height: 100%
-		// position: absolute
-		// top: 0
-		// bottom: 0
-		// left: 50%
-		// margin: 0 0 0 -220px
-		// width: calc(100vw - 370px)
+		max-height: 100vh
+		margin: 0 -20px
+		transform: translateX(20px)

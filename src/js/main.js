@@ -23,20 +23,26 @@ $(document).ready(function() {
     initSliders();
     initMasks();
     initReadmore();
-    matchHeight();
-    _window.on('resize', debounce(matchHeightFix, 200));
+
+    matchHeight()
+    _window.on('resize', debounce(matchHeight, 200));
+
+    skuOffset();
+    _window.on('resize', debounce(skuOffset, 200));
 
     initScrollMonitor();
     initLazyLoad();
     initMap();
+    initTeleport();
 
-    revealFooter();
-    _window.on('resize', throttle(revealFooter, 100));
+    toggleBodyClass();
+
+    // revealFooter();
+    // _window.on('resize', throttle(revealFooter, 100));
 
     // development helper's
     _window.on('resize', debounce(setBreakpoint, 200))
     pixelPerfect();
-    // _window.on('resize', debounce(pixelPerfect, 200))
   }
 
   // this is a master function which should have all functionality
@@ -78,7 +84,9 @@ $(document).ready(function() {
   if (msieversion()) {
     $('body').addClass('is-ie');
   }
-
+  if ( isMobile() ){
+    $('body').addClass('is-mobile');
+  }
   var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
   isChrome ? $('body').addClass('is-chrome') : null
@@ -93,7 +101,7 @@ $(document).ready(function() {
 
     // Viewport units buggyfill
     window.viewportUnitsBuggyfill.init({
-      force: true,
+      force: false,
       refreshDebounceWait: 150,
       appendToBody: true
     });
@@ -146,6 +154,14 @@ $(document).ready(function() {
       }
     })
 
+  function toggleBodyClass(){
+    var targetClass = $('.js-toggle-body-class').data('class');
+
+    if ( targetClass ){
+      $('body').addClass(targetClass);
+    }
+
+  }
 
   //////////
   // SEARCH
@@ -168,6 +184,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('.js-search').find('form').trigger('reset');
     $('html').removeClass('is-search-keyup is-search-found is-search-notfound');
+    closeSearch()
   });
 
   // Search :: Focusout
@@ -275,11 +292,11 @@ $(document).ready(function() {
     }
   });
 
-  _document.on('mouseenter', '.js-categories-trigger', function(){
+  _document.on('mouseenter', '.js-categories-trigger, .catalog__categories', function(){
     $('html').addClass('is-categories-open')
   })
 
-  _document.on('mouseleave', '.js-categories-trigger', function(){
+  _document.on('mouseleave', '.js-categories-trigger, .catalog__categories', function(){
     $('html').removeClass('is-categories-open')
   })
 
@@ -295,6 +312,7 @@ $(document).ready(function() {
   _document.on('click', function(e) {
     if ($(e.target).closest('.catalog__categories, .js-categories-trigger').length == 0) {
       $('html').removeClass('is-categories-open')
+      $('html').removeClass('is-categories-open-fixed');
     }
   });
 
@@ -357,32 +375,74 @@ $(document).ready(function() {
   //////////
   // MATCHHEIGHT
   //////////
-  $.fn.matchHeight._throttle = 200;
 
   function matchHeight(){
+    _document.find('.product').each(function(i, product){
+      var desc = $(product).find('.product__desc');
+      var descHeight = 0;
+      desc.find('li').each(function(i, li){
+        descHeight = descHeight + $(li).height();
+      })
+      var boxOffset = 40;
+      if ( _window.width() < 768 ){
+        boxOffset = 30
+      }
+      var calcHeight =
+        Math.abs(parseInt($(desc).css('top')))
+        + $(product).find('.product__image').outerHeight()
+        + parseInt($(product).find('.product__image').css('margin-bottom'))
+        + $(product).find('.product__title').height()
+        + $(product).find('.product__price').height()
+        + 22
 
-    $('.product').closest('[class^="col"]').matchHeight({
-      byRow: true,
-      property: 'height',
-      target: $('.product'),
-      remove: false
-    });
-
-    matchHeightFix();
-
-    // $.fn.matchHeight._update()
-  }
-
-  function matchHeightFix(){
-    $('.product').each(function(i, product){
-      var closestRow = $(product).closest('[class^="col"]')
-
-      closestRow.css({
-        'margin-bottom': $(product).css('margin-bottom')
+      desc.css({
+        'padding-top': calcHeight,
+        'bottom': '-' + ((boxOffset * 2) + descHeight) + 'px'
       })
     })
-
   }
+
+  // catch ajax
+  function addXMLRequestCallback(callback){
+    var oldSend, i;
+    if( XMLHttpRequest.callbacks ) {
+      XMLHttpRequest.callbacks.push( callback );
+    } else {
+      XMLHttpRequest.callbacks = [callback];
+      oldSend = XMLHttpRequest.prototype.send;
+      XMLHttpRequest.prototype.send = function(){
+        for( i = 0; i < XMLHttpRequest.callbacks.length; i++ ) {
+          XMLHttpRequest.callbacks[i]( this );
+        }
+        oldSend.apply(this, arguments);
+      }
+    }
+  }
+
+  addXMLRequestCallback( function( xhr ) {
+    matchHeight();
+  });
+
+
+
+  //////////
+  // SKU OFFSET
+  //////////
+  function skuOffset(){
+    var el = $('.sku-info');
+    var target = $('.sku-info__text div:nth-child(2)');
+    if ( el.length > 0 && target.length > 0 ){
+      var elPosL = el.offset().left
+      var targetPosL = target.offset().left + parseInt(target.css('paddingLeft').slice(0, -1))
+      var diffInPx = Math.abs(targetPosL - elPosL)
+      console.log(elPosL, targetPosL, diffInPx)
+
+      el.css({
+        'padding-left': Math.floor(diffInPx)
+      })
+    }
+  }
+
 
   //////////
   // FOOTER REVEAL
@@ -520,8 +580,8 @@ $(document).ready(function() {
       prevArrow: slidesNext
     });
 
-
-    $('.js-slides-contacts').slick({
+    var slickContacts = $('.js-slides-contacts')
+    var slickContactsOptions = {
       arrows: true,
       dots: true,
       mobileFirst: true,
@@ -535,11 +595,25 @@ $(document).ready(function() {
           }
         },
         {
-          breakpoint: 1200,
+          breakpoint: 992,
           settings: 'unslick'
         }
       ]
-    });
+    }
+
+    slickContacts.slick(slickContactsOptions);
+
+    _window.on('resize', debounce(function(e){
+      if ( _window.width() > 992 ) {
+        if (slickContacts.hasClass('slick-initialized')) {
+          slickContacts.slick('unslick');
+        }
+        return
+      }
+      if (!slickContacts.hasClass('slick-initialized')) {
+        return slickContacts.slick(slickContactsOptions);
+      }
+    }, 300));
 
     // Gallery
 
@@ -953,91 +1027,96 @@ $(document).ready(function() {
       var wScroll = _window.scrollTop();
       var scrollDirection = pastScroll >= wScroll ? 'up' : 'down'
 
-      // debug
-      // console.log(
-      //   'wScroll', wScroll, scrollDirection,
-      //   'scrollStart', scrollStart,
-      //   'scrollPastBottom', scrollPastBottom,
-      //   'scrollEnd', scrollEnd,
-      //   'fixedByMarginTop', fixedByMarginTop
-      // )
+      if ( _window.width() > 992 ){
+        // debug
+        // console.log(
+        //   'wScroll', wScroll, scrollDirection,
+        //   'scrollStart', scrollStart,
+        //   'scrollPastBottom', scrollPastBottom,
+        //   'scrollEnd', scrollEnd,
+        //   'fixedByMarginTop', fixedByMarginTop
+        // )
 
-      // styles object
-      var elStyles = {
-        'position': "",
-        'bottom': "",
-        'top': "",
-        'width': "",
-        'marginTop': "",
-        'classFixed': ""
-      }
-
-      // calculate which styles to apply
-      if ( wScroll > scrollStart ){
-        // element at the top of viewport, start monitoring
-        elStyles.classFixed = "is-fixed"
-        elStyles.width = parentDimensions.width // prevent fixed/abs jump
-
-        if ( wScroll > scrollPastBottom ){
-          // element at the bottom of viewport
-          // stick it !
-          elStyles.position = "fixed"
-          elStyles.bottom = 0
-
-          // but monitor END POINT and absolute it
-          if ( wScroll > scrollEnd ){
-            elStyles.position = "absolute"
-            elStyles.classFixed = ""
-          }
-        } else {
-          elStyles.position = "static"
+        // styles object
+        var elStyles = {
+          'position': "",
+          'bottom': "",
+          'top': "",
+          'width': "",
+          'marginTop': "",
+          'classFixed': ""
         }
 
-        // make scrollable to the up dir
-        if (scrollDirection == "up" && wScroll < scrollEnd) {
+        // calculate which styles to apply
+        if ( wScroll > scrollStart ){
+          // element at the top of viewport, start monitoring
+          elStyles.classFixed = "is-fixed"
+          elStyles.width = parentDimensions.width // prevent fixed/abs jump
 
-          // if fixed is zero - than it's a first time
-          if ( fixedByMarginTop == 0 ){
-
-            fixedByMarginTop = pastScroll // store the point when it's fixed with margin
-
-          } else {
-            // fixedByMarginTop = pastScroll
-          }
-
-          // if momentum is kept
-          if ( wScroll < fixedByMarginTop){
-            elStyles.position = "static"
-            elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
-          } else {
-            // momentum is broken
-          }
-
-          if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
-            // scrolled all with margin fixed
-            // stick to top
+          if ( wScroll > scrollPastBottom ){
+            // element at the bottom of viewport
+            // stick it !
             elStyles.position = "fixed"
-            elStyles.top = 0
-            elStyles.marginTop = 0
-            elStyles.bottom = "auto"
+            elStyles.bottom = 0
+
+            // but monitor END POINT and absolute it
+            if ( wScroll > scrollEnd ){
+              elStyles.position = "absolute"
+              elStyles.classFixed = ""
+            }
+          } else {
+            elStyles.position = "static"
           }
 
-        } else if ( scrollDirection == "down" ){
+          // make scrollable to the up dir
+          if (scrollDirection == "up" && wScroll < scrollEnd) {
 
+            // if fixed is zero - than it's a first time
+            if ( fixedByMarginTop == 0 ){
+
+              fixedByMarginTop = pastScroll // store the point when it's fixed with margin
+
+            } else {
+              // fixedByMarginTop = pastScroll
+            }
+
+            // if momentum is kept
+            if ( wScroll < fixedByMarginTop){
+              elStyles.position = "static"
+              elStyles.marginTop = ( fixedByMarginTop + wHeight ) - scrollStart - elHeight
+            } else {
+              // momentum is broken
+            }
+
+            if ( wScroll < fixedByMarginTop - (elHeight - wHeight) ){
+              // scrolled all with margin fixed
+              // stick to top
+              elStyles.position = "fixed"
+              elStyles.top = 0
+              elStyles.marginTop = 0
+              elStyles.bottom = "auto"
+            }
+
+          } else if ( scrollDirection == "down" ){
+
+          }
+
+        } else {
+          // scrilling somewhere above sticky el
+          elStyles.classFixed = ""
         }
 
+
+        // apply styles
+        $el.css(elStyles)
+        // $el.addClass(elStyles.classFixed)
+
+        // required for scroll direction
+        pastScroll = wScroll
       } else {
-        // scrilling somewhere above sticky el
-        elStyles.classFixed = ""
+        $el.attr('style', '')
       }
 
-
-      // apply styles
-      $el.css(elStyles)
-      // $el.addClass(elStyles.classFixed)
-
-      // required for scroll direction
-      pastScroll = wScroll
     }
 
     // event bindings
@@ -1048,6 +1127,45 @@ $(document).ready(function() {
     _window.on('resize', debounce(stickyParse, 250))
 
   })
+
+  ////////////
+  // TELEPORT PLUGIN
+  ////////////
+  function initTeleport(){
+    $('[js-teleport]').each(function (i, val) {
+      var self = $(val)
+      var objHtml = $(val).html();
+      var target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
+      var conditionMedia = $(val).data('teleport-condition').substring(1);
+      var conditionPosition = $(val).data('teleport-condition').substring(0, 1);
+
+      if (target && objHtml && conditionPosition) {
+
+        function teleport() {
+          var condition;
+
+          if (conditionPosition === "<") {
+            condition = _window.width() < conditionMedia;
+          } else if (conditionPosition === ">") {
+            condition = _window.width() > conditionMedia;
+          }
+
+          if (condition) {
+            target.html(objHtml)
+            self.html('')
+          } else {
+            self.html(objHtml)
+            target.html("")
+          }
+        }
+
+        teleport();
+        _window.on('resize', debounce(teleport, 100));
+
+
+      }
+    })
+  }
 
   // $('.js-sticky').stick_in_parent({
   //   offset_top: 0

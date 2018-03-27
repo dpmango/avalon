@@ -90,14 +90,16 @@
 	height: 100%
 	background-image: radial-gradient(circle at 51% 32%, #ffffff, #f6f6f6)
 
-
 	+rmin($tablet)
 		margin: 0 -20px 0 -12px
 	+rmin($desktop)
 		margin: 0 -20px 0 0
 	+rmin($xl)
 		.slick-slide
-			padding: 0 0 205px
+			padding: 27px 0 230px
+			img
+				max-width: 200%
+				min-height: 100%
 
 	.slick-track
 		display: flex
@@ -541,6 +543,7 @@
 	white-space: normal
 	max-height: 40px
 	overflow: hidden
+	color: white
 	display: -webkit-box
 	-webkit-line-clamp: 2
 	-webkit-box-orient: vertical
@@ -606,11 +609,12 @@
 	.slick-dots
 		margin: 0
 		padding: 15px 0
+		padding-right: 20px
 		list-style: none
 		display: flex
 		justify-content: center
 		position: absolute
-		bottom: 30px
+		bottom: 37px
 		left: 0
 		right: 0
 		+rmin($tablet)
@@ -645,7 +649,7 @@
 		background: none
 		border-radius: 50%
 		position: absolute
-		bottom: 30px
+		bottom: 36px
 		font-size: 42px
 		cursor: pointer
 		z-index: 10
@@ -668,7 +672,7 @@
 		left: 30px
 
 	.slick-next
-		right: 30px
+		right: 50px
 
 
 	+rmin($tablet)
@@ -677,7 +681,7 @@
 			left: 20px
 
 		.slick-next
-			right: 20px
+			right: 40px
 
 
 

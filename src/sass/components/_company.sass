@@ -7,6 +7,8 @@
 		margin: 0 0 20px
 	p
 		margin: 0 0 20px
+	em
+		max-width: 918px
 
 	+rmin($tablet)
 		h2
@@ -36,8 +38,8 @@
 			&:nth-child(2n)
 				top: 60px
 	+rmin($tablet)
-		margin: 0 0 0 -7.4%
-		padding: 0 0 26px 10px
+		margin: 0 0 0 -6.8%
+		padding: 0 0 3px 10px
 		.row
 			margin: 0 -20px
 			& > [class^="col"]
@@ -45,14 +47,34 @@
 				position: relative
 				&:nth-child(2n)
 					top: 0
-				&:nth-child(3n-1)
-					top: 160px
+				&:nth-child(2)
+					top: 165px
+				&:nth-child(5)
+					top: 130px
 				&:nth-child(3n)
-					top: 80px
+					top: 86px
+				&:nth-child(7)
+					top: -25px
 	+rmin($desktop)
 		margin: 0
-		padding: 0 0 24px
+		padding: 0 0 0px
+		margin-bottom: -5px
 		max-width: 1040px
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+				position: relative
+				&:nth-child(2n)
+					top: 0
+				&:nth-child(2)
+					top: 165px
+				&:nth-child(5)
+					top: 120px
+				&:nth-child(3n)
+					top: 82px
+				&:nth-child(7)
+					top: -30px
 
 .certificates__item
 	display: block
@@ -62,7 +84,7 @@
 		display: block
 		width: 100%
 	+rmin($tablet)
-		margin: 0 0 40px
+		margin: 0 0 50px
 
 // -----
 
@@ -70,23 +92,75 @@
 	padding: 0 0 15px
 	+rmin($tablet)
 		padding: 0 0 10px
+		p
+			padding-right: 50px
 	+rmin($desktop)
 		padding: 0 0 5px
 
+
 .clients__grid
-	margin: 0 -10px
+	margin: 0 -10px 9px
 	.row
 		margin: 0 -20px
 		align-items: center
 		& > [class^="col"]
 			padding: 0 20px
 			position: relative
+	+r($mobile)
+		.col-6
+			&:nth-child(1)
+				order: 1
+				.clients__item
+					padding: 0
+					max-width: 150px
+					transform: translateY(-10px)
+			&:nth-child(2)
+				order: 2
+				.clients__item
+					transform: translateY(-20px)
+			&:nth-child(3)
+				order: 8
+				.clients__item
+					max-width: 150px
+			&:nth-child(4)
+				order: 3
+				.clients__item
+					transform: translateY(-15px)
+			&:nth-child(5)
+				order: 4
+				.clients__item
+					max-width: 150px
+					transform: translateY(-15px)
+			&:nth-child(6)
+				order: 10
+				.clients__item
+					transform: translateY(-20px)
+			&:nth-child(7)
+				order: 5
+				.clients__item
+					max-width: 150px
+					transform: translateY(-15px)
+			&:nth-child(8)
+				order: 6
+				.clients__item
+					transform: translateY(-20px)
+			&:nth-child(9)
+				order: 9
+				.clients__item
+					max-width: 150px
+					transform: translateY(-30px)
+			&:nth-child(10)
+				order: 7
+				.clients__item
+					transform: translateY(-10px)
+
 	+rmin($tablet)
 		margin: 0 0 0 -7.4%
 		padding: 22px 0 0 10px
 	+rmin($desktop)
 		margin: 0
-		padding: 22px 0 0
+		padding: 0px 0 0
+		margin-top: -10px
 		max-width: 1160px
 
 
@@ -111,8 +185,12 @@
 	+rmin($tablet)
 		margin: 0
 		padding: 0 0 45px
+		p
+			margin-right: 0%
 	+rmin($desktop)
-		padding: 0 0 48px
+		padding: 7px 0 48px
+		p
+			margin-right: -10%
 
 .profession__image
 	margin: 0 -20px 20px 0
@@ -128,6 +206,11 @@
 	+rmin($tablet)
 		h2
 			margin: 0 0 22px
+		p
+			margin-right: -5%
+	+rmin($desktop)
+		p
+			margin-right: 0
 
 
 .team__grid
@@ -138,17 +221,19 @@
 		& > [class^="col"]
 			padding: 0 10px
 			position: relative
-			&:nth-child(2n)
+			&:nth-child(odd)
 				top: 60px
 	+rmin($tablet)
-		margin: 0 0 0 -7.4%
+		margin: 0 0 0 -6.8%
 		padding: 10px 0 168px 10px
-		
+
 		.row
 			margin: 0 -20px
 			& > [class^="col"]
 				padding: 0 20px
 				position: relative
+				&:nth-child(odd)
+					top: 0px
 				&:nth-child(2n)
 					top: 0
 				&:nth-child(3n-2)
@@ -157,8 +242,8 @@
 					top: 80px
 	+rmin($desktop)
 		margin: 0
+		padding: 10px 0 180px 10px
 		max-width: 1040px
-		padding-bottom: 180px
 
 .team__item
 	display: block

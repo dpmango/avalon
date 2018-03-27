@@ -29,11 +29,12 @@ block content
 						.breadcrumbs__link Мебель для конференц-залов
 
 			.catalog__main
-				button.btn.btn--categories.js-categories-trigger
+				.btn.btn--categories.js-categories-trigger
 					+icon('ico-categories')
+					+icon('ico-categories-mobile')
 					+icon('ico-close')
-				button.btn.btn--filter.js-filter-trigger
-					+icon('ico-filter')
+				.btn.btn--filter.js-filter-trigger
+					+icon('ico-filter2')
 					+icon('ico-close')
 				
 				.catalog__wrapper
@@ -552,12 +553,12 @@ block content
 								p Мебель и столы для переговорных комнат компания «Авалон» предлагает широкий выбор мебели для переговорных комнат и конференц-залов по выгодной цене с доставкой по Москве!<br>Мы ждем вас в магазинах фабрики «Авалон». 
 
 								p Как успешно провести переговоры любого уровня и добиться поставленной цели? Обеспечьте своим собеседникам максимальный комфорт. Это можно сделать при помощи правильного оформления интерьера, выбора удобной мебели и создания общей приятной атмосферы в переговорной комнате. Для начала при обустройстве переговорной комнаты обратите 
-							
+								div(data-teleport-target="seo-image")
 
 						.col-lg-6
 							
-							figure.seo__image
-								img(data-src="img/pic-seo-1.png", alt="" js-lazy)
+							figure.seo__image(js-teleport data-teleport-to="seo-image" data-teleport-condition="<992")
+								img(src="img/pic-seo-1.png")
 
 	// Seo :: End
 

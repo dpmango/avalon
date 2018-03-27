@@ -3,6 +3,10 @@ title: Результаты поиска - Avalon
 bodyClass: page-results
 ---
 extends shared/_layout
+
+block header
+	include components/_header-results
+	
 block pixelPerfect
 	.pixel-perfect
 		#grid-desktop
@@ -13,7 +17,8 @@ block pixelPerfect
 			img(src="img/grid/grid-search-phone.png")
 block content
 	
-	
+	.js-toggle-body-class(data-class="is-search-open")
+		
 	// Results :: Start
 	.results
 		.container

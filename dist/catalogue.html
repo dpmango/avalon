@@ -89,7 +89,9 @@
               <div class="search__dropdown">
                 <div class="search__results">
                   <div class="search__group">
-                    <p class="search__count"><a class="search__count-link" href="#">товары (48)</a></p>
+                    <p class="search__count">
+                      <div class="search__count-link">товары (48)</div>
+                    </p>
                     <ul class="search__list">
                       <li class="col-6"><a class="search__item" href="#">
                           <figure class="search__item-image"><img src="img/pic-1.png" alt=""></figure><span class="search__item-name">Кресло 3402BM</span></a></li>
@@ -104,14 +106,12 @@
                     </ul>
                   </div>
                   <div class="search__group search__group--count">
-                    <p class="search__count"><a class="search__count-link" href="#">категории товаров (5)</a></p>
+                    <p class="search__count">
+                      <div class="search__count-link">категории товаров (5)</div>
+                    </p>
                     <ul class="search__list search__categories">
-                      <li class="col-12">
-                        <div class="search__item"><span class="search__item-name">Кресла</span></div>
-                      </li>
-                      <li class="col-12">
-                        <div class="search__item"><span class="search__item-name">Кресла для клубов</span></div>
-                      </li>
+                      <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла</span></a></li>
+                      <li class="col-12"><a class="search__item" href="#"><span class="search__item-name">Кресла для клубов</span></a></li>
                     </ul>
                   </div>
                   <div class="search__action"><a class="btn btn--red" href="#">показать все (53)</a></div>
@@ -142,22 +142,25 @@
                 </ul>
               </div>
               <div class="catalog__main">
-                <button class="btn btn--categories js-categories-trigger">
+                <div class="btn btn--categories js-categories-trigger">
                   <svg class="ico ico-categories">
                     <use xlink:href="img/sprite.svg#ico-categories"></use>
                   </svg>
-                  <svg class="ico ico-close">
-                    <use xlink:href="img/sprite.svg#ico-close"></use>
-                  </svg>
-                </button>
-                <button class="btn btn--filter js-filter-trigger">
-                  <svg class="ico ico-filter">
-                    <use xlink:href="img/sprite.svg#ico-filter"></use>
+                  <svg class="ico ico-categories-mobile">
+                    <use xlink:href="img/sprite.svg#ico-categories-mobile"></use>
                   </svg>
                   <svg class="ico ico-close">
                     <use xlink:href="img/sprite.svg#ico-close"></use>
                   </svg>
-                </button>
+                </div>
+                <div class="btn btn--filter js-filter-trigger">
+                  <svg class="ico ico-filter2">
+                    <use xlink:href="img/sprite.svg#ico-filter2"></use>
+                  </svg>
+                  <svg class="ico ico-close">
+                    <use xlink:href="img/sprite.svg#ico-close"></use>
+                  </svg>
+                </div>
                 <div class="catalog__wrapper">
                   <div class="catalog__content">
                     <div class="catalog__ctrl">
@@ -474,10 +477,11 @@
                         <p>Многие на личном опыте знают, что такое «комната-пенал» или как говорят дизайнеры «эффект трамвая». Места много — поставить ничего нельзя. AVALON взялись решить эту задачу на отдельно взятой даче. Что же получилось? А получились раздвижные стены, гостиная и кухня с барной стойкой. Все в современном ритме: фрески, пробковые полы, натяжные потолки, камень и деревья, травы, цветы! </p>
                         <p>Мебель и столы для переговорных комнат компания «Авалон» предлагает широкий выбор мебели для переговорных комнат и конференц-залов по выгодной цене с доставкой по Москве!<br>Мы ждем вас в магазинах фабрики «Авалон». </p>
                         <p>Как успешно провести переговоры любого уровня и добиться поставленной цели? Обеспечьте своим собеседникам максимальный комфорт. Это можно сделать при помощи правильного оформления интерьера, выбора удобной мебели и создания общей приятной атмосферы в переговорной комнате. Для начала при обустройстве переговорной комнаты обратите </p>
+                        <div data-teleport-target="seo-image"></div>
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <figure class="seo__image"><img data-src="img/pic-seo-1.png" alt="" js-lazy></figure>
+                      <figure class="seo__image" js-teleport data-teleport-to="seo-image" data-teleport-condition="&lt;992"><img src="img/pic-seo-1.png"></figure>
                     </div>
                   </div>
                 </div>

@@ -51,23 +51,35 @@
 		margin: 0 0 62px -25px
 		& > li
 			padding: 0 30px 12px 100px
-			width: 325px
-
+			flex: 0 0 50%
+			width: 50%
 			&:after
 				font-size: 125px
 				left: 0
 				width: 90px
 				top: -4px
+			&:nth-child(2)
+				padding-left: 130px
+				&:after
+					left: 25px
+
 	+rmin($desktop)
 		margin: 0 0 44px
-		max-width: 1080px
+		max-width: 1060px
 		& > li
-			padding: 0 35px 0 120px
+			padding: 0 29px 0 120px
 			min-height: 105px
+			flex: 0 0 33.333%
 			width: 33.333%
+			&:nth-child(2)
+				padding-left: 130px
+				&:after
+					left: 25px
+			&:nth-child(3)
+				padding-left: 135px
 			&:after
-				top: -6px
-				left: 30px
+				top: -2px
+				left: 32px
 
 
 
@@ -97,12 +109,12 @@
 		z-index: -1
 		background: #f2f1ed
 	& > li
-		margin: 0 0 20px
+		margin: 0 0 21px
 		&:last-child
 			margin: 0
 	+rmin($tablet)
 		top: 0
-		padding: 40px 0 80px
+		padding: 42px 0 80px
 		& > li
 			margin: 0 0 40px
 	+rmin($desktop)
@@ -114,21 +126,25 @@
 	position: relative
 	background: #fff
 	display: flex
+	flex-direction: column
 	flex-wrap: wrap
 	padding: 17px 20px 12px
 	max-width: 1080px
 	min-height: 130px
 	margin: 0 -20px
 	+rmin($tablet)
-		margin: 0 0 0 -40px
+		flex-direction: row
+		margin: 0 0 0 -37px
 		padding: 19px 40px 12px
 		flex-wrap: nowrap
 	+rmin($desktop)
 		min-height: 105px
+		margin: 0 0 0 -40px
 
 .delivery__offices-city
 	display: block
-	min-width: 178px
+	flex: 0 0 auto
+	min-height: auto
 	margin: 0 0 10px
 	font-size: 15px
 	line-height: 20px
@@ -136,28 +152,53 @@
 	color: $blackColor
 	text-transform: uppercase
 	+rmin($tablet)
+		flex: 0 0 178px
+		min-width: 178px
 		font-size: 20px
 		line-height: 25px
 		margin: 0 40px 10px 0
 	+rmin($desktop)
+		flex-basis: 200px
 		min-width: 200px
 
 .delivery__offices-address
-	margin: auto 0 0
+	margin: 0
 	padding: 0
 	list-style: none
+	width: 100%
 	& > li
 		margin: 0 0 10px
+		max-width: 100%
 		&:last-child
 			margin: 0
-
+	+r($tablet)
+		flex: 1 0 auto
+		display: flex
+		flex-direction: column
+		& > li
+			&:last-child
+				margin-top: auto
 	+rmin($tablet)
 		margin: 0
 		& > li
 			margin: 0 0 24px
+			&:first-child
+				min-height: 50px
+	+rmin($desktop)
+		& > li
+			&:first-child
+				min-height: 1px
 
 
 .delivery__payments
 	margin: 0 -20px 0 0
+	p
+		&:last-child
+			margin-bottom: 0
 	+rmin($tablet)
-		margin: 0
+		margin: 0 0 0px 0
+		p
+			padding-right: 100px
+	+rmin($desktop)
+		p
+			padding-right: 40px

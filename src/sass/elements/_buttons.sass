@@ -75,7 +75,7 @@ button
     font-size: 15px
     line-height: 1
     color: #252525
-    padding: 8px 0 11px
+    padding: 8px 0 5px
     overflow: hidden
     &:after, &:before
         content: ''
@@ -102,9 +102,10 @@ button
         animation-direction: both
 
     +rmin($tablet)
-        font-size: 20px
+      font-size: 20px
     +rmin($wide)
-        font-size: 25px
+      padding: 8px 0 11px
+      font-size: 25px
 
 @keyframes loadBtn
   from
@@ -179,14 +180,26 @@ button
     top: -115px
     right: -20px
     z-index: 110
+    .ico-categories
+      display: none
+      font-size: 30px
+    .ico-categories-mobile
+      display: inline-block
+      font-size: 20px
+
     +rmin($tablet)
         top: -165px
         right: 0
+        .ico-categories
+          display: inline-block
+        .ico-categories-mobile
+          display: none
     +rmin($desktop)
         right: auto
         top: 105px
         left: 50%
         margin: 0 0 0 -50vw
+
     // position: absolute
     // bottom: 75px
     // right: -20px
@@ -206,9 +219,17 @@ button
     top: -70px
     right: -20px
     z-index: 90
+    .ico
+      font-size: 22px
+      &-close
+        font-size: 16px
     +rmin($tablet)
         top: -100px
         right: 0
+        .ico
+          font-size: 32px
+          &-close
+            font-size: 24px
     +rmin($desktop)
         display: none
     // position: absolute

@@ -9,15 +9,17 @@
 	display: block
 	font-size: 20px
 	line-height: 25px
-	margin: 0 0 20px
+	margin: 0 5px 20px 0
+	padding-right: 0px
 	p:last-child
 		margin: 0
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 35px
-		margin: 0 0 30px
+		margin: 0 0 23px
+		padding-right: 20px
 	+rmin($desktop)
-		margin: 24px 0 30px
+		margin: 43px 0 0px
 
 .cases__address
 	display: block
@@ -35,8 +37,9 @@
 		font-size: 18px
 		margin: 0 0 30px
 	+rmin($desktop)
-		margin: 24px 0 30px
-		text-align: right
+		margin: 43px 0 30px
+		text-align: center
+		padding-left: 22px
 
 // -----
 
@@ -46,7 +49,7 @@
 	color: #fff
 	padding: 30px 0 0
 	background: #252525
-	margin: 0 -30px
+	margin: 7px -30px
 	padding: 30px 30px 0
 	&:after
 		content: ''
@@ -73,8 +76,8 @@
 				&:nth-child(even)
 					top: 100px
 	+rmin($tablet)
-		padding: 40px 7.2% 0
-		margin: 0 -20px
+		padding: 40px 2.8% 0
+		margin: 4px -20px 0
 	+rmin($desktop)
 		padding: 40px 9.2% 0
 		margin: 0 -10px
@@ -87,18 +90,20 @@
 
 .cases__item
 	display: block
-	margin: 0 -30px 60px 0
+	margin: 0 -30px 55px 0
 	color: #fff
 	transition: 0.3s $ease
 	&:hover
 		color: $primaryColor
 		.cases__item-image
 			box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.75)
-	+rmin($mobile)
+	+rmin($tablet)
+		margin: 0 0 71px
+	+rmin($desktop)
 		margin: 0 0 74px
 
 .cases__item-image
-	margin: 0 0 20px
+	margin: 0 0 27px
 	overflow: hidden
 	position: relative
 	transition: 0.3s
@@ -115,7 +120,7 @@
 		height: 100%
 		object-fit: cover
 	+rmin($tablet)
-		margin: 0 0 30px
+		margin: 0 0 39px
 		&:before
 			padding: 67% 0 0
 	+rmin($desktop)
@@ -126,10 +131,11 @@
 	font-size: 23px
 	line-height: 25px
 	font-weight: 900
-	padding: 0 30px 0 0
+	padding: 0 20px 0 0
 	+rmin($tablet)
 		font-size: 25px
 		line-height: 30px
+		padding: 0 30px 0 0
 	+rmin($desktop)
 		padding: 0 40px 0 0
 
@@ -153,29 +159,53 @@
 				.cases__images-item
 					margin-left: -10px
 	+rmin($tablet)
-		padding: 50px 0
+		padding: 46px 0 29px 0
 		margin: 0
 		.row
+			margin: 0 -20px
 			& > [class^="col"]
+				padding: 0 20px
 				&:nth-child(1)
 					.cases__images-item
 						margin-left: -20px
+						margin-right: 10px
 				&:nth-child(3)
 				 	clear: left
+				&:nth-child(4)
+					.cases__images-item
+						margin-bottom: 40px
+						margin-left: -10px
 				&:nth-child(5)
 					.cases__images-item
 						margin-right: -20px
 				&:nth-child(6)
 					clear: left
+	+rmin($desktop)
+		padding: 52px 0 29px 0
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				&:nth-child(1)
+					.cases__images-item
+						margin-left: -20px
+						margin-right: 0
+				&:nth-child(4)
+					.cases__images-item
+						margin-bottom: 80px
+						margin-left: 0px
+				&:nth-child(5)
+					.cases__images-item
+						margin-right: -20px
 
 .cases__images-item
 	margin: 0 0 30px
 	img
 		display: block
 		width: 100%
+	+rmin($tablet)
+		margin: 0 0 80px
 	+rmin($desktop)
 		margin: 0 0 80px
-
 
 
 // -----

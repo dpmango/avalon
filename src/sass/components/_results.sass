@@ -17,7 +17,9 @@
 
 .results__display
 	display: flex
-	margin: 0 0 28px
+	margin: 0 0 32px
+	+rmin($tablet)
+		margin: 0 0 28px
 	.ui__check
 		margin: 0 10px 0 0
 
@@ -63,7 +65,7 @@
 .results__catalog, .results__categories
 	padding: 0 0 30px
 	+rmin($desktop)
-		padding: 0 0 20px
+		padding: 0 0 15px
 
 
 .results__load
@@ -71,4 +73,4 @@
 	+rmin($tablet)
 		padding: 2px 40px
 	+rmin($desktop)
-		padding: 0
+		padding: 13px 0 0
