@@ -134,11 +134,12 @@
 	margin: 0 -20px
 	+rmin($tablet)
 		flex-direction: row
-		margin: 0 0 0 -40px
+		margin: 0 0 0 -37px
 		padding: 19px 40px 12px
 		flex-wrap: nowrap
 	+rmin($desktop)
 		min-height: 105px
+		margin: 0 0 0 -40px
 
 .delivery__offices-city
 	display: block
@@ -164,8 +165,10 @@
 	margin: 0
 	padding: 0
 	list-style: none
+	width: 100%
 	& > li
 		margin: 0 0 10px
+		max-width: 100%
 		&:last-child
 			margin: 0
 	+r($tablet)
@@ -189,6 +192,9 @@
 
 .delivery__payments
 	margin: 0 -20px 0 0
+	p
+		&:last-child
+			margin-bottom: 0
 	+rmin($tablet)
 		margin: 0 0 0px 0
 		p

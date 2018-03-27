@@ -39,7 +39,27 @@
 				top: 60px
 	+rmin($tablet)
 		margin: 0 0 0 -6.8%
-		padding: 0 0 26px 10px
+		padding: 0 0 3px 10px
+		.row
+			margin: 0 -20px
+			& > [class^="col"]
+				padding: 0 20px
+				position: relative
+				&:nth-child(2n)
+					top: 0
+				&:nth-child(2)
+					top: 165px
+				&:nth-child(5)
+					top: 130px
+				&:nth-child(3n)
+					top: 86px
+				&:nth-child(7)
+					top: -25px
+	+rmin($desktop)
+		margin: 0
+		padding: 0 0 0px
+		margin-bottom: -5px
+		max-width: 1040px
 		.row
 			margin: 0 -20px
 			& > [class^="col"]
@@ -55,11 +75,6 @@
 					top: 82px
 				&:nth-child(7)
 					top: -30px
-	+rmin($desktop)
-		margin: 0
-		padding: 0 0 0px
-		margin-bottom: -5px
-		max-width: 1040px
 
 .certificates__item
 	display: block
@@ -217,6 +232,8 @@
 			& > [class^="col"]
 				padding: 0 20px
 				position: relative
+				&:nth-child(odd)
+					top: 0px
 				&:nth-child(2n)
 					top: 0
 				&:nth-child(3n-2)

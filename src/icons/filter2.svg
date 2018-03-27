@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="30px" height="34px" viewBox="0 0 30 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>filter2</title>
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/filter icon white</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="avalon_ct_tb" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-703.000000, -248.000000)">
-        <g id="filter" transform="translate(688.000000, 235.000000)">
-            <g id="icons/filter-icon-white" transform="translate(15.000000, 14.000000)">
-                <g id="filter-icon">
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="3" width="30" height="2"></rect>
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="15" width="30" height="2"></rect>
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="27" width="30" height="2"></rect>
-                    <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" fill="#999999" cx="8" cy="4" r="4"></circle>
-                    <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" fill="#999999" cx="22" cy="16" r="4"></circle>
-                    <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" fill="#999999" cx="15" cy="28" r="4"></circle>
-                </g>
-            </g>
+    <g id="icons/filter-icon-white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="filter-icon" transform="translate(0.000000, 1.000000)">
+            <rect id="Rectangle" fill="#FFFFFF" x="12" y="3" width="18" height="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="3" width="4" height="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="26" y="15" width="4" height="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="15" width="18" height="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="27" width="11" height="2"></rect>
+            <rect id="Rectangle" fill="#FFFFFF" x="19" y="27" width="11" height="2"></rect>
+            <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" cx="8" cy="4" r="4"></circle>
+            <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" cx="22" cy="16" r="4"></circle>
+            <circle id="Oval-2" stroke="#FFFFFF" stroke-width="2" cx="15" cy="28" r="4"></circle>
         </g>
     </g>
 </svg>

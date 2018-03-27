@@ -23,8 +23,12 @@ $(document).ready(function() {
     initSliders();
     initMasks();
     initReadmore();
+
     matchHeight()
     _window.on('resize', debounce(matchHeight, 200));
+
+    skuOffset();
+    _window.on('resize', debounce(skuOffset, 200));
 
     initScrollMonitor();
     initLazyLoad();
@@ -39,7 +43,6 @@ $(document).ready(function() {
     // development helper's
     _window.on('resize', debounce(setBreakpoint, 200))
     pixelPerfect();
-    // _window.on('resize', debounce(pixelPerfect, 200))
   }
 
   // this is a master function which should have all functionality
@@ -81,7 +84,9 @@ $(document).ready(function() {
   if (msieversion()) {
     $('body').addClass('is-ie');
   }
-
+  if ( isMobile() ){
+    $('body').addClass('is-mobile');
+  }
   var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
   isChrome ? $('body').addClass('is-chrome') : null
@@ -307,6 +312,7 @@ $(document).ready(function() {
   _document.on('click', function(e) {
     if ($(e.target).closest('.catalog__categories, .js-categories-trigger').length == 0) {
       $('html').removeClass('is-categories-open')
+      $('html').removeClass('is-categories-open-fixed');
     }
   });
 
@@ -371,9 +377,12 @@ $(document).ready(function() {
   //////////
 
   function matchHeight(){
-    $('.product').each(function(i, product){
+    _document.find('.product').each(function(i, product){
       var desc = $(product).find('.product__desc');
-      var descHeight = desc.find('li').length * 20;
+      var descHeight = 0;
+      desc.find('li').each(function(i, li){
+        descHeight = descHeight + $(li).height();
+      })
       var boxOffset = 40;
       if ( _window.width() < 768 ){
         boxOffset = 30
@@ -386,12 +395,52 @@ $(document).ready(function() {
         + $(product).find('.product__price').height()
         + 22
 
-      console.log(descHeight)
       desc.css({
         'padding-top': calcHeight,
         'bottom': '-' + ((boxOffset * 2) + descHeight) + 'px'
       })
     })
+  }
+
+  // catch ajax
+  function addXMLRequestCallback(callback){
+    var oldSend, i;
+    if( XMLHttpRequest.callbacks ) {
+      XMLHttpRequest.callbacks.push( callback );
+    } else {
+      XMLHttpRequest.callbacks = [callback];
+      oldSend = XMLHttpRequest.prototype.send;
+      XMLHttpRequest.prototype.send = function(){
+        for( i = 0; i < XMLHttpRequest.callbacks.length; i++ ) {
+          XMLHttpRequest.callbacks[i]( this );
+        }
+        oldSend.apply(this, arguments);
+      }
+    }
+  }
+
+  addXMLRequestCallback( function( xhr ) {
+    matchHeight();
+  });
+
+
+
+  //////////
+  // SKU OFFSET
+  //////////
+  function skuOffset(){
+    var el = $('.sku-info');
+    var target = $('.sku-info__text div:nth-child(2)');
+    if ( el.length > 0 && target.length > 0 ){
+      var elPosL = el.offset().left
+      var targetPosL = target.offset().left + parseInt(target.css('paddingLeft').slice(0, -1))
+      var diffInPx = Math.abs(targetPosL - elPosL)
+      console.log(elPosL, targetPosL, diffInPx)
+
+      el.css({
+        'padding-left': Math.floor(diffInPx)
+      })
+    }
   }
 
 
@@ -531,8 +580,8 @@ $(document).ready(function() {
       prevArrow: slidesNext
     });
 
-
-    $('.js-slides-contacts').slick({
+    var slickContacts = $('.js-slides-contacts')
+    var slickContactsOptions = {
       arrows: true,
       dots: true,
       mobileFirst: true,
@@ -546,11 +595,25 @@ $(document).ready(function() {
           }
         },
         {
-          breakpoint: 1200,
+          breakpoint: 992,
           settings: 'unslick'
         }
       ]
-    });
+    }
+
+    slickContacts.slick(slickContactsOptions);
+
+    _window.on('resize', debounce(function(e){
+      if ( _window.width() > 992 ) {
+        if (slickContacts.hasClass('slick-initialized')) {
+          slickContacts.slick('unslick');
+        }
+        return
+      }
+      if (!slickContacts.hasClass('slick-initialized')) {
+        return slickContacts.slick(slickContactsOptions);
+      }
+    }, 300));
 
     // Gallery
 

@@ -252,10 +252,15 @@
         newHeight = $element.data('expandedHeight') + 'px';
         newLink = 'lessLink';
         expanded = true;
+        $element.addClass('is-opening');
+        $element.removeClass('is-closing');
+
       }
       else {
         newHeight = collapsedHeight;
         newLink = 'moreLink';
+        $element.removeClass('is-opening');
+        $element.addClass('is-closing');
       }
 
       // Fire beforeToggle callback
