@@ -24,15 +24,18 @@ $(document).ready(function() {
   var markersCoord = [
     {
       lat: 55.797139,
-      lng: 37.6093601
+      lng: 37.6093601,
+      marker: markerHover
     },
     {
       lat: 59.854462,
-      lng: 30.4811287
+      lng: 30.4811287,
+      marker: markerDefault
     },
     {
       lat: 51.174037,
-      lng: 71.4223829
+      lng: 71.4223829,
+      marker: markerDefault
     }
   ]
 
@@ -941,7 +944,7 @@ $(document).ready(function() {
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(coords.lat, coords.lng),
           map: map,
-          icon: markerDefault
+          icon: coords.marker
         });
         markers.push(marker);
 
@@ -956,7 +959,7 @@ $(document).ready(function() {
 
   // change marker onclick
   _document
-    .on('click', '.contacts__address', function(){
+    .on('mouseenter', '.contacts__address', function(){
       var markerId = $(this).data('marker-id') - 1;
       if ( markerId !== undefined ){
         changeMapsMarker(markerId)
@@ -979,7 +982,7 @@ $(document).ready(function() {
 
       targetMarker.setIcon(markerHover) // set target new image
 
-      map.setCenter(targetMarker.getPosition());
+      map.panTo(targetMarker.getPosition());
     }
 
     // set active class

@@ -98,15 +98,18 @@
 			right: 10px
 		+rmin($desktop)
 			right: -20px
-	// &--dark
-	&.is-active
-		// background: #252525
+	&--dark
+		background: #252525
 		color: #fff
 		border: none
 		+r($desktop)
 			background: transparent
 		&::after
 			opacity: 1
+	&.is-active
+		strong
+			color: $primaryColor
+
 
 
 	strong
@@ -116,6 +119,7 @@
 		font-weight: 900
 		margin: 0 0 25px
 		text-transform: uppercase
+		transition: .25s $ease
 	p
 		margin: 0 0 20px
 		&:last-child
@@ -124,7 +128,7 @@
 		font-size: 18px
 		line-height: 25px
 		padding: 38px 20px 37px
-		&.contacts__address--dark, &.is-active
+		&.contacts__address--dark
 			padding-bottom: 33px
 		strong
 			font-size: 25px
