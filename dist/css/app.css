@@ -9900,6 +9900,10 @@ a.breadcrumbs__link:hover {
   padding: 30px 30px 0;
 }
 
+.cases__grid--even-childs {
+  padding-bottom: 80px;
+}
+
 .cases__grid:after {
   content: '';
   display: block;
