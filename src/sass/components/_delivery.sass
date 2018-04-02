@@ -166,13 +166,15 @@
 	padding: 0
 	list-style: none
 	width: 100%
+	min-width: 1px
+	min-height: 0
 	& > li
 		margin: 0 0 10px
 		max-width: 100%
 		&:last-child
 			margin: 0
 	+r($tablet)
-		flex: 1 0 auto
+		flex: 1 1 auto
 		display: flex
 		flex-direction: column
 		& > li

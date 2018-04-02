@@ -25,7 +25,7 @@ $(document).ready(function() {
     {
       lat: 55.797139,
       lng: 37.6093601,
-      marker: markerHover
+      marker: markerDefault
     },
     {
       lat: 59.854462,
@@ -38,6 +38,10 @@ $(document).ready(function() {
       marker: markerDefault
     }
   ]
+  var mapCenter = {
+    lat: 54.3181598,
+    lng: 48.3837915
+  }
 
   ////////////
   // READY - triggered when PJAX DONE
@@ -465,11 +469,23 @@ $(document).ready(function() {
       var elPosL = el.offset().left
       var targetPosL = target.offset().left + parseInt(target.css('paddingLeft').slice(0, -1))
       var diffInPx = Math.abs(targetPosL - elPosL)
-      console.log(elPosL, targetPosL, diffInPx)
-
       el.css({
         'padding-left': Math.floor(diffInPx)
       })
+    }
+
+    if ( _window.width() > 992 ){
+      var actionBtn = $('.sku__action');
+      var actionTarget = $('.sku__chars .sku__info-list:eq(1)');
+      if ( actionBtn.length > 0 && actionTarget.length > 0 ){
+        var AelPosL = actionBtn.offset().left
+        var AtargetPosL = actionTarget.offset().left
+        var AdiffInPx = Math.abs(AtargetPosL - AelPosL)
+        console.log(actionTarget, AelPosL, AtargetPosL)
+        actionBtn.css({
+          'padding-left': Math.floor(AdiffInPx)
+        })
+      }
     }
   }
 
@@ -531,7 +547,7 @@ $(document).ready(function() {
       cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
       mobileFirst: true,
       responsive: [{
-        breakpoint: 1200,
+        breakpoint: 992,
         settings: {
           arrows: false,
           dots: true
@@ -558,7 +574,7 @@ $(document).ready(function() {
           }
         },
         {
-          breakpoint: 1200,
+          breakpoint: 992,
           settings: {
             arrows: false,
             dots: false
@@ -592,7 +608,7 @@ $(document).ready(function() {
           }
         },
         {
-          breakpoint: 1200,
+          breakpoint: 992,
           settings: {
             dots: false,
             arrows: true
@@ -618,6 +634,7 @@ $(document).ready(function() {
       cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
       nextArrow: slidesPrev,
       prevArrow: slidesNext,
+      loop: false,
       responsive: [{
           breakpoint: 767,
           settings: {
@@ -887,6 +904,7 @@ $(document).ready(function() {
     var response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML);
     var bodyClasses = $(response).filter('notbody').attr('class');
     $('html').removeClass();
+    $('.js-nav-collapse').slideUp('fast');
     $('body').attr('class', bodyClasses);
 
     pageReady();
@@ -908,10 +926,7 @@ $(document).ready(function() {
     if ($('#contacts__map').length) {
 
       map = new google.maps.Map(document.getElementById('contacts__map'), {
-        center: {
-          lat: 54.3181598,
-          lng: 48.3837915
-        },
+        center: mapCenter,
         zoom: 4,
         disableDefaultUI: true,
         styles: [{
@@ -965,10 +980,14 @@ $(document).ready(function() {
         changeMapsMarker(markerId)
       }
     })
+    .on('mouseleave', '.contacts__address', function(){
+      changeMapsMarker(null, null, true)
+    })
 
-  function changeMapsMarker(id, marker){
+
+  function changeMapsMarker(id, marker, clear){
     if ( id !== null){
-    } else if ( marker ){
+    } else if ( marker !== null ){
       id = markers.indexOf(marker) // get id
     }
     var targetMarker = markers[id];
@@ -983,16 +1002,27 @@ $(document).ready(function() {
       targetMarker.setIcon(markerHover) // set target new image
 
       map.panTo(targetMarker.getPosition());
+
+      // set active class
+      var linkedControl = $('.contacts__address[data-marker-id='+ (id + 1) +']');
+
+      if ( linkedControl.length > 0 ){
+        $('.contacts__address').removeClass('is-active');
+        linkedControl.addClass('is-active');
+      }
+
     }
 
-    // set active class
-    var linkedControl = $('.contacts__address[data-marker-id='+ (id + 1) +']');
+    if ( clear ){
+      // reset all markers first
+      $.each(markers, function(i, m){
+        m.setIcon(markerDefault)
+      });
 
-    console.log(linkedControl)
-    if ( linkedControl.length > 0 ){
       $('.contacts__address').removeClass('is-active');
-      linkedControl.addClass('is-active');
+      map.panTo(mapCenter);
     }
+
 
   }
 
