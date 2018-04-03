@@ -10138,10 +10138,6 @@ a.breadcrumbs__link:hover {
   }
 }
 
-.cases__other {
-  margin: 0 0 28px;
-}
-
 .cases__other-heading {
   display: block;
   font-size: 30px;
@@ -11715,7 +11711,7 @@ a.breadcrumbs__link:hover {
   max-width: 100%;
 }
 
-.header .container {
+.header .container, .footer .container {
   max-width: 100%;
 }
 
@@ -11752,20 +11748,6 @@ a.breadcrumbs__link:hover {
 
 .error .container {
   max-width: 100%;
-}
-
-@media only screen and (min-width: 1750px) {
-  .catalog__grid .col-xl-3 {
-    width: 20%;
-    max-width: 20%;
-  }
-}
-
-@media only screen and (min-width: 1750px) {
-  .results .col-xl-20 {
-    width: 16.66%;
-    max-width: 16.66%;
-  }
 }
 
 .pp-buttons {
