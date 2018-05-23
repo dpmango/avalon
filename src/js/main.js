@@ -11,42 +11,47 @@ $(document).ready(function() {
 
   // maps settings
   // should be on top
-  var map;
-  var markers = [];
-  var markerDefault = {
-    url: "img/pin.png",
-    scaledSize: new google.maps.Size(44, 60)
-  }
-  var markerHover = {
-    url: "img/pin_hover.png",
-    scaledSize: new google.maps.Size(44, 60)
-  }
-  var markersCoord = [
-    {
-      lat: 55.797139,
-      lng: 37.6093601,
-      marker: markerDefault
-    },
-    {
-      lat: 59.854462,
-      lng: 30.4811287,
-      marker: markerDefault
-    },
-    {
-      lat: 51.174037,
-      lng: 71.4223829,
-      marker: markerDefault
+  var map, markers = [], markerDefault, markerHover, markersCoord, mapCenter
+  function updateMapVars(){
+    if ($('#contacts__map').length > 0) {
+      markerDefault = {
+        url: "img/pin.png",
+        scaledSize: new google.maps.Size(44, 60)
+      }
+      markerHover = {
+        url: "img/pin_hover.png",
+        scaledSize: new google.maps.Size(44, 60)
+      }
+      markersCoord = [
+        {
+          lat: 55.797139,
+          lng: 37.6093601,
+          marker: markerDefault
+        },
+        {
+          lat: 59.854462,
+          lng: 30.4811287,
+          marker: markerDefault
+        },
+        {
+          lat: 51.174037,
+          lng: 71.4223829,
+          marker: markerDefault
+        }
+      ]
+      mapCenter = {
+        lat: 54.3181598,
+        lng: 48.3837915
+      }
+
     }
-  ]
-  var mapCenter = {
-    lat: 54.3181598,
-    lng: 48.3837915
   }
 
   ////////////
   // READY - triggered when PJAX DONE
   ////////////
   function pageReady() {
+    updateMapVars();
     legacySupport();
     // updateHeaderActiveClass();
 
